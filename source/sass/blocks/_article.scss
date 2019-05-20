@@ -6,16 +6,53 @@
 	> *:last-child {
 		margin-bottom: 0;
 	}
+
+  .date {
+    margin-bottom: 40px;
+  }
+
+  img {
+    border-radius: radius(sm);
+  }
+
+  blockquote {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: color(secondary);
+    color: color(white);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+
+    > *:first-child {
+  		margin-top: 0;
+  	}
+
+  	> *:last-child {
+  		margin-bottom: 0;
+  	}
+  }
 }
 
 @include respond-to(medium) {
   .article {
+    column-count: 2;
+    column-gap: 30px;
 
+    blockquote {
+      padding: 25px 30px;
+      font-size: 19px;
+    }
   }
 }
 
 @include respond-to(large) {
   .article {
-
+    blockquote {
+      padding: 44px 40px;
+      font-size: 19px;
+    }
   }
 }
