@@ -44,7 +44,7 @@
 
   initEllipsis();
 
-  window.on('resize', function() {
+  $(window).resize(function() {
     initEllipsis();
   })
 
@@ -548,7 +548,7 @@ picturefill();
 
     initNewsSlider();
 
-    $(window).on('resize', function() {
+    $(window ).resize(function() {
       initNewsSlider();
     });
 

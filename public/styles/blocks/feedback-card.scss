@@ -1,8 +1,4 @@
-.card-feedback {
-
-}
-
-.card-feedback__heading {
+.feedback-card__heading {
   display: none;
 }
 
@@ -10,12 +6,12 @@
   color: color(secondary);
 }
 
-.card-feedback__branch {
+.feedback-card__branch {
   display: none;
 }
 
 @include respond-to(medium) {
-  .card-feedback {
+  .feedback-card {
     padding: 30px 40px;
     background-color: color(secondary);
     border-radius: radius(sm);
@@ -35,7 +31,7 @@
     }
   }
 
-  .card-feedback__heading {
+  .feedback-card__heading {
     margin: 0;
     margin-bottom: 30px;
     display: flex;
@@ -47,7 +43,7 @@
     text-transform: none;
   }
 
-  .card-feedback__heading-logo {
+  .feedback-card__heading-logo {
     flex-shrink: 0;
     display: block;
     width: 65px;
@@ -62,20 +58,20 @@
 }
 
 @include respond-to(large) {
-  .card-feedback {
+  .feedback-card {
     position: relative;
     padding: 0 60px;
     padding-top: 60px;
     padding-bottom: 50px;
   }
 
-  .card-feedback__heading {
+  .feedback-card__heading {
     margin-bottom: 50px;
   }
 }
 
 @include respond-to(1600px) {
-  .card-feedback__branch {
+  .feedback-card__branch {
     position: absolute;
     bottom: -100px;
     right: 200px;
