@@ -1,0 +1,18 @@
+mixin link-comeback(data)
+    +el({
+        tag: 'a',
+        class: 'link-comeback',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        title: data.title,
+        target: data.target,
+        href: data.href,
+        text: 'Назад',
+        position: data.position,
+    })&attributes(attributes)
+        +el({
+            tag: 'svg',
+            icon: 'arrow',
+            class: 'link-comeback__icon',
+        })

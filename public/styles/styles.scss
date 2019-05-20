@@ -14,6 +14,7 @@
 @import "./blocks/bullet";
 @import "./blocks/sticky-footer";
 @import "./blocks/header-wrap";
+@import "./blocks/article";
 @import "./blocks/page-content";
 
 @import "../pug/blocks/button/button";
@@ -64,3 +65,5 @@
 @import "../pug/blocks/house-choice/house-choice";
 @import "../pug/blocks/posts-card/posts-card";
 @import "../pug/blocks/posts/posts";
+
+@import "../pug/blocks/breadcrumbs/breadcrumbs";

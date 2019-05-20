@@ -8,6 +8,13 @@ block vars
 block content
     main.page-content
         .page-content__wrap
+            +breadcrumbs({
+                items: ['Главная', 'Блог', 'Статья'],
+                mix: 'page-content__breadcrumbs',
+            })
+            +link-comeback({
+                mix: 'page-content__link-comeback',
+            })
             article.article
                 h2 Разработан очередной проект виллы
                 +date({
