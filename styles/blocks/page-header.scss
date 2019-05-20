@@ -1,8 +1,12 @@
 .page-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   padding-top: 8px;
   padding-bottom: 10px;
+  background-color: color(white);
   color: color(primary);
   box-shadow: 0 0 10px 0 rgba(#004316, 0.2);
 }

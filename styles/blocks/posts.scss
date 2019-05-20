@@ -1,0 +1,48 @@
+.posts {
+}
+
+.posts__wrap {
+  @include wrapper;
+}
+
+.posts__list {
+  @include ul-no;
+}
+
+.posts__item {
+  margin-bottom: 20px;
+}
+
+@include respond-to(620px) {
+  .posts__wrap {
+    padding-bottom: 0;
+  }
+
+  .posts__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .posts__item {
+    width: 50%;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@include respond-to(medium) {
+  .posts__item {
+    width: 33.33%;
+  }
+}
+
+@include respond-to(920px) {
+
+}
+
+@include respond-to(large) {
+
+}

@@ -28,7 +28,7 @@
 
     initNewsSlider();
 
-    $(window).on('resize', function() {
+    $(window ).resize(function() {
       initNewsSlider();
     });
 

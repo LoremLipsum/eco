@@ -26,7 +26,7 @@
 
   initEllipsis();
 
-  window.on('resize', function() {
+  $(window).resize(function() {
     initEllipsis();
   })
 
