@@ -8,7 +8,7 @@
 	}
 
   .date {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   img {
@@ -52,21 +52,34 @@
 
 @include respond-to(medium) {
   .article {
-    column-count: 2;
-    column-gap: 30px;
-
     blockquote {
       padding: 30px;
       font-size: 19px;
     }
+
+    .date {
+      margin-bottom: 30px;
+    }
   }
 }
+
+@include respond-to(1024px) {
+  .article {
+    column-count: 2;
+    column-gap: 30px;
+  }
+}
+
 
 @include respond-to(large) {
   .article {
     blockquote {
       padding: 40px;
       font-size: 20px;
+    }
+
+    .date {
+      margin-bottom: 40px;
     }
   }
 }
