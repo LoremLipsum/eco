@@ -1,0 +1,21 @@
+@mixin ol-no {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+
+    // &::before {
+    //   display: none;
+    // }
+  }
+}
+
+@mixin ul-no {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}

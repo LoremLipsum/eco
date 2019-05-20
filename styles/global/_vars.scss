@@ -1,0 +1,146 @@
+$fonts: (
+  primary: #{"Gotham Pro", "Pragmatica", "Arial", sans-serif, "Nimbus Sans L", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
+);
+
+$widths: (
+  small: 320px,
+  small-lg: 520px,
+  medium: 920px,
+  medium-lg: 920px,
+  large: 1240px,
+);
+
+$pads: (
+  small: 20px,
+  medium: 50px,
+  large: 50px,
+);
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$colors: (
+  primary: #004416,
+  secondary: #8ab23f,
+  light: #edf6fa,
+  black: #202e31,
+  dark: #031607,
+  white: #fff,
+  light-gray: #d2d5d6,
+  error: #d0021b,
+  disabled: #c9c9c6,
+);
+
+// время анимаций
+$durations: (
+  md: 0.3s,
+  lg: 0.6s,
+);
+
+$func: (
+  primary: cubic-bezier(0.25, 0.1, 0.25, 1),
+);
+
+// для бордер-радиусов
+$radius: (
+  sm: 6px,
+);
+
+
+$change: 8%;
+
+$y: (
+  small: (
+    size-20:  16px,
+    size-30:  20px,
+    size-40:  25px,
+    size-50:  30px,
+    size-70:  30px,
+    size-80:  30px,
+    size-90:  30px,
+    size-100: 40px,
+    size-110: 40px,
+    size-120: 40px,
+    size-130: 40px,
+    size-140: 40px,
+    size-150: 50px,
+    size-160: 60px,
+    size-170: 60px,
+    size-180: 60px,
+    size-190: 60px,
+    size-200: 60px,
+    size-250: 100px,
+    size-270: 110px,
+  ),
+  medium: (
+    size-20:  18px,
+    size-30:  25px,
+    size-40:  35px,
+    size-50:  40px,
+    size-70:  45px,
+    size-80:  50px,
+    size-90:  60px,
+    size-100: 80px,
+    size-110: 80px,
+    size-120: 80px,
+    size-130: 100px,
+    size-140: 100px,
+    size-150: 100px,
+    size-160: 100px,
+    size-170: 120px,
+    size-180: 120px,
+    size-190: 130px,
+    size-200: 140px,
+    size-250: 190px,
+    size-270: 210px,
+  ),
+  large: (
+    size-20:  20px,
+    size-30:  30px,
+    size-40:  40px,
+    size-50:  50px,
+    size-70:  70px,
+    size-80:  80px,
+    size-90:  90px,
+    size-100: 100px,
+    size-110: 110px,
+    size-120: 120px,
+    size-130: 130px,
+    size-140: 140px,
+    size-150: 150px,
+    size-160: 160px,
+    size-170: 170px,
+    size-180: 180px,
+    size-190: 190px,
+    size-200: 200px,
+    size-250: 250px,
+    size-270: 270px,
+  ),
+);
+
+$x: (
+  small: (
+    size-100: 20px,
+    size-200: 20px,
+  ),
+  medium: (
+    size-100: 50px,
+    size-200: 100px,
+  ),
+  large: (
+    size-100: 100px,
+    size-200: 200px,
+  ),
+);
+
+$fs: (
+  small: (
+    size-28: 22px,
+  ),
+  medium: (
+    size-28: 26px,
+  ),
+  large: (
+    size-28: 28px,
+  ),
+);

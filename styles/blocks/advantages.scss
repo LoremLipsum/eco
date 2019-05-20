@@ -1,0 +1,15 @@
+.advantages {
+  @include ul-no;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.advantages__item {
+  width: 33.33%;
+  max-width: 300px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

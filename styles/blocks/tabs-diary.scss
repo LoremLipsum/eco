@@ -1,0 +1,44 @@
+.tabs-diary {
+  @include ul-no;
+}
+
+.tabs-diary__button {
+  display: block;
+  width: 100%;
+  color: color(black);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @include hover {
+    color: color(secondary);
+  }
+}
+
+@include respond-to(medium) {
+  .tabs-diary {
+    .swiper-slide-thumb-active {
+      .tabs-diary__button {
+        border: 1px solid color(secondary);
+        color: color(secondary);
+        background-color: color(white);
+      }
+    }
+  }
+
+  .tabs-diary__item {
+    width: auto;
+  }
+
+  .tabs-diary__button {
+    width: auto;
+    padding: 12px 30px;
+    border: 1px solid transparent;
+    border-radius: 23px;
+
+    @include hover {
+      color: color(secondary);
+    }
+  }
+}

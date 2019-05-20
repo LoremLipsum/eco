@@ -1,0 +1,97 @@
+.house-plan {
+
+}
+
+.house-plan__wrap {
+  @include wrapper
+}
+
+@include respond-to(medium) {
+  .house-plan {
+    position: relative;
+    z-index: 1;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .house-plan__card {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: radius(sm);
+    background-color: color(secondary);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -20px;
+      bottom: -20px;
+      left: 50px;
+      right: 50px;
+      z-index: -1;
+      border-radius: radius(sm);
+      background-color: color(secondary);
+      opacity: 0.5;
+    }
+  }
+
+  .house-plan__heading-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 384px;
+    padding-top: 50px;
+    padding-left: 60px;
+    background-repeat: no-repeat;
+    background-size: 763px 384px;
+    background-position: left top;
+    background-image: url('../assets/images/cloud-small.png')
+  }
+
+  .house-plan__heading {
+    margin: 0;
+    color: color(primary);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: none;
+
+    &--accent {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .house-plan {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .house-plan__card {
+    width: 950px;
+    height: 650px;
+
+    &::after {
+      left: 70px;
+      right: 70px;
+    }
+  }
+
+  .house-plan__heading-wrap {
+    height: 384px;
+    padding-top: 50px;
+    padding-left: 60px;
+    background-size: 763px 384px;
+  }
+
+  .house-plan__heading {
+    font-size: 50px;
+    font-weight: 500;
+  }
+}

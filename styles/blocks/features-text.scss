@@ -1,0 +1,43 @@
+.features-text__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  color: color(primary);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.features-text__text {
+  text-align: center;
+
+  @include first-last;
+}
+
+@include respond-to(520px) {
+  .features-text {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@include respond-to(medium) {
+  .features-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .features-text__heading {
+    width: 100%;
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .features-text__text {
+    width: 100%;
+    text-align: left;
+  }
+}

@@ -1,0 +1,32 @@
+@mixin mask ($color) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $color;
+    @content
+  }
+}
+
+@mixin mask-color ($color) {
+  &::after {
+    background-color: $color;
+  }
+}
+
+@mixin maskEco {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(#010a03, 0.6), rgba(#709133, 0.4));
+    transition: duration(md) func(primary);
+    @content
+  }
+}

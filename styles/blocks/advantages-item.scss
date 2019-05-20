@@ -1,0 +1,25 @@
+.advantages-item {
+
+}
+
+.advantages-item__icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 24px;
+  fill: color(secondary);
+}
+
+.advantages-item__text {
+  font-size: 14px;
+  line-height: 20px;
+  color: color(white);
+
+  > *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}

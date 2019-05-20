@@ -1,0 +1,55 @@
+.color-primary {
+  color: color(primary);
+}
+
+.color-secondary {
+  color: color(secondary);
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.disabled {
+  opacity: 0.2;
+  pointer-events: none;
+
+  @include hover {
+    opacity: 0.2;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
