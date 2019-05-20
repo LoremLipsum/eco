@@ -1,10 +1,12 @@
+extends ./templates/template
 
 block vars
-    - var pageTitle = 'ТД Время'
+    - var pageTitle = 'Экопарк'
+    - var main = false
 
 block content
-    main.content
-        .content__wrap
+    main.page-content
+        .page-content__wrap
             ul
                 li
                     a(href="page-main.html") Главная
