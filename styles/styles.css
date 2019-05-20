@@ -1529,7 +1529,7 @@ body > *
 
 .article .date
 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .article img
@@ -1582,6 +1582,20 @@ body > *
 
 @media (min-width: 920px)
 {
+    .article blockquote
+    {
+        font-size: 19px; 
+
+        padding: 30px;
+    }
+    .article .date
+    {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1024px)
+{
     .article
     {
         -webkit-column-count: 2;
@@ -1590,12 +1604,6 @@ body > *
         -webkit-column-gap: 30px;
            -moz-column-gap: 30px;
                 column-gap: 30px;
-    }
-    .article blockquote
-    {
-        font-size: 19px; 
-
-        padding: 30px;
     }
 }
 
@@ -1606,6 +1614,10 @@ body > *
         font-size: 20px; 
 
         padding: 40px;
+    }
+    .article .date
+    {
+        margin-bottom: 40px;
     }
 }
 
@@ -1660,8 +1672,8 @@ body > *
 
 .page-content__breadcrumbs
 {
-    margin-top: -55px;
-    margin-bottom: 30px;
+    margin-top: -10px;
+    margin-bottom: 20px;
 }
 
 .page-content__pagination
@@ -1694,6 +1706,11 @@ body > *
 
         margin-bottom: 40px;
     }
+    .page-content__breadcrumbs
+    {
+        margin-top: -30px;
+        margin-bottom: 25px;
+    }
 }
 
 @media (min-width: 1240px)
@@ -1707,6 +1724,11 @@ body > *
         font-size: 40px; 
 
         margin-bottom: 50px;
+    }
+    .page-content__breadcrumbs
+    {
+        margin-top: -55px;
+        margin-bottom: 30px;
     }
 }
 

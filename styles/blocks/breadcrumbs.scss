@@ -1,3 +1,43 @@
-.breadcrumbs {
-  
+.breadcrumbs__list {
+  @include ul-no;
+  font-size: 0;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 0;
+  margin-right: 6px;
+  font-size: 13px;
+
+  &:last-child {
+    margin-right: 0;
+
+    .breadcrumbs__link {
+      pointer-events: none;
+      opacity: 0.6;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.breadcrumbs__link {
+  position: relative;
+  display: block;
+  padding-right: 12px;
+  text-decoration: none;
+
+  &::after {
+    content: "\2022";
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  @include hover {
+    text-decoration: underline;
+  }
 }

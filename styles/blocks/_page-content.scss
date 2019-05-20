@@ -21,8 +21,17 @@
   text-transform: none;
 }
 
+.page-content__breadcrumbs {
+  margin-top: -55px;
+  margin-bottom: 30px;
+}
+
 .page-content__pagination {
   margin-top: 20px;
+}
+
+.page-content__link-comeback {
+  margin-bottom: 40px;
 }
 
 @include respond-to(medium) {
