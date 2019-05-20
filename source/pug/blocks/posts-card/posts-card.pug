@@ -32,6 +32,7 @@ mixin posts-card(data)
             +el({
                 class: 'posts-card__text',
                 text: data.text,
+                js: 'ellipsis',
             })
             .posts-card__link-wrap
                 +link-w-arrow({
