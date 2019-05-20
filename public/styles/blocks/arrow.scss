@@ -1,0 +1,25 @@
+.arrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-top-color: color(primary);
+  border-right-color: color(primary);
+  color: inherit;
+  transform-origin: center;
+  transition: duration(md) func(primary);
+
+  &--down {
+    transform: rotate(135deg);
+  }
+
+  &--left {
+    transform: rotate(45deg);
+  }
+
+  &--white {
+    border-top-color: color(white);
+    border-right-color: color(white);
+  }
+}

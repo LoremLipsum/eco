@@ -1,0 +1,40 @@
+mixin posts-card(data)
+    +el({
+        tag: 'article',
+        class: 'posts-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'a',
+            class: 'posts-card__image-wrap',
+        })
+            +el({
+                tag: 'img',
+                upload: data.image,
+                class: 'posts-card__image'
+            })
+        .posts-card__content
+            +date({
+                mix: 'posts-card__date',
+                text: data.date,
+            })
+            +el({
+                tag: 'h4',
+                class: 'posts-card__heading',
+                before: {
+                    tag: 'a',
+                    text: data.heading,
+                    class: 'posts-card__heading-link',
+                }
+            })
+            +el({
+                class: 'posts-card__text',
+                text: data.text,
+            })
+            .posts-card__link-wrap
+                +link-w-arrow({
+                    text: 'Подробнее',
+                    mix: 'posts-card__link-w-arrow',
+                })

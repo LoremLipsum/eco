@@ -1,0 +1,17 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Экопарк'
+    - var main = true
+    - var pageId = 1
+
+block content
+    main
+        +house-choice({})
+        +feedback({})
+        +features({})
+        +quote({})
+        +map({})
+        +news-diary({
+
+        })

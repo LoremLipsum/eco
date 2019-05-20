@@ -1,0 +1,54 @@
+.form__group {
+  margin-bottom: 20px;
+}
+
+.form__field {
+  margin-bottom: 16px;
+}
+
+.form__submit-wrap {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form__submit {
+  width: 100%;
+  max-width: 340px;
+  cursor: pointer;
+}
+
+.form__confirm-wrap {
+  text-align: center;
+}
+
+@include respond-to(medium) {
+  .form__group {
+    margin-bottom: 20px;
+  }
+
+  .form__field {
+    margin-bottom: 20px;
+  }
+
+  .form__submit-wrap {
+    margin-bottom: 20px;
+  }
+
+  .form__submit {
+    max-width: none;
+  }
+}
+
+@include respond-to(large) {
+  .form__group {
+    margin-bottom: 40px;
+  }
+
+  .form__field {
+    margin-bottom: 20px;
+  }
+
+  .form__submit-wrap {
+    margin-bottom: 40px;
+  }
+}

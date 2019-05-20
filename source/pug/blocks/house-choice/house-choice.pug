@@ -1,0 +1,31 @@
+mixin house-choice(data)
+    +el({
+        class: 'house-choice',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'tabs-choice',
+    })&attributes(attributes)
+        .house-choice__wrap
+            .house-choice__branch.js-parallax(style="background-image: url(assets/images/branch-without-cone.png)")
+            h2.house-choice__heading Выбери дом мечты
+            +tabs({
+                mix: 'house-choice__tabs',
+                items: [
+                    {
+                        text: 'Дома',
+                        js: 'button-tabs-choice',
+                    },
+                    {
+                        text: 'Генеральный план',
+                        js: 'button-tabs-choice',
+                    }
+                ],
+            })
+        .tab-1.js-content-tabs-choice.active
+            +house-top({
+                items: house,
+            })
+        .tab-2.js-content-tabs-choice
+            +house-plan({
+
+            })

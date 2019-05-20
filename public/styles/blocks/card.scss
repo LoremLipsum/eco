@@ -1,0 +1,10 @@
+.card {
+
+}
+
+@include respond-to(medium) {
+  .map {
+    height: 400px;
+    background-color: color(light);
+  }
+}

@@ -1,0 +1,28 @@
+.our-stores__wrap {
+  @include wrapper;
+}
+
+.our-stores__table {
+  margin-bottom: get($y, small, size-200);
+}
+
+.our-stores__heading {
+  margin-top: 0;
+  text-align: center;
+}
+
+@include respond-to(medium) {
+  .our-stores__table {
+    margin-bottom: get($y, medium, size-200);
+  }
+
+  .our-stores__heading {
+    text-align: left;
+  }
+}
+
+@include respond-to(large) {
+  .our-stores__table {
+    margin-bottom: get($y, large, size-200);
+  }
+}

@@ -1,0 +1,35 @@
+// ul,
+// ol {
+//   margin: 0;
+//   padding: 0;
+//   list-style-position: inside;
+//
+//   li {
+//     margin: 0;
+//     margin-bottom: mb(sm);
+//   }
+// }
+
+// ol {
+//   list-style-type: none;
+//   counter-reset: list;
+//
+//   li {
+//     &::before {
+//       counter-increment: list;
+//       content: counter(list) ") ";
+//     }
+//   }
+// }
+
+// @include respond-to(medium) {
+//   li {
+//     margin-bottom: mb(md);
+//   }
+// }
+//
+// @include respond-to(large) {
+//   li {
+//     margin-bottom: mb(lg);
+//   }
+// }

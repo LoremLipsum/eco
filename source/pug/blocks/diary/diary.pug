@@ -1,0 +1,130 @@
+mixin diary(data)
+    +el({
+        class: 'diary',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'diary',
+        text: data.text,
+    })&attributes(attributes)
+        .diary__wrap
+            .diary__branch.js-parallax(style="background-image: url(assets/images/branch-w-3-cone.png)")
+            .diary__content
+                +el({
+                    tag: 'h2',
+                    class: 'diary__heading',
+                    text: '<span class="diary__heading--accent">Дневник</span> <br>строительства',
+                })
+                .diary__tabs-wrap
+                    .js-tabs-diary-slider.swiper-container
+                        +tabs-diary({
+                            mix: 'diary__tabs swiper-wrapper',
+                            items: [
+                                {
+                                    text: 'апрель',
+                                    mix: 'swiper-slide',
+                                },
+                                {
+                                    text: 'март',
+                                    mix: 'swiper-slide',
+                                },
+                                {
+                                    text: 'февраль',
+                                    mix: 'swiper-slide',
+                                },
+                                {
+                                    text: 'январь',
+                                    mix: 'swiper-slide',
+                                },
+                            ],
+                        })
+                    .diary__tabs-control
+                        +control({
+                            mod: ['prev', 'size-md'],
+                            js: 'tabs-diary-prev'
+                        })
+                        +control({
+                            mod: ['next', 'size-md'],
+                            js: 'tabs-diary-next'
+                        })
+                .diary__list-slider.js-diary-slider.swiper-container
+                    .swiper-wrapper
+                        .active.swiper-slide
+                            .diary__item-slider.js-diary-item-slider.swiper-container
+                                .diary__list.swiper-wrapper
+                                    each item in diarys
+                                        +el({
+                                            class: 'diary__item',
+                                            mix: 'swiper-slide'
+                                        })
+                                            +diary-item({
+                                                image: item.image,
+                                            })
+                                .diary__item-control
+                                    +control({
+                                        mod: ['prev', 'size-lg', 'bg'],
+                                        js: 'diary-item-prev'
+                                    })
+                                    +control({
+                                        mod: ['next', 'size-lg', 'bg'],
+                                        js: 'diary-item-next'
+                                    })
+                        .swiper-slide
+                            .diary__item-slider.js-diary-item-slider.swiper-container
+                                .diary__list.swiper-wrapper
+                                    each item in diarys2
+                                        +el({
+                                            class: 'diary__item',
+                                            mix: 'swiper-slide'
+                                        })
+                                            +diary-item({
+                                                image: item.image,
+                                            })
+                                .diary__item-control
+                                    +control({
+                                        mod: ['prev', 'size-lg', 'bg'],
+                                        js: 'diary-item-prev'
+                                    })
+                                    +control({
+                                        mod: ['next', 'size-lg', 'bg'],
+                                        js: 'diary-item-next'
+                                    })
+                        .swiper-slide
+                            .diary__item-slider.js-diary-item-slider.swiper-container
+                                .diary__list.swiper-wrapper
+                                    each item in diarys3
+                                        +el({
+                                            class: 'diary__item',
+                                            mix: 'swiper-slide'
+                                        })
+                                            +diary-item({
+                                                image: item.image,
+                                            })
+                                .diary__item-control
+                                    +control({
+                                        mod: ['prev', 'size-lg', 'bg'],
+                                        js: 'diary-item-prev'
+                                    })
+                                    +control({
+                                        mod: ['next', 'size-lg', 'bg'],
+                                        js: 'diary-item-next'
+                                    })
+                        .swiper-slide
+                            .diary__item-slider.js-diary-item-slider.swiper-container
+                                .diary__list.swiper-wrapper
+                                    each item in diarys4
+                                        +el({
+                                            class: 'diary__item',
+                                            mix: 'swiper-slide'
+                                        })
+                                            +diary-item({
+                                                image: item.image,
+                                            })
+                                .diary__item-control
+                                    +control({
+                                        mod: ['prev', 'size-lg', 'bg'],
+                                        js: 'diary-item-prev'
+                                    })
+                                    +control({
+                                        mod: ['next', 'size-lg', 'bg'],
+                                        js: 'diary-item-next'
+                                    })

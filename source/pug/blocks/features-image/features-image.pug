@@ -1,0 +1,12 @@
+mixin features-image(data)
+    +el({
+        class: 'features-image',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'img',
+            class: 'features-image__image',
+            image: data.image
+        })

@@ -1,0 +1,30 @@
+mixin news-diary(data)
+    +el({
+        class: 'news-diary',
+        mod: data.mod,
+        mix: data.mix,
+        js: 'tabs-nd',
+    })&attributes(attributes)
+        .news-diary__tabs-wrap
+            +tabs({
+                mix: 'news-diary__tabs',
+                items: [
+                    {
+                        text: 'Новости',
+                        js: 'button-tabs-nd',
+                    },
+                    {
+                        text: 'Дневник строительства',
+                        js: 'button-tabs-nd',
+                    }
+                ],
+            })
+        .tab-1.js-content-tabs-nd.active
+            +news({
+                items: news,
+
+            })
+        .tab-2.js-content-tabs-nd
+            +diary({
+                items: diarys,
+            })

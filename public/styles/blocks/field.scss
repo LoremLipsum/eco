@@ -1,0 +1,79 @@
+.field {
+  display: block;
+  width: 100%;
+
+  &--with-icon {
+    position: relative;
+
+    .field__input {
+      padding-left: 70px;
+    }
+  }
+}
+
+.field__label {
+  margin-bottom: 6px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  color: color(black);
+}
+
+.field__input {
+  display: block;
+  width: 100%;
+  height: 52px;
+  min-height: 52px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: radius(sm);
+  background-color: color(white);
+  color: color(black);
+  font-size: 16px;
+  line-height: 20px;
+  caret-color: color(black);
+  outline: none;
+
+  &::placeholder {
+    font-size: 13px;
+    color: color(black);
+  }
+
+  &:hover,
+  &:focus,
+  &.active {
+    ~ .field__icon-wrap {
+      .field__icon {
+        fill: color(primary);
+      }
+    }
+  }
+
+  &--error:not(:focus) {
+    border: 1px solid color(error);
+    color: color(error);
+
+    ~ .field__label {
+      color: color(error);
+    }
+  }
+}
+
+.field__icon-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 100%;
+  border-right: 1px solid color(light-gray);
+}
+
+.field__icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: color(secondary);
+}

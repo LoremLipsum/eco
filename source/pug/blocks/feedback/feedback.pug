@@ -1,0 +1,39 @@
+mixin feedback(data)
+    +el({
+        class: 'feedback',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .feedback__wrap
+            .feedback__branch.feedback__branch--desk.js-parallax(style="background-image: url(assets/images/branch-w-3-cone.png)")
+            .feedback__branch.feedback__branch--mob.js-parallax(style="background-image: url(assets/images/branch-small-w-shadow.png)")
+            .feedback__row
+                .feedback__col.feedback__col--left
+                    h2.feedback__heading
+                        | Получите
+                        |
+                        span.feedback__heading--accent
+                            | бесплатно
+                            |
+                            br
+                            span.feedback__heading--secondary
+                                |лучшие планировки
+                            br
+                        |
+                        | в&nbsp;авторской разработке
+                    h3.feedback__subheading
+                        | Лучшие планировки будут у Вас
+                        br
+                        |
+                        |на&nbsp;почте в&nbsp;течение 15 минут
+                    .feedback__image-wrap
+                        .feedback__image
+                            +el({
+                                tag: 'img',
+                                image: 'journal.png',
+                            })
+                .feedback__col.feedback__col--right
+                    +feedback-card({
+                        mix: 'feedback__card',
+                    })

@@ -1,0 +1,42 @@
+include ./include
+
+block vars
+    - var pageTitle = 'Экопарк'
+    - var main = false
+
+doctype html
+html(lang="ru-RU")
+    block head
+        +head()
+
+    body
+        block icon
+        block header
+            if main == true
+                +main-header({})
+            else
+                +page-header({})
+        block content
+        block footer
+            +footer({})
+        block modal
+            //- +modal({
+            //-     js: 'modal-callback',
+            //-     heading: 'Заказать обратный звонок',
+            //-     text: 'Укажите ваш номер телефона, имя и мы свяжемся с вами в ближайшее время.'
+            //- })
+            //-     +form({
+            //-         group: [
+            //-             {
+            //-                 firstName: true,
+            //-                 tel: true,
+            //-                 message: {
+            //-                     placeholder: 'Сообщение'
+            //-                 },
+            //-             },
+            //-         ],
+            //-         confirm: true,
+            //-         submit: 'Отправить'
+            //-     })
+        block scripts
+            +scripts()

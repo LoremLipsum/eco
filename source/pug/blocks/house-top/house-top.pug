@@ -1,0 +1,40 @@
+mixin house-top(data)
+    +el({
+        class: 'house-top',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .house-top__wrap
+            .house-top__heading-group
+                h2.house-top__heading
+                    span.house-top__heading-circle
+                        span.house-top__heading-top
+                            | топ
+                            |
+                        span.house-top__heading-number
+                            | 3
+                        |
+                        |
+                        span.house-top__heading-accent
+                            | дома
+                        span.house-top__circle-branch.house-top__circle-branch--inner
+                            span.js-parallax(style="background-image: url(assets/images/branch-for-circle-inner.png)")
+                        span.house-top__circle-branch.house-top__circle-branch--outer.js-parallax(style="background-image: url(assets/images/branch-for-circle-outer.png)")
+                    span.house-top__heading-descr
+                        span.house-top__heading-descr-accent
+                            | в&nbsp;скандинавском стиле
+                        |
+                        | на&nbsp;территории современного
+                        |
+                        |коттеджного поселка
+            .house-top__card-list.js-house-top-slider.swiper-container
+                .swiper-wrapper
+                    each item in data.items
+                        .house-top__card-item.swiper-slide
+                            +house-card({
+                                image: item.image,
+                                number: item.number,
+                                price: item.price,
+                            })
+            .house-top__bullet.js-house-top-bullet.swiper-pagination

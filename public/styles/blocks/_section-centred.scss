@@ -1,0 +1,116 @@
+.section-centred {
+  text-align: center;
+
+  &--head {
+    .section-centred__wrap {
+      padding-top: get($y, small, size-130);
+      padding-bottom: get($y, small, size-180);
+    }
+  }
+
+  &--content {
+    .section-centred__wrap {
+      padding-top: get($y, small, size-160);
+      padding-bottom: get($y, small, size-190);
+    }
+  }
+
+  &--bg-primary {
+    background-color: color(primary);
+    color: color(white);
+  }
+
+  &--bg-light {
+    background-color: color(light);
+  }
+}
+
+.section-centred__wrap {
+  padding-left: get($x, small, size-200);
+  padding-right: get($x, small, size-200);
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-centred__heading {
+  margin-bottom: get($y, small, size-80);
+}
+
+.section-centred__row {
+  margin-bottom: get($y, medium, size-90);
+}
+
+@include respond-to(medium) {
+  .section-centred {
+    &--head {
+      .section-centred__wrap {
+        padding-top: get($y, medium, size-130);
+        padding-bottom: get($y, medium, size-180);
+      }
+    }
+
+    &--content {
+      .section-centred__wrap {
+        padding-top: get($y, medium, size-160);
+        padding-bottom: get($y, medium, size-190);
+      }
+    }
+  }
+
+  .section-centred__wrap {
+    padding-left: get($x, medium, size-200);
+    padding-right: get($x, medium, size-200);
+  }
+
+  .section-centred__heading {
+    margin-bottom: get($y, medium, size-80);
+    padding-left: get($x, medium, size-100);
+    padding-right: get($x, medium, size-100);
+  }
+
+  .section-centred__row {
+    margin-bottom: get($y, medium, size-90);
+  }
+}
+
+@include respond-to(large) {
+  .section-centred {
+    &--head {
+      .section-centred__wrap {
+        padding-top: get($y, large, size-130);
+        padding-bottom: get($y, large, size-180);
+      }
+    }
+
+    &--content {
+      .section-centred__wrap {
+        padding-top: get($y, large, size-160);
+        padding-bottom: get($y, large, size-190);
+      }
+    }
+  }
+
+  .section-centred__wrap {
+    width: width(large);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: get($x, large, size-200);
+    padding-right: get($x, large, size-200);
+  }
+
+  .section-centred__heading {
+    margin-bottom: get($y, large, size-80);
+    padding-left: get($x, large, size-100);
+    padding-right: get($x, large, size-100);
+  }
+
+  .section-centred__row {
+    margin-bottom: get($y, large, size-90);
+  }
+}

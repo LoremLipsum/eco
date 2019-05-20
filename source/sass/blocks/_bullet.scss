@@ -1,0 +1,27 @@
+.bullet-dark {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding: 9px;
+  background-color: #40664b;
+  background-clip: content-box;
+  border-radius: 50%;
+  outline: none;
+  opacity: 1;
+}
+
+.bullet-gray {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding: 9px;
+  background-color: #cccccc;
+  background-clip: content-box;
+  border-radius: 50%;
+  outline: none;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: color(secondary);
+}

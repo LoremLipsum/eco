@@ -1,0 +1,151 @@
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro__wrap {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: pads(small);
+  padding-right: pads(small);
+}
+
+.intro__heading {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.intro__text {
+  display: block;
+  max-width: 500px;
+  margin-bottom: 28px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+
+  &--accent {
+    color: color(secondary);
+  }
+}
+
+.intro__button {
+  margin-bottom: 80px;
+}
+
+// .intro__bottom {
+//   margin-top: auto;
+// }
+
+.intro__advantages-wrap {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .intro__wrap {
+    padding-left: pads(medium);
+    padding-right: pads(medium);
+  }
+}
+
+@include respond-to(1024px) {
+  .intro__wrap {
+    display: block;
+  }
+
+  .intro__heading {
+    position: static;
+    width: auto;
+    max-width: 1100px;
+    height: auto;
+    margin: 0;
+    margin-bottom: 30px;
+    overflow: visible;
+    color: color(white);
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 1.38;
+
+    &--lg {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &--secondary {
+      color: color(secondary);
+    }
+  }
+
+  .intro__text {
+    max-width: 660px;
+    margin-bottom: 35px;
+    text-align: left;
+    font-weight: 400;
+
+    &--accent {
+      color: color(secondary);
+      font-weight: 500;
+    }
+  }
+
+  .intro__button {
+    margin-bottom: 30px;
+  }
+
+  .intro__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .intro__advantages-wrap {
+    flex-grow: 1;
+    display: block;
+    margin-right: 60px;
+  }
+
+  .intro__video {
+    flex-shrink: 0;
+    margin-top: 0;
+  }
+}
+
+@include respond-to(large) {
+  .intro__wrap {
+    padding-left: 140px;
+    padding-right: 40px;
+  }
+
+  .intro__heading {
+    font-size: 40px;
+  }
+
+  .intro__text {
+    font-size: 26px;
+  }
+
+  .intro__button {
+    margin-bottom: 32px;
+  }
+}
+
+@include respond-to(1600px) {
+  .intro__wrap {
+    padding-left: 150px;
+    padding-right: 50px;
+  }
+
+  .intro__advantages-wrap {
+    margin-right: 120px;
+  }
+}

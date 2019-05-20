@@ -1,0 +1,16 @@
+mixin features-text(data)
+    +el({
+        class: 'features-text',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'h3',
+            class: 'features-text__heading',
+            text: data.heading
+        })
+        +el({
+            class: 'features-text__text',
+            text: data.text
+        })

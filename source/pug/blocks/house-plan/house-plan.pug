@@ -1,0 +1,15 @@
+mixin house-plan(data)
+    +el({
+        class: 'house-plan',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .house-plan__wrap
+            .house-plan__card
+                .house-plan__heading-wrap
+                    .house-plan__heading
+                        | Выберите
+                        |
+                        span.house-plan__heading--accent
+                            | дом мечты

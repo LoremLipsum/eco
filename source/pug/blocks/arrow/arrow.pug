@@ -1,0 +1,8 @@
+mixin arrow(data)
+    +el({
+        tag: data.tag ? data.tag : 'span',
+        class: 'arrow',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)

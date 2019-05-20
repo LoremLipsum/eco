@@ -1,0 +1,45 @@
+.news-diary {
+  padding-top: 20px;
+}
+
+.news-diary__tabs-wrap {
+  @include wrapper;
+}
+
+.news-diary__tabs {
+  margin-bottom: 20px;
+}
+
+.js-content-tabs-nd {
+  max-height: 0;
+  overflow: hidden;
+
+  &.active {
+    max-height: 9999px;
+  }
+}
+
+@include respond-to(520px) {
+  .news-diary {
+    padding-top: 30px;
+  }
+
+  .news-diary__tabs {
+    margin-bottom: 30px;
+  }
+}
+
+@include respond-to(medium) {
+  .news-diary {
+    padding-top: 0;
+  }
+
+  .news-diary__tabs-wrap {
+    display: none;
+  }
+
+  .js-content-tabs-nd {
+    max-height: none;
+    overflow: visible;
+  }
+}

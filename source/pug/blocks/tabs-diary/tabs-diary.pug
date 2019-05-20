@@ -1,0 +1,18 @@
+mixin tabs-diary(data)
+    +el({
+        class: 'tabs-diary',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        each item, index in data.items
+            +el({
+                class: 'tabs-diary__item',
+                mix: item.mix,
+            })
+                +el({
+                    tag: 'button',
+                    class: 'tabs-diary__button',
+                    text: item.text,
+                    js: item.js,
+                })

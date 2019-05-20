@@ -1,0 +1,28 @@
+mixin specification(data)
+    +el({
+        tag: 'ul',
+        class: 'specification',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            li.specification__item
+                +el({
+                    class: 'specification__text-wrap',
+                    mod: 'name',
+                    before: {
+                        tag: 'span',
+                        class: 'specification__text',
+                        text: item.name
+                    }
+                })
+                +el({
+                    class: 'specification__text-wrap',
+                    mod: 'value',
+                    before: {
+                        tag: 'span',
+                        class: 'specification__text',
+                        text: item.value
+                    }
+                })

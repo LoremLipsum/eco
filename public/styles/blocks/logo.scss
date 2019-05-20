@@ -1,0 +1,44 @@
+.logo {
+  display: block;
+  text-decoration: none !important;
+}
+
+.logo__image {
+  display: block;
+  width: 70px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.logo__text {
+  color: color(white);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@include respond-to(1024px) {
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo__image {
+    margin: 0;
+    margin-right: 25px;
+  }
+
+  .logo__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+
+    span {
+      display: block;
+    }
+  }
+}

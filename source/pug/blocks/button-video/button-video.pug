@@ -1,0 +1,20 @@
+mixin button-video(data)
+    +el({
+        tag: 'button',
+        class: 'button-video',
+        href: data.href,
+        mod: data.mod,
+        mix: data.mix,
+        js: 'button-video',
+    })(hidden)
+        svg.button-video__circle(viewBox="0 0 64 64" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg")
+            defs
+                linearGradient(id="video-gradient")
+                    stop(offset="0%" stop-color="rgb(20, 85, 29)")
+                    stop(offset="100%" stop-color="rgb(117, 161, 57)")
+            circle(cx="50%" cy="50%" r="30" stroke="url(#video-gradient)" stroke-width="2")
+        +el({
+            tag: 'svg',
+            class: 'button-video__icon',
+            icon: 'arrow-triangle'
+        })

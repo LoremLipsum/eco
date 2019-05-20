@@ -1,0 +1,14 @@
+mixin map(data)
+    +el({
+        class: 'map',
+        mod: data.mod,
+        mix: data.mix,
+        js: 'map',
+    })
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+        .map__map#map
+        .map__wrap
+            .map__content
+                +map-card({
+                    mix: 'map__card',
+                })

@@ -1,0 +1,31 @@
+mixin news(data)
+    +el({
+        tag: 'section',
+        class: 'news',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .news__wrap
+            .news__top
+                +el({
+                    tag: 'h2',
+                    class: 'news__heading',
+                    text: 'Новости <span class="news__heading--accent">Экопарка</span>',
+                })
+                +link-w-arrow({
+                    text: 'все новости',
+                    mix: 'news__top-link',
+                })
+            .news__list.js-news-slider.swiper-container
+                .swiper-wrapper
+                    each item in data.items
+                        +el({
+                            class: 'news__item',
+                            mix: 'swiper-slide'
+                        })
+                            +news-card({
+                                image: item.image,
+                                date: item.date,
+                                heading: item.heading,
+                            })

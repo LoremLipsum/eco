@@ -1,0 +1,20 @@
+mixin map-list(data)
+    +el({
+        tag: 'ol',
+        class: 'map-list',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        //- each item, index in data.items
+        //-     +el({
+        //-         tag: 'li',
+        //-         class: 'map-list__item',
+        //-         mix: item.mix,
+        //-     })
+        //-         +el({
+        //-             tag: 'button',
+        //-             class: 'map-list__button',
+        //-             text: item.text,
+        //-             js: 'button-pin',
+        //-         })(data-pin='pin-' + (index + 1))

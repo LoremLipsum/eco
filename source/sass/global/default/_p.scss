@@ -1,0 +1,16 @@
+p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+@include respond-to(medium) {
+  p {
+    // margin-bottom: get($y, medium, size-20);
+  }
+}
+
+@include respond-to(large) {
+  p {
+    // margin-bottom: get($y, large, size-20);
+  }
+}

@@ -1,0 +1,59 @@
+mixin page-header(data)
+    +el({
+        tag: 'header',
+        class: 'page-header',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'header',
+    })&attributes(attributes)
+        .page-header__wrap
+            .page-header__col.page-header__col--left
+                .page-header__button-nav-wrap
+                    +button-nav({
+                        mix: 'page-header__button-nav',
+                        js: 'button-nav',
+                        mod: 'primary',
+                    })
+            +el({
+                tag: 'a',
+                class: 'page-header__logo',
+                js: data.js,
+                href: 'page-main.html',
+                title: 'Вернуться на главную страницу',
+                before: {
+                    tag: 'img',
+                    class: 'page-header__logo-image',
+                    image: 'logo-page.svg',
+                    width: '50',
+                    height: '59',
+                    alt: 'logo',
+                }
+            })
+            .page-header__col.page-header__col--right
+                +button-icon({
+                    tag: 'a',
+                    mod: 'primary',
+                    mix: 'page-header__button-icon',
+                    href: 'tel:88005053848',
+                    ariaLabel: 'Позвонить',
+                    icon: 'tel',
+                })
+                +callback({
+                    mix: 'page-header__callback page-header__callback--desktop',
+                    iconColor: 'primary',
+                    mod: 'small'
+                })
+            nav.page-header__panel.js-panel-main-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+                .page-header__panel-wrap
+                    +page-nav({
+                        items: mainNav,
+                        mix: 'page-header__page-nav'
+                    })
+                    .page-header__panel-bottom
+                        +callback({
+                            mix: 'page-header__callback page-header__callback--mobile'
+                        })
+        +overlay({
+            js: 'header-overlay',
+            mix: 'page-header__overlay',
+        })

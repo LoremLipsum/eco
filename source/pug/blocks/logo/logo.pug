@@ -1,0 +1,22 @@
+mixin logo(data)
+    +el({
+        tag: 'a',
+        class: 'logo',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        href: main == true ? 'none' : 'index.html',
+        title: main == true ? data.title : 'Вернуться на главную страницу',
+    })&attributes(attributes)
+        +el({
+            tag: 'img',
+            class: 'logo__image',
+            image: 'logo.svg',
+            width: '70',
+            height: '100',
+            alt: 'logo',
+        })
+        +el({
+            class: 'logo__text',
+            text: '<span>Жилой</span> комплекс'
+        })

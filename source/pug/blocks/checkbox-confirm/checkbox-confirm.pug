@@ -1,0 +1,20 @@
+mixin checkbox-confirm(data)
+    +el({
+        tag: 'label',
+        class: 'checkbox-confirm',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        +el({
+            tag: 'input',
+            class: 'hidden checkbox-confirm__input',
+            type: 'checkbox',
+            checked: true,
+            name: 'confirm',
+        })&attributes(attributes)
+        +el({
+            tag: 'span',
+            class: 'checkbox-confirm__label',
+            text: 'Согласие на обработку персональных данных'
+        })

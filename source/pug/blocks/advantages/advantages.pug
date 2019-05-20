@@ -1,0 +1,17 @@
+mixin advantages(data)
+    +el({
+        tag: 'ul',
+        class: 'advantages',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            +el({
+                tag: 'li',
+                class: 'advantages__item',
+            })
+                +advantages-item({
+                    icon: item.icon,
+                    text: item.text,
+                })

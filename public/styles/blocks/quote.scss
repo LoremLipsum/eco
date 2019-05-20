@@ -1,0 +1,82 @@
+.quote {
+  position: relative;
+  z-index: 10;
+  display: none;
+}
+
+.quote__wrap {
+  @include wrapper;
+}
+
+.quote__block {
+  margin: 0;
+  padding: 0;
+}
+
+.quote__branch {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .quote {
+    display: block;
+    margin-top: -20px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+  }
+
+  .quote__wrap {
+    position: relative;
+    z-index: 1;
+  }
+
+  .quote__block {
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: color(primary);
+    @include first-last;
+
+    &--accent {
+      font-weight: 900;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .quote {
+    display: block;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 70px;
+  }
+
+  .quote__block {
+    font-size: 40px;
+  }
+}
+
+@include respond-to(1600px) {
+  .quote__block {
+    position: relative;
+    z-index: 10;
+  }
+
+  .quote__branch {
+    position: absolute;
+    top: -90px;
+    right: 60px;
+    transform: translate(100%);
+    z-index: 2;
+    display: block;
+    width: 482px;
+    height: 344px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 482px 344px;
+    box-sizing: border-box;
+  }
+}

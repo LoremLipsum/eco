@@ -1,0 +1,48 @@
+mixin main-header(data)
+    +el({
+        tag: 'header',
+        class: 'main-header',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'header',
+    })&attributes(attributes)
+        .main-header__bg
+        .main-header__wrap
+            .main-header__top
+                .main-header__button-nav-wrap
+                    +button-nav({
+                        mix: 'main-header__button-nav',
+                        js: 'button-nav',
+                    })
+                +button-icon({
+                    tag: 'a',
+                    mod: 'white',
+                    mix: 'main-header__phone-button',
+                    href: 'tel:88005053848',
+                    ariaLabel: 'Позвонить',
+                    icon: 'tel',
+                })
+            +logo({
+                mix: 'main-header__logo',
+            })
+            +callback({
+                mix: 'main-header__callback main-header__callback--desktop'
+            })
+            nav.main-header__panel.js-panel-main-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+                .main-header__panel-wrap
+                    +main-nav({
+                        items: mainNav,
+                        mix: 'main-header__main-nav'
+                    })
+                    .main-header__panel-bottom
+                        +callback({
+                            mix: 'main-header__callback main-header__callback--mobile',
+                            mod: 'small'
+                        })
+        +intro({
+            mix: 'main-header__intro',
+        })
+        +overlay({
+            js: 'header-overlay',
+            mix: 'main-header__overlay',
+        })

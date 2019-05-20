@@ -1,0 +1,12 @@
+mixin control(data)
+    +el({
+        tag: data.tag ? data.tag : 'button',
+        class: 'control',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)
+        +arrow({
+            mix: 'control__arrow',
+        })

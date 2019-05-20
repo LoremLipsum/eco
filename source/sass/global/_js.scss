@@ -1,0 +1,32 @@
+
+.js-content-tabs {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.js-show-more-item-2 {
+  &:nth-child(n+3) {
+    display: none;
+
+    &.active {
+      display: block !important;
+    }
+  }
+}
+
+.js-show-more-item-5 {
+  &:nth-child(n+6) {
+    display: none;
+
+    &.active {
+      display: block !important;
+    }
+  }
+}
+
+@include respond-to(medium-lg) {
+
+}

@@ -1,0 +1,244 @@
+.diary {
+  position: relative;
+}
+
+.diary__wrap {
+  @include wrapper;
+  padding-bottom: 40px;
+}
+
+.diary__content {
+  max-width: 585px;
+  margin: 0 auto;
+}
+
+.diary__heading {
+  display: none;
+}
+
+.diary__tabs-wrap {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.diary__tabs-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+
+  .control {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+}
+
+.diary__title {
+  margin: 0;
+  margin-bottom: 15px;
+  color: color(secondary);
+  font-weight: 400px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.diary__item-slider {
+  position: relative;
+  width: 100%;
+  max-width: 585px;
+  height: 60vw;
+  max-height: 380px;
+  border-radius: radius(sm) radius(sm) 0 radius(sm);
+  overflow: hidden;
+}
+
+.diary__item-control {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+
+  .control {
+    &--prev {
+      margin-right: 1px;
+    }
+  }
+}
+
+.diary__item {
+  height: 100%;
+  width: 100%;
+}
+
+.diary__branch {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .diary {
+    position: relative;
+    background-color: color(light);
+    // overflow: hidden;
+    background-position:
+      calc(100% - 440px) calc(100% + 20px),
+      right -180px;
+    background-size:
+      1000px 536px,
+      1720px 902px;
+    background-repeat: no-repeat;
+    background-image:
+      url('../assets/images/diary-house.png'),
+      url('../assets/images/cloud-large.png');
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: 0;
+      z-index: 1;
+      width: 1835px;
+      height: 120px;
+      background-image: url('../assets/images/brush-white.png');
+      background-repeat: no-repeat;
+      background-size: 1835px 120px;
+      background-position: center;
+    }
+  }
+
+  .diary__wrap {
+    padding-top: 80px;
+    padding-bottom: 55px;
+  }
+
+  .diary__content {
+    position: relative;
+    z-index: 1;
+    width: 585px;
+    max-width: none;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .diary__heading {
+    display: block;
+    margin: 0;
+    margin-bottom: 40px;
+    color: color(primary);
+    font-size: 36px;
+    font-weight: medium;
+    text-transform: none;
+
+    &--accent {
+      font-weight: 900;
+    }
+  }
+
+  .diary__tabs-wrap {
+    margin-bottom: 40px;
+  }
+
+  .diary__tabs-control {
+    left: -36px;
+    right: -36px;
+  }
+
+  .diary__list-slider {
+    width: 585px;
+    height: 380px;
+    overflow: hidden !important;
+  }
+
+  .diary__item-slider {
+    width: 585px;
+    max-width: none;
+    height: 380px;
+    max-height: none;
+  }
+}
+
+@include respond-to(920px) {
+  .diary {
+
+  }
+
+  .diary__content {
+    margin-left: auto;
+  }
+}
+
+@include respond-to(large) {
+  .diary {
+    background-position:
+      calc(50% - 370px) calc(100% + 20px),
+      right -180px;
+    background-size:
+      1173px 629px,
+      1720px 902px;
+  }
+
+  .diary__wrap {
+    position: relative;
+    padding-top: 100px;
+    overflow: visible;
+  }
+
+  .diary__heading {
+    font-size: 40px;
+  }
+
+  // .diary__branch-wrap {
+  //   width: width(large);
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   padding-left: pads(large);
+  //   padding-right: pads(large);
+  // }
+
+
+
+}
+
+@include respond-to(1600px) {
+  .diary__content {
+    position: relative;
+    z-index: 10;
+    margin-left: auto;
+  }
+
+  .diary__branch {
+    position: absolute;
+    top: -150px;
+    right: 170px;
+    transform: translate(100%);
+    z-index: 2;
+    display: block;
+    width: 796px;
+    height: 626px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 796px 626px;
+    box-sizing: border-box;
+  }
+}
+
+@include respond-to(1920px) {
+  .diary {
+    background-position:
+      -10px calc(100% + 20px),
+      right -180px;
+  }
+}

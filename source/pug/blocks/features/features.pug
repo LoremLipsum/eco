@@ -1,0 +1,58 @@
+mixin features(data)
+    +el({
+        tag: 'section',
+        class: 'features',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .features__wrap
+            h2.features__heading
+                | Наши преимущества
+                span.features__heading--hidden
+                    |
+                    | — Ваше
+                    |
+                    span.features__heading--accent
+                        | высокое качество жизни
+            .features__content
+                +el({
+                    class: 'features__list-text'
+                }).js-features-text-slider.swiper-container
+                    .swiper-wrapper
+                        each item in featuresText
+                            +el({
+                                class: 'features__item-text',
+                                mix: 'swiper-slide'
+                            })
+                                +features-text({
+                                    text: item.text,
+                                    heading: item.heading
+                                })
+                    .features__nav-slider
+                        +control({
+                            mod: ['prev', 'size-sm'],
+                            js: 'features-prev',
+                            mix: 'features__control features__control--prev'
+                        })
+                        //- .features__fraction.features__fraction--prev.js-features-fraction-prev
+                        .features__bullet.features__bullet--desk.js-features-bullet-desk.swiper-pagination
+                        .features__fraction.js-features-fraction.swiper-pagination
+                        //- .features__fraction.features__fraction--next.js-features-fraction-next
+                        +control({
+                            mod: ['next', 'size-sm'],
+                            js: 'features-next',
+                            mix: 'features__control features__control--next'
+                        })
+                .features__list-image-wrap
+                    .features__list-image.js-features-image-slider.swiper-container
+                        .swiper-wrapper
+                            each item in featuresImages
+                                +el({
+                                    class: 'features__item-image',
+                                    mix: 'swiper-slide'
+                                })
+                                    +features-image({
+                                        image: item.image
+                                    })
+                    .features__bullet.features__bullet--mob.js-features-bullet-mob.swiper-pagination

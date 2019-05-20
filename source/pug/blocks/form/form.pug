@@ -1,0 +1,81 @@
+mixin form(data)
+    +f({
+        class: 'form',
+    })
+        .form__group
+            if data.firstName
+                +field({
+                    mix: 'form__field',
+                    icon: 'user',
+                    mod:  data.modField,
+                    label: 'Ваше имя',
+                    name: 'user',
+                    required: true,
+                    placeholder: 'Ваше имя'
+                })(aria-required='true', aria-invalid='false')
+            if data.lastName
+                +field({
+                    mix: 'form__field',
+                    icon: data.icon,
+                    mod:  data.modField,
+                    label: 'Введите фамилию',
+                    name: 'user',
+                    placeholder: 'Введите фамилию:'
+                })
+            if data.email
+                +field({
+                    mix: 'form__field',
+                    icon: 'email',
+                    mod: data.modField,
+                    label: 'E-mail',
+                    type: 'email',
+                    name: 'email',
+                    required: true,
+                    placeholder: 'E-mail'
+                })(aria-required='true', aria-invalid='false')
+            if data.tel
+                +field({
+                    mix: 'form__field',
+                    icon: 'tel-field',
+                    mod: data.modField,
+                    label: 'Ваш телефон',
+                    type: 'tel',
+                    name: 'tel',
+                    placeholder: 'Ваш телефон',
+                })(aria-required='true', aria-invalid='false')
+            if data.text
+                +field({
+                    mix: 'form__field',
+                    icon: data.text.icon,
+                    mod: data.text.modField,
+                    label: data.text.placeholder,
+                    type: 'text',
+                    name: data.text.name,
+                    placeholder: data.text.placeholder,
+                })(aria-required='true', aria-invalid='false')
+            if data.message
+                +field({
+                    tag: 'textarea',
+                    mix: 'form__field',
+                    icon: 'message',
+                    mod: data.modField,
+                    label: data.message,
+                    name: 'message',
+                    required: true,
+                    placeholder: data.message
+                })(aria-required='true', aria-invalid='false')
+        +el({
+            class: 'form__submit-wrap',
+            mod: data.modSubmit
+        })
+            +button({
+                mix: 'form__submit',
+                mod: ['bg-secondary', 'medium'],
+                type: 'submit',
+                text: data.submit
+            })
+        .form__confirm-wrap
+            +checkbox-confirm({
+                label: 'Согласие на обработку персональных данных',
+                mix: 'form__confirm',
+            })

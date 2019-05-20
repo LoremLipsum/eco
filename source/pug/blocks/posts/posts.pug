@@ -1,0 +1,23 @@
+mixin posts(data)
+    +el({
+        class: 'posts',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .posts__wrap
+            +el({
+                tag: 'ul',
+                class: 'posts__list'
+            })
+                each item in data.items
+                    +el({
+                        tag: 'li',
+                        class: 'posts__item',
+                    })
+                        +posts-card({
+                            image: item.image,
+                            date: item.date,
+                            heading: item.heading,
+                            text: item.text
+                        })

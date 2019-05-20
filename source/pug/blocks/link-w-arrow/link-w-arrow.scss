@@ -1,0 +1,24 @@
+.link-w-arrow {
+  position: relative;
+  display: inline-block;
+  padding-right: 14px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: color(black);
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  .arrow {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.link-w-arrow__arrow {
+  position: absolute;
+  top: 8px;
+  right: 0;
+}

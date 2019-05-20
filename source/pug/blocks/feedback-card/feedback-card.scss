@@ -1,0 +1,88 @@
+.feedback-card__heading {
+  display: none;
+}
+
+.form__confirm {
+  color: color(secondary);
+}
+
+.feedback-card__branch {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .feedback-card {
+    padding: 30px 40px;
+    background-color: color(secondary);
+    border-radius: radius(sm);
+
+    .form__submit {
+      background-color: color(primary);
+      color: color(white);
+
+      @include hover {
+        background-color: darken(color(primary), $change);
+        color: rgba(color(white), 0.7);
+      }
+    }
+
+    .form__confirm {
+      color: color(primary);
+    }
+  }
+
+  .feedback-card__heading {
+    margin: 0;
+    margin-bottom: 30px;
+    display: flex;
+    color: color(primary);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: left;
+    text-transform: none;
+  }
+
+  .feedback-card__heading-logo {
+    flex-shrink: 0;
+    display: block;
+    width: 65px;
+    height: 93px;
+    margin-right: 20px;
+    fill: color(primary);
+  }
+
+  .form__confirm {
+    color: color(secondary);
+  }
+}
+
+@include respond-to(large) {
+  .feedback-card {
+    position: relative;
+    padding: 0 60px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .feedback-card__heading {
+    margin-bottom: 50px;
+  }
+}
+
+@include respond-to(1600px) {
+  .feedback-card__branch {
+    position: absolute;
+    bottom: -100px;
+    right: 200px;
+    transform: translate(100%);
+    z-index: 2;
+    display: block;
+    width: 363px;
+    height: 229px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 363px 229px;
+  }
+}

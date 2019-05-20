@@ -1,0 +1,16 @@
+mixin quote(data)
+    +el({
+        class: 'quote',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        .quote__wrap
+            .quote__branch.js-parallax(style="background-image: url(assets/images/branch-w-1-cone.png)")
+            blockquote.quote__block
+                p
+                    | Совмещайте доступность городской
+                    br
+                    | инфраструктуры и все
+                    br
+                    span.quote__block--accent плюсы загородной жизни

@@ -1,0 +1,15 @@
+mixin link-w-arrow(data)
+    +el({
+        tag: data.tag ? data.tag : 'a',
+        class: 'link-w-arrow',
+        href: data.href,
+        target: data.target,
+        title: data.title,
+        mod: data.mod,
+        mix: data.mix,
+        text: data.text,
+    })&attributes(attributes)
+        +arrow({
+            mod: 'left',
+            mix: 'link-w-arrow__arrow',
+        })

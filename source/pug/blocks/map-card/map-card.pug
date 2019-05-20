@@ -1,0 +1,25 @@
+mixin map-card(data)
+    +el({
+        class: 'map-card',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        .map-card__header
+            +el({
+                tag: 'h3',
+                class: 'map-card__heading',
+                text: 'Внешняя инфраструктура',
+            })
+            +el({
+                tag: 'h4',
+                class: 'map-card__subheading',
+                text: 'Расположение',
+            })
+        //- +el({
+        //-     class: 'map-card__list',
+        //-     js: 'map-list'
+        //- })
+        +el({
+            class: 'js-map-list'
+        })

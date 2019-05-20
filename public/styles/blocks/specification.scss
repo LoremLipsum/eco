@@ -1,0 +1,93 @@
+.specification {
+  position: relative;
+  z-index: 1;
+  @include ul-no;
+}
+
+.specification__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.specification__text-wrap {
+  flex-grow: 1;
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+
+  &--value {
+    text-align: right;
+    font-weight: 500;
+  }
+}
+
+@include respond-to(medium) {
+  .specification {
+    @include ul-no;
+    &--bg-light {
+      .specification__text-wrap {
+        &::after {
+          background-color: color(light);
+        }
+      }
+      .specification__text {
+        background-color: color(light);
+      }
+    }
+  }
+
+  .specification__item {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .specification__text-wrap {
+    line-height: 20px !important;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 9999px;
+      height: 10px;
+      transform: translateY(-5px);
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg preserveAspectRatio='xMinYMax' fill='rgb(200,200,200)' viewBox='0 0 4 2' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-size: 4px 2px;
+      background-position: left center;
+      background-color: color(white);
+    }
+
+    &--name {
+      &::after {
+        left: 0;
+        bottom: -7px;
+        z-index: -1;
+        height: 15px;
+      }
+    }
+
+    &--value {
+      margin-left: auto;
+      text-align: right;
+
+      &::after {
+        right: 0;
+        top: 23px;
+        z-index: -2;
+        height: 2px;
+      }
+    }
+  }
+
+  .specification__text {
+    background-color: color(white);
+  }
+}

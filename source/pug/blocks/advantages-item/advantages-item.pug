@@ -1,0 +1,16 @@
+mixin advantages-item(data)
+    +el({
+        class: 'advantages-item',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'svg',
+            icon: data.icon,
+            class: 'advantages-item__icon',
+        })
+        +el({
+            class: 'advantages-item__text',
+            text: data.text
+        })
