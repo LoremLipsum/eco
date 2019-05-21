@@ -1,5 +1,4 @@
 mixin callback(data)
-    if data.iconColor == 'primary'
         +el({
             class: 'callback',
             mix: data.mix,
@@ -7,11 +6,9 @@ mixin callback(data)
             js: data.js,
         })&attributes(attributes)
             +button-icon({
-                tag: 'a',
-                mod: 'primary',
-                mix: 'callback__icon',
-                href: 'tel:88005053848',
-                ariaLabel: 'Позвонить',
+                tag: 'button',
+                mix: 'callback__button',
+                ariaLabel: 'Окрыть форму обратного звонка',
                 icon: 'tel',
             })
             +el({
@@ -19,31 +16,6 @@ mixin callback(data)
                 href: 'tel:88005053848',
                 class: 'callback__link',
                 text: '8 800 <span class="callback__number">505 38 48</span>',
-            })
-            +el({
-                class: 'callback__text',
-                text: 'Бесплатно по всей Росcии',
-            })
-    else
-        +el({
-            class: 'callback',
-            mix: data.mix,
-            mod: data.mod,
-            js: data.js,
-        })&attributes(attributes)
-            +button-icon({
-                tag: 'a',
-                mod: 'white',
-                mix: 'callback__icon',
-                href: 'tel:88005053848',
-                ariaLabel: 'Позвонить',
-                icon: 'tel',
-            })
-            +el({
-                tag: 'a',
-                href: 'tel:88005053848',
-                class: 'callback__link',
-                text: '8 (800) <span class="callback__number">505 38 48</span>',
             })
             +el({
                 class: 'callback__text',

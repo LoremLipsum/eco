@@ -80,29 +80,28 @@ picturefill();
 
 (function() {
 
-  var btn = document.querySelector('.js-button-nav');
+  var btnOpen = document.querySelector('.js-button-nav');
+  var btnClose = document.querySelector('.js-panel-close');
   var block = document.querySelector('.js-panel-main-nav');
   var overlay = document.querySelector('.js-header-overlay');
   var ESC = 27;
 
-  var toggle = function() {
+  var open = function() {
     block.classList.toggle('active');
-    btn.classList.toggle('active');
     overlay.classList.toggle('active');
   };
 
   var close = function() {
     block.classList.remove('active');
-    btn.classList.remove('active');
     overlay.classList.remove('active');
   };
 
-  var onBtnClick = function(e) {
+  var onBtnOpenClick = function(e) {
     e.preventDefault();
-    toggle();
+    open();
   };
 
-  var onCloseClick = function(e) {
+  var onBtnCloseClick = function(e) {
     e.preventDefault();
     close();
   };
@@ -114,8 +113,9 @@ picturefill();
     }
   };
 
-  btn.addEventListener('click', onBtnClick);
-  overlay.addEventListener('click', onCloseClick);
+  btnOpen.addEventListener('click', onBtnOpenClick);
+  btnClose.addEventListener('click', onBtnCloseClick);
+  overlay.addEventListener('click', onBtnCloseClick);
   document.addEventListener('keyup', onEscKeyup);
 
 })();
@@ -233,7 +233,8 @@ picturefill();
               menuItem
                 .appendTo(menu)
                 .find('.js-button-pin')
-                .on('click', function() {
+
+                .on('mouseover', function() {
                   var btn = $(this);
                   var atr = btn.attr('data-pin');
 
@@ -360,10 +361,6 @@ picturefill();
   var diaryItemSlider = new Swiper('.js-diary-item-slider', {
     slidesPerView: 1,
     grabCursor: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
     navigation: {
       nextEl: '.js-diary-item-next',
       prevEl: '.js-diary-item-prev',
@@ -382,14 +379,19 @@ picturefill();
   var myNum1;
   var featuresImageSlider = new Swiper('.js-features-image-slider', {
     loop: true,
-    loopedSlides: 5,
+    loopedSlides: 9,
     grabCursor: false,
     slidesPerView: 1,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
-    activeIndex: 1,
+    navigation: {
+      nextEl: '.js-features-next',
+      prevEl: '.js-features-prev',
+      clickable: true,
+      disabledClass: 'disabled',
+    },
     pagination: {
-      el: '.js-features-fraction',
+      el: '.js-features-fraction-current',
       type: 'fraction',
       clickable: true,
       formatFractionCurrent: function (number) {
@@ -473,17 +475,13 @@ picturefill();
           clickable: true,
           bulletClass: 'bullet-dark',
         },
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
       },
     }
   });
 
   var featuresTextSlider = new Swiper('.js-features-text-slider', {
     loop: true,
-    loopedSlides: 5,
+    loopedSlides: 9,
     slidesPerView: 1,
     grabCursor: false,
     navigation: {
@@ -508,13 +506,225 @@ picturefill();
           clickable: true,
           bulletClass: 'bullet-dark',
         },
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
       },
     }
   });
+
+  var featuresTextSlider2 = undefined;
+  var featuresImageSlider2 = undefined;
+
+  function initSlider() {
+    var screenWidth = parseInt(window.innerWidth, 10);
+    if ( (screenWidth > (919)) && (featuresTextSlider2 == undefined)) {
+      featuresTextSlider2 = new Swiper('.js-features-text-slider', {
+        loop: true,
+        loopedSlides: 9,
+        pagination: {
+          el: '.js-features-progressbar',
+          clickable: true,
+          type: 'progressbar',
+        },
+        navigation: {
+          nextEl: '.js-features-next',
+          prevEl: '.js-features-prev',
+          clickable: true,
+          disabledClass: 'disabled',
+        },
+      });
+    } else if ((screenWidth < 920) && (featuresTextSlider2 != undefined)) {
+      featuresTextSlider2.destroy();
+      featuresTextSlider2 = undefined;
+    }
+    if ( (screenWidth > (919)) && (featuresImageSlider2 == undefined)) {
+      featuresImageSlider2 = new Swiper('.js-features-image-slider', {
+        loop: true,
+        loopedSlides: 9,
+        grabCursor: false,
+        navigation: {
+          nextEl: '.js-features-next',
+          prevEl: '.js-features-prev',
+          clickable: true,
+          disabledClass: 'disabled',
+        },
+        pagination: {
+          el: '.js-features-fraction-total',
+          type: 'fraction',
+          clickable: true,
+          formatFractionTotal: function (number) {
+            switch(number)
+              {
+                case 1:
+                  myNum1='01';
+                  break;
+                case 2:
+                  myNum1='02';
+                  break;
+                case 3:
+                  myNum1='03';
+                  break;
+                case 4:
+                  myNum1='04';
+                  break;
+                case 5:
+                  myNum1='05';
+                  break;
+                case 6:
+                  myNum1='06';
+                  break;
+                case 7:
+                  myNum1='07';
+                  break;
+                case 8:
+                  myNum1='08';
+                  break;
+                case 9:
+                  myNum1='09';
+                  break;
+                default: myNum1 = number
+              }
+            return myNum1;
+          },
+        },
+      });
+    } else if ((screenWidth < 920) && (featuresImageSlider2 != undefined)) {
+      featuresImageSlider2.destroy();
+      featuresImageSlider2 = undefined;
+    }
+  }
+
+  initSlider();
+
+  window.addEventListener('resize', function() {
+    initSlider();
+  });
+
+})();
+
+'use strict';
+
+(function() {
+  var housePLanSlider = undefined;
+
+  function initHousePLanSlider() {
+    var screenWidth = $(window).outerWidth();
+    if ((screenWidth < (920)) && (housePLanSlider == undefined)) {
+      housePLanSlider = new Swiper('.js-house-plan-slider', {
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 0,
+        pagination: {
+          el: '.js-house-plan-bullet',
+          clickable: true,
+          bulletClass: 'bullet-gray',
+        },
+      });
+    } else if ((screenWidth > 919) && (housePLanSlider != undefined)) {
+      housePLanSlider.destroy();
+      housePLanSlider = undefined;
+      var housePLan = $('.js-house-plan-slider');
+      housePLan.find('.swiper-wrapper').removeAttr('style');
+      housePLan.find('.swiper-slide').removeAttr('style');
+    }
+  }
+
+  initHousePLanSlider();
+
+  $(window).resize(function() {
+    initHousePLanSlider();
+  });
+
+})();
+
+'use strict';
+
+(function() {
+  var houseTopSlider = undefined;
+
+  function inithouseTopSlider() {
+    var screenWidth = $(window).outerWidth();
+    if ( (screenWidth < (920)) && (houseTopSlider == undefined)) {
+      houseTopSlider = new Swiper('.js-house-top-slider', {
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 0,
+        pagination: {
+          el: '.js-house-top-bullet',
+          clickable: true,
+          bulletClass: 'bullet-gray',
+        },
+      });
+    } else if ((screenWidth > 919) && (houseTopSlider != undefined)) {
+      houseTopSlider.destroy();
+      houseTopSlider = undefined;
+      var houseTop = $('.js-house-top-slider');
+      houseTop.find('.swiper-wrapper').removeAttr('style');
+      houseTop.find('.swiper-slide').removeAttr('style');
+    }
+  }
+
+  inithouseTopSlider();
+
+  $(window).resize(function() {
+    inithouseTopSlider();
+  });
+
+
+  if ($(window).outerWidth() > 919) {
+    houseTopCardSlider1 = new Swiper('.js-house-top-card-slider-1', {
+      loop: true,
+      grabCursor: true,
+      slidesPerView: 1,
+      autoHeight: 'auto',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.js-house-top-card-next',
+        prevEl: '.js-house-top-card-prev',
+        clickable: true,
+        disabledClass: 'disabled',
+      },
+    });
+
+    houseTopCardSlider1 = new Swiper('.js-house-top-card-slider-2', {
+      loop: true,
+      grabCursor: true,
+      slidesPerView: 1,
+      autoHeight: 'auto',
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.js-house-top-card-next',
+        prevEl: '.js-house-top-card-prev',
+        clickable: true,
+        disabledClass: 'disabled',
+      },
+    });
+
+    houseTopCardSlider1 = new Swiper('.js-house-top-card-slider-3', {
+      loop: true,
+      grabCursor: true,
+      slidesPerView: 1,
+      autoHeight: 'auto',
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.js-house-top-card-next',
+        prevEl: '.js-house-top-card-prev',
+        clickable: true,
+        disabledClass: 'disabled',
+      },
+    });
+  }
 
 })();
 
@@ -532,15 +742,16 @@ picturefill();
           grabCursor: true,
           slidesPerView: 'auto',
           centeredSlides: true,
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
+          pagination: {
+            el: '.js-news-bullet',
+            clickable: true,
+            bulletClass: 'bullet-gray',
           },
         });
       } else if ((screenWidth > 919) && (newsSlider != undefined)) {
         newsSlider.destroy();
         newsSlider = undefined;
-        var news = document.querySelector('.js-news-slider');
+        var news = $('.js-news-slider');
         news.find('.swiper-wrapper').removeAttr('style');
         news.find('.swiper-slide').removeAttr('style');
       }
@@ -558,70 +769,9 @@ picturefill();
 'use strict';
 
 (function() {
-  var houseTopSlider = undefined;
-
-  function inithouseTopSlider() {
-    var screenWidth = $(window).outerWidth();
-    if ( (screenWidth < (920)) && (houseTopSlider == undefined)) {
-      houseTopSlider = new Swiper('.js-house-top-slider', {
-        loop: true,
-        grabCursor: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 0,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.js-house-top-bullet',
-          clickable: true,
-          bulletClass: 'bullet-gray',
-        },
-      });
-    } else if ((screenWidth > 919) && (houseTopSlider != undefined)) {
-      houseTopSlider.destroy();
-      houseTopSlider = undefined;
-      var houseCard = $('.js-house-top-slider');
-      houseCard.find('.swiper-wrapper').removeAttr('style');
-      houseCard.find('.swiper-slide').removeAttr('style');
-    }
-  }
-
-  inithouseTopSlider();
-
-  $(window).resize(function() {
-    inithouseTopSlider();
-  });
-
-
-  if ($(window).outerWidth() > 919) {
-    houseCardSlider = new Swiper('.js-house-card-slider', {
-      loop: true,
-      grabCursor: true,
-      slidesPerView: 1,
-      autoHeight: 'auto',
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.js-house-card-next',
-        prevEl: '.js-house-card-prev',
-        clickable: true,
-        disabledClass: 'disabled',
-      },
-    });
-  }
-
-})();
-
-'use strict';
-
-(function() {
 
   var tabsNewsDiary = document.querySelector('.js-tabs-nd');
-  var tabsChoice = document.querySelector('.js-tabs-choice');
+  var tabsHousePlan = document.querySelector('.js-tabs-house-plan');
 
   var switchTabs = function (btns, contents, classContents) {
     for (var i = 0; i < btns.length; i++) {
@@ -654,11 +804,11 @@ picturefill();
         switchTabs(btnsNewsDiary, contentsNewsDiary, 'js-content-tabs-nd');
       }
 
-      if(tabsChoice) {
-        var btnsChoice = tabsChoice.querySelectorAll('.js-button-tabs-choice');
-        var contentsChoice = tabsChoice.querySelectorAll('.js-content-tabs-choice');
+      if(tabsHousePlan) {
+        var btnsHousePlan = tabsHousePlan.querySelectorAll('.js-tabs-button-hause-plan');
+        var contentsHousePlan = tabsHousePlan.querySelectorAll('.js-tabs-content-hause-plan');
 
-        switchTabs(btnsChoice, contentsChoice, 'js-content-tabs-choice');
+        switchTabs(btnsHousePlan, contentsHousePlan, 'js-tabs-content-hause-plan');
       }
     }
   };
@@ -670,4 +820,47 @@ picturefill();
   });
 
 
+})();
+
+'use strict';
+
+(function() {
+  var btns = document.querySelectorAll('.js-button-video');
+
+  if(btns){
+    var videoModal = document.querySelector('.js-modal-video');
+    var video = videoModal.querySelector('.js-modal-video-iframe');
+    var overlay = videoModal.querySelector('.js-modal-overlay');
+    var btnClose = videoModal.querySelector('.js-modal-close');
+
+    for (var i = 0; i < btns.length; i++) {
+      if(parseInt(window.innerWidth, 10) > 1023) {
+        var videoItem = btns[i].parentNode.parentNode;
+        var atr = videoItem.getAttribute('data-video-id');
+        videoItem.querySelector('.js-video-preview').style.backgroundImage = 'url(https://img.youtube.com/vi/' + atr + '/0.jpg)';
+      }
+
+      btns[i].addEventListener('click', function(e) {
+        e.preventDefault();
+
+        var btnVideo = e.currentTarget;
+        var videoItem = btnVideo.parentNode.parentNode;
+        var atr = videoItem.getAttribute('data-video-id');
+
+        videoModal.classList.add('active');
+        video.src = 'https://www.youtube.com/embed/' + atr+ '?enablejsapi=1';
+        video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+      })
+    }
+
+    btnClose.addEventListener('click', function(e) {
+      videoModal.classList.remove('active');
+      video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    });
+
+    overlay.addEventListener('click', function(e) {
+      videoModal.classList.remove('active');
+      video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    });
+  }
 })();

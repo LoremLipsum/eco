@@ -13,8 +13,17 @@
 @include respond-to(medium) {
   .feedback-card {
     padding: 30px 40px;
+    padding-bottom: 50px;
     background-color: color(secondary);
     border-radius: radius(sm);
+
+    .field__input {
+      &:hover,
+      &:focus,
+      &.active {
+        border: 2px solid color(primary);
+      }
+    }
 
     .form__submit {
       background-color: color(primary);

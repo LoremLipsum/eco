@@ -5,31 +5,17 @@ mixin house-card(data)
         mod: data.mod,
         js: data.js,
     })&attributes(attributes)
-        .house-card__image-list
-            .js-house-card-slider.swiper-container
-                .swiper-wrapper
-                    each item in data.image
-                        .house-card__image-item.swiper-slide
-                            +el({
-                                tag: 'a',
-                                href: '',
-                                class: 'house-card__image-wrap',
-                            })
-                                +el({
-                                    tag: 'img',
-                                    upload: item,
-                                    class: 'house-card__image',
-                                    alt: 'Фото коттеджа'
-                                })
-                .house-card__control
-                    +control({
-                        mod: ['prev', 'size-lg', 'bg'],
-                        js: 'house-card-prev'
-                    })
-                    +control({
-                        mod: ['next', 'size-lg', 'bg'],
-                        js: 'house-card-next'
-                    })
+        +el({
+            tag: 'a',
+            href: '',
+            class: 'house-card__image-wrap',
+        })
+            +el({
+                tag: 'img',
+                upload: data.image,
+                class: 'house-card__image',
+                alt: 'Фото коттеджа'
+            })
         .house-card__content
             .house-card__heading-wrap
                 +el({
@@ -48,6 +34,7 @@ mixin house-card(data)
                 })
             +specification({
                 mix: 'house-card__specification',
+                mod: 'no-dots',
                 items: [
                     {
                         name: 'Площадь дома:',
@@ -59,13 +46,9 @@ mixin house-card(data)
                     },
                 ]
             })
-            .house-card__bottom
-                .house-card__price
-                    | !{data.price}
-                    span.house-card__rouble &#x20BD;
-                .house-card__button-wrap
-                    +button({
-                        tag: 'a',
-                        mod: ['small', 'shadow'],
-                        text: 'Подробнее',
-                    })
+            .house-card__button-wrap
+                +button({
+                    tag: 'a',
+                    mod: ['small', 'shadow'],
+                    text: 'Подробнее',
+                })

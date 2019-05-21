@@ -1,0 +1,19 @@
+mixin video-item(data)
+    +el({
+        class: 'video-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })(data-video-id=data.videoId)
+        +el({
+            class: 'video-item__text',
+            text: 'Посмотрите <br><span class="text-medium"><span class="color-secondary">видео</span> о Экопарке<span>',
+        })
+        +el({
+            class: 'video-item__preview',
+            js: 'video-preview'
+        })
+        .video-item__button-wrap
+            +button-video({
+                mix: 'video-item__button',
+            })

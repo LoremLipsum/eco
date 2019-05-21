@@ -1,6 +1,6 @@
 .callback {
   position: relative;
-  padding-left: 50px;
+  padding-left: 54px;
   text-align: left;
 
   &--small {
@@ -8,6 +8,7 @@
 
     .callback__link {
       font-size: 17px;
+      line-height: 1;
     }
 
     .callback__number {
@@ -16,15 +17,30 @@
 
     .callback__text {
       font-size: 12px;
+      line-height: 1;
     }
 
-    .callback__icon {
+    .callback__button {
       top: 5px;
+    }
+  }
+
+  &--primary {
+    .button-icon__icon {
+      fill: color(primary);
+    }
+
+    .callback__text {
+      color: color(primary);
+    }
+
+    .callback__link {
+      color: color(primary);
     }
   }
 }
 
-.callback__icon {
+.callback__button {
   position: absolute;
   top: 2px;
   left: 0;
@@ -34,16 +50,16 @@
 .callback__link {
   display: inline-block;
   padding: 4px;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.2;
   color: inherit;
   text-decoration: none;
   transform: translate(-4px);
 }
 
 .callback__number {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 500;
 }
 
@@ -51,19 +67,6 @@
   color: inherit;
   font-size: 15px;
   font-weight: 400;
-  line-height: 1;
-}
-
-@include respond-to(large) {
-  .callback {
-    padding-left: 54px;
-  }
-
-  .callback__link {
-    font-size: 22px;
-  }
-
-  .callback__number {
-    font-size: 26px;
-  }
+  line-height: 1.2;
+  color: #eaeaea;
 }

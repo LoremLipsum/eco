@@ -31,19 +31,22 @@ mixin page-header(data)
             })
             .page-header__col.page-header__col--right
                 +button-icon({
-                    tag: 'a',
+                    tag: 'button',
                     mod: 'primary',
                     mix: 'page-header__button-icon',
-                    href: 'tel:88005053848',
-                    ariaLabel: 'Позвонить',
+                    ariaLabel: 'Окрыть форму обратного звонка',
                     icon: 'tel',
                 })
                 +callback({
                     mix: 'page-header__callback page-header__callback--desktop',
                     iconColor: 'primary',
-                    mod: 'small'
+                    mod: ['small', 'primary'],
                 })
             nav.page-header__panel.js-panel-main-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+                +button-close({
+                    mix: 'page-header__close-panel',
+                    js: 'panel-close'
+                })
                 .page-header__panel-wrap
                     +page-nav({
                         items: mainNav,
@@ -51,7 +54,8 @@ mixin page-header(data)
                     })
                     .page-header__panel-bottom
                         +callback({
-                            mix: 'page-header__callback page-header__callback--mobile'
+                            mod: ['small', 'primary'],
+                            mix: 'page-header__callback page-header__callback--mobile',
                         })
         +overlay({
             js: 'header-overlay',

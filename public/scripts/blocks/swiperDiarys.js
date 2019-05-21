@@ -41,10 +41,6 @@
   var diaryItemSlider = new Swiper('.js-diary-item-slider', {
     slidesPerView: 1,
     grabCursor: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
     navigation: {
       nextEl: '.js-diary-item-next',
       prevEl: '.js-diary-item-prev',

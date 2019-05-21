@@ -6,12 +6,30 @@ block vars
     - var pageId = 1
 
 block content
-    main
-        +house-choice({})
-        +feedback({})
-        +features({})
+    main.main-content
+        .main-content__section-top-wrap
+            +house-plan({
+                mix: 'main-content__house-plan',
+                items: house
+            })
+            +feedback({
+                mix: 'main-content__feedback',
+            })
+            +house-top({
+                mix: 'main-content__house-top',
+                items: houseTop
+            })
+        +features({
+        })
         +quote({})
         +map({})
         +news-diary({
 
         })
+
+block video
+    +modal({
+        js: 'modal-video',
+        video: true,
+        mod: 'video',
+    })

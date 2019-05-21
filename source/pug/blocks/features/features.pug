@@ -35,10 +35,11 @@ mixin features(data)
                             js: 'features-prev',
                             mix: 'features__control features__control--prev'
                         })
-                        //- .features__fraction.features__fraction--prev.js-features-fraction-prev
-                        .features__bullet.features__bullet--desk.js-features-bullet-desk.swiper-pagination
-                        .features__fraction.js-features-fraction.swiper-pagination
-                        //- .features__fraction.features__fraction--next.js-features-fraction-next
+                        .features__fraction.features__fraction--current.js-features-fraction-current.swiper-pagination
+                        .features__nav-slider-inner
+                            .features__progressbar.js-features-progressbar
+                            .features__bullet.features__bullet--desk.js-features-bullet-desk.swiper-pagination
+                        .features__fraction.features__fraction--total.js-features-fraction-total.swiper-pagination
                         +control({
                             mod: ['next', 'size-sm'],
                             js: 'features-next',
@@ -55,4 +56,4 @@ mixin features(data)
                                     +features-image({
                                         image: item.image
                                     })
-                    .features__bullet.features__bullet--mob.js-features-bullet-mob.swiper-pagination
+                        .features__bullet.features__bullet--mob.js-features-bullet-mob.swiper-pagination

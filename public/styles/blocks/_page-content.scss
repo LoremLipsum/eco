@@ -22,8 +22,8 @@
 }
 
 .page-content__breadcrumbs {
-  margin-top: -55px;
-  margin-bottom: 30px;
+  margin-top: -10px;
+  margin-bottom: 20px;
 }
 
 .page-content__pagination {
@@ -51,6 +51,12 @@
     margin-bottom: 40px;
     font-size: 36px;
   }
+
+
+  .page-content__breadcrumbs {
+    margin-top: -30px;
+    margin-bottom: 25px;
+  }
 }
 
 @include respond-to(large) {
@@ -61,5 +67,10 @@
   .page-content__heading {
     margin-bottom: 50px;
     font-size: 40px;
+  }
+
+  .page-content__breadcrumbs {
+    margin-top: -55px;
+    margin-bottom: 30px;
   }
 }

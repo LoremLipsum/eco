@@ -1,0 +1,75 @@
+mixin house-top-card(data)
+    +el({
+        class: 'house-top-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .house-top-card__image-list
+            +el({
+                js: 'house-top-card-slider-' + data.index,
+                mix: 'swiper-container'
+            })
+                .swiper-wrapper
+                    each item in data.image
+                        .house-top-card__image-item.swiper-slide
+                            +el({
+                                tag: 'a',
+                                href: '',
+                                class: 'house-top-card__image-wrap',
+                            })
+                                +el({
+                                    tag: 'img',
+                                    upload: item,
+                                    class: 'house-top-card__image',
+                                    alt: 'Фото коттеджа'
+                                })
+                .house-top-card__control
+                    +control({
+                        mod: ['prev', 'size-lg', 'bg'],
+                        js: 'house-top-card-prev'
+                    })
+                    +control({
+                        mod: ['next', 'size-lg', 'bg'],
+                        js: 'house-top-card-next'
+                    })
+        .house-top-card__content
+            .house-top-card__heading-wrap
+                +el({
+                    tag: 'h4',
+                    mix: 'house-top-card__heading',
+                    before: {
+                        tag: 'a',
+                        class: 'house-top-card__heading-link',
+                        text: 'коттедж ',
+                        after: {
+                            tag: 'span',
+                            class: 'house-top-card__heading--number',
+                            text: data.number,
+                        }
+                    }
+                })
+            +specification({
+                mix: 'house-top-card__specification',
+                mod: 'with-dots',
+                items: [
+                    {
+                        name: 'Площадь дома:',
+                        value: '148 м<sup>2</sup>'
+                    },
+                    {
+                        name: 'Площадь участка:',
+                        value: '211 м<sup>2</sup>'
+                    },
+                ]
+            })
+            .house-top-card__bottom
+                .house-top-card__price
+                    | !{data.price}
+                    span.house-top-card__rouble &#x20BD;
+                .house-top-card__button-wrap
+                    +button({
+                        tag: 'a',
+                        mod: ['small', 'shadow'],
+                        text: 'Подробнее',
+                    })

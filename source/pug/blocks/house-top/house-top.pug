@@ -6,7 +6,7 @@ mixin house-top(data)
         js: data.js,
     })&attributes(attributes)
         .house-top__wrap
-            .house-top__heading-group
+            .house-top__heading-wrap
                 h2.house-top__heading
                     span.house-top__heading-circle
                         span.house-top__heading-top
@@ -25,16 +25,18 @@ mixin house-top(data)
                         span.house-top__heading-descr-accent
                             | в&nbsp;скандинавском стиле
                         |
-                        | на&nbsp;территории современного
-                        |
-                        |коттеджного поселка
-            .house-top__card-list.js-house-top-slider.swiper-container
+                        span.house-top__heading-descr-desktop
+                            | на&nbsp;территории современного
+                            |
+                            |коттеджного поселка
+            .house-top__list.js-house-top-slider.swiper-container
                 .swiper-wrapper
-                    each item in data.items
-                        .house-top__card-item.swiper-slide
-                            +house-card({
+                    each item, index in data.items
+                        .house-top__item.swiper-slide
+                            +house-top-card({
                                 image: item.image,
                                 number: item.number,
                                 price: item.price,
+                                index: index + 1,
                             })
             .house-top__bullet.js-house-top-bullet.swiper-pagination

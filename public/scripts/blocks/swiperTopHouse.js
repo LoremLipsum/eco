@@ -12,10 +12,6 @@
         slidesPerView: 'auto',
         centeredSlides: true,
         spaceBetween: 0,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
         pagination: {
           el: '.js-house-top-bullet',
           clickable: true,
@@ -39,7 +35,41 @@
 
 
   if ($(window).outerWidth() > 919) {
-    houseCardSlider = new Swiper('.js-house-card-slider', {
+    houseCardSlider1 = new Swiper('.js-house-card-slider-1', {
+      loop: true,
+      grabCursor: true,
+      slidesPerView: 1,
+      autoHeight: 'auto',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.js-house-card-next',
+        prevEl: '.js-house-card-prev',
+        clickable: true,
+        disabledClass: 'disabled',
+      },
+    });
+
+    houseCardSlider1 = new Swiper('.js-house-card-slider-2', {
+      loop: true,
+      grabCursor: true,
+      slidesPerView: 1,
+      autoHeight: 'auto',
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.js-house-card-next',
+        prevEl: '.js-house-card-prev',
+        clickable: true,
+        disabledClass: 'disabled',
+      },
+    });
+
+    houseCardSlider1 = new Swiper('.js-house-card-slider-3', {
       loop: true,
       grabCursor: true,
       slidesPerView: 1,

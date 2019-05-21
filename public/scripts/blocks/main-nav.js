@@ -2,29 +2,28 @@
 
 (function() {
 
-  var btn = document.querySelector('.js-button-nav');
+  var btnOpen = document.querySelector('.js-button-nav');
+  var btnClose = document.querySelector('.js-panel-close');
   var block = document.querySelector('.js-panel-main-nav');
   var overlay = document.querySelector('.js-header-overlay');
   var ESC = 27;
 
-  var toggle = function() {
+  var open = function() {
     block.classList.toggle('active');
-    btn.classList.toggle('active');
     overlay.classList.toggle('active');
   };
 
   var close = function() {
     block.classList.remove('active');
-    btn.classList.remove('active');
     overlay.classList.remove('active');
   };
 
-  var onBtnClick = function(e) {
+  var onBtnOpenClick = function(e) {
     e.preventDefault();
-    toggle();
+    open();
   };
 
-  var onCloseClick = function(e) {
+  var onBtnCloseClick = function(e) {
     e.preventDefault();
     close();
   };
@@ -36,8 +35,9 @@
     }
   };
 
-  btn.addEventListener('click', onBtnClick);
-  overlay.addEventListener('click', onCloseClick);
+  btnOpen.addEventListener('click', onBtnOpenClick);
+  btnClose.addEventListener('click', onBtnCloseClick);
+  overlay.addEventListener('click', onBtnCloseClick);
   document.addEventListener('keyup', onEscKeyup);
 
 })();

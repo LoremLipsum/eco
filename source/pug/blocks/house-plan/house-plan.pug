@@ -3,13 +3,41 @@ mixin house-plan(data)
         class: 'house-plan',
         mix: data.mix,
         mod: data.mod,
-        js: data.js,
+        js: 'tabs-house-plan',
     })&attributes(attributes)
         .house-plan__wrap
-            .house-plan__card
+            .house-plan__main-card.house-plan__main-card--desktop
                 .house-plan__heading-wrap
-                    .house-plan__heading
+                    h2.house-plan__heading
                         | Выберите
                         |
                         span.house-plan__heading--accent
                             | дом мечты
+            +tabs({
+                mix: 'house-plan__tabs',
+                items: [
+                    {
+                        text: 'Дома',
+                        js: 'tabs-button-hause-plan',
+                    },
+                    {
+                        text: 'Генеральный план',
+                        js: 'tabs-button-hause-plan',
+                    }
+                ],
+            })
+        .house-plan__tabs-content-wrap
+            .tab-1.js-tabs-content-hause-plan.active
+                .house-plan__list.js-house-plan-slider.swiper-container
+                    .swiper-wrapper
+                        each item, index in data.items
+                            .house-plan__item.swiper-slide
+                                +house-card({
+                                    image: item.image,
+                                    number: item.number,
+                                    price: item.price,
+                                    index: index + 1,
+                                })
+                    .house-plan__bullet.js-house-plan-bullet.swiper-pagination
+            .tab-2.js-tabs-content-hause-plan
+                .house-plan__main-card.house-plan__main-card--mobile

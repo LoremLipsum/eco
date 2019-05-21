@@ -111,7 +111,8 @@
               menuItem
                 .appendTo(menu)
                 .find('.js-button-pin')
-                .on('click', function() {
+
+                .on('mouseover', function() {
                   var btn = $(this);
                   var atr = btn.attr('data-pin');
 

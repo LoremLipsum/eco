@@ -25,7 +25,7 @@
   height: 52px;
   min-height: 52px;
   padding: 15px 20px;
-  border: none;
+  border: 2px solid transparent;
   border-radius: radius(sm);
   background-color: color(white);
   color: color(black);
@@ -42,11 +42,7 @@
   &:hover,
   &:focus,
   &.active {
-    ~ .field__icon-wrap {
-      .field__icon {
-        fill: color(primary);
-      }
-    }
+    border: 2px solid color(secondary);
   }
 
   &--error:not(:focus) {
@@ -61,13 +57,13 @@
 
 .field__icon-wrap {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 100%;
+  width: 48px;
+  height: 48px;
   border-right: 1px solid color(light-gray);
 }
 
@@ -76,4 +72,5 @@
   width: 16px;
   height: 16px;
   fill: color(secondary);
+  transition: duration(md) func(primary);
 }

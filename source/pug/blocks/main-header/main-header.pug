@@ -15,11 +15,10 @@ mixin main-header(data)
                         js: 'button-nav',
                     })
                 +button-icon({
-                    tag: 'a',
+                    tag: 'button',
                     mod: 'white',
                     mix: 'main-header__phone-button',
-                    href: 'tel:88005053848',
-                    ariaLabel: 'Позвонить',
+                    ariaLabel: 'Окрыть форму обратного звонка',
                     icon: 'tel',
                 })
             +logo({
@@ -29,6 +28,10 @@ mixin main-header(data)
                 mix: 'main-header__callback main-header__callback--desktop'
             })
             nav.main-header__panel.js-panel-main-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+                +button-close({
+                    mix: 'main-header__close-panel',
+                    js: 'panel-close'
+                })
                 .main-header__panel-wrap
                     +main-nav({
                         items: mainNav,
@@ -37,12 +40,36 @@ mixin main-header(data)
                     .main-header__panel-bottom
                         +callback({
                             mix: 'main-header__callback main-header__callback--mobile',
-                            mod: 'small'
+                            mod: ['small', 'primary'],
                         })
-        +intro({
-            mix: 'main-header__intro',
-        })
-        +overlay({
-            js: 'header-overlay',
-            mix: 'main-header__overlay',
-        })
+            +el({
+                tag: 'h1',
+                mix: 'main-header__heading',
+                text: '<span class="main-header__heading--lg"><span class="main-header__heading--secondary">Уникальный формат</span> загородного жилья</span>, настоящий островок средиземноморского стиля в&nbsp;окружении лесного массива',
+            })
+            +el({
+                tag: 'p',
+                mix: 'main-header__text',
+                text: '<span class="main-header__text--accent">40 домов</span> площадью от&nbsp;100&nbsp;до&nbsp;248&nbsp;м<sup>2</sup> доступны для&nbsp;жизни и&nbsp;отдыха на&nbsp;Южном берегу Крыма',
+            })
+            .main-header__button-wrap
+                +button({
+                    tag: 'a',
+                    mix: 'main-header__button',
+                    mod: ['shadow', 'large'],
+                    text: 'Посмотреть планировки',
+                })
+            .main-header__bottom
+                .main-header__advantages-wrap
+                    +advantages({
+                        items: advantages,
+                        mix: 'main-header__advantages',
+                    })
+                +video-item({
+                    mix: 'main-header__video-item',
+                    videoId: 'zfVg3cuNcyw',
+                })
+            +overlay({
+                js: 'header-overlay',
+                mix: 'main-header__overlay',
+            })
