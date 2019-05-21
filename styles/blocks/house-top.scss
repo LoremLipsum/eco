@@ -31,6 +31,10 @@
 .house-top__list {
   overflow: visible;
 
+  .house-card-w-slider__image-wrap {
+    opacity: 1;
+  }
+
   .swiper-slide-active {
     .house-top-card__image-wrap {
       &::after {
@@ -275,6 +279,12 @@
     margin-right: auto;
     padding-left: pads(large);
     padding-right: pads(large);
+  }
+
+  .house-top__list {
+    .house-card-w-slider  {
+      box-shadow: 0 13px 16px 0 rgba(#031307, 0.2);
+    }
   }
 
   .house-top__heading-wrap {

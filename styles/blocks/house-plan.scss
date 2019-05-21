@@ -54,15 +54,6 @@
   margin-bottom: 20px;
 }
 
-.js-tabs-content-hause-plan {
-  max-height: 0;
-  overflow: hidden;
-
-  &.active {
-    max-height: 9999px;
-  }
-}
-
 .house-plan__bullet {
   position: relative;
   margin-top: 30px;

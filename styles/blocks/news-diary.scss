@@ -10,15 +10,6 @@
   margin-bottom: 20px;
 }
 
-.js-content-tabs-nd {
-  max-height: 0;
-  overflow: hidden;
-
-  &.active {
-    max-height: 9999px;
-  }
-}
-
 @include respond-to(520px) {
   .news-diary {
     padding-top: 30px;
@@ -36,10 +27,5 @@
 
   .news-diary__tabs-wrap {
     display: none;
-  }
-
-  .js-content-tabs-nd {
-    max-height: none;
-    overflow: visible;
   }
 }

@@ -142,26 +142,26 @@
 
   function initSlider() {
     var screenWidth = parseInt(window.innerWidth, 10);
-    if ( (screenWidth > (919)) && (featuresTextSlider2 == undefined)) {
-      featuresTextSlider2 = new Swiper('.js-features-text-slider', {
-        loop: true,
-        loopedSlides: 9,
-        pagination: {
-          el: '.js-features-progressbar',
-          clickable: true,
-          type: 'progressbar',
-        },
-        navigation: {
-          nextEl: '.js-features-next',
-          prevEl: '.js-features-prev',
-          clickable: true,
-          disabledClass: 'disabled',
-        },
-      });
-    } else if ((screenWidth < 920) && (featuresTextSlider2 != undefined)) {
-      featuresTextSlider2.destroy();
-      featuresTextSlider2 = undefined;
-    }
+    // if ( (screenWidth > (919)) && (featuresTextSlider2 == undefined)) {
+    //   featuresTextSlider2 = new Swiper('.js-features-text-slider', {
+    //     loop: true,
+    //     loopedSlides: 9,
+    //     pagination: {
+    //       el: '.js-features-progressbar',
+    //       clickable: true,
+    //       type: 'progressbar',
+    //     },
+    //     navigation: {
+    //       nextEl: '.js-features-next',
+    //       prevEl: '.js-features-prev',
+    //       clickable: true,
+    //       disabledClass: 'disabled',
+    //     },
+    //   });
+    // } else if ((screenWidth < 920) && (featuresTextSlider2 != undefined)) {
+    //   featuresTextSlider2.destroy();
+    //   featuresTextSlider2 = undefined;
+    // }
     if ( (screenWidth > (919)) && (featuresImageSlider2 == undefined)) {
       featuresImageSlider2 = new Swiper('.js-features-image-slider', {
         loop: true,
