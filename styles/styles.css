@@ -8833,7 +8833,7 @@ body > *
     }
 }
 
-.house-top-card
+.house-card-w-slider
 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8855,7 +8855,7 @@ body > *
     -ms-flex-direction: column;
 }
 
-.house-top-card__image-wrap
+.house-card-w-slider__image-wrap
 {
     display: block;
     overflow: hidden;
@@ -8869,7 +8869,7 @@ body > *
     outline: none;
     background-color: #edf6fa;
 }
-.house-top-card__image-wrap::after
+.house-card-w-slider__image-wrap::after
 {
     position: absolute;
     top: 0;
@@ -8888,7 +8888,7 @@ body > *
     background-image:         linear-gradient(to bottom, rgba(1, 10, 3, .6), rgba(112, 145, 51, .4));
 }
 
-.house-top-card__image
+.house-card-w-slider__image
 {
     font-family: 'object-fit: cover; object-position: center'; 
 
@@ -8903,7 +8903,7 @@ body > *
        object-position: center;
 }
 
-.house-top-card__content
+.house-card-w-slider__content
 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8925,7 +8925,7 @@ body > *
     justify-content: flex-start;
 }
 
-.house-top-card__heading
+.house-card-w-slider__heading
 {
     font-size: 24px;
     font-weight: 400;
@@ -8935,30 +8935,30 @@ body > *
 
     text-transform: none;
 }
-.house-top-card__heading--number
+.house-card-w-slider__heading--number
 {
     font-weight: 700;
 }
 
-.house-top-card__heading-link
+.house-card-w-slider__heading-link
 {
     text-decoration: none;
 
     color: inherit;
     outline: none;
 }
-.house-top-card__heading-link:hover,
-.house-top-card__heading-link:focus
+.house-card-w-slider__heading-link:hover,
+.house-card-w-slider__heading-link:focus
 {
     color: #8ab23f;
 }
 
-.house-top-card__control
+.house-card-w-slider__control
 {
     display: none;
 }
 
-.house-top-card__heading-wrap
+.house-card-w-slider__heading-wrap
 {
     position: relative;
     z-index: 1;
@@ -8966,7 +8966,7 @@ body > *
     overflow: hidden;
 }
 
-.house-top-card__heading
+.house-card-w-slider__heading
 {
     position: relative;
 
@@ -8977,7 +8977,7 @@ body > *
 
     background-color: #fff;
 }
-.house-top-card__heading::after
+.house-card-w-slider__heading::after
 {
     position: absolute;
     z-index: -1;
@@ -8991,13 +8991,13 @@ body > *
 
     background-color: #8ab23f;
 }
-.house-top-card__heading--number
+.house-card-w-slider__heading--number
 {
     font-size: 30px;
     font-weight: 700;
 }
 
-.house-top-card__bottom
+.house-card-w-slider__bottom
 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9013,14 +9013,14 @@ body > *
     justify-content: space-between;
 }
 
-.house-top-card__price
+.house-card-w-slider__price
 {
     font-size: 24px; 
 
     display: block;
 }
 
-.house-top-card__rouble
+.house-card-w-slider__rouble
 {
     font-size: 22px;
     font-weight: lighter;
@@ -9028,12 +9028,12 @@ body > *
     padding: 0 8px;
 }
 
-.house-top-card__button-wrap
+.house-card-w-slider__button-wrap
 {
     text-align: center;
 }
 
-.house-top-card__button
+.house-card-w-slider__button
 {
     height: 44px !important; 
     margin: 0 auto;
@@ -9041,16 +9041,16 @@ body > *
 
 @media (min-width: 920px)
 {
-    .house-top-card
+    .house-card-w-slider
     {
         -webkit-box-shadow: 0 13px 16px 0 rgba(3, 19, 7, .2);
                 box-shadow: 0 13px 16px 0 rgba(3, 19, 7, .2);
     }
-    .house-top-card__image-list
+    .house-card-w-slider__image-list
     {
         position: relative;
     }
-    .house-top-card__control
+    .house-card-w-slider__control
     {
         position: absolute;
         z-index: 2;
@@ -9065,28 +9065,28 @@ body > *
         -ms-flex-align: center;
         align-items: center;
     }
-    .house-top-card__control .control--prev
+    .house-card-w-slider__control .control--prev
     {
         margin-right: 1px;
     }
-    .house-top-card__image-wrap
+    .house-card-w-slider__image-wrap
     {
         height: 21vw;
     }
-    .house-top-card__image-wrap::after
+    .house-card-w-slider__image-wrap::after
     {
         opacity: 0;
     }
-    .house-top-card__content
+    .house-card-w-slider__content
     {
         padding: 22px;
         padding-top: 12px;
     }
-    .house-top-card__bottom
+    .house-card-w-slider__bottom
     {
         display: block;
     }
-    .house-top-card__price
+    .house-card-w-slider__price
     {
         margin-bottom: 10px;
 
@@ -9096,17 +9096,17 @@ body > *
 
 @media (min-width: 1240px)
 {
-    .house-top-card__image-wrap
+    .house-card-w-slider__image-wrap
     {
         height: 280px;
     }
-    .house-top-card__bottom
+    .house-card-w-slider__bottom
     {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
     }
-    .house-top-card__price
+    .house-card-w-slider__price
     {
         font-size: 28px; 
 
@@ -9114,8 +9114,88 @@ body > *
 
         text-align: left;
     }
-    .house-top-card__rouble
+    .house-card-w-slider__rouble
     {
         font-size: 26px;
+    }
+}
+
+.tabs-blocks
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    margin: 0;
+    padding: 0; 
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.tabs-blocks li
+{
+    list-style-type: none;
+}
+
+.tabs-blocks__item
+{
+    margin-bottom: 0;
+}
+
+.tabs-blocks__button
+{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+
+    padding: 10px;
+
+    text-transform: uppercase; 
+
+    color: #004416;
+    border-radius: 6px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 10px 0 rgba(138, 178, 63, .2);
+            box-shadow: 0 0 10px 0 rgba(138, 178, 63, .2);
+}
+.tabs-blocks__button:hover,
+.tabs-blocks__button:focus
+{
+    color: #8ab23f;
+}
+.tabs-blocks__button.active
+{
+    color: #fff; 
+    background-color: #8ab23f;
+
+    -webkit-box-ordinal-group: 10000;
+    -ms-flex-order: 9999;
+    order: 9999;
+}
+
+@media (min-width: 920px)
+{
+    .tabs-blocks
+    {
+            flex-direction: row; 
+
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+    }
+    .tabs-blocks__item
+    {
+        margin-right: 30px;
+    }
+    .tabs-blocks__item:last-child
+    {
+        margin-right: 0;
     }
 }

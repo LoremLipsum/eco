@@ -16,24 +16,26 @@
 @import "./blocks/header-wrap";
 @import "./blocks/article";
 @import "./blocks/page-content";
-
+@import "./blocks/main-content";
 @import "../pug/blocks/button/button";
 @import "../pug/blocks/button-nav/button-nav";
 @import "../pug/blocks/button-icon/button-icon";
 @import "../pug/blocks/button-video/button-video";
+@import "../pug/blocks/button-close/button-close";
 @import "../pug/blocks/arrow/arrow";
 @import "../pug/blocks/control/control";
 @import "../pug/blocks/link-w-arrow/link-w-arrow";
 @import "../pug/blocks/date/date";
+@import "../pug/blocks/overlay/overlay";
+
 @import "../pug/blocks/field/field";
 @import "../pug/blocks/checkbox-confirm/checkbox-confirm";
 @import "../pug/blocks/form/form";
 @import "../pug/blocks/logo/logo";
 @import "../pug/blocks/main-nav/main-nav";
 @import "../pug/blocks/callback/callback";
-@import "../pug/blocks/overlay/overlay";
 @import "../pug/blocks/main-header/main-header";
-@import "../pug/blocks/video-intro/video-intro";
+@import "../pug/blocks/video-item/video-item";
 @import "../pug/blocks/specification/specification";
 @import "../pug/blocks/page-nav/page-nav";
 @import "../pug/blocks/page-header/page-header";
@@ -65,6 +67,7 @@
 @import "../pug/blocks/house-choice/house-choice";
 @import "../pug/blocks/posts-card/posts-card";
 @import "../pug/blocks/posts/posts";
-
 @import "../pug/blocks/breadcrumbs/breadcrumbs";
 @import "../pug/blocks/link-comeback/link-comeback";
+@import "../pug/blocks/modal/modal";
+@import "../pug/blocks/house-top-card/house-top-card";

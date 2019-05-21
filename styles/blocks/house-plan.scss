@@ -1,39 +1,109 @@
 .house-plan {
-
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .house-plan__wrap {
   @include wrapper
 }
 
+.house-plan__heading {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.house-choice__tabs {
+  margin-bottom: 20px;
+}
+
+.house-plan__list {
+  .swiper-slide-active {
+    .house-card__image-wrap {
+      &::after {
+        opacity: 0 !important;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.house-plan__item {
+  width: 100%;
+  padding: 0 15px;
+  max-width: 360px;
+  box-sizing: border-box;
+}
+
+.house-plan__main-card {
+  &--desktop {
+  }
+
+  &--mobile {
+    height: 250px;
+    margin: 0 20px;
+    border-radius: radius(sm);
+    background-color: color(secondary);
+  }
+}
+
+.house-plan__tabs {
+  margin-bottom: 20px;
+}
+
+.js-tabs-content-hause-plan {
+  max-height: 0;
+  overflow: hidden;
+
+  &.active {
+    max-height: 9999px;
+  }
+}
+
+.house-plan__bullet {
+  position: relative;
+  margin-top: 30px;
+  height: 24px;
+}
+
 @include respond-to(medium) {
   .house-plan {
     position: relative;
     z-index: 1;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
-  .house-plan__card {
-    position: relative;
-    width: 100%;
-    max-width: 950px;
-    height: 600px;
-    margin: 0 auto;
-    border-radius: radius(sm);
-    background-color: color(secondary);
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -20px;
-      bottom: -20px;
-      left: 50px;
-      right: 50px;
-      z-index: -1;
+  .house-plan__main-card {
+    &--desktop {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 950px;
+      height: 600px;
+      margin: 0 auto;
       border-radius: radius(sm);
       background-color: color(secondary);
-      opacity: 0.5;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -20px;
+        bottom: -20px;
+        left: 50px;
+        right: 50px;
+        z-index: -1;
+        border-radius: radius(sm);
+        background-color: color(secondary);
+        opacity: 0.4;
+      }
+    }
+
+    &--mobile {
+      display: none;
     }
   }
 
@@ -52,12 +122,12 @@
   }
 
   .house-plan__heading {
-    margin: 0;
     color: color(primary);
     font-size: 40px;
     font-weight: 500;
     line-height: 1.2;
     text-transform: none;
+    text-align: left;
 
     &--accent {
       display: block;
@@ -65,15 +135,18 @@
       font-weight: 900;
     }
   }
+
+  .house-plan__tabs {
+    display: none;
+  }
+
+  .house-plan__tabs-content-wrap {
+    display: none;
+  }
 }
 
 @include respond-to(large) {
-  .house-plan {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-
-  .house-plan__card {
+  .house-plan__main-card {
     width: 950px;
     height: 650px;
 

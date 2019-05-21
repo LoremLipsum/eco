@@ -66,6 +66,13 @@
   }
 }
 
+.feedback__col {
+  &--right {
+    position: relative;
+    z-index: 10;
+  }
+}
+
 .feedback__card {
   margin-top: -100px;
 }
