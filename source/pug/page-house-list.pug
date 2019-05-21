@@ -1,0 +1,39 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Экопарк'
+    - var main = false
+    - var pageId = 5
+
+block content
+    main.page-content.page-content--posts
+        .page-content__wrap
+            +breadcrumbs({
+                items: ['Главная', 'Наши объекты', 'Коттеджи'],
+                mix: 'page-content__breadcrumbs',
+            })
+            .page-content__heading Коттеджи
+            .page-content__content.page-content__content--bg-light-w-brash.page-content__content--bg-logo
+                +tabs-blocks({
+                    items: [
+                        {
+                            text: 'Таунхаусы',
+                        },
+                        {
+                            text: 'Коттеджи',
+                        },
+                        {
+                            text: 'Виллы',
+                        },
+                    ]
+                })
+                .tab-1.js-tabs-content-hause-plan.active
+
+                .tab-2.js-tabs-content-hause-plan
+
+                .tab-3.js-tabs-content-hause-plan
+
+                br
+                +pagination({
+                    mix: 'page-content__pagination',
+                })

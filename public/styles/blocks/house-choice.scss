@@ -17,16 +17,6 @@
   text-align: center;
 }
 
-.js-content-tabs-choice {
-  max-height: 0;
-  overflow: hidden;
-
-
-  &.active {
-    max-height: 9999px;
-  }
-}
-
 .house-choice__branch {
   display: none;
 }
@@ -38,19 +28,7 @@
     flex-direction: column;
     padding-bottom: 0;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 100px;
-      bottom: 100px;
-      left: 0;
-      right: 0;
-      z-index: -1;
-      background-image: url('../assets/images/bg-choice-house.jpg');
-      background-position: center top;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+
 
     .tab-1 {
       order: 2;

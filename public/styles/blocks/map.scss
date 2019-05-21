@@ -53,6 +53,7 @@
     background-position: center;
     overflow: visible;
     cursor: pointer;
+    transition: duration(md) func(primary);
     // margin-left: 100px;
 
     &::after {

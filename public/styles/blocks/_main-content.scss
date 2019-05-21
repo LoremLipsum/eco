@@ -1,0 +1,43 @@
+@include respond-to(medium) {
+  .main-content__section-top-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      height: 1220px;
+      background-image: url('../assets/images/bg-choice-house.jpg');
+      background-position: center top;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .main-content__house-plan {
+    order: 1;
+  }
+
+  .main-content__feedback {
+    order: 3;
+  }
+
+  .main-content__house-top {
+    order: 2;
+  }
+}
+
+@include respond-to(medium) {
+  .main-content__section-top-wrap {
+    &::after {
+      top: 200px;
+      right: -70px;
+      height: 1390px;
+    }
+  }
+}

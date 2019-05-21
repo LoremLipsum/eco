@@ -1,56 +1,56 @@
-mixin house-top-card(data)
+mixin house-card-w-slider(data)
     +el({
-        class: 'house-top-card',
+        class: 'house-card-w-slider',
         mix: data.mix,
         mod: data.mod,
         js: data.js,
     })&attributes(attributes)
-        .house-top-card__image-list
+        .house-card-w-slider__image-list
             +el({
-                js: 'house-top-card-slider-' + data.index,
-                mix: 'swiper-container'
+                mix: data.index ? 'js-house-card-w-slider js-slider-' + data.index : 'js-house-card-w-slider',
+                class: 'swiper-container',
             })
                 .swiper-wrapper
                     each item in data.image
-                        .house-top-card__image-item.swiper-slide
+                        .house-card-w-slider__image-item.swiper-slide
                             +el({
                                 tag: 'a',
                                 href: '',
-                                class: 'house-top-card__image-wrap',
+                                class: 'house-card-w-slider__image-wrap',
                             })
                                 +el({
                                     tag: 'img',
                                     upload: item,
-                                    class: 'house-top-card__image',
+                                    class: 'house-card-w-slider__image',
                                     alt: 'Фото коттеджа'
                                 })
-                .house-top-card__control
+                .house-card-w-slider__control
                     +control({
                         mod: ['prev', 'size-lg', 'bg'],
-                        js: 'house-top-card-prev'
+                        js: 'house-card-w-slider-prev'
                     })
                     +control({
                         mod: ['next', 'size-lg', 'bg'],
-                        js: 'house-top-card-next'
+                        js: 'house-card-w-slider-next'
                     })
-        .house-top-card__content
-            .house-top-card__heading-wrap
+        .house-card-w-slider__content
+            .house-card-w-slider__heading-wrap
                 +el({
                     tag: 'h4',
-                    mix: 'house-top-card__heading',
+                    mix: 'house-card-w-slider__heading',
                     before: {
                         tag: 'a',
-                        class: 'house-top-card__heading-link',
+                        class: 'house-card-w-slider__heading-link',
                         text: 'коттедж ',
                         after: {
                             tag: 'span',
-                            class: 'house-top-card__heading--number',
+                            class: 'house-card-w-slider__heading--number',
                             text: data.number,
                         }
                     }
                 })
             +specification({
-                mix: 'house-top-card__specification',
+                mix: 'house-card-w-slider__specification',
                 mod: 'with-dots',
                 items: [
                     {
@@ -63,11 +63,11 @@ mixin house-top-card(data)
                     },
                 ]
             })
-            .house-top-card__bottom
-                .house-top-card__price
+            .house-card-w-slider__bottom
+                .house-card-w-slider__price
                     | !{data.price}
-                    span.house-top-card__rouble &#x20BD;
-                .house-top-card__button-wrap
+                    span.house-card-w-slider__rouble &#x20BD;
+                .house-card-w-slider__button-wrap
                     +button({
                         tag: 'a',
                         mod: ['small', 'shadow'],

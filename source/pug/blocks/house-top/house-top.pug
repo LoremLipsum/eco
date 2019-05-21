@@ -33,7 +33,7 @@ mixin house-top(data)
                 .swiper-wrapper
                     each item, index in data.items
                         .house-top__item.swiper-slide
-                            +house-top-card({
+                            +house-card-w-slider({
                                 image: item.image,
                                 number: item.number,
                                 price: item.price,

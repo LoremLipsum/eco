@@ -1,0 +1,47 @@
+.tabs-blocks {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include ul-no;
+}
+
+.tabs-blocks__item {
+  margin-bottom: 0;
+}
+
+.tabs-blocks__button {
+  padding: 10px;
+  border-radius: radius(sm);
+  background-color: color(white);
+  box-shadow: 0 0 10px 0 rgba(color(secondary), 0.2);
+  color: color(primary);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  @include hover {
+    color: color(secondary);
+  }
+
+  &.active {
+    order: 9999;
+    background-color: color(secondary);
+    color: color(white);
+  }
+}
+
+@include respond-to(medium) {
+  .tabs-blocks {
+    flex-direction: row;
+  }
+
+  .tabs-blocks__item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

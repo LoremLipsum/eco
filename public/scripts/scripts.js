@@ -674,56 +674,60 @@ picturefill();
 
 
   if ($(window).outerWidth() > 919) {
-    houseTopCardSlider1 = new Swiper('.js-house-top-card-slider-1', {
-      loop: true,
-      grabCursor: true,
-      slidesPerView: 1,
-      autoHeight: 'auto',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.js-house-top-card-next',
-        prevEl: '.js-house-top-card-prev',
-        clickable: true,
-        disabledClass: 'disabled',
-      },
-    });
+    var houseTop = document.querySelector('.house-top');
 
-    houseTopCardSlider1 = new Swiper('.js-house-top-card-slider-2', {
-      loop: true,
-      grabCursor: true,
-      slidesPerView: 1,
-      autoHeight: 'auto',
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.js-house-top-card-next',
-        prevEl: '.js-house-top-card-prev',
-        clickable: true,
-        disabledClass: 'disabled',
-      },
-    });
+    if (houseTop) {
+      var houseTopCardSlider1 = new Swiper('.house-top .js-house-card-w-slider.js-slider-1', {
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 1,
+        autoHeight: 'auto',
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.js-house-card-w-slider-next',
+          prevEl: '.js-house-card-w-slider-prev',
+          clickable: true,
+          disabledClass: 'disabled',
+        },
+      });
 
-    houseTopCardSlider1 = new Swiper('.js-house-top-card-slider-3', {
-      loop: true,
-      grabCursor: true,
-      slidesPerView: 1,
-      autoHeight: 'auto',
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.js-house-top-card-next',
-        prevEl: '.js-house-top-card-prev',
-        clickable: true,
-        disabledClass: 'disabled',
-      },
-    });
+      var houseTopCardSlider2 = new Swiper('.house-top .js-house-card-w-slider.js-slider-2', {
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 1,
+        autoHeight: 'auto',
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.js-house-card-w-slider-next',
+          prevEl: '.js-house-card-w-slider-prev',
+          clickable: true,
+          disabledClass: 'disabled',
+        },
+      });
+
+      var houseTopCardSlider3 = new Swiper('.house-top .js-house-card-w-slider.js-slider-3', {
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 1,
+        autoHeight: 'auto',
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.js-house-card-w-slider-next',
+          prevEl: '.js-house-card-w-slider-prev',
+          clickable: true,
+          disabledClass: 'disabled',
+        },
+      });
+    }
   }
 
 })();

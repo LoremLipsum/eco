@@ -1,5 +1,5 @@
 .news {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .news__top {
@@ -8,7 +8,7 @@
 
 .news__list {
   .swiper-slide-active {
-    .news-item__image-wrap {
+    .news-card__image-wrap {
       &::after {
         opacity: 0 !important;
       }
@@ -21,6 +21,11 @@
   max-width: 360px;
   padding: 0 15px;
   box-sizing: border-box;
+}
+
+.news__bullet {
+  position: relative;
+  margin-top: 20px;
 }
 
 @include respond-to(medium) {
@@ -65,6 +70,10 @@
   .news__item {
     width: 33.33%;
     max-width: none;
+  }
+
+  .news__bullet {
+    display: none;
   }
 }
 
