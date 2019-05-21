@@ -1,14 +1,19 @@
 .page-content {
   padding-top: 100px;
-  padding-bottom: 50px;
 
-  &--posts {
-    padding-bottom: 35px;
+  &--pads-bottom {
+    padding-bottom: 50px;
   }
 }
 
 .page-content__wrap {
   @include wrapper;
+}
+
+.page-content__content {
+  &--pads-bottom {
+    padding-bottom: 40px;
+  }
 }
 
 .page-content__heading {
@@ -34,15 +39,60 @@
   margin-bottom: 40px;
 }
 
+.page-content__tabs-house-list {
+  margin-bottom: 40px;
+}
+
 @include respond-to(medium) {
   .page-content {
     padding-top: 130px;
-    padding-bottom: 70px;
 
     &--posts {
+
+    }
+
+    &--pads-bottom {
+      padding-bottom: 70px;
+    }
+  }
+
+  .page-content__content {
+    &--bg-light-w-brash {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+      }
+
+      &::before {
+        left: 50%;
+        top: 0;
+        width: 100%;
+        min-width: 2452px;
+        height: 120px;
+        transform: translate(-50%);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+        background-image: url('../assets/images/brush-light.png');
+      }
+
+      &::after {
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: color(light-secondary);
+      }
+    }
+
+    &--bg-w-logo {
       background-image: url('../assets/images/bg-w-logo.png');
       background-repeat: no-repeat;
-      background-position: center 290px;
+      background-position: center 160px;
       background-size: auto;
     }
   }
@@ -52,10 +102,13 @@
     font-size: 36px;
   }
 
-
   .page-content__breadcrumbs {
     margin-top: -30px;
     margin-bottom: 25px;
+  }
+
+  .page-content__tabs-house-list {
+    margin-bottom: 50px;
   }
 }
 
@@ -72,5 +125,9 @@
   .page-content__breadcrumbs {
     margin-top: -55px;
     margin-bottom: 30px;
+  }
+
+  .page-content__tabs-house-list {
+    margin-bottom: 60px;
   }
 }

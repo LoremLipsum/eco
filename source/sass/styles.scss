@@ -15,8 +15,6 @@
 @import "./blocks/sticky-footer";
 @import "./blocks/header-wrap";
 @import "./blocks/article";
-@import "./blocks/page-content";
-@import "./blocks/main-content";
 @import "../pug/blocks/button/button";
 @import "../pug/blocks/button-nav/button-nav";
 @import "../pug/blocks/button-icon/button-icon";
@@ -71,6 +69,8 @@
 @import "../pug/blocks/link-comeback/link-comeback";
 @import "../pug/blocks/modal/modal";
 @import "../pug/blocks/house-card-w-slider/house-card-w-slider";
-
 @import "../pug/blocks/tabs-blocks/tabs-blocks";
 @import "../pug/blocks/house-list/house-list";
+
+@import "./blocks/page-content";
+@import "./blocks/main-content";

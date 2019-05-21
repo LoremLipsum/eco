@@ -3,7 +3,7 @@ mixin news-diary(data)
         class: 'news-diary',
         mod: data.mod,
         mix: data.mix,
-        js: 'tabs-nd',
+        js: 'tabs-small',
     })&attributes(attributes)
         .news-diary__tabs-wrap
             +tabs({
@@ -11,20 +11,20 @@ mixin news-diary(data)
                 items: [
                     {
                         text: 'Новости',
-                        js: 'button-tabs-nd',
+                        js: 'tabs-small-button',
                     },
                     {
                         text: 'Дневник строительства',
-                        js: 'button-tabs-nd',
+                        js: 'tabs-small-button',
                     }
                 ],
             })
-        .tab-1.js-content-tabs-nd.active
+        .tab-1.js-tabs-small-content.active
             +news({
                 items: news,
 
             })
-        .tab-2.js-content-tabs-nd
+        .tab-2.js-tabs-small-content
             +diary({
                 items: diarys,
             })

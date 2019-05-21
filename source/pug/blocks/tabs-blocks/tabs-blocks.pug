@@ -11,11 +11,11 @@ mixin tabs-blocks(data)
                 tag: 'li',
                 class: 'tabs-blocks__item',
                 mix: item.mix,
+                mix: index == 0 ? 'active' : '',
             })
                 +el({
                     tag: 'button',
                     class: 'tabs-blocks__button',
                     text: item.text,
                     js: item.js,
-                    mix: index == 0 ? 'active' : '',
                 })(data-tab='tab-' + (index + 1))

@@ -3,7 +3,7 @@ mixin house-plan(data)
         class: 'house-plan',
         mix: data.mix,
         mod: data.mod,
-        js: 'tabs-house-plan',
+        js: 'tabs-small',
     })&attributes(attributes)
         .house-plan__wrap
             .house-plan__main-card.house-plan__main-card--desktop
@@ -18,16 +18,16 @@ mixin house-plan(data)
                 items: [
                     {
                         text: 'Дома',
-                        js: 'tabs-button-hause-plan',
+                        js: 'tabs-small-button',
                     },
                     {
                         text: 'Генеральный план',
-                        js: 'tabs-button-hause-plan',
+                        js: 'tabs-small-button',
                     }
                 ],
             })
         .house-plan__tabs-content-wrap
-            .tab-1.js-tabs-content-hause-plan.active
+            .tab-1.js-tabs-small-content.active
                 .house-plan__list.js-house-plan-slider.swiper-container
                     .swiper-wrapper
                         each item, index in data.items
@@ -39,5 +39,5 @@ mixin house-plan(data)
                                     index: index + 1,
                                 })
                     .house-plan__bullet.js-house-plan-bullet.swiper-pagination
-            .tab-2.js-tabs-content-hause-plan
+            .tab-2.js-tabs-small-content
                 .house-plan__main-card.house-plan__main-card--mobile

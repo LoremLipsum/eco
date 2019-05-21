@@ -10,12 +10,11 @@ mixin tabs(data)
             +el({
                 tag: 'li',
                 class: 'tabs__item',
-                mix: item.mix,
+                mix: index == 0 ? 'active' : '',
             })
                 +el({
                     tag: 'button',
                     class: 'tabs__button',
                     text: item.text,
                     js: item.js,
-                    mix: index == 0 ? 'active' : '',
                 })(data-tab='tab-' + (index + 1))

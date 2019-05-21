@@ -16,10 +16,15 @@
   background-color: color(light);
   overflow: hidden;
   outline: none;
-  @include maskEco;
+  @include maskEco {
+    opacity: 0;
+  }
   box-sizing: border-box;
 
   @include hover {
+    &::after {
+      opacity: 1;
+    }
   }
 }
 
@@ -97,20 +102,18 @@
 }
 
 .house-card-w-slider__bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-top: 20px;
 }
 
 .house-card-w-slider__price {
-  display: block;
-  font-size: 24px;
+  display: none;
+  font-size: 20px;
+  text-align: center;
 }
 
 .house-card-w-slider__rouble {
   font-weight: lighter;
-  font-size: 22px;
+  font-size: 18px;
   padding: 0 8px;
 }
 
@@ -123,11 +126,12 @@
   height: 44px !important;
 }
 
-@include respond-to(medium) {
-  .house-card-w-slider  {
-    box-shadow: 0 13px 16px 0 rgba(#031307, 0.2);
-  }
+.house-card-w-slider__specification {
+  margin-top: auto;
+}
 
+
+@include respond-to(medium) {
   .house-card-w-slider__image-list {
     position: relative;
   }
@@ -159,15 +163,6 @@
     padding: 22px;
     padding-top: 12px;
   }
-
-  .house-card-w-slider__bottom {
-    display: block;
-  }
-
-  .house-card-w-slider__price {
-    margin-bottom: 10px;
-    text-align: center;
-  }
 }
 
 @include respond-to(large) {
@@ -177,9 +172,12 @@
 
   .house-card-w-slider__bottom {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .house-card-w-slider__price {
+    display: block;
     margin-bottom: 0;
     text-align: left;
     font-size: 28px;

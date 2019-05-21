@@ -3,7 +3,7 @@
 }
 
 .house-list__item {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   list-style: none;
   text-indent: 0;
 
@@ -12,12 +12,13 @@
   }
 }
 
-@include respond-to(720px) {
+@include respond-to(620px) {
   .house-list {
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
+    margin-bottom: 30px;
   }
 
   .house-list__item {
@@ -27,7 +28,7 @@
   }
 }
 
-@include respond-to(1124px) {
+@include respond-to(large) {
   .house-list__item {
     width: 33.33%;
   }

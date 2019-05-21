@@ -1,2 +1,15 @@
 mixin house-list(data)
-  .house-list&attributes(attributes)
+    +el({
+        tag: 'ul',
+        class: 'house-list',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            li.house-list__item
+                +house-card-w-slider({
+                    image: item.image,
+                    number: item.number,
+                    price: item.price,
+                })
