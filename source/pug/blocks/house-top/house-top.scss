@@ -32,14 +32,21 @@
   overflow: visible;
 
   .house-card-w-slider__image-wrap {
-    opacity: 1;
+    &::after {
+      opacity: 1 ;
+    }
   }
 
   .swiper-slide-active {
-    .house-top-card__image-wrap {
+    .house-card-w-slider__image-wrap {
       &::after {
-        opacity: 0 !important;
-        pointer-events: none;
+        opacity: 0;
+      }
+
+      @include hover {
+        &::after {
+          opacity: 0;
+        }
       }
     }
   }
@@ -102,6 +109,32 @@
     position: relative;
     z-index: 10;
     margin: 0 -15px;
+
+    .house-card-w-slider__image-wrap {
+      &::after {
+        opacity: 0;
+      }
+
+      @include hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    .swiper-slide-active {
+      .house-card-w-slider__image-wrap {
+        &::after {
+          opacity: 0;
+        }
+
+        @include hover {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 
   .house-top__item {

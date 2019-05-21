@@ -191,7 +191,8 @@
     &--desk {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      flex-wrap: wrap;
       width: auto;
       height: 28px;
       margin-top: 0;
@@ -286,21 +287,21 @@
     overflow: hidden;
   }
 
-  .features__progressbar {
-    position: absolute;
-    left: 0;
-    right: 0px;
-    top: 14px;
-    display: block;
-    height: 1px;
-    width: auto;
-    background-color: color(secondary);
-
-    .swiper-pagination-progressbar-fill {
-      display: block;
-      background-color: color(primary);
-    }
-  }
+  // .features__progressbar {
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0px;
+  //   top: 14px;
+  //   display: block;
+  //   height: 1px;
+  //   width: auto;
+  //   background-color: color(secondary);
+  //
+  //   .swiper-pagination-progressbar-fill {
+  //     display: block;
+  //     background-color: color(primary);
+  //   }
+  // }
 }
 
 @include respond-to(large) {

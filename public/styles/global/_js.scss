@@ -1,9 +1,17 @@
-
-.js-content-tabs {
+.js-tabs-content {
   display: none;
 
   &.active {
     display: block;
+  }
+}
+
+.js-tabs-small-content {
+  max-height: 0;
+  overflow: hidden;
+
+  &.active {
+    max-height: 9999px;
   }
 }
 
@@ -27,6 +35,13 @@
   }
 }
 
-@include respond-to(medium-lg) {
+@include respond-to(medium) {
+  .js-tabs-small-content {
+    max-height: none;
+    overflow: visible;
 
+    &.active {
+      max-height: none;
+    }
+  }
 }

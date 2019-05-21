@@ -23,6 +23,7 @@ $colors: (
   primary: #004416,
   secondary: #8ab23f,
   light: #edf6fa,
+  light-secondary: #f9faf8,
   black: #202e31,
   dark: #031607,
   white: #fff,
@@ -43,6 +44,7 @@ $func: (
 
 // для бордер-радиусов
 $radius: (
+  xs: 3px,
   sm: 6px,
 );
 

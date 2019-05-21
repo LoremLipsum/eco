@@ -515,26 +515,26 @@ picturefill();
 
   function initSlider() {
     var screenWidth = parseInt(window.innerWidth, 10);
-    if ( (screenWidth > (919)) && (featuresTextSlider2 == undefined)) {
-      featuresTextSlider2 = new Swiper('.js-features-text-slider', {
-        loop: true,
-        loopedSlides: 9,
-        pagination: {
-          el: '.js-features-progressbar',
-          clickable: true,
-          type: 'progressbar',
-        },
-        navigation: {
-          nextEl: '.js-features-next',
-          prevEl: '.js-features-prev',
-          clickable: true,
-          disabledClass: 'disabled',
-        },
-      });
-    } else if ((screenWidth < 920) && (featuresTextSlider2 != undefined)) {
-      featuresTextSlider2.destroy();
-      featuresTextSlider2 = undefined;
-    }
+    // if ( (screenWidth > (919)) && (featuresTextSlider2 == undefined)) {
+    //   featuresTextSlider2 = new Swiper('.js-features-text-slider', {
+    //     loop: true,
+    //     loopedSlides: 9,
+    //     pagination: {
+    //       el: '.js-features-progressbar',
+    //       clickable: true,
+    //       type: 'progressbar',
+    //     },
+    //     navigation: {
+    //       nextEl: '.js-features-next',
+    //       prevEl: '.js-features-prev',
+    //       clickable: true,
+    //       disabledClass: 'disabled',
+    //     },
+    //   });
+    // } else if ((screenWidth < 920) && (featuresTextSlider2 != undefined)) {
+    //   featuresTextSlider2.destroy();
+    //   featuresTextSlider2 = undefined;
+    // }
     if ( (screenWidth > (919)) && (featuresImageSlider2 == undefined)) {
       featuresImageSlider2 = new Swiper('.js-features-image-slider', {
         loop: true,
@@ -801,10 +801,11 @@ picturefill();
 
 (function() {
 
-  var tabsSmall= document.querySelector('.js-tabs-small');
-  var tabs = document.querySelector('.js-tabs');
+  var tabsSmall= document.querySelectorAll('.js-tabs-small');
 
-  var switchTabs = function (btns, contents, classContents) {
+  var tabs = document.querySelectorAll('.js-tabs');
+
+  var switchTabs = function (tabs, btns, contents, classContents) {
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener('click', function (e) {
         e.preventDefault();
@@ -820,34 +821,37 @@ picturefill();
         };
 
         tab.parentNode.classList.add('active');
-        document.querySelector('.' + classContents + '.' + atr).classList.add('active');
+        tabs.querySelector('.' + classContents + '.' + atr).classList.add('active');
       });
     }
   };
 
   if(tabs) {
-    var btnsTabs = tabs.querySelectorAll('.js-tabs-button');
-    var contentsTabs = tabs.querySelectorAll('.js-tabs-content');
-
-    switchTabs(btnsTabs, contentsTabs, 'js-tabs-content');
+    for (var i = 0; i < tabs.length; i += 1) {
+      var btnsTabs = tabs[i].querySelectorAll('.js-tabs-button');
+      var contentsTabs = tabs[i].querySelectorAll('.js-tabs-content');
+      switchTabs(tabs, btnsTabs, contentsTabs, 'js-tabs-content');
+    }
   }
 
   // табы на мобильной версии
-  var switchMobile = function() {
+  var initTabsSmall = function() {
     if(parseInt(window.innerWidth, 10) < 920) {
       if(tabsSmall) {
-        var btnsTabsSmall = tabsSmall.querySelectorAll('.js-tabs-small-button');
-        var contentTabsSmall = tabsSmall.querySelectorAll('.js-tabs-small-content');
 
-        switchTabs(btnsTabsSmall, contentTabsSmall, 'js-tabs-small-content');
+        for (var i = 0; i < tabsSmall.length; i += 1) {
+          var btnsTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-small-button');
+          var contentTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-small-content');
+          switchTabs(tabsSmall[i], btnsTabsSmall, contentTabsSmall, 'js-tabs-small-content');
+        }
       }
     }
   };
 
-  switchMobile();
+  initTabsSmall();
 
   window.addEventListener('resize', function() {
-    switchMobile();
+    initTabsSmall();
   });
 
 
@@ -879,7 +883,7 @@ picturefill();
         var atr = videoItem.getAttribute('data-video-id');
 
         videoModal.classList.add('active');
-        video.src = 'https://www.youtube.com/embed/' + atr+ '?enablejsapi=1';
+        video.src = 'https://www.youtube.com/embed/' + atr+ '?enablejsapi=1&autoplay=1';
         video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
       })
     }

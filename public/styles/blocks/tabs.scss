@@ -12,6 +12,13 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &.active {
+    .tabs__button {
+      color: color(secondary);
+      pointer-events: none;
+    }
+  }
 }
 
 .tabs__button {
@@ -24,10 +31,6 @@
   text-transform: uppercase;
 
   @include hover {
-    color: color(secondary);
-  }
-
-  &.active {
     color: color(secondary);
   }
 }

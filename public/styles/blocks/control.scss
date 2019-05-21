@@ -11,6 +11,14 @@
     }
   }
 
+  &.disabled {
+    opacity: 1;
+
+    .arrow {
+      opacity: 0.2;
+    }
+  }
+
   &--prev {
     .arrow {
       transform:  translate(2px) rotate(-135deg);
@@ -40,25 +48,20 @@
 
   &--bg {
     background-color: #bdd491;
-
-    &.disabled {
-      opacity: 1;
-
-      .arrow {
-        opacity: 0.2;
-      }
-    }
   }
+
+
 
   &--shadow {
     background-color: color(white);
     box-shadow: 0 0 40px 0 rgba(color(secondary), 0.2);
 
-    &.disabled {
-      opacity: 1;
+    @include hover {
+      background-color: color(secondary);
 
       .arrow {
-        opacity: 0.2;
+        border-top-color: color(white);
+        border-right-color: color(white);
       }
     }
   }
