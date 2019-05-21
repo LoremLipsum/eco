@@ -10,15 +10,10 @@
   @include hover {
     text-decoration: underline;
 
-    .arrow {
+    .link-w-arrow__arrow {
       border-top-color: color(secondary);
       border-right-color: color(secondary);
     }
-  }
-
-  .arrow {
-    width: 8px;
-    height: 8px;
   }
 }
 
@@ -26,4 +21,8 @@
   position: absolute;
   top: 6px;
   right: 0;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  transform-origin: center;
 }

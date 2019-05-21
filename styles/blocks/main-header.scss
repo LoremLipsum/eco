@@ -5,7 +5,7 @@
   flex-direction: column;
   height: 100vh;
   min-height: 685px;
-  max-height: 800px;
+  max-height: 815px;
   padding-top: 15px;
   padding-bottom: 50px;
   color: color(white);
@@ -201,9 +201,9 @@
 
 @include respond-to(1024px) {
   .main-header {
+    min-height: 768px;
+    max-height: 1024px;
     position: relative;
-    max-height: none;
-    height: auto;
     overflow: hidden;
 
     &::after {
@@ -279,6 +279,7 @@
     width: 100%;
     max-width: none;
     margin-top: 15px;
+    margin-bottom: 40px;
     padding: 0;
     background-color: transparent;
   }
@@ -308,7 +309,8 @@
     width: 100%;
     height: auto;
     margin: 0;
-    margin-top: 60px;
+    margin-top: auto;
+    margin-bottom: 15px;
     margin-right: calc(100% - 1000px);
     overflow: visible;
     color: color(white);
@@ -331,8 +333,7 @@
     width: 100%;
     max-width: none;
     margin-right: calc(100% - 660px);
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin-bottom: 25px;
     text-align: left;
     font-weight: 400;
 
@@ -343,15 +344,13 @@
   }
 
   .main-header__button-wrap {
-    margin-top: 35px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     text-align: left;
   }
 
   .main-header__bottom {
     display: flex;
     align-items: flex-end;
-    margin-top: 50px;
     justify-content: space-between;
   }
 
@@ -369,6 +368,8 @@
 
 @include respond-to(large) {
   .main-header {
+    min-height: 820px;
+    max-height: 1240px;
     padding-bottom: 55px;
 
     &::after {
@@ -394,13 +395,13 @@
   }
 
   .main-header__heading {
+    margin-bottom: 30px;
     margin-left: 100px;
     margin-right: calc(100% - 1200px);
     font-size: 40px;
   }
 
   .main-header__text {
-    margin-top: 30px;
     margin-left: 100px;
     margin-right: calc(100% - 750px);
     font-size: 26px;
@@ -408,10 +409,6 @@
 
   .main-header__button-wrap {
     margin-left: 100px;
-  }
-
-  .main-header__bottom {
-    // margin-left: 100px;
   }
 }
 
@@ -439,6 +436,7 @@
   .main-header__logo {
     order: 1;
     margin-right: 130px;
+    margin-bottom: 80px;
   }
 
   .main-header__callback {
@@ -459,7 +457,6 @@
 
   .main-header__heading {
     order: 4;
-    margin-top: 80px;
     margin-right: calc(100% - 1200px);
   }
 
