@@ -21,9 +21,9 @@
     } else if ((screenWidth > 919) && (houseTopSlider != undefined)) {
       houseTopSlider.destroy();
       houseTopSlider = undefined;
-      var houseCard = $('.js-house-top-slider');
-      houseCard.find('.swiper-wrapper').removeAttr('style');
-      houseCard.find('.swiper-slide').removeAttr('style');
+      var houseTop = $('.js-house-top-slider');
+      houseTop.find('.swiper-wrapper').removeAttr('style');
+      houseTop.find('.swiper-slide').removeAttr('style');
     }
   }
 
@@ -35,7 +35,7 @@
 
 
   if ($(window).outerWidth() > 919) {
-    houseCardSlider1 = new Swiper('.js-house-card-slider-1', {
+    houseTopCardSlider1 = new Swiper('.js-house-top-card-slider-1', {
       loop: true,
       grabCursor: true,
       slidesPerView: 1,
@@ -45,14 +45,14 @@
         disableOnInteraction: false,
       },
       navigation: {
-        nextEl: '.js-house-card-next',
-        prevEl: '.js-house-card-prev',
+        nextEl: '.js-house-top-card-next',
+        prevEl: '.js-house-top-card-prev',
         clickable: true,
         disabledClass: 'disabled',
       },
     });
 
-    houseCardSlider1 = new Swiper('.js-house-card-slider-2', {
+    houseTopCardSlider1 = new Swiper('.js-house-top-card-slider-2', {
       loop: true,
       grabCursor: true,
       slidesPerView: 1,
@@ -62,14 +62,14 @@
         disableOnInteraction: false,
       },
       navigation: {
-        nextEl: '.js-house-card-next',
-        prevEl: '.js-house-card-prev',
+        nextEl: '.js-house-top-card-next',
+        prevEl: '.js-house-top-card-prev',
         clickable: true,
         disabledClass: 'disabled',
       },
     });
 
-    houseCardSlider1 = new Swiper('.js-house-card-slider-3', {
+    houseTopCardSlider1 = new Swiper('.js-house-top-card-slider-3', {
       loop: true,
       grabCursor: true,
       slidesPerView: 1,
@@ -79,8 +79,8 @@
         disableOnInteraction: false,
       },
       navigation: {
-        nextEl: '.js-house-card-next',
-        prevEl: '.js-house-card-prev',
+        nextEl: '.js-house-top-card-next',
+        prevEl: '.js-house-top-card-prev',
         clickable: true,
         disabledClass: 'disabled',
       },

@@ -37,17 +37,17 @@
           <img class="page-header__logo-image" src="./assets/images/logo-page.svg" width="50" height="59" alt="logo">
         </a>
         <div class="page-header__col page-header__col--right">
-          <a class="button-icon button-icon--primary page-header__button-icon" aria-label="Позвонить" href="tel:88005053848">
+          <button class="button-icon button-icon--primary page-header__button-icon" aria-label="Окрыть форму обратного звонка" type="button">
             <svg class="button-icon__icon">
               <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
             </svg>
-          </a>
-          <div class="callback callback--small page-header__callback page-header__callback--desktop">
-            <a class="button-icon button-icon--primary callback__icon" aria-label="Позвонить" href="tel:88005053848">
+          </button>
+          <div class="callback callback--small callback--primary page-header__callback page-header__callback--desktop">
+            <button class="button-icon callback__button" aria-label="Окрыть форму обратного звонка" type="button">
               <svg class="button-icon__icon">
                 <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
               </svg>
-            </a>
+            </button>
             <a class="callback__link" href="tel:88005053848">8 800 <span class="callback__number">505 38 48</span>
             </a>
             <div class="callback__text">Бесплатно по всей Росcии
@@ -55,6 +55,10 @@
           </div>
         </div>
         <nav class="page-header__panel js-panel-main-nav" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+          <button class="button-close page-header__close-panel js-panel-close" aria-label="Закрыть окно" type="button">
+            <span class="button-close__icon">
+            </span>
+          </button>
           <div class="page-header__panel-wrap">
             <ul class="page-nav page-header__page-nav">
               <li class="page-nav__item" itemprop="name">
@@ -83,13 +87,13 @@
               </li>
             </ul>
             <div class="page-header__panel-bottom">
-              <div class="callback page-header__callback page-header__callback--mobile">
-                <a class="button-icon button-icon--white callback__icon" aria-label="Позвонить" href="tel:88005053848">
+              <div class="callback callback--small callback--primary page-header__callback page-header__callback--mobile">
+                <button class="button-icon callback__button" aria-label="Окрыть форму обратного звонка" type="button">
                   <svg class="button-icon__icon">
                     <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
                   </svg>
-                </a>
-                <a class="callback__link" href="tel:88005053848">8 (800) <span class="callback__number">505 38 48</span>
+                </button>
+                <a class="callback__link" href="tel:88005053848">8 800 <span class="callback__number">505 38 48</span>
                 </a>
                 <div class="callback__text">Бесплатно по всей Росcии
                 </div>

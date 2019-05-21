@@ -12,15 +12,16 @@
           grabCursor: true,
           slidesPerView: 'auto',
           centeredSlides: true,
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
+          pagination: {
+            el: '.js-news-bullet',
+            clickable: true,
+            bulletClass: 'bullet-gray',
           },
         });
       } else if ((screenWidth > 919) && (newsSlider != undefined)) {
         newsSlider.destroy();
         newsSlider = undefined;
-        var news = document.querySelector('.js-news-slider');
+        var news = $('.js-news-slider');
         news.find('.swiper-wrapper').removeAttr('style');
         news.find('.swiper-slide').removeAttr('style');
       }
