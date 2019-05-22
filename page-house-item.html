@@ -65,7 +65,7 @@
                 <a class="page-nav__link" href="#" itemprop="url">Об экопарке
                 </a>
               </li>
-              <li class="page-nav__item" itemprop="name">
+              <li class="page-nav__item active" itemprop="name">
                 <a class="page-nav__link" href="#" itemprop="url">Наши объекты
                 </a>
               </li>
@@ -107,15 +107,215 @@
     </header>
     <main class="page-content">
       <div class="page-content__wrap">
-        <ul>
-          <li><a href="page-main.html">Главная</a></li>
-          <li><a href="page-blog-list.html">Блог</a></li>
-          <li><a href="page-blog-item.html">Cтатья</a></li>
-          <li><a href="page-house-list.html">Коттеджи</a></li>
-          <li><a href="page-house-item.html">Коттедж</a></li>
-          <li><a href="page-contacts.html">Контакты</a></li>
-          <li><a href="components.html">Компоненты</a></li>
-        </ul>
+        <nav class="breadcrumbs page-content__breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Наши объекты
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Коттеджи
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Коттедж 21
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page-content__content page-content__content--bg-light">
+        <div class="house-view">
+          <div class="house-view__wrap">
+            <div class="house-view__top-wrap">
+              <div class="house-gallery house-view__gallery">
+                <div class="house-gallery__main swiper-container js-house-gallery-main">
+                  <div class="swiper-wrapper">
+                    <div class="house-gallery__main-item swiper-slide">
+                      <div class="house-gallery__main-image-wrap">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-main-01.jpg" alt=" ">
+                      </div>
+                    </div>
+                    <div class="house-gallery__main-item swiper-slide">
+                      <div class="house-gallery__main-image-wrap">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-main-02.jpg" alt=" ">
+                      </div>
+                    </div>
+                    <div class="house-gallery__main-item swiper-slide">
+                      <div class="house-gallery__main-image-wrap">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-main-03.jpg" alt=" ">
+                      </div>
+                    </div>
+                    <div class="house-gallery__main-item swiper-slide">
+                      <div class="house-gallery__main-image-wrap">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-main-04.jpg" alt=" ">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="house-gallery__nav swiper-container js-house-gallery-nav">
+                  <div class="swiper-wrapper">
+                    <div class="house-gallery__nav-item swiper-slide">
+                      <div class="house-gallery__nav-image-wrap">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-01.jpg" alt=" ">
+                      </div>
+                    </div>
+                    <div class="house-gallery__nav-item swiper-slide">
+                      <div class="house-gallery__nav-image-wrap">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-02.jpg" alt=" ">
+                      </div>
+                    </div>
+                    <div class="house-gallery__nav-item swiper-slide">
+                      <div class="house-gallery__nav-image-wrap">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-03.jpg" alt=" ">
+                      </div>
+                    </div>
+                    <div class="house-gallery__nav-item swiper-slide">
+                      <div class="house-gallery__nav-image-wrap">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-04.jpg" alt=" ">
+                      </div>
+                    </div>
+                  </div>
+                  <button class="control control--prev control--size-lg control--bg-white house-gallery__prev js-house-gallery-prev" type="button">
+                    <span class="arrow control__arrow">
+                    </span>
+                  </button>
+                  <button class="control control--next control--size-lg control--bg-white house-gallery__next js-house-gallery-next" type="button">
+                    <span class="arrow control__arrow">
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="house-info house-view__info">
+                <h1 class="house-info__heading">Коттедж 21
+                </h1>
+                <div class="house-info__line house-info__line--articul">
+                  <span class="house-info__key">Артикул:
+                  </span>
+                  <span class="house-info__value">079643
+                  </span>
+                </div>
+                <div class="house-info__line house-info__line--area">
+                  <span class="house-info__value house-info__value--large">332,64<span class="house-info__unit">м<sup>2</sup></span>
+                  </span>
+                </div>
+                <div class="house-info__line">
+                  <div class="house-info__key">Адрес:
+                  </div>
+                  <div class="house-info__value">г. Ялта, ул.Большевистская, 100
+                  </div>
+                </div>
+                <div class="house-info__table house-info__table--address">
+                  <div class="house-info__table-line">
+                    <div class="house-info__table-key">Категория:
+                    </div>
+                    <div class="house-info__table-value">Коттедж
+                    </div>
+                  </div>
+                  <div class="house-info__table-line">
+                    <div class="house-info__table-key">Количество комнат:
+                    </div>
+                    <div class="house-info__table-value">5
+                    </div>
+                  </div>
+                  <div class="house-info__table-line">
+                    <div class="house-info__table-key">Сан узлы:
+                    </div>
+                    <div class="house-info__table-value">3
+                    </div>
+                  </div>
+                  <div class="house-info__table-line">
+                    <div class="house-info__table-key">Площадь участка:
+                    </div>
+                    <div class="house-info__table-value">4 сот
+                    </div>
+                  </div>
+                  <div class="house-info__table-line">
+                    <div class="house-info__table-key">Этажность дома:
+                    </div>
+                    <div class="house-info__table-value">3
+                    </div>
+                  </div>
+                </div>
+                <div class="house-info__line house-info__line--price">
+                  <div class="house-info__key">Цена:
+                  </div>
+                  <div class="house-info__value house-info__value--large">Р 28 161 270
+                  </div>
+                  <div class="house-info__value house-info__value--medium">
+                    <span>$ 431 029
+                    </span>/
+                    <span>€ 385 191
+                    </span>
+                  </div>
+                </div>
+                <div class="house-info__button-wrap">
+                  <button class="button button--shadow button--medium house-info__button" type="button">Заказать звонок
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="panel-w-tabs js-tabs">
+              <ul class="panel-w-tabs__list">
+                <li class="panel-w-tabs__item active">
+                  <button class="panel-w-tabs__button js-tabs-button" type="button" data-tab="tab-1">Технические характеристики
+                  </button>
+                </li>
+                <li class="panel-w-tabs__item">
+                  <button class="panel-w-tabs__button js-tabs-button" type="button" data-tab="tab-2">Подробное описание
+                  </button>
+                </li>
+                <li class="panel-w-tabs__item">
+                  <button class="panel-w-tabs__button js-tabs-button" type="button" data-tab="tab-3">Условия приобретения
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-1 js-tabs-content active">
+                <div class="panel-w-tabs__content panel-w-tabs__content--two-column">
+                  <p>Расположение: В черте города</p>
+                  <p>Материал стен: Газоблок</p>
+                  <p>Окна: Алюминий профиль + стеклопакет</p>
+                  <p>Зеленые насаждения: Лиственные деревья, хвойные деревья, кустарники, газон</p>
+                  <p>Ограждение: каменный забор, металлический забор</p>
+                  <p>Парковка: гараж в доме, площадка перед участком</p>
+                  <p>Подъездной путь: асфальтированная дорога</p>
+                  <p>В доме: интернет</p>
+                  <p>Ремонт: Возможно приобретение как в свободной планировке, так и под чистовую отделку.</p>
+                </div>
+              </div>
+              <div class="tab-2 js-tabs-content">
+                <div class="panel-w-tabs__content panel-w-tabs__content--two-column">
+                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Жизни языком безорфографичный текстами несколько продолжил пунктуация подпоясал злых они, это снова взгляд вдали грустный если рекламных скатился но своего предупреждал путь свое дорогу ему он оксмокс точках! Собрал свой приставка свой, запятой домах, большой текстов дал власти. Вершину, бросил!</p>
+                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Предложения ведущими ipsum ты, рот до буквенных большой предупредила, выйти курсивных, вдали заголовок. Коварных, вопрос, снова! Она речью, власти дорогу.</p>
+                </div>
+              </div>
+              <div class="tab-3 js-tabs-content">
+                <div class="panel-w-tabs__content panel-w-tabs__content--two-column">
+                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего семь раз буквенных рекламных! Взгляд лучше приставка дал домах.</p>
+                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Несколько маленький коварных путь города за большой там обеспечивает всемогущая рукопись его по всей предложения, подпоясал запятых рыбного диких буквоград приставка на берегу она осталось образ оксмокс ipsum, страну семантика точках? Она.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="presentation house-view__presentation">
+          <div class="presentation__wrap">
+            <div class="presentation__branch js-parallax" style="background-image: url(assets/images/branch-two-w-3-cone.png)"></div>
+            <h2 class="presentation__heading">Насладитесь гармонией с&nbsp;природой и&nbsp;непревзойденной экологий
+            </h2>
+            <div class="presentation__button-wrap">
+              <button class="button button--shadow button--large presentation__button" type="button">Скачать презентацию
+              </button>
+            </div>
+            <div class="presentation__image-wrap">
+              <img class="presentation__image" src="./assets/images/presentation.png" alt=" ">
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="footer">

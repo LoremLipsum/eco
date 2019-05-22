@@ -5,7 +5,7 @@
 
   if(btns){
     var videoModal = document.querySelector('.js-modal-video');
-    var video = videoModal.querySelector('.js-modal-video-iframe');
+    var video = videoModal.querySelector('.js-modal-iframe');
     var overlay = videoModal.querySelector('.js-modal-overlay');
     var btnClose = videoModal.querySelector('.js-modal-close');
 

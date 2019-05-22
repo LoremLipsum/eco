@@ -1,3 +1,53 @@
+'use strict';
+
+(function() {
+  var section = document.querySelector('#js-contacts-map');
+
+  if(section) {
+    if(parseInt(window.innerWidth, 10) < 920) {
+      var center = [44.495731, 34.123411];
+      var zoom = 15;
+      var size = [64, 67];
+      var offset = [-20, -50]
+    } else if (parseInt(window.innerWidth, 10) > 919 && parseInt(window.innerWidth, 10) < 1250){
+      var center = [44.495863, 34.124459];
+      var zoom = 17;
+      var size = [74, 78];
+      var offset = [-25, -60];
+    } else {
+      var center = [44.495527, 34.125038];
+      var zoom = 17;
+      var size = [84, 88];
+      var offset = [-30, -70];
+    }
+
+    ymaps.ready(function () {
+      var map = new ymaps.Map('js-contacts-map', {
+        center: center,
+        zoom: zoom,
+        scrollZoom: false,
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+      Placemark = new ymaps.Placemark([44.497561, 34.123285], {
+        balloonContent: 'г. Ялта, ул. Большевистская, 100'
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'assets/images/pin-contacts.png',
+        iconImageSize: size,
+        iconImageOffset: offset,
+      });
+
+      map.geoObjects.add(Placemark);
+      map.behaviors.disable('scrollZoom');
+      map.controls.add('zoomControl');
+      var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+      map.controls.get('zoomControl').options.set('size', 'small');
+    });
+  }
+})();
+
 (function($) {
 	'use strict';
 	$(function() {
@@ -428,40 +478,6 @@ picturefill();
          }
         return myNum;
       },
-      formatFractionTotal: function (number) {
-        switch(number)
-          {
-            case 1:
-              myNum1='01';
-              break;
-            case 2:
-              myNum1='02';
-              break;
-            case 3:
-              myNum1='03';
-              break;
-            case 4:
-              myNum1='04';
-              break;
-            case 5:
-              myNum1='05';
-              break;
-            case 6:
-              myNum1='06';
-              break;
-            case 7:
-              myNum1='07';
-              break;
-            case 8:
-              myNum1='08';
-              break;
-            case 9:
-              myNum1='09';
-              break;
-            default: myNum1 = number
-          }
-        return myNum1;
-      },
     },
     breakpoints: {
       1249: {
@@ -624,6 +640,54 @@ picturefill();
   window.addEventListener('resize', function() {
     initSlider();
   });
+
+})();
+
+'use strict';
+
+(function() {
+
+  var initSlider = function() {
+    var houseGalleryNavSlider = new Swiper('.js-house-gallery-nav', {
+      loop: true,
+      loopedSlides: 3,
+      grabCursor: true,
+      slidesPerView: 3,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.js-house-gallery-prev',
+        prevEl: '.js-house-gallery-next',
+        clickable: true,
+        disabledClass: 'disabled',
+      },
+      breakpoints: {
+        620: {
+          spaceBetween: 5,
+        }
+      }
+    });
+
+    var houseGalleryMainSlider = new Swiper('.js-house-gallery-main', {
+      loop: true,
+      loopedSlides: 3,
+      grabCursor: true,
+      slidesPerView: 1,
+      thumbs: {
+        swiper: houseGalleryNavSlider,
+      },
+      navigation: {
+        prevEl: '.js-house-gallery-prev',
+        nextEl: '.js-house-gallery-next',
+        clickable: true,
+        disabledClass: 'disabled',
+      },
+    });
+
+  }
+
+  initSlider();
 
 })();
 
@@ -805,7 +869,7 @@ picturefill();
 
   var tabs = document.querySelectorAll('.js-tabs');
 
-  var switchTabs = function (tabs, btns, contents, classContents) {
+  var switchTabs = function (item, btns, contents, classContents) {
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener('click', function (e) {
         e.preventDefault();
@@ -821,18 +885,22 @@ picturefill();
         };
 
         tab.parentNode.classList.add('active');
-        tabs.querySelector('.' + classContents + '.' + atr).classList.add('active');
+        item.querySelector('.' + classContents + '.' + atr).classList.add('active');
       });
     }
   };
 
-  if(tabs) {
-    for (var i = 0; i < tabs.length; i += 1) {
-      var btnsTabs = tabs[i].querySelectorAll('.js-tabs-button');
-      var contentsTabs = tabs[i].querySelectorAll('.js-tabs-content');
-      switchTabs(tabs, btnsTabs, contentsTabs, 'js-tabs-content');
+  var initTabs = function () {
+    if(tabs) {
+      for (var i = 0; i < tabs.length; i += 1) {
+        var btnsTabs = tabs[i].querySelectorAll('.js-tabs-button');
+        var contentsTabs = tabs[i].querySelectorAll('.js-tabs-content');
+        switchTabs(tabs[i], btnsTabs, contentsTabs, 'js-tabs-content');
+      }
     }
   }
+
+  initTabs();
 
   // табы на мобильной версии
   var initTabsSmall = function() {
@@ -840,7 +908,7 @@ picturefill();
       if(tabsSmall) {
 
         for (var i = 0; i < tabsSmall.length; i += 1) {
-          var btnsTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-small-button');
+          var btnsTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-button');
           var contentTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-small-content');
           switchTabs(tabsSmall[i], btnsTabsSmall, contentTabsSmall, 'js-tabs-small-content');
         }
@@ -864,7 +932,7 @@ picturefill();
 
   if(btns){
     var videoModal = document.querySelector('.js-modal-video');
-    var video = videoModal.querySelector('.js-modal-video-iframe');
+    var video = videoModal.querySelector('.js-modal-iframe');
     var overlay = videoModal.querySelector('.js-modal-overlay');
     var btnClose = videoModal.querySelector('.js-modal-close');
 

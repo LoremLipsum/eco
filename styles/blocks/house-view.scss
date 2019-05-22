@@ -1,0 +1,39 @@
+.house-view {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.house-view__top-wrap {
+  margin-bottom: 45px;
+}
+
+.house-view__gallery {
+  margin-bottom: 30px;
+}
+
+
+@include respond-to(large) {
+  .house-view {
+    max-width: none;
+    margin: 0;
+  }
+
+  .house-view__top-wrap {
+    display: flex;
+    margin-bottom: 45px;
+  }
+
+  .house-view__gallery {
+    width: calc(100% - 420px);
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+  .house-view__info {
+    width: 420px;
+    height: 700px;
+    max-width: none;
+    margin: 0;
+    overflow-y: auto;
+  }
+}

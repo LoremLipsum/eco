@@ -65,7 +65,7 @@
                 <a class="page-nav__link" href="#" itemprop="url">Об экопарке
                 </a>
               </li>
-              <li class="page-nav__item" itemprop="name">
+              <li class="page-nav__item active" itemprop="name">
                 <a class="page-nav__link" href="#" itemprop="url">Наши объекты
                 </a>
               </li>
@@ -105,17 +105,87 @@
       <div class="overlay page-header__overlay js-header-overlay">
       </div>
     </header>
-    <main class="page-content">
-      <div class="page-content__wrap">
-        <ul>
-          <li><a href="page-main.html">Главная</a></li>
-          <li><a href="page-blog-list.html">Блог</a></li>
-          <li><a href="page-blog-item.html">Cтатья</a></li>
-          <li><a href="page-house-list.html">Коттеджи</a></li>
-          <li><a href="page-house-item.html">Коттедж</a></li>
-          <li><a href="page-contacts.html">Контакты</a></li>
-          <li><a href="components.html">Компоненты</a></li>
-        </ul>
+    <main>
+      <div class="contacts">
+        <div class="contacts__wrap">
+          <div class="contacts__info">
+            <h1 class="contacts__heading">Контакты</h1>
+            <h3 class="contacts__subheading">Расположение Экопарка и&nbsp;офиса компании</h3>
+            <p>г. Ялта, ул. Большевистская, 100</p>
+            <h3 class="contacts__subheading">Телефоны</h3>
+            <p>
+              <a class="contacts__link" href="tel:88005053848">8 800 505 38 48
+              </a>
+              <a class="contacts__link" href="tel:89785748811">8 978 574 88 11
+                <svg class="contacts__link-icon contacts__link-icon--tel-01">
+                  <use xlink:href="./assets/images/sprites/sprite.svg#tel-w-circle01"></use>
+                </svg>
+                <svg class="contacts__link-icon contacts__link-icon--tel-02">
+                  <use xlink:href="./assets/images/sprites/sprite.svg#tel-w-circle02"></use>
+                </svg>
+              </a>
+            </p>
+            <h3 class="contacts__subheading">E-mail</h3>
+            <p>
+              <a class="contacts__link" href="mailto:sale@ecopark-krym.ru">sale@ecopark-krym.ru
+              </a>
+            </p>
+            <div class="contacts-card contacts__card">
+              <h4 class="contacts-card__heading">Заполните форму и&nbsp;мы&nbsp;ответим на&nbsp;все Ваши вопросы</h4>
+              <form class="form" action="/" method="post" accept-charset="UTF-8">
+                <div class="form__group">
+                  <label class="field field--with-icon form__field">
+                    <span class="hidden">Ваше имя
+                    </span>
+                    <input class="field__input" tabindex="0" placeholder="Ваше имя" name="user" required type="text" aria-required="true" aria-invalid="false">
+                    <span class="field__icon-wrap">
+                      <svg class="field__icon">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+                      </svg>
+                    </span>
+                  </label>
+                  <label class="field field--with-icon form__field">
+                    <span class="hidden">E-mail
+                    </span>
+                    <input class="field__input" tabindex="0" placeholder="E-mail" name="email" required type="email" aria-required="true" aria-invalid="false">
+                    <span class="field__icon-wrap">
+                      <svg class="field__icon">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#email"></use>
+                      </svg>
+                    </span>
+                  </label>
+                  <label class="field field--with-icon form__field">
+                    <span class="hidden">Ваш телефон
+                    </span>
+                    <input class="field__input" tabindex="0" placeholder="Ваш телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
+                    <span class="field__icon-wrap">
+                      <svg class="field__icon">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#tel-field"></use>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+                <div class="form__submit-wrap form__submit-wrap--bg-primary form__submit-wrap--medium">
+                  <label class="button button--bg-primary button--medium form__submit">
+                    <input class="hidden" type="submit">
+                    Отправить
+                  </label>
+                </div>
+                <div class="form__confirm-wrap">
+                  <label class="checkbox-confirm form__confirm">
+                    <input class="hidden checkbox-confirm__input" name="confirm" checked type="checkbox">
+                    <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                    </span>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__map">
+          <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+          <div class="contacts__map-content" id="js-contacts-map"></div>
+        </div>
       </div>
     </main>
     <footer class="footer">
