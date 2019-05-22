@@ -1,0 +1,21 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Экопарк'
+    - var main = false
+    - var pageId = 2
+
+block content
+    main.page-content
+        .page-content__wrap
+            +breadcrumbs({
+                items: ['Главная', 'Наши объекты', 'Коттеджи', 'Коттедж 21'],
+                mix: 'page-content__breadcrumbs',
+            })
+        .page-content__content.page-content__content--bg-light
+            +house-view({
+
+            })
+            +presentation({
+                mix: 'house-view__presentation'
+            })

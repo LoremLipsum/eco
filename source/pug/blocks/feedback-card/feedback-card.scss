@@ -1,9 +1,11 @@
-.feedback-card__heading {
-  display: none;
+.feedback-card {
+  .form__confirm {
+    color: color(secondary);
+  }
 }
 
-.form__confirm {
-  color: color(secondary);
+.feedback-card__heading {
+  display: none;
 }
 
 .feedback-card__branch {
@@ -59,10 +61,6 @@
     height: 93px;
     margin-right: 20px;
     fill: color(primary);
-  }
-
-  .form__confirm {
-    color: color(secondary);
   }
 }
 

@@ -4,8 +4,9 @@
 @import "./libs/swiper";
 // @import "./libs/animate";
 // @import "./libs/baron";
-@import "./global/vars";
 @import "./global/functions";
+@import "./global/vars";
+
 @import "./global/mixins/mixins";
 @import "./global/base";
 @import "./global/default/default";
@@ -71,6 +72,11 @@
 @import "../pug/blocks/modal/modal";
 @import "../pug/blocks/tabs-blocks/tabs-blocks";
 @import "../pug/blocks/house-list/house-list";
+@import "../pug/blocks/house-gallery/house-gallery";
+@import "../pug/blocks/house-info/house-info";
+@import "../pug/blocks/panel-w-tabs/panel-w-tabs";
+@import "../pug/blocks/house-view/house-view";
+
 
 @import "./blocks/page-content";
 @import "./blocks/main-content";

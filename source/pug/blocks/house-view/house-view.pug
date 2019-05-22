@@ -1,0 +1,19 @@
+mixin house-view(data)
+    +el({
+        class: 'house-view',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .house-view__wrap
+            .house-view__top-wrap
+                +house-gallery({
+                    items: gallery,
+                    mix: 'house-view__gallery'
+                })
+                +house-info({
+                    mix: 'house-view__info'
+                })
+            +panel-w-tabs({
+
+            })

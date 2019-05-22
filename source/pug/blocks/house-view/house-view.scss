@@ -1,0 +1,57 @@
+.house-view {
+  position: relative;
+  z-index: 100;
+}
+
+.house-view__wrap {
+  max-width: 780px + pads(small) * 2;
+  margin: 0 auto;
+  padding-left: pads(small);
+  padding-right: pads(small);
+}
+
+.house-view__top-wrap {
+  margin-bottom: 45px;
+}
+
+.house-view__gallery {
+  margin-bottom: 30px;
+}
+
+@include respond-to(medium) {
+  .house-view__wrap {
+    max-width: 780px + pads(medium) * 2;
+    padding-left: pads(medium);
+    padding-right: pads(medium);
+  }
+}
+
+@include respond-to(large) {
+  .house-view__wrap {
+    width: width(large);
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: pads(large);
+    padding-right: pads(large);
+  }
+
+  .house-view__top-wrap {
+    display: flex;
+    margin-bottom: 45px;
+  }
+
+  .house-view__gallery {
+    width: calc(100% - 420px);
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+  .house-view__info {
+    width: 420px;
+    height: 700px;
+    max-width: none;
+    margin: 0;
+    overflow-y: auto;
+  }
+}

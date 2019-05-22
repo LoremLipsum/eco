@@ -48,7 +48,7 @@ mixin diary(data)
                         })
                 .diary__list-slider.js-diary-slider.swiper-container
                     .swiper-wrapper
-                        .active.swiper-slide
+                        .swiper-slide
                             .diary__item-slider.js-diary-item-slider.swiper-container
                                 .diary__list.swiper-wrapper
                                     each item in diarys
@@ -61,11 +61,11 @@ mixin diary(data)
                                             })
                                 .diary__item-control
                                     +control({
-                                        mod: ['prev', 'size-lg', 'bg'],
+                                        mod: ['prev', 'size-lg', 'bg-light-secondary'],
                                         js: 'diary-item-prev'
                                     })
                                     +control({
-                                        mod: ['next', 'size-lg', 'bg'],
+                                        mod: ['next', 'size-lg', 'bg-light-secondary'],
                                         js: 'diary-item-next'
                                     })
                         .swiper-slide
@@ -81,11 +81,11 @@ mixin diary(data)
                                             })
                                 .diary__item-control
                                     +control({
-                                        mod: ['prev', 'size-lg', 'bg'],
+                                        mod: ['prev', 'size-lg', 'bg-light-secondary'],
                                         js: 'diary-item-prev'
                                     })
                                     +control({
-                                        mod: ['next', 'size-lg', 'bg'],
+                                        mod: ['next', 'size-lg', 'bg-light-secondary'],
                                         js: 'diary-item-next'
                                     })
                         .swiper-slide
@@ -101,11 +101,11 @@ mixin diary(data)
                                             })
                                 .diary__item-control
                                     +control({
-                                        mod: ['prev', 'size-lg', 'bg'],
+                                        mod: ['prev', 'size-lg', 'bg-light-secondary'],
                                         js: 'diary-item-prev'
                                     })
                                     +control({
-                                        mod: ['next', 'size-lg', 'bg'],
+                                        mod: ['next', 'size-lg', 'bg-light-secondary'],
                                         js: 'diary-item-next'
                                     })
                         .swiper-slide
@@ -121,10 +121,10 @@ mixin diary(data)
                                             })
                                 .diary__item-control
                                     +control({
-                                        mod: ['prev', 'size-lg', 'bg'],
+                                        mod: ['prev', 'size-lg', 'bg-light-secondary'],
                                         js: 'diary-item-prev'
                                     })
                                     +control({
-                                        mod: ['next', 'size-lg', 'bg'],
+                                        mod: ['next', 'size-lg', 'bg-light-secondary'],
                                         js: 'diary-item-next'
                                     })

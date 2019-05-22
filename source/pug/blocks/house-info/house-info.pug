@@ -1,0 +1,124 @@
+mixin house-info-line(data)
+    +el({
+        class: 'house-info__line',
+        mod: data.mod,
+    })
+        if data.key
+            +el({
+                tag: 'span',
+                class: 'house-info__key',
+                text: data.key,
+            })
+        if data.value
+            +el({
+                tag: 'span',
+                class: 'house-info__value',
+                text: data.value,
+            })
+        block
+
+mixin house-info-table-line(data)
+    +el({
+        class: 'house-info__table-line',
+        before: {
+            class: 'house-info__table-key',
+            text: data.key,
+        },
+        after: {
+            class: 'house-info__table-value',
+            text: data.value
+        },
+    })
+
+mixin house-info(data)
+    +el({
+        class: 'house-info',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'h1',
+            class: 'house-info__heading',
+            text: 'Коттедж 21',
+        })
+        +house-info-line({
+            mod: 'articul',
+            key: 'Артикул:',
+            value: '079643',
+        })
+        +house-info-line({
+            mod: 'area',
+        })
+            +el({
+                tag: 'span',
+                class: 'house-info__value',
+                mod: 'large',
+                text: '332,64<span class="house-info__unit">м<sup>2</sup></span>',
+            })
+        +house-info-line({
+        })
+            +el({
+                class: 'house-info__key',
+                text: 'Адрес:',
+            })
+            +el({
+                class: 'house-info__value',
+                text: 'г. Ялта, ул.Большевистская, 100',
+            })
+        +el({
+            class: 'house-info__table',
+            mod: 'address',
+        })
+            +house-info-table-line({
+                key: 'Категория:',
+                value: 'Коттедж',
+            })
+            +house-info-table-line({
+                key: 'Количество комнат:',
+                value: '5',
+            })
+            +house-info-table-line({
+                key: 'Сан узлы:',
+                value: '3',
+            })
+            +house-info-table-line({
+                key: 'Площадь участка:',
+                value: '4 сот',
+            })
+            +house-info-table-line({
+                key: 'Этажность дома:',
+                value: '3',
+            })
+        +el({
+            class: 'house-info__line',
+            mod: 'price',
+        })
+            +el({
+                class: 'house-info__key',
+                text: 'Цена:',
+            })
+            +el({
+                class: 'house-info__value',
+                mod: 'large',
+                text: 'Р 28 161 270',
+            })
+            +el({
+                class: 'house-info__value',
+                mod: 'medium',
+            })
+                +el({
+                    tag: 'span',
+                    text: '$ 431 029'
+                })
+                | /
+                +el({
+                    tag: 'span',
+                    text: '€ 385 191'
+                })
+        .house-info__button-wrap
+            +button({
+                mix: 'house-info__button',
+                mod: ['shadow', 'medium'],
+                text: 'Заказать звонок',
+            })

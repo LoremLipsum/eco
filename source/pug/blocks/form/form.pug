@@ -70,7 +70,7 @@ mixin form(data)
         })
             +button({
                 mix: 'form__submit',
-                mod: ['bg-secondary', 'medium'],
+                mod: data.modSubmit,
                 type: 'submit',
                 text: data.submit
             })

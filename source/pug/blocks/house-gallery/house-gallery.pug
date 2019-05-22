@@ -1,0 +1,55 @@
+mixin house-gallery(data)
+    +el({
+        class: 'house-gallery',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        +el({
+            class: 'house-gallery__main',
+            js: 'house-gallery-main',
+            mix: 'swiper-container',
+        })
+            .swiper-wrapper
+                each item in data.items.main
+                    +el({
+                        class: 'house-gallery__main-item',
+                        mix: 'swiper-slide',
+                    })
+                        +el({
+                            mix: 'house-gallery__main-image-wrap',
+                        })
+                            +el({
+                                tag: 'img',
+                                upload: item.image,
+                                mix: 'house-gallery__image',
+                            })
+        +el({
+            class: 'house-gallery__nav',
+            js: 'house-gallery-nav',
+            mix: 'swiper-container',
+        })
+            .swiper-wrapper
+                each item in data.items.nav
+                    +el({
+                        class: 'house-gallery__nav-item',
+                        mix: 'swiper-slide',
+                    })
+                        +el({
+                            mix: 'house-gallery__nav-image-wrap',
+                        })
+                            +el({
+                                tag: 'img',
+                                upload: item.image,
+                                mix: 'house-gallery__image',
+                            })
+            +control({
+                mod: ['prev', 'size-lg', 'bg-white'],
+                js: 'house-gallery-prev',
+                mix: 'house-gallery__prev',
+            })
+            +control({
+                mod: ['next', 'size-lg', 'bg-white'],
+                js: 'house-gallery-next',
+                mix: 'house-gallery__next',
+            })

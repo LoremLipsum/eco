@@ -124,6 +124,7 @@ $button: (
   }
 
   &--shadow {
+    background-image: linear-gradient(#8ab23f, #5f831d);
     background-color: color(secondary);
     color: #051e0e;
     text-shadow: -1px 1px 0 rgba(color(white), 0.1);
@@ -146,19 +147,27 @@ $button: (
   }
 }
 
-.button--large.button--shadow {
-  background-image: linear-gradient(#8ab23f, #5f831d);
-  background-color: color(secondary);
+.button--medium.button--shadow {
   box-shadow:
-    inset 0 0 13px 0 rgba(#fff, 0.3),
-    0 10px 30px 0 rgba(color(secondary), 0.4);
+    inset 0 0 5px 0 rgba(#fff, 0.34),
+    0 5px 15px 0 rgba(color(secondary), 0.4);
 
   @include hover {
-    color: rgba(#051e0e, 0.7);
-
     box-shadow:
-      inset 0 0 13px 0 rgba(#fff, 0.3),
-      0 0px 10px 0 rgba(color(secondary), 0.4);
+      inset 0 0 5px 0 rgba(#fff, 0.34),
+      inset 0 -5px 10px 0 rgba(#fff, 0.3);
+  }
+}
+
+.button--large.button--shadow {
+  box-shadow:
+    inset 0 0 13px 0 rgba(#fff, 0.34),
+    0 10px 30px 0 rgba(color(secondary), 0.65);
+
+  @include hover {
+    box-shadow:
+      inset 0 0 13px 0 rgba(#fff, 0.34),
+      inset 0 -5px 10px 0 rgba(#fff, 0.3);
   }
 }
 
@@ -190,16 +199,15 @@ $button: (
     background-image: linear-gradient(#8ab23f, #5f831d);
     background-color: color(secondary);
     box-shadow:
-      inset 0 0 13px 0 rgba(#fff, 0.3),
+      inset 0 0 13px 0 rgba(#fff, 0.34),
       0 4px 15px 0 rgba(color(secondary), 0.4);
 
     @include hover {
       color: rgba(#051e0e, 0.7);
 
       box-shadow:
-        inset 0 0 13px 0 rgba(#fff, 0.3),
-        inset 0 -5px 10px 0 rgba(#fff, 0.2),
-        0 0px 5px 0 rgba(color(secondary), 0.4);
+        inset 0 0 13px 0 rgba(#fff, 0.34),
+        inset 0 -5px 10px 0 rgba(#fff, 0.2);
     }
   }
 }

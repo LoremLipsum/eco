@@ -6,7 +6,7 @@
 
   var tabs = document.querySelectorAll('.js-tabs');
 
-  var switchTabs = function (tabs, btns, contents, classContents) {
+  var switchTabs = function (item, btns, contents, classContents) {
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener('click', function (e) {
         e.preventDefault();
@@ -22,18 +22,22 @@
         };
 
         tab.parentNode.classList.add('active');
-        tabs.querySelector('.' + classContents + '.' + atr).classList.add('active');
+        item.querySelector('.' + classContents + '.' + atr).classList.add('active');
       });
     }
   };
 
-  if(tabs) {
-    for (var i = 0; i < tabs.length; i += 1) {
-      var btnsTabs = tabs[i].querySelectorAll('.js-tabs-button');
-      var contentsTabs = tabs[i].querySelectorAll('.js-tabs-content');
-      switchTabs(tabs, btnsTabs, contentsTabs, 'js-tabs-content');
+  var initTabs = function () {
+    if(tabs) {
+      for (var i = 0; i < tabs.length; i += 1) {
+        var btnsTabs = tabs[i].querySelectorAll('.js-tabs-button');
+        var contentsTabs = tabs[i].querySelectorAll('.js-tabs-content');
+        switchTabs(tabs[i], btnsTabs, contentsTabs, 'js-tabs-content');
+      }
     }
   }
+
+  initTabs();
 
   // табы на мобильной версии
   var initTabsSmall = function() {
@@ -41,7 +45,7 @@
       if(tabsSmall) {
 
         for (var i = 0; i < tabsSmall.length; i += 1) {
-          var btnsTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-small-button');
+          var btnsTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-button');
           var contentTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-small-content');
           switchTabs(tabsSmall[i], btnsTabsSmall, contentTabsSmall, 'js-tabs-small-content');
         }

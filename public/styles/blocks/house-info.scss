@@ -1,0 +1,162 @@
+.house-info__heading {
+  margin: 0;
+  margin-bottom: 15px;
+  color: color(primary);
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 500,
+}
+
+.house-info__line {
+  margin-bottom: 14px;
+
+  &--area {
+
+  }
+
+  &--price {
+    margin-bottom: 20px;
+
+    .house-info__key {
+      font-weight: 500;
+    }
+  }
+}
+
+.house-info__key {
+  padding-right: 0.4em;
+}
+
+.house-info__value {
+  font-weight: 500;
+
+  &--medium {
+    font-size: 20px;
+    color: color(primary);
+  }
+
+  &--large {
+    font-size: 26px;
+    color: color(primary);
+
+    .house-info__unit {
+      padding-left: 0.4em;
+      font-size: 20px;
+
+      sup {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.house-info__table {
+  display: table;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-top: 1px solid color(secondary);
+  border-bottom: 1px solid color(secondary);
+}
+
+.house-info__table-line {
+  display: table-row;
+}
+
+.house-info__table-key,
+.house-info__table-value {
+  display: table-cell;
+  text-align: left;
+  padding: 3px 0;
+}
+
+.house-info__table-key {
+  width: auto;
+  padding-right: 0.4em;
+}
+
+.house-info__table-value {
+  width: 2%;
+  font-weight: 500;
+}
+
+.house-info__button {
+  width: 100%;
+  max-width: 420px;
+}
+
+@include respond-to(420px) {
+  .house-info__button-wrap {
+    text-align: center;
+  }
+
+  .house-info__button {
+    width: auto;
+  }
+}
+
+@include respond-to(medium) {
+  .house-info__heading {
+    font-size: 34px;
+  }
+
+  .house-info__value {
+    &--medium {
+      font-size: 22px;
+    }
+
+    &--large {
+      font-size: 28px;
+
+      .house-info__unit {
+        font-size: 22px;
+
+        sup {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(large) {
+  .house-info {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 60px;
+    padding-bottom: 40px;
+    border-radius: radius(sm);
+    box-shadow: $shadow-secondary;
+  }
+
+  .house-info__heading {
+    font-size: 40px;
+  }
+
+  .house-info__value {
+    &--medium {
+      font-size: 24px;
+    }
+
+    &--large {
+      font-size: 30px;
+
+      .house-info__unit {
+        font-size: 24px;
+
+        sup {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .house-info__table-key,
+  .house-info__table-value {
+    padding: 6px 0;
+  }
+
+  .house-info__button {
+    margin-top: auto;
+  }
+
+}

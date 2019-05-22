@@ -1,0 +1,52 @@
+mixin contacts(data)
+    +el({
+        class: 'contacts',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .contacts__wrap
+            .contacts__info
+                h1.contacts__heading Контакты
+                h3.contacts__subheading Расположение Экопарка и&nbsp;офиса компании
+                p г. Ялта, ул. Большевистская, 100
+                h3.contacts__subheading Телефоны
+                p
+                    +el({
+                        tag: 'a',
+                        class: 'contacts__link',
+                        href: 'tel:88005053848',
+                        text: '8 800 505 38 48'
+                    })
+                    +el({
+                        tag: 'a',
+                        class: 'contacts__link',
+                        href: 'tel:89785748811',
+                        text: '8 978 574 88 11'
+                    })
+                        +el({
+                            tag: 'svg',
+                            class: 'contacts__link-icon',
+                            mod: 'tel-01',
+                            icon: 'tel-w-circle01'
+                        })
+                        +el({
+                            tag: 'svg',
+                            class: 'contacts__link-icon',
+                            mod: 'tel-02',
+                            icon: 'tel-w-circle02'
+                        })
+                h3.contacts__subheading E-mail
+                p
+                    +el({
+                        tag: 'a',
+                        class: 'contacts__link',
+                        href: 'mailto:sale@ecopark-krym.ru',
+                        text: 'sale@ecopark-krym.ru'
+                    })
+                +contacts-card({
+                    mix: 'contacts__card',
+                })
+        .contacts__map
+            script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+            .contacts__map-content#js-contacts-map

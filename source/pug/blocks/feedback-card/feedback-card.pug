@@ -5,7 +5,7 @@ mixin feedback-card(data)
         mod: data.mod,
         js: data.js,
     })&attributes(attributes)
-        h3.feedback-card__heading
+        h4.feedback-card__heading
             +el({
                 tag: 'svg',
                 icon: 'logo',
@@ -19,5 +19,6 @@ mixin feedback-card(data)
             submit: 'Получить планировки',
             modField: 'with-icon',
             mix: 'feedback-card__form',
+            modSubmit: ['bg-secondary', 'medium'],
         })
         .feedback-card__branch.js-parallax(style="background-image: url(assets/images/branch-small-w-shadow.png)")

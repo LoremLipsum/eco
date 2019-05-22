@@ -14,6 +14,18 @@
   &--pads-bottom {
     padding-bottom: 40px;
   }
+
+  &--bg-light-w-brash {
+    background-color: color(light-secondary);
+  }
+
+  &--bg-light {
+    background-color: color(light-secondary);
+  }
+
+  &--article {
+    padding-bottom: 40px;
+  }
 }
 
 .page-content__heading {
@@ -59,6 +71,7 @@
   .page-content__content {
     &--bg-light-w-brash {
       position: relative;
+      background-color: transparent;
 
       &::before,
       &::after {
@@ -95,6 +108,10 @@
       background-position: center 160px;
       background-size: auto;
     }
+
+    &--article {
+      padding-bottom: 60px;
+    }
   }
 
   .page-content__heading {
@@ -115,6 +132,12 @@
 @include respond-to(large) {
   .page-content {
     padding-top: 160px;
+  }
+
+  .page-content__content {
+    &--article {
+      padding-bottom: 60px;
+    }
   }
 
   .page-content__heading {

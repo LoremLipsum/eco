@@ -55,40 +55,6 @@
          }
         return myNum;
       },
-      formatFractionTotal: function (number) {
-        switch(number)
-          {
-            case 1:
-              myNum1='01';
-              break;
-            case 2:
-              myNum1='02';
-              break;
-            case 3:
-              myNum1='03';
-              break;
-            case 4:
-              myNum1='04';
-              break;
-            case 5:
-              myNum1='05';
-              break;
-            case 6:
-              myNum1='06';
-              break;
-            case 7:
-              myNum1='07';
-              break;
-            case 8:
-              myNum1='08';
-              break;
-            case 9:
-              myNum1='09';
-              break;
-            default: myNum1 = number
-          }
-        return myNum1;
-      },
     },
     breakpoints: {
       1249: {

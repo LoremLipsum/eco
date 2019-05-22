@@ -1,0 +1,26 @@
+mixin presentation(data)
+    +el({
+        class: 'presentation',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .presentation__wrap
+            .presentation__branch.js-parallax(style="background-image: url(assets/images/branch-two-w-3-cone.png)")
+            +el({
+                tag: 'h2',
+                class: 'presentation__heading',
+                text: 'Насладитесь гармонией с&nbsp;природой и&nbsp;непревзойденной экологий'
+            })
+            .presentation__button-wrap
+                +button({
+                    mod: ['shadow', 'large'],
+                    mix: 'presentation__button',
+                    text: 'Скачать презентацию',
+                })
+            .presentation__image-wrap
+                +el({
+                    tag: 'img',
+                    class: 'presentation__image',
+                    image: 'presentation.png',
+                })

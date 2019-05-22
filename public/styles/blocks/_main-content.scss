@@ -1,3 +1,8 @@
+.main-content__wrap {
+  position: relative;
+  @include wrapper;
+}
+
 @include respond-to(medium) {
   .main-content__section-top-wrap {
     position: relative;
@@ -38,6 +43,30 @@
       top: 200px;
       right: -70px;
       height: 1390px;
+    }
+  }
+}
+
+@include respond-to(1600px) {
+  .main-content__wrap {
+    position: relative;
+  }
+
+  .main-content__branch {
+    &--top {
+      position: absolute;
+      top: 330px;
+      right: 230px;
+      transform: translate(100%);
+      z-index: 2;
+      display: block;
+      width: 858px;
+      height: 705px;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 858px 705px;
+      box-sizing: border-box;
     }
   }
 }

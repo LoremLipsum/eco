@@ -1,0 +1,18 @@
+mixin contacts-card(data)
+    +el({
+        class: 'contacts-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        h4.contacts-card__heading
+            | Заполните форму и&nbsp;мы&nbsp;ответим на&nbsp;все Ваши вопросы
+        +form({
+            firstName: true,
+            tel: true,
+            email: true,
+            submit: 'Отправить',
+            modField: 'with-icon',
+            modSubmit: ['bg-primary', 'medium'],
+            mix: 'contacts-card__form',
+        })
