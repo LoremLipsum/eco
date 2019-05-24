@@ -48,8 +48,10 @@
   }
 
   .feedback-card__heading {
+    position: relative;
     margin: 0;
     margin-bottom: 30px;
+    padding-left: 85px;
     display: flex;
     color: color(primary);
     font-size: 18px;
@@ -57,15 +59,20 @@
     line-height: 1.4;
     text-align: left;
     text-transform: none;
-  }
 
-  .feedback-card__heading-logo {
-    flex-shrink: 0;
-    display: block;
-    width: 65px;
-    height: 93px;
-    margin-right: 20px;
-    fill: color(primary);
+    &::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 0;
+      display: block;
+      width: 65px;
+      height: 93px;
+      background-image: url('../assets/images/logo-primary.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   .feedback-card__form {

@@ -6,11 +6,6 @@ mixin feedback-card(data)
         js: data.js,
     })&attributes(attributes)
         h4.feedback-card__heading
-            +el({
-                tag: 'svg',
-                icon: 'logo',
-                class: 'feedback-card__heading-logo',
-            })
             | Лучшие планировки будут у&nbsp;Вас на почте в&nbsp;течение 15&nbsp;минут
         +form({
             firstName: true,

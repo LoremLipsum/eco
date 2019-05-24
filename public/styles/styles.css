@@ -6975,29 +6975,38 @@ body > *
         font-weight: 500;
         line-height: 1.4;
 
+        position: relative;
+
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
 
         margin: 0;
         margin-bottom: 30px;
+        padding-left: 85px;
 
         text-align: left;
         text-transform: none; 
 
         color: #004416;
     }
-    .feedback-card__heading-logo
+    .feedback-card__heading::before
     {
+        position: absolute;
+        top: -6px;
+        left: 0;
+
         display: block;
 
         width: 65px;
         height: 93px;
-        margin-right: 20px;
 
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        fill: #004416;
+        content: '';
+
+        background-image: url('../assets/images/logo-primary.svg');
+        background-repeat: no-repeat; 
+        background-position: center;
+        background-size: contain;
     }
     .feedback-card__form
     {
