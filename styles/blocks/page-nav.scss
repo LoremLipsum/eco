@@ -17,6 +17,7 @@
   &.active {
     .page-nav__link {
       color: color(secondary);
+      pointer-events: none;
     }
   }
 }
@@ -69,8 +70,4 @@
       border-bottom: 3px solid color(disabled);
     }
   }
-}
-
-@include respond-to(large) {
-
 }

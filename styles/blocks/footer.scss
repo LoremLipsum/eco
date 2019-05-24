@@ -2,6 +2,7 @@
   padding-top: get($y, small, size-40);
   background-color: color(dark);
   color: color(white);
+  overflow: hidden;
 }
 
 .footer__about {
@@ -265,7 +266,7 @@
   }
 
   .footer__title-arrow {
-    display: none;
+    display: none !important;
   }
 
   .footer__list {
@@ -351,4 +352,5 @@
   .footer__title-group {
     margin-left: auto;
   }
+
 }

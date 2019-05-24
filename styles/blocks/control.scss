@@ -5,7 +5,7 @@
   transform-origin: center;
 
   @include hover {
-    .arrow {
+    .control__arrow {
       border-top-color: color(secondary);
       border-right-color: color(secondary);
     }

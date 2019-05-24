@@ -368,6 +368,148 @@ picturefill();
 	});
 })(jQuery);
 
+(function($) {
+	'use strict';
+	$(function() {
+    var header = $('.js-header-scroll');
+    var lastScrollTop = 0;
+
+    $(window).scroll(function(e){
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop) {
+        header.removeClass('active');
+      } else  {
+        header.addClass('active');
+      }
+      lastScrollTop = st;
+    });
+	});
+})(jQuery);
+
+(function($) {
+	'use strict';
+	$(function() {
+    var btns = $('.js-show-button');
+
+    if (btns) {
+      var items = '.js-show-item';
+
+      var show = function (className) {
+        btns.on('click', function(e){
+          e.preventDefault();
+          $(this).parents(className).toggleClass('active');
+          var text = $(this).text() === 'Скрыть' ? 'Смотреть больше' : 'Скрыть';
+          $(this).text(text);
+        });
+      }
+
+      var screenWidth = $(window).outerWidth();
+      var aboutDescr = $('.js-about-descr');
+
+
+      if (aboutDescr) {
+        var showAboutDescr = function() {
+          if (screenWidth < 920 && !aboutDescr.hasClass('js-show-3-items')) {
+            aboutDescr.addClass('js-show-3-items');
+            show('.js-about-descr');
+          } else {
+            aboutDescr.removeClass('js-show-3-items');
+          }
+        }
+
+        showAboutDescr();
+
+        $(window).resize(function() {
+          showAboutDescr();
+        });
+      }
+
+      var service = $('.js-service-descr');
+
+      if (service) {
+        var showService = function() {
+          if (screenWidth < 920 && !service.hasClass('js-show-2-items')) {
+            service.addClass('js-show-2-items');
+            show('.js-service-descr');
+          } else {
+            service.removeClass('js-show-2-items');
+          }
+        }
+
+        showService();
+
+        $(window).resize(function() {
+          showService();
+        });
+      }
+    }
+
+	});
+})(jQuery);
+
+'use strict';
+
+(function() {
+
+  var item = document.querySelector('.js-about-intro-gallery');
+
+  if (item) {
+    var slider = new Swiper('.js-about-intro-gallery', {
+      loop: true,
+      loopedSlides: 3,
+      grabCursor: true,
+      slidesPerView: 1,
+      navigation: {
+        prevEl: '.js-about-intro-prev',
+        nextEl: '.js-about-intro-next',
+        clickable: true,
+        disabledClass: 'disabled',
+      }
+    });
+  }
+
+})();
+
+(function($) {
+	'use strict';
+	$(function() {
+
+    var item = $('.js-about-servise-slider');
+    var slider = undefined;
+
+    if (item) {
+      function initSlider() {
+        var screenWidth = $(window).outerWidth();
+        if ( (screenWidth < (920)) && (slider == undefined)) {
+          slider = new Swiper('.js-about-servise-slider', {
+            loop: true,
+            grabCursor: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            pagination: {
+              el: '.js-about-service-bullet',
+              clickable: true,
+              bulletClass: 'bullet-white',
+            },
+          });
+        } else if ((screenWidth > 919) && (slider != undefined)) {
+          slider.destroy();
+          slider = undefined;
+          item.find('.swiper-wrapper').removeAttr('style');
+          item.find('.swiper-slide').removeAttr('style');
+        }
+      }
+
+      initSlider();
+
+      $(window ).resize(function() {
+        initSlider();
+      });
+    }
+
+	});
+})(jQuery);
+
 'use strict';
 
 (function() {
@@ -647,8 +789,10 @@ picturefill();
 
 (function() {
 
-  var initSlider = function() {
-    var houseGalleryNavSlider = new Swiper('.js-house-gallery-nav', {
+  var item = document.querySelector('.js-house-gallery-nav');
+
+  if (item) {
+    var navSlider = new Swiper('.js-house-gallery-nav', {
       loop: true,
       loopedSlides: 3,
       grabCursor: true,
@@ -669,13 +813,13 @@ picturefill();
       }
     });
 
-    var houseGalleryMainSlider = new Swiper('.js-house-gallery-main', {
+    var mainSlider = new Swiper('.js-house-gallery-main', {
       loop: true,
       loopedSlides: 3,
       grabCursor: true,
       slidesPerView: 1,
       thumbs: {
-        swiper: houseGalleryNavSlider,
+        swiper: navSlider,
       },
       navigation: {
         prevEl: '.js-house-gallery-prev',
@@ -684,10 +828,7 @@ picturefill();
         disabledClass: 'disabled',
       },
     });
-
   }
-
-  initSlider();
 
 })();
 

@@ -2,8 +2,10 @@
 
 (function() {
 
-  var initSlider = function() {
-    var houseGalleryNavSlider = new Swiper('.js-house-gallery-nav', {
+  var item = document.querySelector('.js-house-gallery-nav');
+
+  if (item) {
+    var navSlider = new Swiper('.js-house-gallery-nav', {
       loop: true,
       loopedSlides: 3,
       grabCursor: true,
@@ -24,13 +26,13 @@
       }
     });
 
-    var houseGalleryMainSlider = new Swiper('.js-house-gallery-main', {
+    var mainSlider = new Swiper('.js-house-gallery-main', {
       loop: true,
       loopedSlides: 3,
       grabCursor: true,
       slidesPerView: 1,
       thumbs: {
-        swiper: houseGalleryNavSlider,
+        swiper: navSlider,
       },
       navigation: {
         prevEl: '.js-house-gallery-prev',
@@ -39,9 +41,6 @@
         disabledClass: 'disabled',
       },
     });
-
   }
-
-  initSlider();
 
 })();

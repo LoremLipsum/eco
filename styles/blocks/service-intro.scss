@@ -1,0 +1,127 @@
+.service-intro {
+  padding-top: get($y, small, size-70);
+}
+
+.service-intro__wrap {
+  @include wrapper;
+}
+
+.service-intro__content {
+  @include first-last;
+  margin-bottom: 20px;
+}
+
+.service-intro__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-intro__subheading {
+  margin: 0;
+  margin-bottom: 20px;
+  color: color(secondary);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.service-intro__list {
+  @include ul-no;
+  margin-bottom: 20px;
+}
+
+.service-intro__item {
+  margin-bottom: 20px;
+}
+
+.service-intro__image-wrap {
+  height: 62vw;
+  max-height: 435px;
+  margin: 0 -#{pads(small)};
+}
+
+@include respond-to(medium) {
+  .service-intro {
+    position: relative;
+    z-index: 0;
+    padding-top: get($y, medium, size-70);
+    padding-bottom: 60px;
+  }
+
+  .service-intro__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .service-intro__content {
+    order: 1;
+    width: calc(50% - 15px);
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .service-intro__heading {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .service-intro__subheading {
+    margin-bottom: 50px;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .service-intro__image-wrap {
+    order: 2;
+    display: block;
+    width: calc(50% - 15px);
+    height: 380px;
+    margin: 0;
+    margin-top: 10px;
+    max-height: none;
+  }
+
+  .service-intro__list {
+    order: 3;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    margin-top: 45px;
+    margin-bottom: -30px;
+  }
+
+  .service-intro__item {
+    width: 50%;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+}
+
+@include respond-to(large) {
+  .service-intro {
+    padding-top: get($y, large, size-70);
+  }
+
+  .service-intro__heading {
+    margin-bottom: 50px;
+  }
+
+  .service-intro__subheading {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+
+  .service-intro__content {
+    width: 460px;
+  }
+
+  .service-intro__image-wrap {
+    width: calc(100% - 490px);
+    height: 430px;
+  }
+
+}

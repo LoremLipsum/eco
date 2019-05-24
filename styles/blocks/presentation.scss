@@ -1,0 +1,123 @@
+.presentation {
+  background-color: color(light-secondary);
+}
+
+.presentation__wrap {
+  position: relative;
+  max-width: 780px + pads(small) * 2;
+  margin: 0 auto;
+  padding-left: pads(small);
+  padding-right: pads(small);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.presentation__heading {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 330px;
+  color: color(primary);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.presentation__button {
+  width: 100%;
+}
+
+.presentation__branch {
+  display: none;
+}
+
+.presentation__image-wrap {
+  display: none;
+}
+
+@include respond-to(620px) {
+  .presentation__wrap {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .presentation__heading {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .presentation__button {
+    width: 300px;
+  }
+
+  .presentation__image-wrap {
+    position: absolute;
+    display: block;
+    top: -40px;
+    left: 330px;
+    width: 540px;
+    height: 384px;
+  }
+
+  .presentation__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@include respond-to(medium) {
+  .presentation__wrap {
+    max-width: 780px + pads(medium) * 2;
+    padding-left: pads(medium);
+    padding-right: pads(medium);
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .presentation__heading {
+    max-width: 390px;
+    margin-bottom: 40px;
+    font-size: 26px;
+  }
+
+  .presentation__image-wrap {
+    left: 410px;
+    width: 610px;
+    height: 434px;
+  }
+}
+
+@include respond-to(large) {
+  .presentation__wrap {
+    padding-top: 150px;
+    padding-bottom: 85px;
+  }
+
+  .presentation__heading {
+    max-width: 450px;
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+
+  .presentation__image-wrap {
+    left: 450px;
+    width: 836px;
+    height: 595px;
+  }
+
+  .presentation__branch {
+    position: absolute;
+    top: -340px;
+    left: 150px + pads(large);
+    transform: translate(-100%);
+    z-index: 10;
+    display: block;
+    width: 1445px;
+    height: 851px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+  }
+}

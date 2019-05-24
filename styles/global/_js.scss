@@ -15,25 +15,39 @@
   }
 }
 
-.js-show-more-item-2 {
-  &:nth-child(n+3) {
-    display: none;
+.js-show-3-items {
+  .js-show-item {
+    &:nth-child(n+4) {
+      display: none;
+    }
+  }
 
-    &.active {
-      display: block !important;
+  &.active {
+    .js-show-item {
+      &:nth-child(n+4) {
+        display: block !important;
+      }
     }
   }
 }
 
-.js-show-more-item-5 {
-  &:nth-child(n+6) {
-    display: none;
+.js-show-2-items {
+  .js-show-item {
+    &:nth-child(n+3) {
+      display: none;
+    }
+  }
 
-    &.active {
-      display: block !important;
+  &.active {
+    .js-show-item {
+      &:nth-child(n+3) {
+        display: block !important;
+      }
     }
   }
 }
+
+
 
 @include respond-to(medium) {
   .js-tabs-small-content {

@@ -1,13 +1,20 @@
+.feedback-card {
+  .form__confirm {
+    color: color(secondary);
+  }
+}
+
 .feedback-card__heading {
   display: none;
 }
 
-.form__confirm {
-  color: color(secondary);
-}
-
 .feedback-card__branch {
   display: none;
+}
+
+.feedback-card__form {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 @include respond-to(medium) {
@@ -61,8 +68,9 @@
     fill: color(primary);
   }
 
-  .form__confirm {
-    color: color(secondary);
+  .feedback-card__form {
+    max-width: none;
+    margin: 0;
   }
 }
 

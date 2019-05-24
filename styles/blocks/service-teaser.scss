@@ -1,0 +1,36 @@
+.service-teaser {
+  padding: 20px 0;
+  background-color: color(secondary);
+}
+
+.service-teaser__wrap {
+  @include wrapper;
+}
+
+.service-teaser__text {
+  font-size: 22px;
+  font-weight: 500;
+  color: color(white);
+  text-align: center;
+  @include first-last;
+}
+
+@include respond-to(medium) {
+  .service-teaser {
+    padding: 40px 0;
+  }
+
+  .service-teaser__text {
+    font-size: 26px;
+  }
+}
+
+@include respond-to(large) {
+  .service-teaser {
+    padding: 60px 0;
+  }
+
+  .service-teaser__text {
+    font-size: 30px;
+  }
+}
