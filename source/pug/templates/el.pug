@@ -68,7 +68,8 @@ mixin el(data)
             for = data.for,
             min = data.min,
             max = data.max,
-            style = data.style
+            style = data.style,
+            rel = data.tag == '_blank' ? 'nofollow noopener' : data.rel,
         )&attributes(elAttr)&attributes(attributes)
         if data.tag && data.tag == 'svg'
             use(xlink:href = elXlink + '#' + data.icon)

@@ -6,7 +6,6 @@
 // @import "./libs/baron";
 @import "./global/functions";
 @import "./global/vars";
-
 @import "./global/mixins/mixins";
 @import "./global/base";
 @import "./global/default/default";
@@ -26,7 +25,6 @@
 @import "../pug/blocks/link-w-arrow/link-w-arrow";
 @import "../pug/blocks/date/date";
 @import "../pug/blocks/overlay/overlay";
-
 @import "../pug/blocks/field/field";
 @import "../pug/blocks/checkbox-confirm/checkbox-confirm";
 @import "../pug/blocks/form/form";
@@ -43,6 +41,7 @@
 @import "../pug/blocks/intro/intro";
 @import "../pug/blocks/social/social";
 @import "../pug/blocks/tabs/tabs";
+@import "../pug/blocks/circle/circle";
 @import "../pug/blocks/pagination/pagination";
 @import "../pug/blocks/tabs-diary/tabs-diary";
 @import "../pug/blocks/news-card/news-card";
@@ -66,7 +65,7 @@
 @import "../pug/blocks/house-plan/house-plan";
 @import "../pug/blocks/house-choice/house-choice";
 @import "../pug/blocks/posts-card/posts-card";
-@import "../pug/blocks/posts/posts";
+@import "../pug/blocks/posts-list/posts-list";
 @import "../pug/blocks/breadcrumbs/breadcrumbs";
 @import "../pug/blocks/link-comeback/link-comeback";
 @import "../pug/blocks/modal/modal";
@@ -74,13 +73,33 @@
 @import "../pug/blocks/house-list/house-list";
 @import "../pug/blocks/house-gallery/house-gallery";
 @import "../pug/blocks/house-info/house-info";
+@import "../pug/blocks/presentation/presentation";
 @import "../pug/blocks/panel-w-tabs/panel-w-tabs";
 @import "../pug/blocks/house-view/house-view";
-
-
+@import "../pug/blocks/contacts-card/contacts-card";
+@import "../pug/blocks/contacts/contacts";
+@import "../pug/blocks/docs-card/docs-card";
+@import "../pug/blocks/docs-section/docs-section";
+@import "../pug/blocks/house-section/house-section";
+@import "../pug/blocks/posts-section/posts-section";
 @import "./blocks/page-content";
 @import "./blocks/main-content";
+@import "../pug/blocks/item-w-circle/item-w-circle";
+@import "../pug/blocks/service-card/service-card";
+@import "../pug/blocks/about-form/about-form";
+@import "../pug/blocks/service-section/service-section";
+@import "../pug/blocks/service-intro/service-intro";
+@import "../pug/blocks/about-intro/about-intro";
+@import "../pug/blocks/about-descr/about-descr";
+@import "../pug/blocks/about-card/about-card";
+@import "../pug/blocks/item-w-card/item-w-card";
+@import "../pug/blocks/about-service/about-service";
+@import "../pug/blocks/place-intro/place-intro";
+@import "../pug/blocks/place-quote/place-quote";
+@import "../pug/blocks/place-descr/place-descr";
+@import "../pug/blocks/picture/picture";
+@import "../pug/blocks/service-descr/service-descr";
 
-@import "../pug/blocks/presentation/presentation";
-@import "../pug/blocks/contacts/contacts";
-@import "../pug/blocks/contacts-card/contacts-card";
+@import "../pug/blocks/service-teaser/service-teaser";
+@import "../pug/blocks/service-bonus/service-bonus";
+@import "../pug/blocks/service-garanty/service-garanty";

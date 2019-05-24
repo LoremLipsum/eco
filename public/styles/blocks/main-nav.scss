@@ -17,6 +17,7 @@
   &.active {
     .main-nav__link {
       color: color(secondary);
+      pointer-events: none;
     }
   }
 }

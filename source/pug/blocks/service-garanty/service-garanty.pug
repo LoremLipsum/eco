@@ -1,0 +1,21 @@
+mixin service-garanty(data)
+    +el({
+        class: 'service-garanty',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .service-garanty__wrap
+            h2.service-garanty__heading Мы гарантируем:
+            .service-garanty_list-wrap
+                ul.service-garanty__list
+                    each item in serviceGarantyIcons
+                        +el({
+                            tag: 'li',
+                            class: 'service-garanty__item',
+                        })
+                            +item-w-circle({
+                                icon: item.icon,
+                                text: item.text,
+                                mod: 'text-lg'
+                            })

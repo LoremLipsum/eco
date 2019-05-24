@@ -10,13 +10,16 @@ module.exports = () => (
     // .pipe($.rename({
     //   dirname: '',
     // }))
+    // .pipe($.rename({
+    //   dirname: './source/assets/images',
+    // }))
     .pipe($.if('*.{jpg,png}',
       $.imagemin(),
     ))
     .pipe(gulp.dest(config.dest.images))
-    .pipe($.if('*.{jpg,png}',
-      $.webp()
-    ))
+    // .pipe($.if('*.{jpg,png}',
+    //   $.webp()
+    // ))
     .pipe(gulp.dest(config.dest.images))
     .pipe($.if('*.svg',
       $.svgmin({

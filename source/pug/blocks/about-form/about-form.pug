@@ -1,0 +1,59 @@
+mixin about-form(data)
+    +el({
+        class: 'about-form',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .about-form__wrap
+            .about-form__content
+                h4.about-form__heading
+                    | Заполните форму <br>и мы ответим на все вопросы
+                +f({
+                    class: 'about-form__form',
+                })
+                    .about-form__field-group
+                        +field({
+                            mix: 'about-form__field',
+                            icon: 'user',
+                            mod:  ['with-icon', 'border-secondary'],
+                            label: 'Ваше имя',
+                            name: 'user',
+                            required: true,
+                            placeholder: 'Ваше имя'
+                        })(aria-required='true', aria-invalid='false')
+                        +field({
+                            mix: 'about-form__field',
+                            icon: 'tel-field',
+                            mod:  ['with-icon', 'border-secondary'],
+                            label: 'Ваш телефон',
+                            type: 'tel',
+                            name: 'tel',
+                            placeholder: 'Ваш телефон',
+                        })(aria-required='true', aria-invalid='false')
+                        +field({
+                            mix: 'about-form__field',
+                            icon: 'email',
+                            mod:  ['with-icon', 'border-secondary'],
+                            label: 'E-mail',
+                            type: 'email',
+                            name: 'email',
+                            required: true,
+                            placeholder: 'E-mail'
+                        })(aria-required='true', aria-invalid='false')
+                    .about-form__footer
+                        +el({
+                            class: 'about-form__submit-wrap',
+                            mod: data.modSubmit
+                        })
+                            +button({
+                                mix: 'about-form__submit',
+                                mod: ['medium', 'bg-primary'],
+                                type: 'submit',
+                                text: 'Отправить'
+                            })
+                        .about-form__confirm-wrap
+                            +checkbox-confirm({
+                                label: 'Согласие на обработку персональных данных',
+                                mix: 'about-form__confirm',
+                            })

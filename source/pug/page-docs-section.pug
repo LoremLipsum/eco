@@ -1,0 +1,12 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Экопарк'
+    - var main = false
+    - var pageId = 5
+
+block content
+    main.page-content.page-content--no-pads
+        +docs-section({
+            items: docs,
+        })

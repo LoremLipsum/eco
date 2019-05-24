@@ -19,9 +19,6 @@
   &:disabled {
     pointer-events: none;
 
-    .control__icon {
-      fill: color(light-gray);
-    }
   }
 }
 
@@ -29,6 +26,7 @@
   display: flex;
   align-items: center;
   @include ul-no;
+  overflow: hidden;
 }
 
 .pagination__item {

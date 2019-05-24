@@ -1,0 +1,34 @@
+mixin about-descr(data)
+    +el({
+        class: 'about-descr',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .about-descr__wrap
+            .about-descr__content
+                h2.about-descr__heading В распоряжении всех&nbsp;владельцев домов клубного поселка
+                p.
+                    Периметр всей территории обустроен: асфальтированным подъездом, и&nbsp;пешеходными
+                    дорожками, уличным освещением. У&nbsp;каждого объекта предусмотрены парковочные
+                    места (на&nbsp;вилле&nbsp;&mdash; паркинг на&nbsp;2&nbsp;авто), а&nbsp;также участок земли для отдыха
+                    и&nbsp;проведения досуга. У&nbsp;всех таунхаусах и&nbsp;коттеджей будет эксплуатируемая
+                    кровля, а&nbsp;также наличие просторных открытых террас.
+            .about-descr__list-wrap.js-about-descr
+                ul.about-descr__list
+                    each item in aboutIcons
+                        +el({
+                            tag: 'li',
+                            class: 'about-descr__item',
+                            js: 'show-item'
+                        })
+                            +item-w-circle({
+                                icon: item.icon,
+                                text: item.text
+                            })
+                +button({
+                    mix: 'about-descr__button-show',
+                    mod: ['small', 'bg-secondary'],
+                    text: 'Смотреть больше',
+                    js: 'show-button',
+                })

@@ -25,3 +25,4 @@ runTask('serviceWorker');
 runTask('spriteSvg');
 runTask('watch');
 runTask('zip');
+runTask('webp');

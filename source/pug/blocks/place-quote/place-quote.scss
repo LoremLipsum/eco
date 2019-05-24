@@ -1,0 +1,57 @@
+.place-quote {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .place-quote {
+    position: relative;
+    display: block;
+    height: 320px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: pads(medium);
+      right: 0;
+      z-index: -1;
+      background-color: color(secondary);
+    }
+  }
+
+  .place-quote__wrap {
+    padding-left: pads(medium);
+    padding-right: pads(medium);
+  }
+
+  .place-quote__image-wrap {
+    position: absolute;
+    left: 0;
+    top: -60px;
+    height: 460px;
+    width: 460px;
+  }
+}
+
+@include respond-to(large) {
+  .place-quote {
+    height: 320px;
+  }
+
+  .place-quote__wrap {
+    position: relative;
+    width: width(large);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: pads(large);
+    padding-right: pads(large);
+  }
+
+  .place-quote__image-wrap {
+    top: -60px;
+    left: pads(medium);
+    height: 460px;
+    width: 460px;
+  }
+}

@@ -5,9 +5,9 @@ mixin house-list(data)
         mod: data.mod,
         mix: data.mix,
         js: data.js,
-    })&attributes(attributes)
+    })(itemscope itemtype="http://schema.org/ItemList")
         each item in data.items
-            li.house-list__item
+            li.house-list__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
                 +house-card-w-slider({
                     image: item.image,
                     number: item.number,

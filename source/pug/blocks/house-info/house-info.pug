@@ -36,7 +36,7 @@ mixin house-info(data)
         mod: data.mod,
         mix: data.mix,
         js: data.js,
-    })&attributes(attributes)
+    })(itemscope itemtype="http://schema.org/Product")
         +el({
             tag: 'h1',
             class: 'house-info__heading',
@@ -93,7 +93,7 @@ mixin house-info(data)
         +el({
             class: 'house-info__line',
             mod: 'price',
-        })
+        })(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
             +el({
                 class: 'house-info__key',
                 text: 'Цена:',
@@ -102,7 +102,7 @@ mixin house-info(data)
                 class: 'house-info__value',
                 mod: 'large',
                 text: 'Р 28 161 270',
-            })
+            })(itemprop="price")
             +el({
                 class: 'house-info__value',
                 mod: 'medium',
@@ -110,12 +110,12 @@ mixin house-info(data)
                 +el({
                     tag: 'span',
                     text: '$ 431 029'
-                })
+                })(itemprop="price")
                 | /
                 +el({
                     tag: 'span',
                     text: '€ 385 191'
-                })
+                })(itemprop="price")
         .house-info__button-wrap
             +button({
                 mix: 'house-info__button',

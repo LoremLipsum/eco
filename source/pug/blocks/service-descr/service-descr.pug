@@ -1,0 +1,42 @@
+mixin service-descr(data)
+    +el({
+        tag: 'section',
+        class: 'service-descr',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .service-descr__wrap
+            .service-descr__content
+                h2.service-descr__heading Постпродажный сервис
+                .service-descr__text
+                    p.
+                        Cервис высокого уровня&nbsp;&mdash; одна из&nbsp;составляющих высокого качества жизни.
+                        В&nbsp;ЭКОПАРКЕ умеют находить правильный подход к&nbsp;решению Ваших ежедневных бытовых вопросов
+                +el({
+                    class: 'service-descr__image-wrap',
+                })
+                    +picture-small-and-large({
+                        path: 'service',
+                        large: 'service-02-lg',
+                        small: 'service-02-sm',
+                        exp: 'jpg',
+                    })
+            .service-descr__list-wrap.js-service-descr
+                ul.service-descr__list
+                    each item in serviceIcons
+                        +el({
+                            tag: 'li',
+                            class: 'service-descr__item',
+                            js: 'show-item'
+                        })
+                            +item-w-circle({
+                                icon: item.icon,
+                                text: item.text
+                            })
+                +button({
+                    mix: 'about-descr__button-show',
+                    mod: ['small', 'bg-secondary'],
+                    text: 'Смотреть больше',
+                    js: 'show-button',
+                })

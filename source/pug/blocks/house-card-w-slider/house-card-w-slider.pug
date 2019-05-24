@@ -4,7 +4,7 @@ mixin house-card-w-slider(data)
         mix: data.mix,
         mod: data.mod,
         js: data.js,
-    })&attributes(attributes)
+    })(itemscope itemtype="http://schema.org/Product")
         .house-card-w-slider__image-list
             +el({
                 mix: data.index ? 'js-house-card-w-slider js-slider-' + data.index : 'js-house-card-w-slider',
@@ -17,13 +17,13 @@ mixin house-card-w-slider(data)
                                 tag: 'a',
                                 href: '',
                                 class: 'house-card-w-slider__image-wrap',
-                            })
+                            })(itemprop="url")
                                 +el({
                                     tag: 'img',
                                     upload: item,
                                     class: 'house-card-w-slider__image',
                                     alt: 'Фото коттеджа'
-                                })
+                                })(itemprop="image")
                 .house-card-w-slider__control
                     +control({
                         mod: ['prev', 'size-lg', 'bg-light-secondary'],
@@ -38,7 +38,8 @@ mixin house-card-w-slider(data)
                 +el({
                     tag: 'h4',
                     mix: 'house-card-w-slider__heading',
-                    before: {
+                })
+                    +el({
                         tag: 'a',
                         class: 'house-card-w-slider__heading-link',
                         text: 'коттедж ',
@@ -47,8 +48,7 @@ mixin house-card-w-slider(data)
                             class: 'house-card-w-slider__heading--number',
                             text: data.number,
                         }
-                    }
-                })
+                    })(itemprop="url")
             +specification({
                 mix: 'house-card-w-slider__specification',
                 mod: 'with-dots',
@@ -64,9 +64,11 @@ mixin house-card-w-slider(data)
                 ]
             })
             .house-card-w-slider__bottom
-                .house-card-w-slider__price
-                    | !{data.price}
+                .house-card-w-slider__price(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+                    span(itemprop="price")
+                        | !{data.price}
                     span.house-card-w-slider__rouble &#x20BD;
+                    meta(itemprop="priceCurrency" content="RUB")
                 .house-card-w-slider__button-wrap
                     +button({
                         tag: 'a',

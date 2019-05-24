@@ -1,0 +1,19 @@
+mixin posts(data)
+    +el({
+        tag: 'ul',
+        class: 'posts-list',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            +el({
+                tag: 'li',
+                class: 'posts-list__item',
+            })
+                +posts-card({
+                    image: item.image,
+                    date: item.date,
+                    heading: item.heading,
+                    text: item.text
+                })

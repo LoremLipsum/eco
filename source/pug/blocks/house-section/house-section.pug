@@ -1,0 +1,44 @@
+mixin house-section(data)
+    +el({
+        tag: 'section',
+        class: 'house-section',
+        mod: data.mod,
+        mix: data.mix,
+        js: 'tabs',
+    })&attributes(attributes)
+        .house-section__wrap
+            h1.house-section__heading Коттеджи
+        .house-section__content
+            .house-section__wrap
+                +tabs-blocks({
+                    mix: 'house-section__tabs',
+                    items: [
+                        {
+                            text: 'Таунхаусы',
+                            js: 'tabs-button',
+                        },
+                        {
+                            text: 'Коттеджи',
+                            js: 'tabs-button',
+                        },
+                        {
+                            text: 'Виллы',
+                            js: 'tabs-button',
+                        },
+                    ]
+                })
+                .tab-1.js-tabs-content.active
+                    +house-list({
+                        items: houseList1,
+                    })
+                .tab-2.js-tabs-content
+                    +house-list({
+                        items: houseList2,
+                    })
+                .tab-3.js-tabs-content
+                    +house-list({
+                        items: houseList3,
+                    })
+                +pagination({
+                    mix: 'house-section__pagination',
+                })

@@ -1,0 +1,14 @@
+mixin place-quote(data)
+    +el({
+        class: 'place-quote',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .place-quote__wrap
+            .place-quote__image-wrap
+                +picture({
+                    path: 'place',
+                    image: 'place-02',
+                    exp: 'jpg',
+                })

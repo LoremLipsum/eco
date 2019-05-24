@@ -1,0 +1,17 @@
+mixin posts-section(data)
+    +el({
+        tag: 'section',
+        class: 'posts-section',
+        mod: data.mod,
+        mix: data.mix,
+        js: 'tabs',
+    })&attributes(attributes)
+        .posts-section__wrap
+            h1.posts-section__heading Блог
+            +posts({
+                items: posts,
+                mix: 'posts-section__posts',
+            })
+            +pagination({
+                mix: 'posts-section__pagination',
+            })

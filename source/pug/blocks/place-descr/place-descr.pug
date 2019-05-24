@@ -1,0 +1,38 @@
+mixin place-descr(data)
+    +el({
+        tag: 'section',
+        class: 'place-descr',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .place-descr__wrap
+            .place-descr__content
+                h2.place-descr__heading Окружите себя захватывающими панорамами
+                p.
+                    Для Вас открывается потрясающий вид на&nbsp;море, горы и&nbsp;Ялту.
+                    Наслаждаться обзором можно как через панорамные окна, так
+                    и&nbsp;на&nbsp;собственных террасах и&nbsp;крышах вашего дома.
+                p.
+                    В&nbsp;основе данного проекта лежит простая идея&nbsp;&mdash;
+                    создания уютного дома, места, где каждый член семьи сможет чувствовать себя
+                    спокойно и&nbsp;счастливо. Места, где любой человек сможет найти для себя уединение
+                    и&nbsp;почувствовать свободу. Места, где тишина и&nbsp;пение птиц будут умиротворять
+                    после тяжелого рабочего дня и&nbsp;наполнять силами и&nbsp;положительными эмоциями
+            +el({
+                class: 'place-descr__image-small-wrap',
+            })
+                +picture({
+                    path: 'place',
+                    image: 'place-02',
+                    exp: 'jpg',
+                })
+        +el({
+            class: 'place-descr__image-large-wrap',
+        })
+            +picture-small-and-large({
+                path: 'place',
+                large: 'place-lg-03',
+                small: 'place-sm-03',
+                exp: 'jpg',
+            })

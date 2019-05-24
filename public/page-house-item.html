@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
-    <header class="page-header js-header">
+    <header class="page-header js-header-scroll js-header">
       <div class="page-header__wrap">
         <div class="page-header__col page-header__col--left">
           <div class="page-header__button-nav-wrap">
@@ -108,24 +108,36 @@
     <main class="page-content">
       <div class="page-content__wrap">
         <nav class="breadcrumbs page-content__breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Главная
+          <ol class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="#" itemprop="item">
+                <span itemprop="name">Главная
+                </span>
+                <meta itemprop="position" content="1">
               </a>
             </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Наши объекты
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="#" itemprop="item">
+                <span itemprop="name">Наши объекты
+                </span>
+                <meta itemprop="position" content="2">
               </a>
             </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Коттеджи
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="#" itemprop="item">
+                <span itemprop="name">Коттеджи
+                </span>
+                <meta itemprop="position" content="3">
               </a>
             </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Коттедж 21
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="#" itemprop="item">
+                <span itemprop="name">Коттедж 21
+                </span>
+                <meta itemprop="position" content="4">
               </a>
             </li>
-          </ul>
+          </ol>
         </nav>
       </div>
       <div class="page-content__content page-content__content--bg-light">
@@ -190,7 +202,7 @@
                   </button>
                 </div>
               </div>
-              <div class="house-info house-view__info">
+              <div class="house-info house-view__info" itemscope itemtype="http://schema.org/Product">
                 <h1 class="house-info__heading">Коттедж 21
                 </h1>
                 <div class="house-info__line house-info__line--articul">
@@ -241,15 +253,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="house-info__line house-info__line--price">
+                <div class="house-info__line house-info__line--price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                   <div class="house-info__key">Цена:
                   </div>
-                  <div class="house-info__value house-info__value--large">Р 28 161 270
+                  <div class="house-info__value house-info__value--large" itemprop="price">Р 28 161 270
                   </div>
                   <div class="house-info__value house-info__value--medium">
-                    <span>$ 431 029
+                    <span itemprop="price">$ 431 029
                     </span>/
-                    <span>€ 385 191
+                    <span itemprop="price">€ 385 191
                     </span>
                   </div>
                 </div>
@@ -335,21 +347,21 @@
             </a>
             <ul class="social social--invert footer__social">
               <li class="social__item">
-                <a class="social__link" title="Мы в Контакте" target="_blank" href="#" rel="nofollow noopener">
+                <a class="social__link" title="Мы в Контакте" target="_blank" rel="nofollow noopener" href="#">
                   <svg class="social__icon" aria-hidden="true">
                     <use xlink:href="./assets/images/sprites/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" title="Мы в Фейсбуке" target="_blank" href="#" rel="nofollow noopener">
+                <a class="social__link" title="Мы в Фейсбуке" target="_blank" rel="nofollow noopener" href="#">
                   <svg class="social__icon" aria-hidden="true">
                     <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="nofollow noopener">
+                <a class="social__link" title="Мы в Инстаграме" target="_blank" rel="nofollow noopener" href="#">
                   <svg class="social__icon" aria-hidden="true">
                     <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
                   </svg>

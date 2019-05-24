@@ -1,0 +1,47 @@
+mixin about-intro(data)
+    +el({
+      class: 'about-intro',
+      mod: data.mod,
+      mix: data.mix,
+      js: data.js,
+    })&attributes(attributes)
+        .about-intro__wrap
+            .about-intro__content
+                h1.about-intro__heading Об Экопарке
+                h2.about-intro__subheading Уникальный элитный поселок
+                p.
+                    Уникальный элитный поселок&nbsp;в, в&nbsp;котором объединены все плюсы городской и&nbsp;загородной жизни.
+                    Лес у&nbsp;порога, панорамные виды на&nbsp;море, горы и&nbsp;Ялту, и&nbsp;всё это без отрыва от&nbsp;цивилизации.
+                p.
+                    Территория коттеджного посёлка &laquo;Экопарк&raquo; составляет 1&nbsp;Га земли, на&nbsp;которой по&nbsp;проекту
+                    расположены 40&nbsp;строений (таунхаусы, коттеджи и&nbsp;вилла). Таунхаусы будут состоять из&nbsp;2-3-х этажей
+                    и&nbsp;иметь площадь от&nbsp;100 кв.м., с&nbsp;площадью земельного участка от&nbsp;1&nbsp;сотки. Виллы и&nbsp;таунхаусы
+                    в&nbsp;данном проекте будут выполнены согласно передовыми европейскими стандартами качества в&nbsp;едином архитектурном стиле
+        +el({
+            class: 'about-intro__gallery',
+            js: 'about-intro-gallery',
+            mix: 'swiper-container',
+        })
+            .swiper-wrapper
+                each item in data.gallery
+                    +el({
+                        class: 'about-intro__item',
+                        mix: 'swiper-slide',
+                    })
+                        +el({
+                            mix: 'about-intro__image-wrap',
+                        })
+                          +el({
+                                tag: 'img',
+                                upload: item.image,
+                                mix: 'about-intro__image',
+                          })
+            .about-intro__controls
+                +control({
+                    mod: ['prev', 'size-lg', 'bg-light-secondary'],
+                    js: 'about-intro-prev',
+                })
+                +control({
+                    mod: ['next', 'size-lg', 'bg-light-secondary'],
+                    js: 'about-intro-next',
+                })

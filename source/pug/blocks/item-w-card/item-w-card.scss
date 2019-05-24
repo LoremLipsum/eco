@@ -1,0 +1,36 @@
+.item-w-card {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  margin: 0;
+  padding: 20px;
+  border-radius: radius(sm);
+  background-color: color(white);
+  box-shadow: $shadow-secondary;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.item-w-card__text {
+  display: inline-block;
+  color: color(primary);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: none;
+}
+
+@include respond-to(medium) {
+  .item-w-card__text {
+    font-size: 22px;
+  }
+}
+
+@include respond-to(large) {
+  .item-w-card__text {
+    font-size: 24px;
+  }
+}

@@ -12,6 +12,11 @@
   display: none;
 }
 
+.feedback-card__form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 @include respond-to(medium) {
   .feedback-card {
     padding: 30px 40px;
@@ -61,6 +66,11 @@
     height: 93px;
     margin-right: 20px;
     fill: color(primary);
+  }
+
+  .feedback-card__form {
+    max-width: none;
+    margin: 0;
   }
 }
 

@@ -15,5 +15,6 @@ module.exports = gulp.series(
     'libScripts',
     'libStyles',
     'spriteSvg',
+    'webp',
   ),
 );

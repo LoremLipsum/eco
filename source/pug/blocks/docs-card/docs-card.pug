@@ -1,0 +1,27 @@
+mixin docs-card(data)
+    +el({
+        tag: 'article',
+        class: 'docs-card',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'docs-card__info',
+            text: '23 Кб'
+        })
+        +el({
+            tag: 'h5',
+            class: 'docs-card__title'
+        })
+            +el({
+                tag: 'a',
+                target: '_blank',
+                class: 'docs-card__link',
+                text: data.heading
+            })
+        +el({
+            tag: 'svg',
+            class: 'docs-card__icon',
+            icon: 'download'
+        })

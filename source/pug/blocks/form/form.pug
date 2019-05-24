@@ -1,6 +1,7 @@
 mixin form(data)
     +f({
         class: 'form',
+        mix: data.mix,
     })
         .form__group
             if data.firstName

@@ -1,0 +1,19 @@
+mixin item-w-circle(data)
+    +el({
+        class: 'item-w-circle',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'item-w-circle__circle',
+        })
+            +el({
+                tag: 'svg',
+                icon: data.icon,
+                class: 'item-w-circle__icon'
+            })
+        +el({
+            class: 'item-w-circle__text',
+            text: data.text
+        })

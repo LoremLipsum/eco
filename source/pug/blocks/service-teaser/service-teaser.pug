@@ -1,0 +1,10 @@
+mixin service-teaser(data)
+    +el({
+        class: 'service-teaser',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .service-teaser__wrap
+            .service-teaser__text
+                p Индивидуально рассмотрим все Ваши пожелания по&nbsp;расширению&nbsp;спектра услуг и&nbsp;решим любой Ваш вопрос.

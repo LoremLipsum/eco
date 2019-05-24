@@ -1,0 +1,30 @@
+mixin service-bonus(data)
+    +el({
+        class: 'service-bonus',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .service-bonus__wrap
+            .service-bonus__content
+                h2.service-bonus__heading Мы заботимся о&nbsp;досуге и&nbsp;маленьких жителей клубного поселка
+                +el({
+                    class: 'service-bonus__image-wrap',
+                })
+                    +picture-small-and-large({
+                        path: 'service',
+                        large: 'service-03-lg',
+                        small: 'service-03-sm',
+                        exp: 'jpg',
+                    })
+            .service-bonus__list-wrap
+                ul.service-bonus__list
+                    each item in serviceBonusIcons
+                        +el({
+                            tag: 'li',
+                            class: 'service-bonus__item',
+                        })
+                            +item-w-circle({
+                                icon: item.icon,
+                                text: item.text
+                            })

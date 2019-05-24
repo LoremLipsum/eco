@@ -1,0 +1,21 @@
+.posts-section {
+  padding-bottom: 40px;
+}
+
+.posts-section__wrap {
+  @include wrapper;
+}
+
+.posts-section__heading {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+@include respond-to(large) {
+  .posts-section {
+    background-image: url('../assets/images/bg-w-logo.png');
+    background-repeat: no-repeat;
+    background-position: center 110px;
+    background-size: auto;
+  }
+}

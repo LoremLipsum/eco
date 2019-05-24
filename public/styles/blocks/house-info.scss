@@ -125,6 +125,7 @@
     padding: 30px 60px;
     padding-bottom: 40px;
     border-radius: radius(sm);
+    background-color: color(white);
     box-shadow: $shadow-secondary;
   }
 
@@ -155,8 +156,9 @@
     padding: 6px 0;
   }
 
-  .house-info__button {
+  .house-info__button-wrap {
     margin-top: auto;
+    text-align: left;
   }
 
 }

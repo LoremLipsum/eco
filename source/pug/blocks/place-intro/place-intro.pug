@@ -1,0 +1,32 @@
+mixin place-intro(data)
+    +el({
+        tag: 'section',
+        class: 'place-intro',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .place-intro__wrap
+            .place-intro__content
+                h1.place-intro__heading Уникальность места
+                h2.place-intro__subheading Насладитесь гармонией с&nbsp;природой и&nbsp;непревзойденной экологий
+                p.
+                    Месторасположение коттеджного посёлка &laquo;Экопарк&raquo;,
+                    является одним из&nbsp;главных преимуществ и&nbsp;отличительных
+                    особенностей проекта так как он&nbsp;граничит с&nbsp;горнолесным
+                    заповедником. Посетив Ялтинский заповедник, вы&nbsp;окунетесь
+                    в&nbsp;сказочную атмосферу жизнерадостных тонов
+                    здешней природы с&nbsp;уникальной флорой и&nbsp;фауной.
+                p.
+                    Витающий в&nbsp;воздухе целебный аромат хвойных смол (фитонцидов) и&nbsp;Черного моря,
+                    тишина в&nbsp;тандеме с&nbsp;комфортабельными и&nbsp;современными таунхаусами и&nbsp;коттеджами,
+                    обеспечат наилучшие условия для жизни в&nbsp;пригороде.
+            +el({
+                class: 'place-intro__image-wrap',
+            })
+                +picture-small-and-large({
+                    path: 'place',
+                    large: 'place-lg-01',
+                    small: 'place-sm-01',
+                    exp: 'jpg',
+                })

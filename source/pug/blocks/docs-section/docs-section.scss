@@ -1,0 +1,143 @@
+.docs-section__wrap {
+  @include wrapper;
+  padding-top: get($y, small, size-70);
+  padding-bottom: 40px;
+}
+
+.docs-section__heading {
+  margin-bottom: 40px;
+}
+
+.docs-section__list {
+  @include ul-no;
+  margin-bottom: -15px;
+}
+
+.docs-section__item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid color(light-gray);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.docs-section__branch {
+  display: none;
+}
+
+.docs-section__image-wrap {
+  display: none;
+}
+
+@include respond-to(620px) {
+  .docs-section {
+    background-color: color(light-secondary);
+  }
+
+  .docs-section__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  .docs-section__item {
+    width: 50%;
+
+    padding: 0 10px;
+    border-bottom: none;
+  }
+}
+
+@include respond-to(medium) {
+  .docs-section__wrap {
+    padding-top: get($y, medium, size-70);
+    padding-bottom: 50px;
+  }
+
+  .docs-section__heading {
+    margin-bottom: 50px;
+  }
+
+  .docs-section__content {
+    max-width: 750px;
+  }
+
+  .docs-section__list {
+    margin: 0 -15px;
+    margin-bottom: -30px;
+  }
+
+  .docs-section__item {
+    width: 50%;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+}
+
+@include respond-to(large) {
+  .docs-section__wrap {
+    position: relative;
+    padding-top: get($y, large, size-70);
+    padding-bottom: 70px;
+  }
+
+  .docs-section__heading {
+    margin-bottom: 60px;
+  }
+
+  .docs-section__image-wrap {
+    position: absolute;
+    top: 90px;
+    right: 410px + pads(large);
+    transform: translate(100%);
+    display: block;
+    width: 581px;
+    height: 697px;
+    padding-bottom: 80px;
+  }
+
+  .docs-section__image {
+    display: block;
+    width: 581px;
+    height: 617px;
+  }
+
+  .docs-section__branch-w-image {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: 363px;
+    height: 229px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@include respond-to(1600px) {
+  .docs-section__content {
+    position: relative;
+    z-index: 100;
+  }
+
+  .docs-section__branch {
+    position: absolute;
+    bottom: 200px;
+    left: 70px + pads(large);
+    transform: translate(-100%);
+    z-index: 1;
+    display: block;
+    width: 629px;
+    height: 550px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .docs-section__branch-w-image {
+    left: 170px;
+  }
+}

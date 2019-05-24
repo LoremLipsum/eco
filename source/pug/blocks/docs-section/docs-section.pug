@@ -1,0 +1,28 @@
+mixin docs-section(data)
+    +el({
+        tag: 'section',
+        class: 'docs-section',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .docs-section__wrap
+            .docs-section__branch.js-parallax(style="background-image: url(assets/images/branch-w-2-cone.png)")
+            .docs-section__image-wrap
+                +el({
+                    tag: 'img',
+                    class: 'docs-section__image',
+                    image: 'docs.png',
+                })
+                .docs-section__branch-w-image.js-parallax(style="background-image: url(assets/images/branch-small-w-shadow.png)")
+            .docs-section__content
+                h1.docs-section__heading Документация
+                +el({
+                    tag: 'ul',
+                    class: 'docs-section__list',
+                })
+                    each item in data.items
+                        li.docs-section__item
+                            +docs-card({
+                                heading: item.heading
+                            })

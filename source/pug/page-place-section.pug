@@ -1,0 +1,18 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Экопарк'
+    - var main = false
+    - var pageId = 1
+
+block content
+    main.page-content.page-content--no-pads
+        +place-intro({
+            gallery: gallery.main
+        })
+        +place-descr({
+
+        })
+        +presentation({
+
+        })

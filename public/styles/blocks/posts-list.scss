@@ -1,0 +1,29 @@
+.posts-list {
+  @include ul-no;
+}
+
+.posts-list__item {
+  margin-bottom: 20px;
+}
+
+@include respond-to(620px) {
+  .posts-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .posts-list__item {
+    width: 50%;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@include respond-to(medium) {
+  .posts-list__item {
+    width: 33.33%;
+  }
+}

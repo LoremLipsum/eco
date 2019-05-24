@@ -7,16 +7,20 @@ mixin breadcrumbs(data)
         js: data.js,
     })
         +el({
-            tag: 'ul',
+            tag: 'ol',
             class: 'breadcrumbs__list',
-        })
-            each item in data.items
+        })(itemscope itemtype="http://schema.org/BreadcrumbList")
+            each item, index in data.items
                 +el({
                     tag: 'li',
                     class: 'breadcrumbs__item',
-                })
+                })(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
                     +el({
                         tag: 'a',
                         class: 'breadcrumbs__link',
-                        text: item,
-                    })
+                    })(itemprop="item")
+                        +el({
+                            tag: 'span',
+                            text: item,
+                        })(itemprop="name")
+                        meta(itemprop="position" content= (index + 1) )

@@ -1,0 +1,29 @@
+mixin service-card(data)
+    +el({
+        class: 'service-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'service-card__image-wrap',
+        })
+            +el({
+                tag: 'img',
+                image: data.image,
+                class: 'service-card__image',
+            })
+        .service-card__content
+            +el({
+                mix: 'service-card__text',
+                before: {
+                    tag: 'strong',
+                    class: 'service-card__title',
+                    text: data.heading
+                },
+                after: {
+                    tag: 'span',
+                    class: 'service-card__descr',
+                    text: data.text
+                }
+            })

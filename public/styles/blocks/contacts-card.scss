@@ -1,0 +1,35 @@
+.contacts-card {
+  padding: 20px;
+  background-color: color(white);
+  border-radius: radius(sm);
+  box-shadow: $shadow-secondary;
+
+}
+
+.contacts-card__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  color: color(primary);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: left;
+  text-transform: none;
+}
+
+@include respond-to(medium) {
+  .contacts-card {
+    padding: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .contacts-card {
+    position: relative;
+    padding:40px;
+  }
+
+  .contacts-card__heading {
+    margin-bottom: 24px;
+  }
+}

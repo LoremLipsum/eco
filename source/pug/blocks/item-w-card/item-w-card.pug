@@ -1,0 +1,13 @@
+mixin item-w-card(data)
+    +el({
+        tag: data.tag,
+        class: 'item-w-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'span',
+            class: 'item-w-card__text',
+            text: data.text
+        })

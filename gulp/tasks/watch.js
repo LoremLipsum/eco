@@ -12,5 +12,6 @@ module.exports = () => (
   gulp.watch(config.watch.fonts, gulp.series('fonts')),
   gulp.watch(config.watch.favicon, gulp.series('favicon')),
   gulp.watch(config.watch.images, gulp.series('images')),
+  gulp.watch(config.watch.webp, gulp.series('webp')),
   gulp.watch(config.watch.upload, gulp.series('upload'))
 );

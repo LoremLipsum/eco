@@ -9,6 +9,30 @@
       padding-left: 70px;
     }
   }
+
+  &--w-focus-primary {
+
+  }
+
+  &--border-seconodary {
+    .field__input {
+      border-color: color(secondary);
+
+      @include hover {
+        border-color: color(primary);
+      }
+    }
+  }
+
+  &--border-primary {
+    .field__input {
+      border-color: color(primary);
+
+      @include hover {
+        border-color: color(secondary);
+      }
+    }
+  }
 }
 
 .field__label {
@@ -57,8 +81,8 @@
 
 .field__icon-wrap {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1px;
+  left: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
