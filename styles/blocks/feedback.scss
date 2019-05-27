@@ -97,6 +97,10 @@
   &--desk {
     display: none;
   }
+
+  &--card {
+    display: none;
+  }
 }
 
 @include respond-to(medium) {
@@ -210,6 +214,12 @@
 }
 
 @include respond-to(1600px) {
+  .feedback__col {
+    &--right {
+      position: relative;
+    }
+  }
+
   .feedback__branch {
     &--desk {
       position: absolute;
@@ -225,6 +235,17 @@
 
     &--mob {
       display: none;
+    }
+
+    &--card {
+      position: absolute;
+      display: block;
+      bottom: -100px;
+      right: 200px;
+      transform: translate(100%);
+      width: 363px;
+      height: 229px;
+      background-size: 363px 229px;
     }
   }
 }

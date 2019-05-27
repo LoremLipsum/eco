@@ -1,0 +1,95 @@
+.condition-card {
+  padding: 25px 20px;
+  border-radius: radius(xs);
+  background-color: color(white);
+  box-shadow: $shadow-secondary;
+}
+
+.condition-card__heading {
+  margin: 0;
+  margin-bottom: 16px;
+  color: color(primary);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.condition-card__descr {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.condition-card__col {
+  &--right {
+    margin-bottom: 40px;
+  }
+}
+
+@include respond-to(medium) {
+  .condition-card {
+    padding: 30px;
+    padding-top: 25px;
+  }
+
+  .condition-card__row {
+    display: flex;
+  }
+
+  .condition-card__col {
+    width: calc(50% - 15px);
+
+    &--right {
+      margin-right: 30px;
+    }
+  }
+
+  .condition-card__heading {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    text-align: left;
+    font-size: 27px;
+  }
+
+  .condition-card__descr {
+    text-align: left;
+    font-size: 22px;
+  }
+
+  .condition-card__col {
+    &--right {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+
+  .condition-card__bottom {
+    margin-top: auto;
+  }
+
+  .condition-card__logo-section {
+    padding-bottom: 20px;
+  }
+}
+
+@include respond-to(large) {
+  .condition-card {
+    padding: 0 60px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .condition-card__heading {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+
+  .condition-card__descr {
+    font-size: 24px;
+  }
+}

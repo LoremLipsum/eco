@@ -1,0 +1,94 @@
+.condition {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: color(light-secondary);
+}
+
+.condition__wrap {
+  @include wrapper;
+}
+
+.condition__header {
+  margin-bottom: 20px;
+}
+
+.condition__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  color: color(primary);
+  font-size: 20px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.condition__text {
+  text-align: center;
+
+  @include first-last;
+}
+
+.condition__tabs {
+  margin-bottom: 20px;
+}
+
+@include respond-to(medium) {
+  .condition {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  .condition__header {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
+
+  .condition__text {
+    display: flex;
+  }
+
+  .condition__heading {
+    flex-shrink: 0;
+    width: 400px;
+    margin-bottom: 0;
+    margin-right: 30px;
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .condition__text {
+    text-align: left;
+    max-width: 550px;
+  }
+}
+
+@include respond-to(large) {
+  .condition {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+
+  .condition__header {
+    margin-bottom: 50px;
+  }
+
+  .condition__heading {
+    width: 460px;
+    font-size: 24px;
+  }
+
+  .condition__tabs {
+    flex-shrink: 0;
+    width: 295px;
+    margin-right: 70px;
+  }
+
+  .condition__content {
+    display: flex;
+  }
+
+  .condition__card-wrap {
+    width: calc(100% - 365px);
+  }
+}

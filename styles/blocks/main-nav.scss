@@ -16,7 +16,7 @@
 
   &.active {
     .main-nav__link {
-      color: color(secondary);
+      color: color(secondary-light);
       pointer-events: none;
     }
   }
@@ -30,7 +30,7 @@
   text-decoration: none;
 
   @include hover {
-    color: color(secondary);
+    color: color(secondary-light);
   }
 }
 
@@ -54,7 +54,7 @@
 
     &.active {
       .main-nav__link {
-        border-bottom: 3px solid color(secondary);
+        border-bottom: 3px solid color(secondary-light);
         color: color(white);
       }
     }

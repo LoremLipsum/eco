@@ -22,6 +22,7 @@
 }
 
 .tabs-blocks__button {
+  display: block;
   width: 100%;
   padding: 4px;
   border-radius: radius(xs);
@@ -30,9 +31,12 @@
   font-weight: 500;
   line-height: 24px;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
 
   @include hover {
     color: color(secondary);
+    text-decoration: none;
   }
 }
 
