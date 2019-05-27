@@ -15,19 +15,18 @@ mixin modal(data)
                 mix: 'modal__close',
                 js: 'modal-close'
             })
-            .modal__dialog-inner
-                if data.heading
-                    +el({
-                        tag: 'h3',
-                        class: 'modal__heading',
-                        text: data.heading,
-                    })
-                if data.text
-                    +el({
-                        tag: 'p',
-                        class: 'modal__text',
-                        text: data.text,
-                    })
-                if data.video
-                    iframe.modal__iframe.js-modal-iframe(id="player" width="640" height="360" )
-                block
+            if data.heading
+                +el({
+                    tag: 'h3',
+                    class: 'modal__heading',
+                    text: data.heading,
+                })
+            if data.text
+                +el({
+                    tag: 'p',
+                    class: 'modal__text',
+                    text: data.text,
+                })
+            if data.video
+                iframe.modal__iframe.js-modal-iframe(id="player" width="640" height="360" )
+            block

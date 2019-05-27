@@ -34,7 +34,7 @@
           </div>
         </div>
         <a class="page-header__logo" title="Вернуться на главную страницу" href="page-main.html">
-          <img class="page-header__logo-image" src="./assets/images/logo-page.svg" width="50" height="59" loading="lazy" alt="logo">
+          <img class="page-header__logo-image" src="./assets/images/logo-page.svg" width="50" height="59" alt="logo">
         </a>
         <div class="page-header__col page-header__col--right">
           <button class="button-icon button-icon--primary page-header__button-icon" aria-label="Окрыть форму обратного звонка" type="button">
@@ -149,22 +149,22 @@
                   <div class="swiper-wrapper">
                     <div class="house-gallery__main-item swiper-slide">
                       <div class="house-gallery__main-image-wrap">
-                        <img class="house-gallery__image" src="./assets/upload/gallery-main-01.jpg" loading="lazy" alt=" ">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-main-01.jpg" alt=" ">
                       </div>
                     </div>
                     <div class="house-gallery__main-item swiper-slide">
                       <div class="house-gallery__main-image-wrap">
-                        <img class="house-gallery__image" src="./assets/upload/gallery-main-02.jpg" loading="lazy" alt=" ">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-main-02.jpg" alt=" ">
                       </div>
                     </div>
                     <div class="house-gallery__main-item swiper-slide">
                       <div class="house-gallery__main-image-wrap">
-                        <img class="house-gallery__image" src="./assets/upload/gallery-main-03.jpg" loading="lazy" alt=" ">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-main-03.jpg" alt=" ">
                       </div>
                     </div>
                     <div class="house-gallery__main-item swiper-slide">
                       <div class="house-gallery__main-image-wrap">
-                        <img class="house-gallery__image" src="./assets/upload/gallery-main-04.jpg" loading="lazy" alt=" ">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-main-04.jpg" alt=" ">
                       </div>
                     </div>
                   </div>
@@ -173,22 +173,22 @@
                   <div class="swiper-wrapper">
                     <div class="house-gallery__nav-item swiper-slide">
                       <div class="house-gallery__nav-image-wrap">
-                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-01.jpg" loading="lazy" alt=" ">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-01.jpg" alt=" ">
                       </div>
                     </div>
                     <div class="house-gallery__nav-item swiper-slide">
                       <div class="house-gallery__nav-image-wrap">
-                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-02.jpg" loading="lazy" alt=" ">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-02.jpg" alt=" ">
                       </div>
                     </div>
                     <div class="house-gallery__nav-item swiper-slide">
                       <div class="house-gallery__nav-image-wrap">
-                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-03.jpg" loading="lazy" alt=" ">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-03.jpg" alt=" ">
                       </div>
                     </div>
                     <div class="house-gallery__nav-item swiper-slide">
                       <div class="house-gallery__nav-image-wrap">
-                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-04.jpg" loading="lazy" alt=" ">
+                        <img class="house-gallery__image" src="./assets/upload/gallery-nav-04.jpg" alt=" ">
                       </div>
                     </div>
                   </div>
@@ -266,7 +266,7 @@
                   </div>
                 </div>
                 <div class="house-info__button-wrap">
-                  <button class="button button--shadow button--medium house-info__button" type="button">Заказать звонок
+                  <button class="button button--shadow button--medium house-info__button js-callback-button" type="button">Заказать звонок
                   </button>
                 </div>
               </div>
@@ -320,11 +320,11 @@
             <h2 class="presentation__heading">Насладитесь гармонией с&nbsp;природой и&nbsp;непревзойденной экологий
             </h2>
             <div class="presentation__button-wrap">
-              <button class="button button--shadow button--large presentation__button" type="button">Скачать презентацию
-              </button>
+              <a class="button button--shadow button--large presentation__button" href="#">Смотреть наши объекты
+              </a>
             </div>
             <div class="presentation__image-wrap">
-              <img class="presentation__image" src="./assets/images/presentation.png" loading="lazy" alt=" ">
+              <img class="presentation__image" src="./assets/images/presentation.png" alt=" ">
             </div>
           </div>
         </div>
@@ -336,7 +336,7 @@
           <div class="footer__about">
             <div class="footer__logo-wrap">
               <a class="logo logo--secondary footer__logo" title="Вернуться на главную страницу" href="index.html">
-                <img class="logo__image" src="./assets/images/logo.svg" width="70" height="100" loading="lazy" alt="logo">
+                <img class="logo__image" src="./assets/images/logo.svg" width="70" height="100" alt="logo">
                 <div class="logo__text"><span>Жилой</span> комплекс
                 </div>
               </a>
@@ -467,6 +467,55 @@
         </div>
       </div>
     </footer>
+    <div class="modal js-modal-callback js-modal">
+      <div class="overlay modal__overlay active js-modal-overlay">
+      </div>
+      <div class="modal__dialog">
+        <button class="button-close button-close--bg-primary modal__close js-modal-close" aria-label="Закрыть окно" type="button">
+          <span class="button-close__icon">
+          </span>
+        </button>
+        <h3 class="modal__heading">Заполните форму <br>и мы позвоним Вам в&nbsp;ближайшее время
+        </h3>
+        <form class="form modal__form" action="/" method="post" accept-charset="UTF-8">
+          <div class="form__group">
+            <label class="field field--with-icon form__field">
+              <span class="hidden">Ваше имя
+              </span>
+              <input class="field__input" tabindex="0" placeholder="Ваше имя" name="user" required type="text" aria-required="true" aria-invalid="false">
+              <span class="field__icon-wrap">
+                <svg class="field__icon">
+                  <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="field field--with-icon form__field">
+              <span class="hidden">Ваш телефон
+              </span>
+              <input class="field__input" tabindex="0" placeholder="Ваш телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
+              <span class="field__icon-wrap">
+                <svg class="field__icon">
+                  <use xlink:href="./assets/images/sprites/sprite.svg#tel-field"></use>
+                </svg>
+              </span>
+            </label>
+          </div>
+          <div class="form__submit-wrap form__submit-wrap--bg-primary form__submit-wrap--medium">
+            <label class="button button--bg-primary button--medium form__submit">
+              <input class="hidden" type="submit">
+              Заказать звонок
+            </label>
+          </div>
+          <div class="form__confirm-wrap">
+            <label class="checkbox-confirm form__confirm">
+              <input class="hidden checkbox-confirm__input" name="confirm" checked type="checkbox">
+              <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="./scripts/libs/jquery.js"></script>
     <script src="./scripts/libs/TweenLite.js"></script>
     <script src="./scripts/libs/CSSPlugin.js"></script>

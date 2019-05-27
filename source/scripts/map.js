@@ -2,9 +2,9 @@
 	'use strict';
 	$(function() {
 
-    var section = $('.js-map');
+    var item = $('.js-map');
 
-    if(section) {
+    if(item.length) {
       if ($(window).outerWidth() > 919) {
         var pl = [
           {
@@ -116,14 +116,14 @@
                   var btn = $(this);
                   var atr = btn.attr('data-pin');
 
-                  var pins=section.find('.js-pin');
-                  var btns=section.find('.js-button-pin');
+                  var pins=item.find('.js-pin');
+                  var btns=item.find('.js-button-pin');
 
                   pins.removeClass('active');
 
                   btns.parent().removeClass('active');
 
-                  section.find('.' + atr).toggleClass('active');
+                  item.find('.' + atr).toggleClass('active');
                   $(this).parent().toggleClass('active');
                 });
           }

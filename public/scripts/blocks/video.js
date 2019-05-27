@@ -3,7 +3,7 @@
 (function() {
   var btns = document.querySelectorAll('.js-button-video');
 
-  if(btns){
+  if(btns.length){
     var videoModal = document.querySelector('.js-modal-video');
     var video = videoModal.querySelector('.js-modal-iframe');
     var overlay = videoModal.querySelector('.js-modal-overlay');
