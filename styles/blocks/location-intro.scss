@@ -1,0 +1,167 @@
+.location-intro__wrap {
+  padding-top: 40px;
+}
+
+.location-intro__wrap {
+  @include wrapper;
+}
+
+.location-intro__heading {
+  margin: 0;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.location-intro__content {
+  @include first-last;
+  margin-bottom: 30px;
+}
+
+.location-intro__list {
+  @include ul-no;
+  margin-bottom: 30px;
+}
+
+.location-intro__item {
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  &--quote {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0;
+  }
+}
+
+.location-intro__image-wrap {
+  width: 100%;
+  height: 62vw;
+  max-height: 520px;
+  @include ofi(cover, center);
+}
+
+.location-intro__quote {
+  width: 100%;
+  margin: 0;
+  padding: 4vw 5vw;
+  text-align: center;
+  background-color: color(secondary);
+  color: color(white);
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@include respond-to(620px) {
+  .location-intro__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 0;
+  }
+
+  .location-intro__item {
+    width: 33.33%;
+    margin-bottom: 30px;
+    padding: 0 15px;
+
+    &--quote {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include respond-to(medium) {
+  .location-intro {
+    position: relative;
+  }
+
+  .location-intro__wrap {
+    padding-top: 55px;
+    padding-bottom: 80px;
+  }
+
+  .location-intro__content {
+    width: calc(50% - 15px);
+    margin-bottom: 0;
+  }
+
+  .location-intro__heading {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .location-intro__item {
+    width: 50%;
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 50px;
+
+    &--quote {
+      position: relative;
+    }
+  }
+
+  .location-intro__image-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: calc(50% + 15px);
+    height: 100%;
+    max-height: none;
+    width: auto;
+  }
+
+  .location-intro__image {
+    height: 100%;
+  }
+
+  .location-intro__quote {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+    width: 580px;
+    padding: 40px 50px;
+    font-size: 19px;
+    text-align: left;
+  }
+}
+
+@include respond-to(large) {
+  .location-intro__wrap {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .location-intro__heading {
+    margin-bottom: 90px;
+  }
+
+  .location-intro__item {
+    margin-bottom: 70px;
+  }
+
+  .location-intro__quote {
+    padding: 60px 50px;
+    font-size: 20px;
+  }
+}

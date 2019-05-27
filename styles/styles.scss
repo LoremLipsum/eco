@@ -23,7 +23,11 @@
 @import "../pug/blocks/arrow/arrow";
 @import "../pug/blocks/control/control";
 @import "../pug/blocks/link-w-arrow/link-w-arrow";
+@import "../pug/blocks/item-w-card/item-w-card";
+@import "../pug/blocks/item-w-circle/item-w-circle";
+@import "../pug/blocks/item-w-number/item-w-number";
 @import "../pug/blocks/date/date";
+@import "../pug/blocks/picture/picture";
 @import "../pug/blocks/overlay/overlay";
 @import "../pug/blocks/field/field";
 @import "../pug/blocks/checkbox-confirm/checkbox-confirm";
@@ -84,7 +88,6 @@
 @import "../pug/blocks/posts-section/posts-section";
 @import "./blocks/page-content";
 @import "./blocks/main-content";
-@import "../pug/blocks/item-w-circle/item-w-circle";
 @import "../pug/blocks/service-card/service-card";
 @import "../pug/blocks/about-form/about-form";
 @import "../pug/blocks/service-section/service-section";
@@ -92,14 +95,14 @@
 @import "../pug/blocks/about-intro/about-intro";
 @import "../pug/blocks/about-descr/about-descr";
 @import "../pug/blocks/about-card/about-card";
-@import "../pug/blocks/item-w-card/item-w-card";
 @import "../pug/blocks/about-service/about-service";
 @import "../pug/blocks/place-intro/place-intro";
 @import "../pug/blocks/place-quote/place-quote";
 @import "../pug/blocks/place-descr/place-descr";
-@import "../pug/blocks/picture/picture";
 @import "../pug/blocks/service-descr/service-descr";
-
 @import "../pug/blocks/service-teaser/service-teaser";
 @import "../pug/blocks/service-bonus/service-bonus";
 @import "../pug/blocks/service-garanty/service-garanty";
+@import "../pug/blocks/location-intro/location-intro";
+@import "../pug/blocks/location-feedback/location-feedback";
+@import "../pug/blocks/location-places/location-places";

@@ -37,7 +37,6 @@
       }
 
       var service = $('.js-service-descr');
-
       if (service) {
         var showService = function() {
           if (screenWidth < 920 && !service.hasClass('js-show-2-items')) {
@@ -52,6 +51,25 @@
 
         $(window).resize(function() {
           showService();
+        });
+      }
+
+      var process = $('.js-process');
+
+      if (process) {
+        var showProcess = function() {
+          if (screenWidth < 920 && !process.hasClass('js-show-2-items')) {
+            process.addClass('js-show-2-items');
+            show('.js-process');
+          } else {
+            process.removeClass('js-show-2-items');
+          }
+        }
+
+        showProcess();
+
+        $(window).resize(function() {
+          showProcess();
         });
       }
     }
