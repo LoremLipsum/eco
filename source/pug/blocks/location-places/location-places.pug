@@ -1,0 +1,32 @@
+mixin location-places(data)
+    +el({
+        class: 'location-places',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .location-places__wrap
+            .location-places__branch.js-parallax(style="background-image: url(assets/images/branch-without-cone.png)")
+            +el({
+                tag: 'ul',
+                class: 'location-places__list',
+            })
+                block
+
+mixin location-places-item(data)
+    li.location-places__item
+        +el({
+            tag: 'figure',
+            class: 'location-places__figure',
+        })
+            +picture({
+                path: 'location',
+                mix: 'location-places__picture',
+                image: data.image,
+                exp: 'jpg'
+            })
+            +el({
+                tag: 'figcaption',
+                class: 'location-places__caption',
+                text: data.text,
+            })

@@ -1,0 +1,17 @@
+mixin item-w-number(data)
+    +el({
+        class: 'item-w-number',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'span',
+            class: 'item-w-number__number',
+            text: data.number
+        })
+        +el({
+            tag: 'span',
+            class: 'item-w-number__text',
+            text: data.text
+        })

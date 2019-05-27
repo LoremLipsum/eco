@@ -1,0 +1,21 @@
+mixin condition-form(data)
+    +el({
+        class: 'condition-form',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'h4',
+            class: 'condition-form__heading',
+            text: data.heading,
+        })
+        +form({
+            firstName: true,
+            tel: true,
+            email: true,
+            submit: data.submit,
+            modField: 'with-icon',
+            mix: 'condition-form__form',
+            modSubmit: ['bg-primary', 'medium'],
+        })

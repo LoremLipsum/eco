@@ -1,0 +1,32 @@
+mixin logo-section(data)
+    +el({
+        tag: 'section',
+        class: 'logo-section',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'tabs',
+    })&attributes(attributes)
+        +el({
+            tag: 'h4',
+            class: 'logo-section__heading',
+            text: data.heading,
+        })
+        +el({
+            tag: 'ul',
+            class: 'logo-section__list',
+        })
+            each item in data.items
+                +el({
+                    tag: 'li',
+                    class: 'logo-section__item',
+                })
+                    +el({
+                        tag: 'a',
+                        class: 'logo-section__logo-wrap',
+                        target: '_black',
+                    })
+                        +el({
+                            tag: 'img',
+                            image: item.image,
+                            class: 'logo-section__logo',
+                        })

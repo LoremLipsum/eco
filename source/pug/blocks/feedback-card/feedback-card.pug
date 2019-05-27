@@ -5,15 +5,17 @@ mixin feedback-card(data)
         mod: data.mod,
         js: data.js,
     })&attributes(attributes)
-        h4.feedback-card__heading
-            | Лучшие планировки будут у&nbsp;Вас на почте в&nbsp;течение 15&nbsp;минут
+        +el({
+            tag: 'h4',
+            class: 'feedback-card__heading',
+            text: data.heading,
+        })
         +form({
             firstName: true,
             tel: true,
             email: true,
-            submit: 'Получить планировки',
+            submit: data.submit,
             modField: 'with-icon',
             mix: 'feedback-card__form',
             modSubmit: ['bg-secondary', 'medium'],
         })
-        .feedback-card__branch.js-parallax(style="background-image: url(assets/images/branch-small-w-shadow.png)")

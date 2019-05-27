@@ -34,7 +34,7 @@
           </div>
         </div>
         <a class="page-header__logo" title="Вернуться на главную страницу" href="page-main.html">
-          <img class="page-header__logo-image" src="./assets/images/logo-page.svg" width="50" height="59" alt="logo">
+          <img class="page-header__logo-image" src="./assets/images/logo-page.svg" width="50" height="59" loading="lazy" alt="logo">
         </a>
         <div class="page-header__col page-header__col--right">
           <button class="button-icon button-icon--primary page-header__button-icon" aria-label="Окрыть форму обратного звонка" type="button">
@@ -132,2116 +132,710 @@
             </li>
           </ol>
         </nav>
+        <h1 class="page-content__heading">Коттеджи</h1>
       </div>
-      <section class="house-section js-tabs">
+      <section class="house-section">
         <div class="house-section__wrap">
-          <h1 class="house-section__heading">Коттеджи</h1>
-        </div>
-        <div class="house-section__content">
-          <div class="house-section__wrap">
-            <ul class="tabs-blocks house-section__tabs">
-              <li class="tabs-blocks__item active">
-                <button class="tabs-blocks__button js-tabs-button" type="button" data-tab="tab-1">Таунхаусы
-                </button>
-              </li>
-              <li class="tabs-blocks__item">
-                <button class="tabs-blocks__button js-tabs-button" type="button" data-tab="tab-2">Коттеджи
-                </button>
-              </li>
-              <li class="tabs-blocks__item">
-                <button class="tabs-blocks__button js-tabs-button" type="button" data-tab="tab-3">Виллы
-                </button>
-              </li>
-            </ul>
-            <div class="tab-1 js-tabs-content active">
-              <ul class="house-list" itemscope itemtype="http://schema.org/ItemList">
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+          <ul class="tabs-blocks house-section__links-group">
+            <li class="tabs-blocks__item">
+              <a class="tabs-blocks__button" href="#">Таунхаусы
+              </a>
+            </li>
+            <li class="tabs-blocks__item active">
+              <a class="tabs-blocks__button" href="#">Коттеджи
+              </a>
+            </li>
+            <li class="tabs-blocks__item">
+              <a class="tabs-blocks__button" href="#">Виллы
+              </a>
+            </li>
+          </ul>
+          <ul class="house-list" itemscope itemtype="http://schema.org/ItemList">
+            <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
+                <div class="house-card-w-slider__image-list">
+                  <div class="swiper-container js-house-card-w-slider">
+                    <div class="swiper-wrapper">
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
                       </div>
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">04
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__control">
+                      <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
+                      <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+                <div class="house-card-w-slider__content">
+                  <div class="house-card-w-slider__heading-wrap">
+                    <h4 class="house-card-w-slider__heading">
+                      <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
+                        <span class="house-card-w-slider__heading--number">04
+                        </span>
+                      </a>
+                    </h4>
+                  </div>
+                  <ul class="specification specification--with-dots house-card-w-slider__specification">
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь дома:
+                        </span>
                       </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">148 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь участка:
+                        </span>
+                      </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">211 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="house-card-w-slider__bottom">
+                    <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">14
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__button-wrap">
+                      <a class="button button--small button--shadow" href="#">Подробнее
+                      </a>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+              </div>
+            </li>
+            <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
+                <div class="house-card-w-slider__image-list">
+                  <div class="swiper-container js-house-card-w-slider">
+                    <div class="swiper-wrapper">
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
                       </div>
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">26
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__control">
+                      <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
+                      <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+                <div class="house-card-w-slider__content">
+                  <div class="house-card-w-slider__heading-wrap">
+                    <h4 class="house-card-w-slider__heading">
+                      <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
+                        <span class="house-card-w-slider__heading--number">14
+                        </span>
+                      </a>
+                    </h4>
+                  </div>
+                  <ul class="specification specification--with-dots house-card-w-slider__specification">
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь дома:
+                        </span>
                       </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">148 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь участка:
+                        </span>
+                      </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">211 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="house-card-w-slider__bottom">
+                    <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">04
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__button-wrap">
+                      <a class="button button--small button--shadow" href="#">Подробнее
+                      </a>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+              </div>
+            </li>
+            <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
+                <div class="house-card-w-slider__image-list">
+                  <div class="swiper-container js-house-card-w-slider">
+                    <div class="swiper-wrapper">
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
                       </div>
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">14
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__control">
+                      <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
+                      <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+                <div class="house-card-w-slider__content">
+                  <div class="house-card-w-slider__heading-wrap">
+                    <h4 class="house-card-w-slider__heading">
+                      <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
+                        <span class="house-card-w-slider__heading--number">26
+                        </span>
+                      </a>
+                    </h4>
+                  </div>
+                  <ul class="specification specification--with-dots house-card-w-slider__specification">
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь дома:
+                        </span>
                       </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">148 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь участка:
+                        </span>
+                      </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">211 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="house-card-w-slider__bottom">
+                    <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">26
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__button-wrap">
+                      <a class="button button--small button--shadow" href="#">Подробнее
+                      </a>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+              </div>
+            </li>
+            <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
+                <div class="house-card-w-slider__image-list">
+                  <div class="swiper-container js-house-card-w-slider">
+                    <div class="swiper-wrapper">
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
                       </div>
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">04
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__control">
+                      <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
+                      <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+                <div class="house-card-w-slider__content">
+                  <div class="house-card-w-slider__heading-wrap">
+                    <h4 class="house-card-w-slider__heading">
+                      <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
+                        <span class="house-card-w-slider__heading--number">04
+                        </span>
+                      </a>
+                    </h4>
+                  </div>
+                  <ul class="specification specification--with-dots house-card-w-slider__specification">
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь дома:
+                        </span>
                       </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">148 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь участка:
+                        </span>
+                      </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">211 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="house-card-w-slider__bottom">
+                    <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">14
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__button-wrap">
+                      <a class="button button--small button--shadow" href="#">Подробнее
+                      </a>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+              </div>
+            </li>
+            <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
+                <div class="house-card-w-slider__image-list">
+                  <div class="swiper-container js-house-card-w-slider">
+                    <div class="swiper-wrapper">
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
                       </div>
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">26
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__control">
+                      <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
+                      <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
                     </div>
                   </div>
-                </li>
-              </ul>
-            </div>
-            <div class="tab-2 js-tabs-content">
-              <ul class="house-list" itemscope itemtype="http://schema.org/ItemList">
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+                <div class="house-card-w-slider__content">
+                  <div class="house-card-w-slider__heading-wrap">
+                    <h4 class="house-card-w-slider__heading">
+                      <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
+                        <span class="house-card-w-slider__heading--number">14
+                        </span>
+                      </a>
+                    </h4>
+                  </div>
+                  <ul class="specification specification--with-dots house-card-w-slider__specification">
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь дома:
+                        </span>
                       </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">148 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь участка:
+                        </span>
+                      </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">211 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="house-card-w-slider__bottom">
+                    <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">26
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__button-wrap">
+                      <a class="button button--small button--shadow" href="#">Подробнее
+                      </a>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+              </div>
+            </li>
+            <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
+                <div class="house-card-w-slider__image-list">
+                  <div class="swiper-container js-house-card-w-slider">
+                    <div class="swiper-wrapper">
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
                       </div>
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">04
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__control">
+                      <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
+                      <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+                <div class="house-card-w-slider__content">
+                  <div class="house-card-w-slider__heading-wrap">
+                    <h4 class="house-card-w-slider__heading">
+                      <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
+                        <span class="house-card-w-slider__heading--number">26
+                        </span>
+                      </a>
+                    </h4>
+                  </div>
+                  <ul class="specification specification--with-dots house-card-w-slider__specification">
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь дома:
+                        </span>
                       </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">148 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь участка:
+                        </span>
+                      </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">211 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="house-card-w-slider__bottom">
+                    <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">14
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__button-wrap">
+                      <a class="button button--small button--shadow" href="#">Подробнее
+                      </a>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+              </div>
+            </li>
+            <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
+                <div class="house-card-w-slider__image-list">
+                  <div class="swiper-container js-house-card-w-slider">
+                    <div class="swiper-wrapper">
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
                       </div>
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">04
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__control">
+                      <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
+                      <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+                <div class="house-card-w-slider__content">
+                  <div class="house-card-w-slider__heading-wrap">
+                    <h4 class="house-card-w-slider__heading">
+                      <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
+                        <span class="house-card-w-slider__heading--number">04
+                        </span>
+                      </a>
+                    </h4>
+                  </div>
+                  <ul class="specification specification--with-dots house-card-w-slider__specification">
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь дома:
+                        </span>
                       </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">148 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь участка:
+                        </span>
+                      </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">211 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="house-card-w-slider__bottom">
+                    <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">04
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__button-wrap">
+                      <a class="button button--small button--shadow" href="#">Подробнее
+                      </a>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+              </div>
+            </li>
+            <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
+                <div class="house-card-w-slider__image-list">
+                  <div class="swiper-container js-house-card-w-slider">
+                    <div class="swiper-wrapper">
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
                       </div>
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">14
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__control">
+                      <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
+                      <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+                <div class="house-card-w-slider__content">
+                  <div class="house-card-w-slider__heading-wrap">
+                    <h4 class="house-card-w-slider__heading">
+                      <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
+                        <span class="house-card-w-slider__heading--number">14
+                        </span>
+                      </a>
+                    </h4>
+                  </div>
+                  <ul class="specification specification--with-dots house-card-w-slider__specification">
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь дома:
+                        </span>
                       </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">148 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь участка:
+                        </span>
+                      </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">211 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="house-card-w-slider__bottom">
+                    <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">26
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__button-wrap">
+                      <a class="button button--small button--shadow" href="#">Подробнее
+                      </a>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+              </div>
+            </li>
+            <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
+                <div class="house-card-w-slider__image-list">
+                  <div class="swiper-container js-house-card-w-slider">
+                    <div class="swiper-wrapper">
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
+                      </div>
+                      <div class="house-card-w-slider__image-item swiper-slide">
+                        <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
+                          <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" loading="lazy" alt="Фото коттеджа" itemprop="image">
+                        </a>
                       </div>
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">14
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__control">
+                      <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
+                      <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
+                        <span class="arrow control__arrow">
+                        </span>
+                      </button>
                     </div>
                   </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
+                </div>
+                <div class="house-card-w-slider__content">
+                  <div class="house-card-w-slider__heading-wrap">
+                    <h4 class="house-card-w-slider__heading">
+                      <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
+                        <span class="house-card-w-slider__heading--number">26
+                        </span>
+                      </a>
+                    </h4>
+                  </div>
+                  <ul class="specification specification--with-dots house-card-w-slider__specification">
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь дома:
+                        </span>
                       </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">148 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="specification__item">
+                      <div class="specification__text-wrap specification__text-wrap--name">
+                        <span class="specification__text">Площадь участка:
+                        </span>
+                      </div>
+                      <div class="specification__text-wrap specification__text-wrap--value">
+                        <span class="specification__text">211 м<sup>2</sup>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="house-card-w-slider__bottom">
+                    <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">26
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
+                    <div class="house-card-w-slider__button-wrap">
+                      <a class="button button--small button--shadow" href="#">Подробнее
+                      </a>
                     </div>
                   </div>
-                </li>
-              </ul>
-            </div>
-            <div class="tab-3 js-tabs-content">
-              <ul class="house-list" itemscope itemtype="http://schema.org/ItemList">
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">14
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">04
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">26
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">14
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">04
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">26
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">15,7 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">04
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">14
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">14,2 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="house-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                  <div class="house-card-w-slider" itemscope itemtype="http://schema.org/Product">
-                    <div class="house-card-w-slider__image-list">
-                      <div class="swiper-container js-house-card-w-slider">
-                        <div class="swiper-wrapper">
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image05.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image06.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                          <div class="house-card-w-slider__image-item swiper-slide">
-                            <a class="house-card-w-slider__image-wrap" href="#" itemprop="url">
-                              <img class="house-card-w-slider__image" src="./assets/upload/image07.jpg" alt="Фото коттеджа" itemprop="image">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="house-card-w-slider__control">
-                          <button class="control control--prev control--size-lg control--bg-light-secondary js-house-card-w-slider-prev" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                          <button class="control control--next control--size-lg control--bg-light-secondary js-house-card-w-slider-next" type="button">
-                            <span class="arrow control__arrow">
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="house-card-w-slider__content">
-                      <div class="house-card-w-slider__heading-wrap">
-                        <h4 class="house-card-w-slider__heading">
-                          <a class="house-card-w-slider__heading-link" href="#" itemprop="url">коттедж 
-                            <span class="house-card-w-slider__heading--number">04
-                            </span>
-                          </a>
-                        </h4>
-                      </div>
-                      <ul class="specification specification--with-dots house-card-w-slider__specification">
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь дома:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">148 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                        <li class="specification__item">
-                          <div class="specification__text-wrap specification__text-wrap--name">
-                            <span class="specification__text">Площадь участка:
-                            </span>
-                          </div>
-                          <div class="specification__text-wrap specification__text-wrap--value">
-                            <span class="specification__text">211 м<sup>2</sup>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="house-card-w-slider__bottom">
-                        <div class="house-card-w-slider__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">12 млн.</span><span class="house-card-w-slider__rouble">&#x20BD;</span>
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div>
-                        <div class="house-card-w-slider__button-wrap">
-                          <a class="button button--small button--shadow" href="#">Подробнее
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="pagination house-section__pagination">
-              <button class="control control--prev control--size-lg control--shadow pagination__control disabled" tabindex="0" type="button">
-                <span class="arrow control__arrow">
-                </span>
-              </button>
-              <ul class="pagination__list">
-                <li class="pagination__item active">
-                  <a class="pagination__link" href="#">1
-                  </a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">2
-                  </a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">3
-                  </a>
-                </li>
-              </ul>
-              <button class="control control--next control--size-lg control--shadow pagination__control" tabindex="0" type="button">
-                <span class="arrow control__arrow">
-                </span>
-              </button>
-            </div>
-          </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <div class="feedback">
@@ -2262,13 +856,14 @@
               </h3>
               <div class="feedback__image-wrap">
                 <div class="feedback__image">
-                  <img src="./assets/images/journal.png" alt=" ">
+                  <img src="./assets/images/journal.png" loading="lazy" alt=" ">
                 </div>
               </div>
             </div>
             <div class="feedback__col feedback__col--right">
               <div class="feedback-card feedback__card">
-                <h4 class="feedback-card__heading">Лучшие планировки будут у&nbsp;Вас на почте в&nbsp;течение 15&nbsp;минут</h4>
+                <h4 class="feedback-card__heading">Лучшие планировки будут у&nbsp;Вас на почте в&nbsp;течение 15&nbsp;минут
+                </h4>
                 <form class="form feedback-card__form" action="/" method="post" accept-charset="UTF-8">
                   <div class="form__group">
                     <label class="field field--with-icon form__field">
@@ -2316,8 +911,8 @@
                     </label>
                   </div>
                 </form>
-                <div class="feedback-card__branch js-parallax" style="background-image: url(assets/images/branch-small-w-shadow.png)"></div>
               </div>
+              <div class="feedback__branch feedback__branch--card js-parallax" style="background-image: url(assets/images/branch-small-w-shadow.png)"></div>
             </div>
           </div>
         </div>
@@ -2329,7 +924,7 @@
           <div class="footer__about">
             <div class="footer__logo-wrap">
               <a class="logo logo--secondary footer__logo" title="Вернуться на главную страницу" href="index.html">
-                <img class="logo__image" src="./assets/images/logo.svg" width="70" height="100" alt="logo">
+                <img class="logo__image" src="./assets/images/logo.svg" width="70" height="100" loading="lazy" alt="logo">
                 <div class="logo__text"><span>Жилой</span> комплекс
                 </div>
               </a>

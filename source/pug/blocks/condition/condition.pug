@@ -1,0 +1,52 @@
+mixin condition(data)
+    +el({
+        tag: 'section',
+        class: 'condition',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'tabs',
+    })&attributes(attributes)
+        .condition__wrap
+            .condition__header
+                h2.condition__heading Вы можете приобрести дом на&nbsp;выгодных условиях
+                .condition__text
+                    p Мы расчитаем для вас оптимальные решения по&nbsp;приобретению коттеджей и&nbsp;предоставим договоры для ознакомления.
+            .condition__content
+                +condition-tabs({
+                    mix: 'condition__tabs',
+                    items: [
+                        {
+                            text: 'Единовременная оплата',
+                            js: 'tabs-button',
+                        },
+                        {
+                            text: 'Рассрочка',
+                            js: 'tabs-button',
+                        },
+                        {
+                            text: 'Ипотека',
+                            js: 'tabs-button',
+                        },
+                        {
+                            text: 'Программы господдержки',
+                            js: 'tabs-button',
+                        },
+                    ]
+                })
+                .condition__card-wrap
+                    .tab-1.js-tabs-content.active
+                        +condition-card({
+                            heading: 'Единовременная оплата',
+                        })
+                    .tab-2.js-tabs-content
+                        +condition-card({
+                            heading: 'Рассрочка'
+                        })
+                    .tab-3.js-tabs-content
+                        +condition-card({
+                            heading: 'Ипотека'
+                        })
+                    .tab-4.js-tabs-content
+                        +condition-card({
+                            heading: 'Программы господдержки'
+                        })

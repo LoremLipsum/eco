@@ -1,0 +1,34 @@
+mixin condition-card(data)
+    +el({
+        tag: 'section',
+        class: 'condition-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'tabs',
+    })&attributes(attributes)
+        .condition-card__row
+            .condition-card__col.condition-card__col--right
+                +el({
+                    tag: 'h3',
+                    class: 'condition-card__heading',
+                    text: data.heading,
+                })
+                .condition-card__descr Рассрочка до 12 мес. <br>Первый взнос 50%
+                .condition-card__bottom
+                    +logo-section({
+                        mix: 'condition-card__logo-section',
+                        heading: 'Банки-партнеры',
+                        items: [
+                            {
+                                image: 'logo/genbank.jpg',
+                            },
+                            {
+                                image: 'logo/rnkb.jpg',
+                            },
+                        ]
+                    })
+            .condition-card__col.condition-card__col--left
+                +condition-form({
+                    heading: 'Заполните форму <br>и&nbsp;мы&nbsp;ответим на&nbsp;все&nbsp;вопросы',
+                    submit: 'Получить предложение',
+                })

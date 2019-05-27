@@ -1,0 +1,38 @@
+blockquote {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 4vw 5vw;
+  text-align: center;
+  background-color: #678b23;
+  color: color(white);
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@include respond-to(medium) {
+  blockquote {
+    padding: 30px;
+    font-size: 19px;
+  }
+}
+
+
+@include respond-to(large) {
+  blockquote {
+    padding: 40px;
+    font-size: 20px;
+  }
+}

@@ -12,7 +12,7 @@ mixin picture-full(data)
         source(media="(min-width: 420px)" srcset='./assets/images/' + path + data.medium + '@1x.webp 1x, ./assets/images/' + path + data.medium + '@2x.webp 2x' type='image/webp')
         source(media="(min-width: 420px)" srcset='./assets/images/' + path + data.medium + '@1x.' + data.exp + ' 1x, ./assets/images/' + path + data.medium + '@2x.' + data.exp + ' 2x')
         source(srcset='./assets/images/' + data.small + '@1x.webp 1x, ./assets/images/' + data.small + '@2x.webp 2x' type='image/webp')
-        img.picture__image(src='./assets/images/' + path + data.small + '@1x.' + data.exp srcset='./assets/images/' + path + data.small + '@2x.' + data.exp + ' 2x' alt=data.alt ? data.alt : '')
+        img.picture__image(src='./assets/images/' + path + data.small + '@1x.' + data.exp srcset='./assets/images/' + path + data.small + '@2x.' + data.exp + ' 2x' alt=data.alt ? data.alt : '' loading='lazy')
 
 mixin picture-small-and-large(data)
     - path = data.path ? data.path + '/' : ''
@@ -26,7 +26,7 @@ mixin picture-small-and-large(data)
         source(media="(min-width: 420px)" srcset='./assets/images/' + path + data.large + '@1x.webp 1x, ./assets/images/' + path + data.large + '@2x.webp 2x' type='image/webp')
         source(media="(min-width: 420px)" srcset='./assets/images/' + path + data.large + '@1x.' + data.exp + ' 1x, ./assets/images/' + path + data.large + '@2x.' + data.exp + ' 2x')
         source(srcset='./assets/images/' + path + data.small + '@1x.webp 1x, ./assets/images/' + path + data.small + '@2x.webp 2x' type='image/webp')
-        img.picture__image(src='./assets/images/' + path + data.small + '@1x.' + data.exp srcset='./assets/images/' + path + data.small + '@2x.' + data.exp + ' 2x' alt=data.alt ? data.alt : '')
+        img.picture__image(src='./assets/images/' + path + data.small + '@1x.' + data.exp srcset='./assets/images/' + path + data.small + '@2x.' + data.exp + ' 2x' alt=data.alt ? data.alt : '' loading='lazy')
 
 
 mixin picture(data)
@@ -39,4 +39,4 @@ mixin picture(data)
         js: data.js,
     })
         source(srcset='./assets/images/' + path + data.image + '@1x.webp 1x, ./assets/images/' + path + data.image + '@2x.webp 2x' type='image/webp')
-        img.picture__image(src='./assets/images/' + path + data.image + '@1x.' + data.exp srcset='./assets/images/' + path + data.image + '@2x.' + data.exp + ' 2x' alt=data.alt ? data.alt : '')
+        img.picture__image(src='./assets/images/' + path + data.image + '@1x.' + data.exp srcset='./assets/images/' + path + data.image + '@2x.' + data.exp + ' 2x' alt=data.alt ? data.alt : '' loading='lazy')

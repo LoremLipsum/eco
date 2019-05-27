@@ -425,7 +425,6 @@ picturefill();
       }
 
       var service = $('.js-service-descr');
-
       if (service) {
         var showService = function() {
           if (screenWidth < 920 && !service.hasClass('js-show-2-items')) {
@@ -440,6 +439,25 @@ picturefill();
 
         $(window).resize(function() {
           showService();
+        });
+      }
+
+      var process = $('.js-process');
+
+      if (process) {
+        var showProcess = function() {
+          if (screenWidth < 920 && !process.hasClass('js-show-2-items')) {
+            process.addClass('js-show-2-items');
+            show('.js-process');
+          } else {
+            process.removeClass('js-show-2-items');
+          }
+        }
+
+        showProcess();
+
+        $(window).resize(function() {
+          showProcess();
         });
       }
     }
@@ -801,8 +819,8 @@ picturefill();
       watchSlidesProgress: true,
       spaceBetween: 10,
       navigation: {
-        nextEl: '.js-house-gallery-prev',
-        prevEl: '.js-house-gallery-next',
+        nextEl: '.js-house-gallery-next',
+        prevEl: '.js-house-gallery-prev',
         clickable: true,
         disabledClass: 'disabled',
       },

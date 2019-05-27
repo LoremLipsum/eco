@@ -14,8 +14,8 @@
       watchSlidesProgress: true,
       spaceBetween: 10,
       navigation: {
-        nextEl: '.js-house-gallery-prev',
-        prevEl: '.js-house-gallery-next',
+        nextEl: '.js-house-gallery-next',
+        prevEl: '.js-house-gallery-prev',
         clickable: true,
         disabledClass: 'disabled',
       },

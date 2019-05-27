@@ -1,0 +1,14 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Экопарк'
+    - var main = false
+    - var pageId = 1
+
+block content
+    main.page-content
+        .page-content__wrap
+            h1.page-content__heading Условия приобретения
+        +condition({})
+        +process({
+        })

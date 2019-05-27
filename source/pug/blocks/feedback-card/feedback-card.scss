@@ -1,11 +1,18 @@
 .feedback-card {
   .form__confirm {
-    color: color(secondary);
+    color: color(secondary-light);
   }
 }
 
 .feedback-card__heading {
-  display: none;
+  margin: 0;
+  margin-bottom: 20px;
+  color: color(white);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: none;
 }
 
 .feedback-card__branch {
@@ -21,14 +28,14 @@
   .feedback-card {
     padding: 30px 40px;
     padding-bottom: 50px;
-    background-color: color(secondary);
+    background-color: color(secondary-light);
     border-radius: radius(sm);
 
     .field__input {
       &:hover,
       &:focus,
       &.active {
-        border: 2px solid color(primary);
+        border: 1px solid color(primary);
       }
     }
 
@@ -49,16 +56,13 @@
 
   .feedback-card__heading {
     position: relative;
-    margin: 0;
+    min-height: 93px;
     margin-bottom: 30px;
     padding-left: 85px;
     display: flex;
     color: color(primary);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.4;
+    font-size: 20px;
     text-align: left;
-    text-transform: none;
 
     &::before {
       content: '';
@@ -83,7 +87,6 @@
 
 @include respond-to(large) {
   .feedback-card {
-    position: relative;
     padding: 0 60px;
     padding-top: 60px;
     padding-bottom: 50px;
@@ -91,22 +94,5 @@
 
   .feedback-card__heading {
     margin-bottom: 50px;
-  }
-}
-
-@include respond-to(1600px) {
-  .feedback-card__branch {
-    position: absolute;
-    bottom: -100px;
-    right: 200px;
-    transform: translate(100%);
-    z-index: 2;
-    display: block;
-    width: 363px;
-    height: 229px;
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 363px 229px;
   }
 }

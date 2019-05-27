@@ -1,0 +1,35 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Экопарк'
+    - var main = false
+    - var pageId = 1
+
+block content
+    main.page-content.page-content--no-pads
+        +location-intro({
+
+        })
+        +location-places({
+
+        })
+            +location-places-item({
+                image: 'location-place-01',
+                text: 'Зоопарк «Сказка»',
+            })
+            +location-places-item({
+                image: 'location-place-02',
+                text: 'Дельфинарий <br>«Акватория»',
+            })
+            +location-places-item({
+                image: 'location-place-03',
+                text: 'Торговый центр <br>«Конфетти»',
+            })
+            +location-places-item({
+                image: 'location-place-04',
+                text: 'СПА-центр <br>«Ливадийский»',
+            })
+        +map({})
+        +location-feedback({
+
+        })

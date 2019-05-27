@@ -1,0 +1,21 @@
+mixin condition-tabs(data)
+    +el({
+        tag: 'ul',
+        class: 'condition-tabs',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        each item, index in data.items
+            +el({
+                tag: 'li',
+                class: 'condition-tabs__item',
+                mix: item.mix,
+                mix: index == 0 ? 'active' : '',
+            })
+                +el({
+                    tag: 'button',
+                    class: 'condition-tabs__button',
+                    text: item.text,
+                    js: item.js,
+                })(data-tab='tab-' + (index + 1))

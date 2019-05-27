@@ -1,0 +1,41 @@
+mixin location-intro(data)
+    +el({
+        tag: 'section',
+        class: 'location-intro',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .location-intro__wrap
+            .location-intro__content
+                h1.location-intro__heading Что рядом <br>с&nbsp;Экопарком?
+                ul.location-intro__list
+                    li.location-intro__item
+                        +item-w-number({
+                            number: '300',
+                            text: 'метров над <br>уровнем моря <br>расположение'
+                        })
+                    li.location-intro__item
+                        +item-w-number({
+                            number: '10',
+                            text: 'минут езды до центральных улиц Ялты и&nbsp;Набережной'
+                        })
+                    li.location-intro__item
+                        +item-w-number({
+                            number: '5',
+                            text: 'минут езды от ТРЦ&nbsp;«Конфетти»'
+                        })
+                    li.location-intro__item.location-intro__item--quote
+                        .location-intro__quote
+                            p.
+                                Близость к&nbsp;инфраструктуре города позволит совершенно свободно пользоваться всеми благами и&nbsp;возможностями города
+        +el({
+            mix: 'location-intro__image-wrap',
+        })
+            +picture-small-and-large({
+                path: 'location',
+                large: 'location-01-lg',
+                small: 'location-01-sm',
+                exp: 'jpg',
+                mix: 'location-intro__image'
+            })

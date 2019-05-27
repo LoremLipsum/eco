@@ -1,0 +1,148 @@
+.process__wrap {
+  @include wrapper;
+  padding: 40px 0;
+}
+
+.process__heading {
+  margin: 0;
+  margin-bottom: 40px;
+  color: color(secondary);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.process__list {
+  @include ol-no;
+  counter-reset: list;
+}
+
+.process__item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 40px;
+  line-height: 1.5;
+  font-size: 16px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-125px, -15px);
+    display: block;
+    counter-increment: list;
+    content: "0" counter(list);
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(color(secondary), 0.1);
+  }
+
+  &:nth-child(n + 10) {
+    &::before {
+      content: counter(list);
+    }
+  }
+
+  .item-w-circle {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.process__arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%) rotate(90deg);
+  transform-origin: center;
+  width: 30px;
+  height: 30px;
+  fill: color(secondary);
+}
+
+.process__button-show {
+  display: block;
+  min-width: 200px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@include respond-to(620px) {
+  .process__list-wrap {
+    max-width: 630px;
+    margin: 0 auto;
+  }
+
+  .process__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -30px;
+  }
+
+  .process__item {
+    width: calc(33.33% - 34px);
+    margin-bottom: 30px;
+    margin-right: 50px;
+    padding-bottom: 0;
+    padding-right: 30px;
+    padding: 0 10px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .process__arrow {
+    top: 50px;
+    border: auto;
+    left: auto;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@include respond-to(medium) {
+  .process__heading {
+    margin-bottom: 30px;
+    font-size: 26px;
+    text-align: left;
+  }
+
+  .process__button-show {
+    display: none;
+  }
+}
+
+@include respond-to(large) {
+  .process {
+    padding: 45px 0;
+  }
+
+  .process__list-wrap {
+    max-width: none;
+    margin: 0;
+  }
+
+  .process__heading {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+
+  .process__item {
+    &::before {
+      font-size: 80px;
+      transform: translate(-160px, -10px);
+    }
+  }
+
+  .process__arrow {
+    top: 65px;
+    width: 64px;
+    height: 64px;
+  }
+}

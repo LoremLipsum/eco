@@ -1,0 +1,35 @@
+mixin process(data)
+    +el({
+        class: 'process',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        .process__wrap
+            .process__heading Процесс приобретения
+            .process__list-wrap.js-process
+                +el({
+                    tag: 'ol',
+                    class: 'process__list',
+                })
+                    each item, index in process
+                        +el({
+                            tag: 'li',
+                            class: 'process__item',
+                            js: 'show-item'
+                        })
+                            +item-w-circle({
+                                icon: item.icon,
+                                text: item.text
+                            })
+                            +el({
+                                tag: 'svg',
+                                class: 'process__arrow',
+                                icon: 'arrow-02',
+                            })
+                +button({
+                    mix: 'about-descr__button-show',
+                    mod: ['small', 'bg-secondary'],
+                    text: 'Смотреть больше',
+                    js: 'show-button',
+                })
