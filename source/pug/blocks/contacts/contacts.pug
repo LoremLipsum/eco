@@ -9,39 +9,41 @@ mixin contacts(data)
             .contacts__info
                 h1.contacts__heading Контакты
                 h3.contacts__subheading Расположение Экопарка и&nbsp;офиса компании
-                p г. Ялта, ул. Большевистская, 100
+                .contacts__text г. Ялта, ул. Большевистская, 100
                 h3.contacts__subheading Телефоны
-                p
+                .contacts__text
                     +el({
                         tag: 'a',
                         class: 'contacts__link',
                         href: 'tel:88005053848',
                         text: '8 800 505 38 48'
                     })
+                    br
                     +el({
                         tag: 'a',
                         class: 'contacts__link',
+                        mod: 'tel',
                         href: 'tel:89785748811',
                         text: '8 978 574 88 11'
                     })
                         +el({
                             tag: 'svg',
                             class: 'contacts__link-icon',
-                            mod: 'tel-01',
                             icon: 'tel-w-circle01'
                         })
                     +el({
                         tag: 'a',
+                        class: 'contacts__link',
+                        mod: 'viber',
                         href: 'viber://add?number=89785748811'
                     })
                         +el({
                             tag: 'svg',
                             class: 'contacts__link-icon',
-                            mod: 'tel-02',
                             icon: 'tel-w-circle02'
                         })
                 h3.contacts__subheading E-mail
-                p
+                .contacts__text
                     +el({
                         tag: 'a',
                         class: 'contacts__link',
