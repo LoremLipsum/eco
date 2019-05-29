@@ -33,11 +33,11 @@
               </span>
             </button>
           </div>
-          <button class="button-icon button-icon--white main-header__phone-button" aria-label="Окрыть форму обратного звонка" type="button">
+          <a class="button-icon button-icon--white main-header__phone-button" aria-label="Позвонить" href="tel:88005053848">
             <svg class="button-icon__icon">
               <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
             </svg>
-          </button>
+          </a>
         </div>
         <a class="logo main-header__logo">
           <img class="logo__image" src="./assets/images/logo.svg" width="70" height="100" alt="logo">
@@ -1200,45 +1200,47 @@
           <span class="button-close__icon">
           </span>
         </button>
-        <h3 class="modal__heading">Заполните форму <br>и мы позвоним Вам в&nbsp;ближайшее время
-        </h3>
-        <form class="form modal__form" action="/" method="post" accept-charset="UTF-8">
-          <div class="form__group">
-            <label class="field field--with-icon form__field">
-              <span class="hidden">Ваше имя
-              </span>
-              <input class="field__input" tabindex="0" placeholder="Ваше имя" name="user" required type="text" aria-required="true" aria-invalid="false">
-              <span class="field__icon-wrap">
-                <svg class="field__icon">
-                  <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
-                </svg>
-              </span>
-            </label>
-            <label class="field field--with-icon form__field">
-              <span class="hidden">Ваш телефон
-              </span>
-              <input class="field__input" tabindex="0" placeholder="Ваш телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
-              <span class="field__icon-wrap">
-                <svg class="field__icon">
-                  <use xlink:href="./assets/images/sprites/sprite.svg#tel-field"></use>
-                </svg>
-              </span>
-            </label>
-          </div>
-          <div class="form__submit-wrap form__submit-wrap--bg-primary form__submit-wrap--medium">
-            <label class="button button--bg-primary button--medium form__submit">
-              <input class="hidden" type="submit">
-              Заказать звонок
-            </label>
-          </div>
-          <div class="form__confirm-wrap">
-            <label class="checkbox-confirm form__confirm">
-              <input class="hidden checkbox-confirm__input" name="confirm" checked type="checkbox">
-              <span class="checkbox-confirm__label">Согласие на обработку персональных данных
-              </span>
-            </label>
-          </div>
-        </form>
+        <div class="modal__dialog-content">
+          <h3 class="modal__heading">Заполните форму <br>и мы позвоним Вам в&nbsp;ближайшее время
+          </h3>
+          <form class="form modal__form" action="/" method="post" accept-charset="UTF-8">
+            <div class="form__group">
+              <label class="field field--with-icon form__field">
+                <span class="hidden">Ваше имя
+                </span>
+                <input class="field__input" tabindex="0" placeholder="Ваше имя" name="user" required type="text" aria-required="true" aria-invalid="false">
+                <span class="field__icon-wrap">
+                  <svg class="field__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+                  </svg>
+                </span>
+              </label>
+              <label class="field field--with-icon form__field">
+                <span class="hidden">Ваш телефон
+                </span>
+                <input class="field__input" tabindex="0" placeholder="Ваш телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
+                <span class="field__icon-wrap">
+                  <svg class="field__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#tel-field"></use>
+                  </svg>
+                </span>
+              </label>
+            </div>
+            <div class="form__submit-wrap form__submit-wrap--bg-primary form__submit-wrap--medium">
+              <label class="button button--bg-primary button--medium form__submit">
+                <input class="hidden" type="submit">
+                Заказать звонок
+              </label>
+            </div>
+            <div class="form__confirm-wrap">
+              <label class="checkbox-confirm form__confirm">
+                <input class="hidden checkbox-confirm__input" name="confirm" checked type="checkbox">
+                <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                </span>
+              </label>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <div class="modal modal--video js-modal-video js-modal">
@@ -1249,7 +1251,9 @@
           <span class="button-close__icon">
           </span>
         </button>
-        <iframe class="modal__iframe js-modal-iframe" id="player" width="640" height="360"></iframe>
+        <div class="modal__dialog-content">
+          <iframe class="modal__iframe js-modal-iframe" id="player" width="640" height="360"></iframe>
+        </div>
       </div>
     </div>
     <script src="./scripts/libs/jquery.js"></script>

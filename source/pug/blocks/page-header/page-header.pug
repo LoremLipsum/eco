@@ -31,10 +31,11 @@ mixin page-header(data)
             })
             .page-header__col.page-header__col--right
                 +button-icon({
-                    tag: 'button',
+                    tag: 'a',
+                    href: 'tel:88005053848',
                     mod: 'primary',
-                    mix: 'page-header__button-icon',
-                    ariaLabel: 'Окрыть форму обратного звонка',
+                    mix: 'main-header__phone-button',
+                    ariaLabel: 'Позвонить',
                     icon: 'tel',
                 })
                 +callback({
