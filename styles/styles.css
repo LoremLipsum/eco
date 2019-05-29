@@ -3378,6 +3378,9 @@ body > *
 
 .main-header__top
 {
+    position: relative;
+    z-index: 1;
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9130,7 +9133,7 @@ body > *
 
     background-color: #031607;
 }
-.modal--video .modal__dialog-inner
+.modal--video .modal__dialog-content
 {
     padding: 0 10px;
 }
@@ -9147,7 +9150,7 @@ body > *
     background-color: #fff;
 }
 
-.modal__dialog-inner
+.modal__dialog-content
 {
     overflow-y: auto;
 
@@ -9245,7 +9248,7 @@ body > *
         width: 700px;
         height: 450px;
     }
-    .modal--video .modal__dialog-inner
+    .modal--video .modal__dialog-content
     {
         padding: 0 20px;
     }
@@ -9254,13 +9257,16 @@ body > *
         width: 460px;
         height: auto;
         max-height: calc(100vh - 160px);
-        padding: 60px;
         padding-bottom: 50px;
 
         border-radius: 6px; 
 
         -ms-flex-negative: 0;
         flex-shrink: 0;
+    }
+    .modal__dialog-content
+    {
+        padding: 0 60px;
     }
     .modal__close
     {
@@ -9309,7 +9315,7 @@ body > *
         width: 900px;
         height: 560px;
     }
-    .modal__dialog-inner
+    .modal__dialog-content
     {
         padding: 0 70px;
     }
