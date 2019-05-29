@@ -43,7 +43,7 @@
             </svg>
           </button>
           <div class="callback callback--small callback--primary page-header__callback page-header__callback--desktop">
-            <button class="button-icon callback__button" aria-label="Окрыть форму обратного звонка" type="button">
+            <button class="button-icon callback__button js-callback-button" aria-label="Окрыть форму обратного звонка" type="button">
               <svg class="button-icon__icon">
                 <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
               </svg>
@@ -88,7 +88,7 @@
             </ul>
             <div class="page-header__panel-bottom">
               <div class="callback callback--small callback--primary page-header__callback page-header__callback--mobile">
-                <button class="button-icon callback__button" aria-label="Окрыть форму обратного звонка" type="button">
+                <button class="button-icon callback__button js-callback-button" aria-label="Окрыть форму обратного звонка" type="button">
                   <svg class="button-icon__icon">
                     <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
                   </svg>
@@ -345,6 +345,55 @@
         </div>
       </div>
     </footer>
+    <div class="modal js-modal-callback js-modal">
+      <div class="overlay modal__overlay active js-modal-overlay">
+      </div>
+      <div class="modal__dialog">
+        <button class="button-close button-close--bg-primary modal__close js-modal-close" aria-label="Закрыть окно" type="button">
+          <span class="button-close__icon">
+          </span>
+        </button>
+        <h3 class="modal__heading">Заполните форму <br>и мы позвоним Вам в&nbsp;ближайшее время
+        </h3>
+        <form class="form modal__form" action="/" method="post" accept-charset="UTF-8">
+          <div class="form__group">
+            <label class="field field--with-icon form__field">
+              <span class="hidden">Ваше имя
+              </span>
+              <input class="field__input" tabindex="0" placeholder="Ваше имя" name="user" required type="text" aria-required="true" aria-invalid="false">
+              <span class="field__icon-wrap">
+                <svg class="field__icon">
+                  <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="field field--with-icon form__field">
+              <span class="hidden">Ваш телефон
+              </span>
+              <input class="field__input" tabindex="0" placeholder="Ваш телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
+              <span class="field__icon-wrap">
+                <svg class="field__icon">
+                  <use xlink:href="./assets/images/sprites/sprite.svg#tel-field"></use>
+                </svg>
+              </span>
+            </label>
+          </div>
+          <div class="form__submit-wrap form__submit-wrap--bg-primary form__submit-wrap--medium">
+            <label class="button button--bg-primary button--medium form__submit">
+              <input class="hidden" type="submit">
+              Заказать звонок
+            </label>
+          </div>
+          <div class="form__confirm-wrap">
+            <label class="checkbox-confirm form__confirm">
+              <input class="hidden checkbox-confirm__input" name="confirm" checked type="checkbox">
+              <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="./scripts/libs/jquery.js"></script>
     <script src="./scripts/libs/TweenLite.js"></script>
     <script src="./scripts/libs/CSSPlugin.js"></script>
