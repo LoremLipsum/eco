@@ -3347,7 +3347,8 @@ body > *
     padding-top: 15px;
     padding-bottom: 50px;
 
-    color: #fff; 
+    color: #fff;
+    background-color: #202e31; 
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
