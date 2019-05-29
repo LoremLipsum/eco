@@ -28,25 +28,39 @@
   text-transform: uppercase;
 }
 
+.contacts__text {
+  margin-bottom: 20px;
+}
+
 .contacts__link {
-  display: block;
+  display: inline-block;
   text-decoration: none;
+  vertical-align: baseline;
+
+  &--tel {
+    .contacts__link-icon {
+      margin-left: 8px;
+      fill: color(secondary);
+    }
+  }
+
+  &--viber {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    margin-left: 4px;
+
+    .contacts__link-icon {
+      fill: #834894;
+    }
+  }
 }
 
 .contacts__link-icon {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-left: 8px;
-  transform: translateY(4px);
-
-  &--tel-01 {
-    fill: color(secondary);
-  }
-
-  &--tel-02 {
-    fill: #834894;
-  }
+  vertical-align: middle;
 }
 
 .contacts__map {
@@ -88,6 +102,10 @@
     font-size: 22px;
   }
 
+  .contacts__text {
+    margin-bottom: 22px;
+  }
+
   .contacts__map {
     position: absolute;
     top: 0;
@@ -102,9 +120,6 @@
 }
 
 @include respond-to(large) {
-  .contacts__wrap {
-  }
-
   .contacts__info {
     width: 400px;
     padding-top: 160px;
@@ -119,6 +134,10 @@
     margin-top: 40px;
     margin-bottom: 20px;
     font-size: 24px;
+  }
+
+  .contacts__text {
+    margin-bottom: 24px;
   }
 
   .contacts__map {

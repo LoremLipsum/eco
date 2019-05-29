@@ -97,12 +97,14 @@
       height: 183px;
       background-image: url('../assets/images/logo-primary.svg');
       background-position: center;
-      background-size: contain;
+      background-size: 129px 183px;
       background-repeat: no-repeat;
     }
   }
 
   .about-form__heading {
+    max-width: 450px;
+    min-height: 60px;
     font-size: 24px;
     text-align: left;
   }

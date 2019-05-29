@@ -1,6 +1,6 @@
 .feedback-card {
   .form__confirm {
-    color: color(secondary-light);
+    color: color(secondary);
   }
 }
 
@@ -28,7 +28,7 @@
   .feedback-card {
     padding: 30px 40px;
     padding-bottom: 50px;
-    background-color: color(secondary-light);
+    background-color: color(secondary);
     border-radius: radius(sm);
 
     .field__input {

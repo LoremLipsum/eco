@@ -17,7 +17,8 @@ mixin presentation(data)
                     tag: 'a',
                     mod: ['shadow', 'large'],
                     mix: 'presentation__button',
-                    text: 'Смотреть наши объекты',
+                    text: 'Скачать презентацию',
+                    js: 'presentation-button',
                 })
             .presentation__image-wrap
                 +el({
@@ -25,3 +26,16 @@ mixin presentation(data)
                     class: 'presentation__image',
                     image: 'presentation.png',
                 })
+        +modal({
+            heading: 'Заполните форму <br>и&nbsp;мы вышлем презентацию на Ваш почтовый адрес',
+            js: 'modal-presentation',
+        })
+            +form({
+                firstName: true,
+                tel: true,
+                email: true,
+                submit: 'Заказать презентацию',
+                modField: 'with-icon',
+                mix: 'modal__form',
+                modSubmit: ['bg-primary', 'medium'],
+            })

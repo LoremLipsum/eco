@@ -320,6 +320,10 @@ picturefill();
 
     var btnsCallback = document.querySelectorAll('.js-callback-button');
     var callback = document.querySelector('.js-modal-callback');
+
+    var btnsPresentation = document.querySelectorAll('.js-presentation-button');
+    var presentation = document.querySelector('.js-modal-presentation');
+
     var ESC = 27;
 
     var close = function() {
@@ -353,12 +357,21 @@ picturefill();
 
     document.addEventListener('keyup', onEscKeyup);
 
+    // Модальные окна
     for (var i = 0; i < btnsCallback.length; i += 1) {
       btnsCallback[i].addEventListener('click', function(e) {
         e.preventDefault();
         callback.classList.add('active');
       });
     }
+
+    for (var i = 0; i < btnsPresentation.length; i += 1) {
+      btnsPresentation[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        presentation.classList.add('active');
+      });
+    }
+
   }
 
 })();

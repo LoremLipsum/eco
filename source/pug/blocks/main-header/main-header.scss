@@ -85,7 +85,7 @@
   margin-top: 30px;
   padding: 20px;
   padding-left: 30px;
-  border-top: 1px solid rgba(color(secondary-light), 0.4);
+  border-top: 1px solid rgba(color(secondary), 0.4);
 }
 
 .main-header__callback {
@@ -128,7 +128,7 @@
   text-align: center;
 
   &--accent {
-    color: color(secondary-light);
+    color: color(secondary);
   }
 }
 
@@ -325,7 +325,7 @@
     }
 
     &--secondary {
-      color: color(secondary-light);
+      color: color(secondary);
     }
   }
 
@@ -338,7 +338,7 @@
     font-weight: 400;
 
     &--accent {
-      color: color(secondary-light);
+      color: color(secondary);
       font-weight: 500;
     }
   }

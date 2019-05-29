@@ -19,17 +19,3 @@ block content
             +presentation({
                 mix: 'house-view__presentation'
             })
-
-block modalPage
-    +modal({
-        heading: 'Заполните форму <br>и мы позвоним Вам в&nbsp;ближайшее время',
-        js: 'modal-callback',
-    })
-        +form({
-            firstName: true,
-            tel: true,
-            submit: 'Заказать звонок',
-            modField: 'with-icon',
-            mix: 'modal__form',
-            modSubmit: ['bg-primary', 'medium'],
-        })

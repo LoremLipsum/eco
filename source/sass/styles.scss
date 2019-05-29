@@ -85,8 +85,6 @@
 @import "../pug/blocks/docs-section/docs-section";
 @import "../pug/blocks/house-section/house-section";
 @import "../pug/blocks/posts-section/posts-section";
-@import "./blocks/page-content";
-@import "./blocks/main-content";
 @import "../pug/blocks/service-card/service-card";
 @import "../pug/blocks/about-form/about-form";
 @import "../pug/blocks/service-intro/service-intro";
@@ -110,3 +108,5 @@
 @import "../pug/blocks/condition-form/condition-form";
 @import "../pug/blocks/condition-card/condition-card";
 @import "../pug/blocks/condition/condition";
+@import "./blocks/page-content";
+@import "./blocks/main-content";

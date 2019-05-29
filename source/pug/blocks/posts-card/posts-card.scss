@@ -64,19 +64,23 @@
 }
 
 .posts-card__text {
+  max-height: 72px;
+  overflow: hidden;
   margin-top: auto;
   margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.posts-card__link-w-arrow {
-
-}
-
-
-@include respond-to(medium) {
-
+@include respond-to(620px) {
+  .posts-card__text {
+    height: 72px;
+    max-height: none;
+  }
 }
 
 @include respond-to(large) {
-
+  .posts-card__text {
+    height: 96px;
+  }
 }
