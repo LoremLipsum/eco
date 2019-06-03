@@ -62,28 +62,60 @@
           </button>
           <div class="main-header__panel-wrap">
             <ul class="main-nav main-header__main-nav">
-              <li class="main-nav__item active" itemprop="name">
-                <a class="main-nav__link" href="#" itemprop="url">Об экопарке
+              <li class="main-nav__item main-nav__item--lvl-2 main-nav__item--current js-main-nav-dropdown" itemprop="name">
+                <button class="main-nav__link js-main-nav-dropdown-button" type="button">Об экопарке
+                </button>
+                <ul class="main-nav-lvl-2 main-nav__lvl-2">
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Описание
+                    </a>
+                  </li>
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Особенности строительства
+                    </a>
+                  </li>
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Что рядом?
+                    </a>
+                  </li>
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Документация
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav__item main-nav__item--lvl-2 js-main-nav-dropdown" itemprop="name">
+                <button class="main-nav__link js-main-nav-dropdown-button" type="button">Наши объекты
+                </button>
+                <ul class="main-nav-lvl-2 main-nav__lvl-2">
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Танхаусы,
+                    </a>
+                  </li>
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Виллы
+                    </a>
+                  </li>
+                  <li class="main-nav-lvl-2__item" itemprop="name">
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Коттеджи
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav__item" itemprop="name">
+                <a class="main-nav__link" 0="u" 1="r" 2="l" href="page-delivery.html">Условия приобретения
                 </a>
               </li>
               <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" href="#" itemprop="url">Наши объекты
+                <a class="main-nav__link" 0="u" 1="r" 2="l" href="page-contacts.html">Услуги
                 </a>
               </li>
               <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" href="page-delivery.html" itemprop="url">Условия приобретения
+                <a class="main-nav__link" 0="u" 1="r" 2="l" href="page-contacts.html">Блог
                 </a>
               </li>
               <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" href="page-contacts.html" itemprop="url">Услуги
-                </a>
-              </li>
-              <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" href="page-contacts.html" itemprop="url">Блог
-                </a>
-              </li>
-              <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" href="page-contacts.html" itemprop="url">Контакты
+                <a class="main-nav__link" 0="u" 1="r" 2="l" href="page-contacts.html">Контакты
                 </a>
               </li>
             </ul>
@@ -107,8 +139,8 @@
         <p class="main-header__text"><span class="main-header__text--accent">40 домов</span> площадью от&nbsp;100&nbsp;до&nbsp;248&nbsp;м<sup>2</sup> доступны для&nbsp;жизни и&nbsp;отдыха на&nbsp;Южном берегу Крыма
         </p>
         <div class="main-header__button-wrap">
-          <a class="button button--shadow button--large main-header__button" href="#">Смотреть наши объекты
-          </a>
+          <button class="button button--shadow button--large main-header__button js-button-down" type="button">Смотреть наши объекты
+          </button>
         </div>
         <div class="main-header__bottom">
           <div class="main-header__advantages-wrap">
@@ -174,7 +206,7 @@
         <div class="main-content__wrap">
           <div class="main-content__branch main-content__branch--top js-parallax" style="background-image: url(assets/images/branch-without-cone.png)"></div>
         </div>
-        <div class="house-plan main-content__house-plan js-tabs-small">
+        <div class="house-plan main-content__house-plan js-down js-tabs-small">
           <div class="house-plan__wrap">
             <div class="house-plan__main-card house-plan__main-card--desktop">
               <div class="house-plan__heading-wrap">
@@ -701,7 +733,7 @@
                   </span>
                 </button>
                 <div class="features__fraction features__fraction--current js-features-fraction-current swiper-pagination"></div>
-                <div class="features__bullet features__bullet--desk js-features-bullet-desk swiper-pagination"></div>
+                <div class="features__bullet js-features-bullet swiper-pagination"></div>
                 <div class="features__fraction features__fraction--total js-features-fraction-total swiper-pagination"></div>
                 <button class="control control--next control--size-sm features__control features__control--next js-features-next" type="button">
                   <span class="arrow control__arrow">
@@ -728,7 +760,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="features__bullet features__bullet--mob js-features-bullet-mob swiper-pagination"></div>
               </div>
             </div>
           </div>
@@ -1095,8 +1126,8 @@
             </ul>
           </div>
           <div class="footer__nav" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
-            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--large js-footer-dropdown">
-              <h4 class="footer__title js-footer-dropdown-button">Об Экопарке
+            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--large js-footer-nav-dropdown">
+              <h4 class="footer__title js-footer-nav-dropdown-button">Об Экопарке
                 <span class="arrow arrow--down arrow--white footer__title-arrow">
                 </span>
               </h4>
@@ -1127,8 +1158,8 @@
                 </li>
               </ul>
             </div>
-            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--small js-footer-dropdown">
-              <h4 class="footer__title js-footer-dropdown-button"> Наши объекты
+            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--small js-footer-nav-dropdown">
+              <h4 class="footer__title js-footer-nav-dropdown-button"> Наши объекты
                 <span class="arrow arrow--down arrow--white footer__title-arrow">
                 </span>
               </h4>

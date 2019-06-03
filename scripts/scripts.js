@@ -1,3 +1,19 @@
+(function($) {
+	'use strict';
+	$(function() {
+
+    var btn = $('.js-button-down');
+    var content = $('.js-down');
+
+    btn.click(function (){
+      $('html, body').animate({
+        scrollTop: content.offset().top
+      }, 500);
+    });
+
+  });
+})(jQuery);
+
 'use strict';
 
 (function() {
@@ -51,17 +67,45 @@
 (function($) {
 	'use strict';
 	$(function() {
-    var btns = $('.js-footer-dropdown-button');
+    var btnsFooter = $('.js-footer-nav-dropdown-button');
+    var btnsMainNav = $('.js-main-nav-dropdown-button');
+    var btnsPageNav = $('.js-page-nav-dropdown-button');
     var btn;
 
-    if ($(window).outerWidth() < 1024) {
-      btns.on('click', function(e){
-        e.preventDefault();
-        btn = $(this);
-        btns.not(btn).parents('.js-footer-dropdown').removeClass('active');
-        btn.parents('.js-footer-dropdown').toggleClass('active');
-      });
+    var initDropdown = function() {
+      if ($(window).outerWidth() < 1024) {
+        btnsFooter.on('click', function(e){
+          e.preventDefault();
+          btn = $(this);
+          btnsFooter.not(btn).parents('.js-footer-nav-dropdown').removeClass('active');
+          btn.parents('.js-footer-nav-dropdown').toggleClass('active');
+        });
+      }
+
+      if ($(window).outerWidth() < 1600) {
+        $('.js-main-nav-dropdown-button').on('click', function(e){
+          e.preventDefault();
+          btn = $(this);
+          btnsMainNav.not(btn).parents('.js-main-nav-dropdown').removeClass('active');
+          btn.parents('.js-main-nav-dropdown').toggleClass('active');
+        });
+      }
+
+      if ($(window).outerWidth() < 1250) {
+        $('.js-page-nav-dropdown-button').on('click', function(e){
+          e.preventDefault();
+          btn = $(this);
+          btnsPageNav.not(btn).parents('.js-page-nav-dropdown').removeClass('active');
+          btn.parents('.js-page-nav-dropdown').toggleClass('active');
+        });
+      }
     }
+
+    initDropdown();
+
+    $(window).resize(function() {
+      initDropdown();
+    });
 
 	});
 })(jQuery);
@@ -406,84 +450,84 @@ picturefill();
 	});
 })(jQuery);
 
-(function($) {
-	'use strict';
-	$(function() {
-    var btns = $('.js-show-button');
-
-    if (btns) {
-      var items = '.js-show-item';
-
-      var show = function (className) {
-        btns.on('click', function(e){
-          e.preventDefault();
-          $(this).parents(className).toggleClass('active');
-          var text = $(this).text() === 'Скрыть' ? 'Смотреть больше' : 'Скрыть';
-          $(this).text(text);
-        });
-      }
-
-      var screenWidth = $(window).outerWidth();
-      var aboutDescr = $('.js-about-descr');
-
-
-      if (aboutDescr) {
-        var showAboutDescr = function() {
-          if (screenWidth < 920 && !aboutDescr.hasClass('js-show-3-items')) {
-            aboutDescr.addClass('js-show-3-items');
-            show('.js-about-descr');
-          } else {
-            aboutDescr.removeClass('js-show-3-items');
-          }
-        }
-
-        showAboutDescr();
-
-        $(window).resize(function() {
-          showAboutDescr();
-        });
-      }
-
-      var service = $('.js-service-descr');
-      if (service) {
-        var showService = function() {
-          if (screenWidth < 920 && !service.hasClass('js-show-2-items')) {
-            service.addClass('js-show-2-items');
-            show('.js-service-descr');
-          } else {
-            service.removeClass('js-show-2-items');
-          }
-        }
-
-        showService();
-
-        $(window).resize(function() {
-          showService();
-        });
-      }
-
-      var process = $('.js-process');
-
-      if (process) {
-        var showProcess = function() {
-          if (screenWidth < 920 && !process.hasClass('js-show-2-items')) {
-            process.addClass('js-show-2-items');
-            show('.js-process');
-          } else {
-            process.removeClass('js-show-2-items');
-          }
-        }
-
-        showProcess();
-
-        $(window).resize(function() {
-          showProcess();
-        });
-      }
-    }
-
-	});
-})(jQuery);
+// (function($) {
+// 	'use strict';
+// 	$(function() {
+//     var btns = $('.js-show-button');
+//
+//     if (btns) {
+//       var items = '.js-show-item';
+//
+//       var show = function (className) {
+//         btns.on('click', function(e){
+//           e.preventDefault();
+//           $(this).parents(className).toggleClass('active');
+//           var text = $(this).text() === 'Скрыть' ? 'Смотреть больше' : 'Скрыть';
+//           $(this).text(text);
+//         });
+//       }
+//
+//       var screenWidth = $(window).outerWidth();
+//       var aboutDescr = $('.js-about-descr');
+//
+//
+//       if (aboutDescr) {
+//         var showAboutDescr = function() {
+//           if (screenWidth < 920 && !aboutDescr.hasClass('js-show-3-items')) {
+//             aboutDescr.addClass('js-show-3-items');
+//             show('.js-about-descr');
+//           } else {
+//             aboutDescr.removeClass('js-show-3-items');
+//           }
+//         }
+//
+//         showAboutDescr();
+//
+//         $(window).resize(function() {
+//           showAboutDescr();
+//         });
+//       }
+//
+//       var service = $('.js-service-descr');
+//       if (service) {
+//         var showService = function() {
+//           if (screenWidth < 920 && !service.hasClass('js-show-2-items')) {
+//             service.addClass('js-show-2-items');
+//             show('.js-service-descr');
+//           } else {
+//             service.removeClass('js-show-2-items');
+//           }
+//         }
+//
+//         showService();
+//
+//         $(window).resize(function() {
+//           showService();
+//         });
+//       }
+//
+//       var process = $('.js-process');
+//
+//       if (process) {
+//         var showProcess = function() {
+//           if (screenWidth < 920 && !process.hasClass('js-show-2-items')) {
+//             process.addClass('js-show-2-items');
+//             show('.js-process');
+//           } else {
+//             process.removeClass('js-show-2-items');
+//           }
+//         }
+//
+//         showProcess();
+//
+//         $(window).resize(function() {
+//           showProcess();
+//         });
+//       }
+//     }
+//
+// 	});
+// })(jQuery);
 
 'use strict';
 
@@ -607,79 +651,13 @@ picturefill();
 
   var myNum;
   var myNum1;
-  var featuresImageSlider = new Swiper('.js-features-image-slider', {
-    loop: true,
-    loopedSlides: 9,
-    grabCursor: false,
-    slidesPerView: 1,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    navigation: {
-      nextEl: '.js-features-next',
-      prevEl: '.js-features-prev',
-      clickable: true,
-      disabledClass: 'disabled',
-    },
-    pagination: {
-      el: '.js-features-fraction-current',
-      type: 'fraction',
-      clickable: true,
-      formatFractionCurrent: function (number) {
-        switch(number)
-          {
-            case 1:
-              myNum='01';
-              break;
-            case 2:
-              myNum='02';
-              break;
-            case 3:
-              myNum='03';
-              break;
-            case 4:
-              myNum='04';
-              break;
-            case 5:
-              myNum='05';
-              break;
-            case 6:
-              myNum='06';
-              break;
-            case 7:
-              myNum='07';
-              break;
-            case 8:
-              myNum='08';
-              break;
-            case 9:
-              myNum='09';
-              break;
-            default: myNum= number
-         }
-        return myNum;
-      },
-    },
-    breakpoints: {
-      1249: {
-        slidesPerView: 1,
-      },
-      919: {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        pagination: {
-          el: '.js-features-bullet-mob',
-          clickable: true,
-          bulletClass: 'bullet-dark',
-        },
-      },
-    }
-  });
 
   var featuresTextSlider = new Swiper('.js-features-text-slider', {
     loop: true,
     loopedSlides: 9,
     slidesPerView: 1,
     grabCursor: false,
+    autoHeight: true,
     navigation: {
       nextEl: '.js-features-next',
       prevEl: '.js-features-prev',
@@ -690,7 +668,7 @@ picturefill();
       swiper: featuresImageSlider,
     },
     pagination: {
-      el: '.js-features-bullet-desk',
+      el: '.js-features-bullet',
       clickable: true,
     },
     breakpoints: {
@@ -698,7 +676,7 @@ picturefill();
         slidesPerView: 1,
         grabCursor: true,
         pagination: {
-          el: '.js-features-bullet-mob',
+          el: '.js-features-bullet',
           clickable: true,
           bulletClass: 'bullet-dark',
         },
@@ -706,31 +684,83 @@ picturefill();
     }
   });
 
-  var featuresTextSlider2 = undefined;
+  var featuresImageSlider = undefined;
   var featuresImageSlider2 = undefined;
 
   function initSlider() {
     var screenWidth = parseInt(window.innerWidth, 10);
-    // if ( (screenWidth > (919)) && (featuresTextSlider2 == undefined)) {
-    //   featuresTextSlider2 = new Swiper('.js-features-text-slider', {
-    //     loop: true,
-    //     loopedSlides: 9,
-    //     pagination: {
-    //       el: '.js-features-progressbar',
-    //       clickable: true,
-    //       type: 'progressbar',
-    //     },
-    //     navigation: {
-    //       nextEl: '.js-features-next',
-    //       prevEl: '.js-features-prev',
-    //       clickable: true,
-    //       disabledClass: 'disabled',
-    //     },
-    //   });
-    // } else if ((screenWidth < 920) && (featuresTextSlider2 != undefined)) {
-    //   featuresTextSlider2.destroy();
-    //   featuresTextSlider2 = undefined;
-    // }
+    if ( (screenWidth > (919)) && (featuresImageSlider == undefined)) {
+      var featuresImageSlider = new Swiper('.js-features-image-slider', {
+        loop: true,
+        loopedSlides: 9,
+        grabCursor: false,
+        slidesPerView: 1,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: '.js-features-next',
+          prevEl: '.js-features-prev',
+          clickable: true,
+          disabledClass: 'disabled',
+        },
+        pagination: {
+          el: '.js-features-fraction-current',
+          type: 'fraction',
+          clickable: true,
+          formatFractionCurrent: function (number) {
+            switch(number)
+              {
+                case 1:
+                  myNum='01';
+                  break;
+                case 2:
+                  myNum='02';
+                  break;
+                case 3:
+                  myNum='03';
+                  break;
+                case 4:
+                  myNum='04';
+                  break;
+                case 5:
+                  myNum='05';
+                  break;
+                case 6:
+                  myNum='06';
+                  break;
+                case 7:
+                  myNum='07';
+                  break;
+                case 8:
+                  myNum='08';
+                  break;
+                case 9:
+                  myNum='09';
+                  break;
+                default: myNum= number
+             }
+            return myNum;
+          },
+        },
+        breakpoints: {
+          1249: {
+            slidesPerView: 1,
+          },
+          // 919: {
+          //   slidesPerView: 'auto',
+          //   centeredSlides: true,
+          //   pagination: {
+          //     el: '.js-features-bullet-mob',
+          //     clickable: true,
+          //     bulletClass: 'bullet-dark',
+          //   },
+          // },
+        }
+      });
+    } else if ((screenWidth < 920) && (featuresImageSlider != undefined)) {
+      featuresImageSlider.destroy();
+      featuresImageSlider = undefined;
+    }
     if ( (screenWidth > (919)) && (featuresImageSlider2 == undefined)) {
       featuresImageSlider2 = new Swiper('.js-features-image-slider', {
         loop: true,
@@ -1044,9 +1074,46 @@ picturefill();
 
 (function() {
 
+  var item = document.querySelector('.js-service-projects-slider');
+
+  if (item) {
+    var navSlider = new Swiper('.js-service-projects-slider', {
+      grabCursor: true,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      centeredSlides: true,
+      navigation: {
+        nextEl: '.js-service-projects-next',
+        prevEl: '.js-service-projects-prev',
+        clickable: true,
+        disabledClass: 'disabled',
+      },
+      breakpoints: {
+        919: {
+          slidesPerView: 2,
+          centeredSlides: false,
+        },
+        619: {
+          spaceBetween: 20,
+          slidesPerView: 1,
+          centeredSlides: false,
+        }
+      }
+    });
+  }
+
+})();
+
+'use strict';
+
+(function() {
+
   var tabsSmall= document.querySelectorAll('.js-tabs-small');
 
   var tabs = document.querySelectorAll('.js-tabs');
+  var tabsProjects = document.querySelector('.js-tabs-projects');
 
   var switchTabs = function (item, btns, contents, classContents) {
     for (var i = 0; i < btns.length; i++) {
@@ -1080,6 +1147,16 @@ picturefill();
   }
 
   initTabs();
+
+  var initTabsProjects = function () {
+    if(tabsProjects) {
+      var btnsTabsProjects = tabsProjects.querySelectorAll('.js-tabs-projects-button');
+      var contentsTabsProjects = tabsProjects.querySelectorAll('.js-tabs-projects-content');
+      switchTabs(tabsProjects, btnsTabsProjects, contentsTabsProjects, 'js-tabs-projects-content');
+    }
+  }
+
+  initTabsProjects();
 
   // табы на мобильной версии
   var initTabsSmall = function() {
