@@ -8,15 +8,23 @@
 
 .tabs-blocks__item {
   margin-bottom: 0;
+  color: color(primary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: color(primary);
 
   &.active {
     margin-top: 15px;
     order: 9999;
 
     .tabs-blocks__button {
-      color: color(secondary);
+      background-color: color(secondary);
+      color: color(white);
       pointer-events: none;
-      font-size: 18px;
     }
   }
 }
@@ -24,15 +32,11 @@
 .tabs-blocks__button {
   display: block;
   width: 100%;
-  padding: 4px;
+  padding: 10px;
   border-radius: radius(xs);
+  background-color: color(white);
   color: color(primary);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 24px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
+  box-shadow: $shadow-secondary;
 
   @include hover {
     color: color(secondary);
@@ -49,6 +53,8 @@
   .tabs-blocks__item {
     flex-basis: 200px;
     margin-right: 33px;
+    margin-bottom: 10px;
+    font-size: 18px;
 
     &:last-child {
       margin-right: 0;
@@ -68,7 +74,6 @@
   .tabs-blocks__button {
     padding: 25px;
     padding-bottom: 20px;
-    font-size: 18px;
     background-color: color(white);
     box-shadow: 0 0 10px 0 rgba(color(secondary), 0.2);
 

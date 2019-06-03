@@ -25,11 +25,17 @@
 }
 
 .about-descr__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   @include ul-no;
+  margin-bottom: -30px;
 }
 
 .about-descr__item {
-  margin-bottom: 20px;
+  width: 50%;
+  margin-bottom: 30px;
+  padding: 0 10px;
 
   .item-w-circle {
     max-width: 200px;
@@ -51,16 +57,8 @@
     margin: 0 auto;
   }
 
-  .about-descr__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: -30px;
-  }
-
   .about-descr__item {
     width: 33%;
-    margin-bottom: 30px;
-    padding: 0 10px;
   }
 }
 

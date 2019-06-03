@@ -1,6 +1,6 @@
 mixin page-header(data)
     +el({
-        tag: 'header',
+        tag: data.tag ? data.tag : 'header',
         class: 'page-header',
         mix: 'js-header-scroll',
         mod: data.mod,

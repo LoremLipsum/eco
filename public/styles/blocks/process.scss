@@ -15,27 +15,42 @@
 }
 
 .process__list {
-  @include ol-no;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -30px;
   counter-reset: list;
 }
 
 .process__item {
   position: relative;
+  width: calc(50% - 10px);
+  max-width: 200px;
+  margin-right: 20px;
   margin-bottom: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding: 0 10px;
   line-height: 1.5;
   font-size: 16px;
+  list-style-type: none;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
 
   &::before {
+    content: "0" counter(list);
     position: absolute;
     top: 0;
     left: 50%;
     z-index: 1;
-    transform: translate(-125px, -15px);
+    transform: translate(-80px, -15px);
     display: block;
     counter-increment: list;
-    content: "0" counter(list);
-    font-size: 70px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 1;
     color: rgba(color(secondary), 0.1);
@@ -47,26 +62,23 @@
     }
   }
 
-  .item-w-circle {
-    max-width: 300px;
-    margin: 0 auto;
-  }
 }
 
 .process__arrow {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%) rotate(90deg);
+  top: 50px;
+  left: auto;
+  right: 0;
+  transform: translateY(-50%);
   transform-origin: center;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   fill: color(secondary);
 }
 
 .process__button-show {
   display: block;
-  min-width: 200px;
+  min-width: 260px;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -74,26 +86,30 @@
 
 @include respond-to(620px) {
   .process__list-wrap {
-    max-width: 630px;
+    // max-width: 630px;
     margin: 0 auto;
-  }
-
-  .process__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: -30px;
   }
 
   .process__item {
     width: calc(33.33% - 34px);
+    max-width: 300px;
     margin-bottom: 30px;
     margin-right: 50px;
     padding-bottom: 0;
     padding-right: 30px;
     padding: 0 10px;
 
+    &:nth-child(2n) {
+      margin-right: 50px;
+    }
+
     &:nth-child(3n) {
       margin-right: 0;
+    }
+
+    &::before {
+      transform: translate(-125px, -15px);
+      font-size: 70px;
     }
   }
 
@@ -124,7 +140,6 @@
   }
 
   .process__list-wrap {
-    max-width: none;
     margin: 0;
   }
 
@@ -134,6 +149,8 @@
   }
 
   .process__item {
+    max-width: none;
+
     &::before {
       font-size: 80px;
       transform: translate(-160px, -10px);

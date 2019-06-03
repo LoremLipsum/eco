@@ -20,7 +20,8 @@ mixin main-nav(data)
             //- else
             //-     -var active = ''
 
-            - var navLinkAttr = item.tag == 'button' ? '' : itemprop='url'
+            if item.tag == 'button'
+                - navLinkAttr = {itemprop: 'url'}
 
             +el({
                 tag: 'li',

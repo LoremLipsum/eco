@@ -6,6 +6,15 @@
   }
 }
 
+.js-tabs-projects-content {
+  max-height: 0;
+  overflow: hidden;
+
+  &.active {
+    max-height: 9999px;
+  }
+}
+
 .js-tabs-small-content {
   max-height: 0;
   overflow: hidden;

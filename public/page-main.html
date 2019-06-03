@@ -63,7 +63,7 @@
           <div class="main-header__panel-wrap">
             <ul class="main-nav main-header__main-nav">
               <li class="main-nav__item main-nav__item--lvl-2 main-nav__item--current js-main-nav-dropdown" itemprop="name">
-                <button class="main-nav__link js-main-nav-dropdown-button" type="button">Об экопарке
+                <button class="main-nav__link js-main-nav-dropdown-button" type="button" itemprop="url">Об экопарке
                 </button>
                 <ul class="main-nav-lvl-2 main-nav__lvl-2">
                   <li class="main-nav-lvl-2__item" itemprop="name">
@@ -85,11 +85,11 @@
                 </ul>
               </li>
               <li class="main-nav__item main-nav__item--lvl-2 js-main-nav-dropdown" itemprop="name">
-                <button class="main-nav__link js-main-nav-dropdown-button" type="button">Наши объекты
+                <button class="main-nav__link js-main-nav-dropdown-button" type="button" itemprop="url">Наши объекты
                 </button>
                 <ul class="main-nav-lvl-2 main-nav__lvl-2">
                   <li class="main-nav-lvl-2__item" itemprop="name">
-                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Танхаусы,
+                    <a class="main-nav-lvl-2__link" href="#" itemprop="url">Танхаусы
                     </a>
                   </li>
                   <li class="main-nav-lvl-2__item" itemprop="name">
@@ -103,19 +103,19 @@
                 </ul>
               </li>
               <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" 0="u" 1="r" 2="l" href="page-delivery.html">Условия приобретения
+                <a class="main-nav__link" href="page-delivery.html" itemprop="url">Условия приобретения
                 </a>
               </li>
               <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" 0="u" 1="r" 2="l" href="page-contacts.html">Услуги
+                <a class="main-nav__link" href="page-contacts.html" itemprop="url">Услуги
                 </a>
               </li>
               <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" 0="u" 1="r" 2="l" href="page-contacts.html">Блог
+                <a class="main-nav__link" href="page-contacts.html" itemprop="url">Блог
                 </a>
               </li>
               <li class="main-nav__item" itemprop="name">
-                <a class="main-nav__link" 0="u" 1="r" 2="l" href="page-contacts.html">Контакты
+                <a class="main-nav__link" href="page-contacts.html" itemprop="url">Контакты
                 </a>
               </li>
             </ul>
@@ -198,6 +198,122 @@
           </div>
         </div>
         <div class="overlay main-header__overlay js-header-overlay">
+        </div>
+      </div>
+      <div class="page-header js-header-scroll js-header main-header__page-header">
+        <div class="page-header__wrap">
+          <div class="page-header__col page-header__col--left">
+            <div class="page-header__button-nav-wrap">
+              <button class="button-nav button-nav--primary page-header__button-nav js-button-nav" aria-label="Открыть меню" type="button">
+                <span class="button-nav__icon">
+                  <span class="button-nav__lines">
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <a class="page-header__logo" title="Вернуться на главную страницу" href="page-main.html">
+            <img class="page-header__logo-image" src="./assets/images/logo-page.svg" width="50" height="59" alt="logo">
+          </a>
+          <div class="page-header__col page-header__col--right">
+            <a class="button-icon button-icon--primary page-header__phone-button" aria-label="Позвонить" href="tel:88005053848">
+              <svg class="button-icon__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
+              </svg>
+            </a>
+            <div class="callback callback--small callback--primary page-header__callback page-header__callback--desktop">
+              <button class="button-icon callback__button js-callback-button" aria-label="Окрыть форму обратного звонка" type="button">
+                <svg class="button-icon__icon">
+                  <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
+                </svg>
+              </button>
+              <a class="callback__link" href="tel:88005053848">8 800 <span class="callback__number">505 38 48</span>
+              </a>
+              <div class="callback__text">Бесплатно по всей Росcии
+              </div>
+            </div>
+          </div>
+          <nav class="page-header__panel js-panel-main-nav" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <button class="button-close page-header__close-panel js-panel-close" aria-label="Закрыть окно" type="button">
+              <span class="button-close__icon">
+              </span>
+            </button>
+            <div class="page-header__panel-wrap">
+              <ul class="page-nav page-header__page-nav">
+                <li class="page-nav__item page-nav__item--lvl-2 page-nav__item--current js-page-nav-dropdown" itemprop="name">
+                  <button class="page-nav__link js-page-nav-dropdown-button" type="button" itemprop="url">Об экопарке
+                  </button>
+                  <ul class="page-nav-lvl-2 page-nav__lvl-2">
+                    <li class="page-nav-lvl-2__item" itemprop="name">
+                      <a class="page-nav-lvl-2__link" href="#" itemprop="url">Описание
+                      </a>
+                    </li>
+                    <li class="page-nav-lvl-2__item" itemprop="name">
+                      <a class="page-nav-lvl-2__link" href="#" itemprop="url">Особенности строительства
+                      </a>
+                    </li>
+                    <li class="page-nav-lvl-2__item" itemprop="name">
+                      <a class="page-nav-lvl-2__link" href="#" itemprop="url">Что рядом?
+                      </a>
+                    </li>
+                    <li class="page-nav-lvl-2__item" itemprop="name">
+                      <a class="page-nav-lvl-2__link" href="#" itemprop="url">Документация
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="page-nav__item page-nav__item--lvl-2 js-page-nav-dropdown" itemprop="name">
+                  <button class="page-nav__link js-page-nav-dropdown-button" type="button" itemprop="url">Наши объекты
+                  </button>
+                  <ul class="page-nav-lvl-2 page-nav__lvl-2">
+                    <li class="page-nav-lvl-2__item" itemprop="name">
+                      <a class="page-nav-lvl-2__link" href="#" itemprop="url">Танхаусы
+                      </a>
+                    </li>
+                    <li class="page-nav-lvl-2__item" itemprop="name">
+                      <a class="page-nav-lvl-2__link" href="#" itemprop="url">Виллы
+                      </a>
+                    </li>
+                    <li class="page-nav-lvl-2__item" itemprop="name">
+                      <a class="page-nav-lvl-2__link" href="#" itemprop="url">Коттеджи
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="page-nav__item" itemprop="name">
+                  <a class="page-nav__link" href="page-delivery.html" itemprop="url">Условия приобретения
+                  </a>
+                </li>
+                <li class="page-nav__item" itemprop="name">
+                  <a class="page-nav__link" href="page-contacts.html" itemprop="url">Услуги
+                  </a>
+                </li>
+                <li class="page-nav__item" itemprop="name">
+                  <a class="page-nav__link" href="page-contacts.html" itemprop="url">Блог
+                  </a>
+                </li>
+                <li class="page-nav__item" itemprop="name">
+                  <a class="page-nav__link" href="page-contacts.html" itemprop="url">Контакты
+                  </a>
+                </li>
+              </ul>
+              <div class="page-header__panel-bottom">
+                <div class="callback callback--small callback--primary page-header__callback page-header__callback--mobile">
+                  <button class="button-icon callback__button js-callback-button" aria-label="Окрыть форму обратного звонка" type="button">
+                    <svg class="button-icon__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
+                    </svg>
+                  </button>
+                  <a class="callback__link" href="tel:88005053848">8 800 <span class="callback__number">505 38 48</span>
+                  </a>
+                  <div class="callback__text">Бесплатно по всей Росcии
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="overlay page-header__overlay js-header-overlay">
         </div>
       </div>
     </header>

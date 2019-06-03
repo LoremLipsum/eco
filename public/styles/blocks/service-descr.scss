@@ -1,11 +1,11 @@
 .service-descr {
-  padding-top: 40px;
-  padding-bottom: 40px;
   background-color: color(light-secondary);
 }
 
 .service-descr__wrap {
   @include wrapper;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .service-descr__heading {
@@ -28,11 +28,23 @@
 }
 
 .service-descr__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   @include ul-no;
+  margin-bottom: -30px;
 }
 
 .service-descr__item {
   margin-bottom: 20px;
+
+  width: 50%;
+  margin-bottom: 30px;
+  padding: 0 10px;
+
+  // &:nth-child(n + 5) {
+  //   width: 33.33%;
+  // }
 
   .item-w-circle {
     max-width: 310px;
@@ -54,49 +66,34 @@
     margin: 0 auto;
   }
 
-  .service-descr__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: -30px;
-  }
-
   .service-descr__item {
-    width: 50%;
-    margin-bottom: 30px;
-    padding: 0 10px;
-
     &:nth-child(n + 5) {
       width: 33.33%;
     }
 
     .item-w-circle {
       max-width: 340px;
-      margin: 0 auto;
     }
   }
 }
 
 @include respond-to(medium) {
   .service-descr {
-    padding-top: 50px;
-    padding-bottom: 50px;
     border-bottom: 220px solid color(secondary);
   }
 
   .service-descr__wrap {
     position: relative;
     display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .service-descr__heading {
     margin: 0;
     margin-bottom: 30px;
+    font-size: 26px;
     text-align: left;
-  }
-
-  .service-descr__subheading {
-    margin-bottom: 30px;
-    font-size: 24px;
   }
 
   .service-descr__content {
@@ -127,7 +124,7 @@
   .service-descr__image-wrap {
     position: absolute;
     left: pads(medium);
-    bottom: -210px;
+    bottom: -160px;
     display: block;
     width: calc(40% - 30px - #{pads(medium)});
     max-width: 300px;
@@ -138,9 +135,12 @@
 
 @include respond-to(large) {
   .service-descr {
+    border-bottom-width: 310px;
+  }
+
+  .service-descr__wrap {
     padding-top: 70px;
     padding-bottom: 60px;
-    border-bottom-width: 310px;
   }
 
   .service-descr__heading {
@@ -161,7 +161,7 @@
   }
 
   .service-descr__image-wrap {
-    bottom: -300px;
+    bottom: -240px;
     width: 460px;
     max-width: none;
     height: 630px;
