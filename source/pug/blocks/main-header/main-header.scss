@@ -188,9 +188,9 @@
   }
 }
 
-// .main-header__page-header {
-//   display: none;
-// }
+.main-header__page-header {
+  display: none;
+}
 
 @include respond-to(420px) {
   .main-header__text {
