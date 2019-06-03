@@ -59,7 +59,7 @@
   text-decoration: none;
   text-align: left;
 
-  @include hover {
+  &:hover {
     color: color(secondary);
   }
 }
@@ -69,7 +69,7 @@
   margin-bottom: 10px;
   overflow: hidden;
 
-  @include hover {
+  &:hover {
     display: block;
   }
 }
@@ -113,7 +113,6 @@
       }
 
       &:hover,
-      &:focus,
       &.active {
         .main-nav__lvl-2 {
           transform: scaleY(1);
@@ -137,7 +136,7 @@
     width: auto;
     padding: 50px 25px;
 
-    @include hover {
+    &:hover {
       color: color(white);
       background-color: color(secondary);
     }
