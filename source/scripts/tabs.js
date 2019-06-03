@@ -5,6 +5,7 @@
   var tabsSmall= document.querySelectorAll('.js-tabs-small');
 
   var tabs = document.querySelectorAll('.js-tabs');
+  var tabsProjects = document.querySelector('.js-tabs-projects');
 
   var switchTabs = function (item, btns, contents, classContents) {
     for (var i = 0; i < btns.length; i++) {
@@ -38,6 +39,16 @@
   }
 
   initTabs();
+
+  var initTabsProjects = function () {
+    if(tabsProjects) {
+      var btnsTabsProjects = tabsProjects.querySelectorAll('.js-tabs-projects-button');
+      var contentsTabsProjects = tabsProjects.querySelectorAll('.js-tabs-projects-content');
+      switchTabs(tabsProjects, btnsTabsProjects, contentsTabsProjects, 'js-tabs-projects-content');
+    }
+  }
+
+  initTabsProjects();
 
   // табы на мобильной версии
   var initTabsSmall = function() {

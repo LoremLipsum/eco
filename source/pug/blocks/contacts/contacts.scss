@@ -1,5 +1,4 @@
 .contacts {
-  margin-bottom: 40px;
 }
 
 .contacts__wrap {
@@ -78,6 +77,10 @@
 
 @include respond-to(medium) {
   .contacts {
+    margin-bottom: 40px;
+  }
+
+  .contacts {
     position: relative;
 
     .form__confirm-wrap {
@@ -120,6 +123,7 @@
 }
 
 @include respond-to(large) {
+
   .contacts__info {
     width: 400px;
     padding-top: 160px;

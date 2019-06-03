@@ -1,30 +1,29 @@
 mixin tabs-blocks(data)
-
-        +el({
-            tag: 'ul',
-            class: 'tabs-blocks',
-            mod: data.mod,
-            mix: data.mix,
-            js: data.js
-        })&attributes(attributes)
-            each item, index in data.items
-                +el({
-                    tag: 'li',
-                    class: 'tabs-blocks__item',
-                    mix: item.mix,
-                    mod: item.mod,
-                })
-                    if data.tag == 'a'
-                        +el({
-                            tag: 'a',
-                            class: 'tabs-blocks__button',
-                            text: item.text,
-                            js: item.js,
-                        })
-                    else
-                        +el({
-                            tag: 'button',
-                            class: 'tabs-blocks__button',
-                            text: item.text,
-                            js: item.js,
-                        })(data-tab='tab-' + (index + 1))
+    +el({
+        tag: 'ul',
+        class: 'tabs-blocks',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        each item, index in data.items
+            +el({
+                tag: 'li',
+                class: 'tabs-blocks__item',
+                mix: item.mix,
+                mod: item.mod,
+            })
+                if data.tag == 'a'
+                    +el({
+                        tag: 'a',
+                        class: 'tabs-blocks__button',
+                        text: item.text,
+                        js: item.js,
+                    })
+                else
+                    +el({
+                        tag: 'button',
+                        class: 'tabs-blocks__button',
+                        text: item.text,
+                        js: item.js,
+                    })(data-tab='tab-' + (index + 1))

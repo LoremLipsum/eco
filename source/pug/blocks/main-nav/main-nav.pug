@@ -15,26 +15,29 @@ mixin main-nav(data)
                 mod: 'line',
             })
         each item, index in data.items
-            if pageId && index == pageId - 1
-                -var active = ' active'
-            else
-                -var active = ''
+            //- if pageId && index == pageId - 1
+            //-     -var active = ' active'
+            //- else
+            //-     -var active = ''
+
+            - var navLinkAttr = item.tag == 'button' ? '' : itemprop='url'
 
             +el({
                 tag: 'li',
                 class: className + '__item',
-                mix: active,
+                mix: item.mix,
                 mod: item.mod,
+                js: item.js
             })(itemprop='name')
                 +el({
-                    tag: 'a',
+                    tag: item.tag ? item.tag : 'a',
                     class: className + '__link',
                     text:item.text,
                     href: item.href,
-                    js: item.js,
-                })(itemprop='url')
-                //- if item.items
-                //-     +main-nav-lvl-2({
-                //-         items: item.items,
-                //-         mix: 'main-nav__lvl-2',
-                //-     })
+                    js: item.jsLink,
+                })&attributes(navLinkAttr)
+                if item.items
+                    +main-nav-lvl-2({
+                        items: item.items,
+                        mix: 'main-nav__lvl-2',
+                    })

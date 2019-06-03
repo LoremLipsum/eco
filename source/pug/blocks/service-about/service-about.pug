@@ -1,0 +1,29 @@
+mixin service-about(data)
+    +el({
+        tag: 'section',
+        class: 'service-about',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .service-about__wrap
+            h2.service-about__heading О&nbsp;нас в&nbsp;цифрах:
+            ul.service-about__list
+                +item-w-number({
+                    tag: 'li',
+                    number: '2016',
+                    text: 'год основания',
+                    mix: 'service-about__item'
+                })
+                +item-w-number({
+                    tag: 'li',
+                    number: '123',
+                    text: 'проектов выполнено',
+                    mix: 'service-about__item'
+                })
+                +item-w-number({
+                    tag: 'li',
+                    number: '10 000 Р',
+                    text: 'Средняя стоимость за&nbsp;м<sup>2</sup>',
+                    mix: 'service-about__item'
+                })

@@ -22,7 +22,7 @@ mixin service-descr(data)
                         small: 'service-02-sm',
                         exp: 'jpg',
                     })
-            .service-descr__list-wrap.js-service-descr
+            .service-descr__list-wrap
                 ul.service-descr__list
                     each item in serviceIcons
                         +el({
@@ -34,9 +34,9 @@ mixin service-descr(data)
                                 icon: item.icon,
                                 text: item.text
                             })
-                +button({
-                    mix: 'about-descr__button-show',
-                    mod: ['small', 'bg-secondary'],
-                    text: 'Смотреть больше',
-                    js: 'show-button',
-                })
+                //- +button({
+                //-     mix: 'about-descr__button-show',
+                //-     mod: ['small', 'bg-secondary'],
+                //-     text: 'Смотреть больше',
+                //-     js: 'show-button',
+                //- })

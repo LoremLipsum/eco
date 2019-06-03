@@ -147,12 +147,15 @@
       transform: translate(320px - pads(medium) - 45px);
     }
   }
+
+  .page-header__phone-button {
+    display: none;
+  }
 }
 
 @include respond-to(large) {
   .page-header {
-    padding-top: 10px;
-    padding-bottom: 15px;
+    padding: 0;
   }
 
   .page-header__col {
@@ -188,7 +191,6 @@
     width: auto;
     max-width: none;
     margin-right: auto;
-    margin-top: 5px;
     padding: 0;
     background-color: transparent;
   }
@@ -199,6 +201,7 @@
 
   .page-header__panel-wrap {
     width: 100%;
+    overflow: visible;
   }
 
   .page-header__page-nav {
@@ -213,6 +216,10 @@
   .page-header__callback {
     &--mobile {
       display: none;
+    }
+
+    &--desktop {
+      margin-top: 0;
     }
   }
 }

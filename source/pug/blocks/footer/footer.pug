@@ -55,8 +55,8 @@ mixin footer(data)
                         mix: 'footer__social',
                     })
                 .footer__nav(role='navigation' aria-label='Дополнительное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
-                    .footer__nav-item.footer__nav-item--dropdown.footer__nav-item--large.js-footer-dropdown
-                        h4.footer__title.js-footer-dropdown-button Об Экопарке
+                    .footer__nav-item.footer__nav-item--dropdown.footer__nav-item--large.js-footer-nav-dropdown
+                        h4.footer__title.js-footer-nav-dropdown-button Об Экопарке
                             +arrow({
                                 mod: ['down', 'white'],
                                 mix: 'footer__title-arrow'
@@ -74,8 +74,8 @@ mixin footer(data)
                                         tag: 'a',
                                         text: item,
                                     })(itemprop='url')
-                    .footer__nav-item.footer__nav-item--dropdown.footer__nav-item--small.js-footer-dropdown
-                        h4.footer__title.js-footer-dropdown-button  Наши объекты
+                    .footer__nav-item.footer__nav-item--dropdown.footer__nav-item--small.js-footer-nav-dropdown
+                        h4.footer__title.js-footer-nav-dropdown-button  Наши объекты
                             +arrow({
                                 mod: ['down', 'white'],
                                 mix: 'footer__title-arrow'

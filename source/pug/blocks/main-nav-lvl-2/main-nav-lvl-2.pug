@@ -1,0 +1,20 @@
+mixin main-nav-lvl-2(data)
+    - var className = 'main-nav-lvl-2'
+    +el({
+        tag: 'ul',
+        class: className,
+        mod: data.mod,
+        mix: data.mix
+    })&attributes(attributes)
+        each item, index in data.items
+            +el({
+                tag: 'li',
+                class: className + '__item',
+                mix: item.mix,
+                mod: item.mod,
+            })(itemprop='name')
+                +el({
+                    tag: 'a',
+                    class: className + '__link',
+                    text: item.text
+                })(itemprop='url')

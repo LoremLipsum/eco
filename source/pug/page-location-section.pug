@@ -3,7 +3,7 @@ extends ./templates/template
 block vars
     - var pageTitle = 'Экопарк'
     - var main = false
-    - var pageId = 1
+    //- - var pageId = 1
 
 block content
     main.page-content.page-content--no-pads
@@ -28,6 +28,22 @@ block content
             +location-places-item({
                 image: 'location-place-04',
                 text: 'СПА-центр <br>«Ливадийский»',
+            })
+            +location-places-item({
+                image: 'location-place-05',
+                text: 'Тренажерный зал «Конфетти»',
+            })
+            +location-places-item({
+                image: 'location-place-06',
+                text: 'Аквапарк «Атлантида»',
+            })
+            +location-places-item({
+                image: 'location-place-07',
+                text: 'Ледовая арена «Конфетти»',
+            })
+            +location-places-item({
+                image: 'location-place-08',
+                text: 'Ресторан «Ореанда»',
             })
         +map({})
         +location-feedback({

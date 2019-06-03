@@ -34,7 +34,7 @@ mixin page-header(data)
                     tag: 'a',
                     href: 'tel:88005053848',
                     mod: 'primary',
-                    mix: 'main-header__phone-button',
+                    mix: 'page-header__phone-button',
                     ariaLabel: 'Позвонить',
                     icon: 'tel',
                 })
@@ -50,7 +50,7 @@ mixin page-header(data)
                 })
                 .page-header__panel-wrap
                     +page-nav({
-                        items: mainNav,
+                        items: pageNav,
                         mix: 'page-header__page-nav'
                     })
                     .page-header__panel-bottom

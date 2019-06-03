@@ -38,13 +38,14 @@ mixin features(data)
                         .features__fraction.features__fraction--current.js-features-fraction-current.swiper-pagination
                         //- .features__nav-slider-inner
                             //- .features__progressbar.js-features-progressbar
-                        .features__bullet.features__bullet--desk.js-features-bullet-desk.swiper-pagination
+                        .features__bullet.js-features-bullet.swiper-pagination
                         .features__fraction.features__fraction--total.js-features-fraction-total.swiper-pagination
                         +control({
                             mod: ['next', 'size-sm'],
                             js: 'features-next',
                             mix: 'features__control features__control--next'
                         })
+                        //- .features__bullet.features__bullet--mob.js-features-bullet-mob.swiper-pagination
                 .features__list-image-wrap
                     .features__list-image.js-features-image-slider.swiper-container
                         .swiper-wrapper
@@ -56,4 +57,3 @@ mixin features(data)
                                     +features-image({
                                         image: item.image
                                     })
-                        .features__bullet.features__bullet--mob.js-features-bullet-mob.swiper-pagination

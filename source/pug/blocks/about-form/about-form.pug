@@ -7,6 +7,11 @@ mixin about-form(data)
     })&attributes(attributes)
         .about-form__wrap
             .about-form__content
+                if data.teaser
+                    +el({
+                        class: 'about-form__teaser',
+                        text: data.teaser
+                    })
                 h4.about-form__heading
                     | Заполните форму и&nbsp;мы&nbsp;ответим на&nbsp;все&nbsp;вопросы
                 +f({

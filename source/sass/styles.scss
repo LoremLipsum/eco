@@ -33,6 +33,11 @@
 @import "../pug/blocks/checkbox-confirm/checkbox-confirm";
 @import "../pug/blocks/form/form";
 @import "../pug/blocks/logo/logo";
+
+@import "../pug/blocks/nav-lvl-2/nav-lvl-2";
+@import "../pug/blocks/main-nav-lvl-2/main-nav-lvl-2";
+@import "../pug/blocks/page-nav-lvl-2/page-nav-lvl-2";
+
 @import "../pug/blocks/main-nav/main-nav";
 @import "../pug/blocks/callback/callback";
 @import "../pug/blocks/main-header/main-header";
@@ -110,3 +115,9 @@
 @import "../pug/blocks/condition/condition";
 @import "./blocks/page-content";
 @import "./blocks/main-content";
+
+@import "../pug/blocks/service-section/service-section";
+@import "../pug/blocks/service-about/service-about";
+@import "../pug/blocks/service-about/service-about";
+@import "../pug/blocks/service-features/service-features";
+@import "../pug/blocks/service-projects/service-projects";

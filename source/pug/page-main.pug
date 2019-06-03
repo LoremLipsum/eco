@@ -3,7 +3,7 @@ extends ./templates/template
 block vars
     - var pageTitle = 'Экопарк'
     - var main = true
-    - var pageId = 1
+    //- - var pageId = 1
 
 block content
     main.main-content
@@ -11,7 +11,7 @@ block content
             .main-content__wrap
                 .main-content__branch.main-content__branch--top.js-parallax(style="background-image: url(assets/images/branch-without-cone.png)")
             +house-plan({
-                mix: 'main-content__house-plan',
+                mix: 'main-content__house-plan js-down',
                 items: house
             })
             +feedback({

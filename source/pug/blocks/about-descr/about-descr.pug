@@ -14,7 +14,7 @@ mixin about-descr(data)
                     места (на&nbsp;вилле&nbsp;&mdash; паркинг на&nbsp;2&nbsp;авто), а&nbsp;также участок земли для отдыха
                     и&nbsp;проведения досуга. У&nbsp;всех таунхаусах и&nbsp;коттеджей будет эксплуатируемая
                     кровля, а&nbsp;также наличие просторных открытых террас.
-            .about-descr__list-wrap.js-about-descr
+            .about-descr__list-wrap
                 ul.about-descr__list
                     each item in aboutIcons
                         +el({
@@ -26,9 +26,9 @@ mixin about-descr(data)
                                 icon: item.icon,
                                 text: item.text
                             })
-                +button({
-                    mix: 'about-descr__button-show',
-                    mod: ['small', 'bg-secondary'],
-                    text: 'Смотреть больше',
-                    js: 'show-button',
-                })
+                //- +button({
+                //-     mix: 'about-descr__button-show',
+                //-     mod: ['small', 'bg-secondary'],
+                //-     text: 'Смотреть больше',
+                //-     js: 'show-button',
+                //- })

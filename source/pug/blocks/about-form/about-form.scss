@@ -4,6 +4,7 @@
 
 .about-form__wrap {
   @include wrapper;
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
@@ -56,6 +57,16 @@
   text-align: center;
 }
 
+.about-form__teaser {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 500;
+  color: color(white);
+  text-align: center;
+  line-height: 1.3;
+  @include first-last;
+}
+
 @include respond-to(medium) {
   .about-form__heading {
     font-size: 22px;
@@ -80,9 +91,18 @@
     width: 304px;
     max-width: none;
   }
+
+  .about-form__teaser {
+    font-size: 26px;
+  }
 }
 
 @include respond-to(large) {
+  .about-form__wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .about-form__content {
     position: relative;
     padding-left: 164px;
@@ -90,8 +110,8 @@
     &::before {
       content: '';
       position: absolute;
-      top: 14px;
       left: 0;
+      bottom: 16px;
       display: block;
       width: 129px;
       height: 183px;
@@ -142,5 +162,10 @@
     .checkbox-confirm__label {
       font-size: 11.5px;
     }
+  }
+
+  .about-form__teaser {
+    font-size: 30px;
+    text-align: left;
   }
 }

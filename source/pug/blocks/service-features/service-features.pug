@@ -1,0 +1,116 @@
+mixin service-features(data)
+    +el({
+        class: 'service-features',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .service-features__wrap
+            ul.service-features__list
+                li.service-features__item.service-features__item--one
+                    .service-features__column.service-features__column--text
+                        .service-features__heading Философия простоты
+                        .service-features__text
+                            p.
+                                Мы&nbsp;хотим избавиться от&nbsp;всего лишнего, оставив главное&nbsp;&mdash; удобство, эстетику и&nbsp;спокойствие
+                    .service-features__column.service-features__column--gallery
+                        +el({
+                            tag: 'img',
+                            class: 'service-features__image',
+                            mod: 'large',
+                            image: 'service/service-features01.jpg'
+                        })
+                        +el({
+                            tag: 'img',
+                            class: 'service-features__image',
+                            mod: 'small',
+                            image: 'service/service-features02.jpg'
+                        })
+                        +el({
+                            tag: 'img',
+                            class: 'service-features__image',
+                            mod: 'small',
+                            image: 'service/service-features03.jpg'
+                        })
+                li.service-features__item.service-features__item--two
+                    .service-features__column.service-features__column--gallery
+                        +el({
+                            tag: 'img',
+                            class: 'service-features__image',
+                            image: 'service/service-features04.jpg'
+                        })
+                    .service-features__column.service-features__column--text
+                        .service-features__heading Удобство
+                        .service-features__text
+                            p.
+                                Мы&nbsp;узнаем распорядок дня, привычки человека и&nbsp;моделируем его жизнь
+                                в&nbsp;пространстве. Затем мы&nbsp;создаём максимально комфортную среду&nbsp;&mdash;
+                                исключая лощеную, но&nbsp;неудобную обстановку.
+                li.service-features__item.service-features__item--three
+                    .service-features__column.service-features__column--text
+                        .service-features__heading Эстетика
+                        .service-features__text
+                            p.
+                                Открытые пространства, встраиваемые решения и&nbsp;лаконичные элементы&nbsp;&mdash; наша страсть.
+                                В&nbsp;отделке мы&nbsp;используем натуральные и&nbsp;качественные материалы с&nbsp;природными цветами.
+                    .service-features__column.service-features__column--gallery
+                        +el({
+                            tag: 'img',
+                            class: 'service-features__image',
+                            mod: 'large',
+                            image: 'service/service-features05.jpg'
+                        })
+                        +el({
+                            tag: 'img',
+                            class: 'service-features__image',
+                            mod: 'small',
+                            image: 'service/service-features06.jpg'
+                        })
+                li.service-features__item.service-features__item--four
+                    .service-features__column.service-features__column--gallery
+                        +el({
+                            tag: 'img',
+                            class: 'service-features__image',
+                            image: 'service/service-features07.jpg'
+                        })
+                    .service-features__column.service-features__column--text
+                        .service-features__heading Спокойствие
+                        .service-features__text
+                            p.
+                                Это чувство подарит минимализм, естественность и упорядоченность.
+                                Особое внимание мы уделяем и свету. Он обязательно должен способствовать
+                                погружению в полное расслабление.
+                li.service-features__item.service-features__item--five
+                    .service-features__column.service-features__column--text
+                        .service-features__heading Тенденции
+                        .service-features__text
+                            p.
+                                Наши интерьеры не теряют свою актуальность с годами. Мы внедряем последние тенденции
+                                в тех элементах, которые можно менять со временем без глобальных переделок.
+                        +el({
+                            tag: 'img',
+                            class: 'service-features__image',
+                            mod: 'small',
+                            image: 'service/service-features08.jpg'
+                        })
+                    .service-features__column.service-features__column--gallery
+                        +el({
+                            tag: 'img',
+                            class: 'service-features__image',
+                            mod: 'large',
+                            image: 'service/service-features09.jpg'
+                        })
+                li.service-features__item.service-features__item--six
+                    .service-features__column.service-features__column--gallery
+                        +el({
+                            tag: 'img',
+                            class: 'service-features__image',
+                            image: 'service/service-features10.jpg'
+                        })
+                    .service-features__column.service-features__column--text
+                        .service-features__heading Как мы работаем
+                        .service-features__text
+                            p.
+                                Наш клиент – это активный и занятой человек. Поэтому мы избавляем его от ненужных производственных сложностей.
+                                Вместе мы обсуждаем и согласовываем проект, а после берём на себя все обязательства по ремонту,
+                                закупкам и контролю. Так, чтобы проект был выполнен в точности как на картинке.

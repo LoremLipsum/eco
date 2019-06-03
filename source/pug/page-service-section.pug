@@ -3,23 +3,70 @@ extends ./templates/template
 block vars
     - var pageTitle = 'Экопарк'
     - var main = false
-    - var pageId = 2
+    //- - var pageId = 2
 
 block content
-    main.page-content.page-content--no-pads
-        +service-intro({
+    main.page-content
+        .page-content__wrap
+            .page-content__heading Услуги
+        +el({
+            class: 'service-section',
+            js: 'tabs',
         })
-        +feedback({
+            .service-section__wrap
+                +tabs-blocks({
+                    mix: 'service-section__tabs',
+                    items: [
+                        {
+                            text: 'Архитектурный отдел',
+                            js: 'tabs-button',
+                            mix: 'active',
+                        },
+                        {
+                            text: 'Постпродажный сервис',
+                            js: 'tabs-button',
+                        },
+                    ]
+                })
 
-        })
-        +service-descr({
-        })
-        +service-bonus({
+            .tab-1.js-tabs-content.active
+                +service-intro({
+                  mix: 'service-section__intro'
+                })
+                +service-about({
+                  mix: 'service-section__about'
+                })
+                +service-features({
+                  mix: 'service-section__features'
+                })
+                +service-projects({
+                  mix: 'service-section__projects'
+                })
+                +about-form({
+                })
+            .tab-2.js-tabs-content
+                +service-descr({
+                })
+                +service-bonus({
+                })
+                +service-garanty({
+                })
+                +about-form({
+                    teaser: 'Индивидуально рассмотрим все Ваши пожелания по&nbsp;расширению спектра услуг и&nbsp;решим любой Ваш вопрос.'
+                })
 
-        })
-        +service-garanty({
 
-        })
-        +service-teaser({
-
-        })
+        //- +feedback({
+        //-
+        //- })
+        //- +service-descr({
+        //- })
+        //- +service-bonus({
+        //-
+        //- })
+        //- +service-garanty({
+        //-
+        //- })
+        //- +service-teaser({
+        //-
+        //- })

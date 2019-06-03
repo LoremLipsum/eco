@@ -37,7 +37,7 @@
           <img class="page-header__logo-image" src="./assets/images/logo-page.svg" width="50" height="59" alt="logo">
         </a>
         <div class="page-header__col page-header__col--right">
-          <a class="button-icon button-icon--primary main-header__phone-button" aria-label="Позвонить" href="tel:88005053848">
+          <a class="button-icon button-icon--primary page-header__phone-button" aria-label="Позвонить" href="tel:88005053848">
             <svg class="button-icon__icon">
               <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
             </svg>
@@ -61,13 +61,45 @@
           </button>
           <div class="page-header__panel-wrap">
             <ul class="page-nav page-header__page-nav">
-              <li class="page-nav__item active" itemprop="name">
-                <a class="page-nav__link" href="#" itemprop="url">Об экопарке
-                </a>
+              <li class="page-nav__item page-nav__item--lvl-2 page-nav__item--current js-page-nav-dropdown" itemprop="name">
+                <button class="page-nav__link js-page-nav-dropdown-button" type="button" itemprop="url">Об экопарке
+                </button>
+                <ul class="page-nav-lvl-2 page-nav__lvl-2">
+                  <li class="page-nav-lvl-2__item" itemprop="name">
+                    <a class="page-nav-lvl-2__link" href="#" itemprop="url">Описание
+                    </a>
+                  </li>
+                  <li class="page-nav-lvl-2__item" itemprop="name">
+                    <a class="page-nav-lvl-2__link" href="#" itemprop="url">Особенности строительства
+                    </a>
+                  </li>
+                  <li class="page-nav-lvl-2__item" itemprop="name">
+                    <a class="page-nav-lvl-2__link" href="#" itemprop="url">Что рядом?
+                    </a>
+                  </li>
+                  <li class="page-nav-lvl-2__item" itemprop="name">
+                    <a class="page-nav-lvl-2__link" href="#" itemprop="url">Документация
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li class="page-nav__item" itemprop="name">
-                <a class="page-nav__link" href="#" itemprop="url">Наши объекты
-                </a>
+              <li class="page-nav__item page-nav__item--lvl-2 js-page-nav-dropdown" itemprop="name">
+                <button class="page-nav__link js-page-nav-dropdown-button" type="button" itemprop="url">Наши объекты
+                </button>
+                <ul class="page-nav-lvl-2 page-nav__lvl-2">
+                  <li class="page-nav-lvl-2__item" itemprop="name">
+                    <a class="page-nav-lvl-2__link" href="#" itemprop="url">Танхаусы,
+                    </a>
+                  </li>
+                  <li class="page-nav-lvl-2__item" itemprop="name">
+                    <a class="page-nav-lvl-2__link" href="#" itemprop="url">Виллы
+                    </a>
+                  </li>
+                  <li class="page-nav-lvl-2__item" itemprop="name">
+                    <a class="page-nav-lvl-2__link" href="#" itemprop="url">Коттеджи
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="page-nav__item" itemprop="name">
                 <a class="page-nav__link" href="page-delivery.html" itemprop="url">Условия приобретения
@@ -188,6 +220,42 @@
                   <source srcset="./assets/images/location/location-place-04@1x.webp, ./assets/images/location/location-place-04@2x.webp 2x" type="image/webp"><img class="picture__image" src="./assets/images/location/location-place-04@1x.jpg" srcset="./assets/images/location/location-place-04@2x.jpg 2x" alt="">
                 </picture>
                 <figcaption class="location-places__caption">СПА-центр <br>«Ливадийский»
+                </figcaption>
+              </figure>
+            </li>
+            <li class="location-places__item">
+              <figure class="location-places__figure">
+                <picture class="picture location-places__picture">
+                  <source srcset="./assets/images/location/location-place-05@1x.webp, ./assets/images/location/location-place-05@2x.webp 2x" type="image/webp"><img class="picture__image" src="./assets/images/location/location-place-05@1x.jpg" srcset="./assets/images/location/location-place-05@2x.jpg 2x" alt="">
+                </picture>
+                <figcaption class="location-places__caption">Тренажерный зал «Конфетти»
+                </figcaption>
+              </figure>
+            </li>
+            <li class="location-places__item">
+              <figure class="location-places__figure">
+                <picture class="picture location-places__picture">
+                  <source srcset="./assets/images/location/location-place-06@1x.webp, ./assets/images/location/location-place-06@2x.webp 2x" type="image/webp"><img class="picture__image" src="./assets/images/location/location-place-06@1x.jpg" srcset="./assets/images/location/location-place-06@2x.jpg 2x" alt="">
+                </picture>
+                <figcaption class="location-places__caption">Аквапарк «Атлантида»
+                </figcaption>
+              </figure>
+            </li>
+            <li class="location-places__item">
+              <figure class="location-places__figure">
+                <picture class="picture location-places__picture">
+                  <source srcset="./assets/images/location/location-place-07@1x.webp, ./assets/images/location/location-place-07@2x.webp 2x" type="image/webp"><img class="picture__image" src="./assets/images/location/location-place-07@1x.jpg" srcset="./assets/images/location/location-place-07@2x.jpg 2x" alt="">
+                </picture>
+                <figcaption class="location-places__caption">Ледовая арена «Конфетти»
+                </figcaption>
+              </figure>
+            </li>
+            <li class="location-places__item">
+              <figure class="location-places__figure">
+                <picture class="picture location-places__picture">
+                  <source srcset="./assets/images/location/location-place-08@1x.webp, ./assets/images/location/location-place-08@2x.webp 2x" type="image/webp"><img class="picture__image" src="./assets/images/location/location-place-08@1x.jpg" srcset="./assets/images/location/location-place-08@2x.jpg 2x" alt="">
+                </picture>
+                <figcaption class="location-places__caption">Ресторан «Ореанда»
                 </figcaption>
               </figure>
             </li>
@@ -320,8 +388,8 @@
             </ul>
           </div>
           <div class="footer__nav" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
-            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--large js-footer-dropdown">
-              <h4 class="footer__title js-footer-dropdown-button">Об Экопарке
+            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--large js-footer-nav-dropdown">
+              <h4 class="footer__title js-footer-nav-dropdown-button">Об Экопарке
                 <span class="arrow arrow--down arrow--white footer__title-arrow">
                 </span>
               </h4>
@@ -352,8 +420,8 @@
                 </li>
               </ul>
             </div>
-            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--small js-footer-dropdown">
-              <h4 class="footer__title js-footer-dropdown-button"> Наши объекты
+            <div class="footer__nav-item footer__nav-item--dropdown footer__nav-item--small js-footer-nav-dropdown">
+              <h4 class="footer__title js-footer-nav-dropdown-button"> Наши объекты
                 <span class="arrow arrow--down arrow--white footer__title-arrow">
                 </span>
               </h4>

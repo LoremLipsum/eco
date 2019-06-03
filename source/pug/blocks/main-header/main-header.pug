@@ -55,10 +55,11 @@ mixin main-header(data)
             })
             .main-header__button-wrap
                 +button({
-                    tag: 'a',
+                    tag: 'button',
                     mix: 'main-header__button',
                     mod: ['shadow', 'large'],
                     text: 'Смотреть наши объекты',
+                    js: 'button-down',
                 })
             .main-header__bottom
                 .main-header__advantages-wrap

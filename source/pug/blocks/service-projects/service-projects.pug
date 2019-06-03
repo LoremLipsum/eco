@@ -1,0 +1,116 @@
+mixin service-projects(data)
+    +el({
+        tag: 'section',
+        class: 'service-projects',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'tabs-projects',
+    })&attributes(attributes)
+        .service-projects__wrap
+            h2.service-projects__heading Реализованные проекты
+            +tabs-blocks({
+                mix: 'service-projects__tabs',
+                items: [
+                    {
+                        text: 'Проект №1',
+                        js: 'tabs-projects-button',
+                        mix: 'active',
+                    },
+                    {
+                        text: 'Проект №2',
+                        js: 'tabs-projects-button',
+                    },
+                    {
+                        text: 'Проект №3',
+                        js: 'tabs-projects-button',
+                    },
+                    {
+                        text: 'Проект №4',
+                        js: 'tabs-projects-button',
+                    },
+                ]
+            })
+        .tab-1.js-tabs-projects-content.active
+            .service-projects__wrap
+                .service-projects__list.js-service-projects-slider.swiper-container
+                    .swiper-wrapper
+                        each item in ['service/service-features01.jpg', 'service/service-features02.jpg', 'projects/projects03.jpg', 'projects/projects01.jpg', 'projects/projects02.jpg', 'projects/projects03.jpg']
+                            .service-projects__item.swiper-slide
+                                +el({
+                                    tag: 'img',
+                                    class: 'service-projects__image',
+                                    image: item,
+                                })
+                    +control({
+                        mod: ['prev', 'size-lg', 'bg-light-secondary'],
+                        js: 'service-projects-prev',
+                        mix: 'service-projects__prev',
+                    })
+                    +control({
+                        mod: ['next', 'size-lg', 'bg-light-secondary'],
+                        js: 'service-projects-next',
+                        mix: 'service-projects__next',
+                    })
+        .tab-2.js-tabs-projects-content
+            .service-projects__wrap
+                .service-projects__list.js-service-projects-slider.swiper-container
+                    .swiper-wrapper
+                        each item in ['service/service-features04.jpg', 'service/service-features03.jpg', 'projects/projects01.jpg', 'projects/projects01.jpg', 'projects/projects02.jpg', 'projects/projects03.jpg']
+                            .service-projects__item.swiper-slide
+                                +el({
+                                    tag: 'img',
+                                    class: 'service-projects__image',
+                                    image: item,
+                                })
+                    +control({
+                        mod: ['prev', 'size-lg', 'bg-light-secondary'],
+                        js: 'service-projects-prev',
+                        mix: 'service-projects__prev',
+                    })
+                    +control({
+                        mod: ['next', 'size-lg', 'bg-light-secondary'],
+                        js: 'service-projects-next',
+                        mix: 'service-projects__next',
+                    })
+        .tab-3.js-tabs-projects-content
+            .service-projects__wrap
+                .service-projects__list.js-service-projects-slider.swiper-container
+                    .swiper-wrapper
+                        each item in ['service/service-features02.jpg', 'service/service-features02.jpg', 'projects/projects01.jpg', 'projects/projects01.jpg', 'projects/projects02.jpg', 'projects/projects03.jpg']
+                            .service-projects__item.swiper-slide
+                                +el({
+                                    tag: 'img',
+                                    class: 'service-projects__image',
+                                    image: item,
+                                })
+                    +control({
+                        mod: ['prev', 'size-lg', 'bg-light-secondary'],
+                        js: 'service-projects-prev',
+                        mix: 'service-projects__prev',
+                    })
+                    +control({
+                        mod: ['next', 'size-lg', 'bg-light-secondary'],
+                        js: 'service-projects-next',
+                        mix: 'service-projects__next',
+                    })
+        .tab-4.js-tabs-projects-content
+            .service-projects__wrap
+                .service-projects__list.js-service-projects-slider.swiper-container
+                    .swiper-wrapper
+                        each item in ['service/service-features03.jpg', 'service/service-features04.jpg', 'projects/projects03.jpg', 'projects/projects01.jpg', 'projects/projects02.jpg', 'projects/projects03.jpg']
+                            .service-projects__item.swiper-slide
+                                +el({
+                                    tag: 'img',
+                                    class: 'service-projects__image',
+                                    image: item,
+                                })
+                    +control({
+                        mod: ['prev', 'size-lg', 'bg-light-secondary'],
+                        js: 'service-projects-prev',
+                        mix: 'service-projects__prev',
+                    })
+                    +control({
+                        mod: ['next', 'size-lg', 'bg-light-secondary'],
+                        js: 'service-projects-next',
+                        mix: 'service-projects__next',
+                    })
