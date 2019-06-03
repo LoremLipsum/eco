@@ -63,6 +63,7 @@
 @include respond-to(medium) {
   .about-intro {
     position: relative;
+    min-height: 670px;
   }
 
   .about-intro__content {
