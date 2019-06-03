@@ -1,0 +1,64 @@
+.service-section {
+
+}
+
+.service-section__wrap {
+  @include wrapper;
+}
+
+.service-section__tabs {
+  justify-content: flex-start;
+  margin-bottom: 40px;
+
+  .tabs-blocks__item {
+    text-transform: none;
+  }
+}
+
+.service-section__about {
+  margin-bottom: 30px;
+}
+
+.service-section__features {
+  margin-bottom: 30px;
+}
+
+.service-section__projects {
+  margin-bottom: 40px;
+}
+
+@include respond-to(medium) {
+  .service-section__tabs {
+    margin-bottom: 50px;
+
+    .tabs-blocks__item {
+      flex-basis: auto;
+    }
+  }
+
+  .service-section__intro {
+    margin-bottom: 50px;
+  }
+
+  .service-section__features {
+    margin-bottom: 50px;
+  }
+}
+
+@include respond-to(large) {
+  .service-section__tabs {
+    margin-bottom: 60px;
+  }
+
+  .service-section__intro {
+    margin-bottom: 60px;
+  }
+
+  .service-section__features {
+    margin-bottom: 70px;
+  }
+
+  .service-section__projects {
+    margin-bottom: 50px;
+  }
+}

@@ -1,7 +1,3 @@
-.service-intro {
-  padding-top: get($y, small, size-70);
-}
-
 .service-intro__wrap {
   @include wrapper;
 }
@@ -47,8 +43,6 @@
   .service-intro {
     position: relative;
     z-index: 0;
-    padding-top: get($y, medium, size-70);
-    padding-bottom: 60px;
   }
 
   .service-intro__wrap {
@@ -102,10 +96,6 @@
 }
 
 @include respond-to(large) {
-  .service-intro {
-    padding-top: get($y, large, size-70);
-  }
-
   .service-intro__heading {
     margin-bottom: 50px;
   }
@@ -123,5 +113,4 @@
     width: calc(100% - 490px);
     height: 430px;
   }
-
 }

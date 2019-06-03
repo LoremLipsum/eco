@@ -156,8 +156,6 @@
 @include respond-to(large) {
   .page-header {
     padding: 0;
-    // padding-top: 10px;
-    // padding-bottom: 15px;
   }
 
   .page-header__col {
@@ -179,7 +177,6 @@
   .page-header__logo {
     order: 1;
     margin: 0;
-    margin-top: 10px;
     margin-right: 25px;
   }
 
@@ -194,7 +191,6 @@
     width: auto;
     max-width: none;
     margin-right: auto;
-    margin-top: 5px;
     padding: 0;
     background-color: transparent;
   }
@@ -223,7 +219,7 @@
     }
 
     &--desktop {
-      margin-top: 10px;
+      margin-top: 0;
     }
   }
 }

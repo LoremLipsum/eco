@@ -36,6 +36,7 @@
       }
     }
 
+    // &:hover,
     &.active {
       .main-nav__lvl-2 {
         display: block;
@@ -58,7 +59,7 @@
   text-decoration: none;
   text-align: left;
 
-  @include hover {
+  &:hover {
     color: color(secondary);
   }
 }
@@ -68,10 +69,7 @@
   margin-bottom: 10px;
   overflow: hidden;
 
-  transition: duration(md) func(primary);
-  transform-origin: 50% 0;
-
-  @include hover {
+  &:hover {
     display: block;
   }
 }
@@ -111,12 +109,10 @@
           border: 8px solid transparent;
           border-top: 6px solid color(secondary);
           transition: opacity duration(md) func(primary);
-          // transition-delay: 0.3s;
         }
       }
 
       &:hover,
-      &:focus,
       &.active {
         .main-nav__lvl-2 {
           transform: scaleY(1);
@@ -140,11 +136,7 @@
     width: auto;
     padding: 50px 25px;
 
-    // &::after {
-    //   transition-delay: 0.3s;
-    // }
-
-    @include hover {
+    &:hover {
       color: color(white);
       background-color: color(secondary);
     }
@@ -157,7 +149,8 @@
     display: block;
     margin-left: -135px;
     transform: scaleY(0);
-    // transform: translate(-50%);
     transition-delay: 0.3s;
+    transform-origin: 50% 0;
+    transition: duration(md) func(primary);
   }
 }

@@ -35,10 +35,25 @@
 
 .item-w-circle__text {
   color: color(primary);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 4 4;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
+
+@include respond-to(medium) {
+  .item-w-circle__text {
+    font-size: 16px;
+  }
 }
 
 @include respond-to(large) {

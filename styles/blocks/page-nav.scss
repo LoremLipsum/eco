@@ -4,6 +4,7 @@
 
 .page-nav__item {
   margin-bottom: 0;
+  border-bottom: 1px solid rgba(color(secondary), 0.5);
   color: color(black);
   font-size: 18px;
   line-height: 26px;
@@ -12,6 +13,7 @@
 
   &:last-child {
     margin-bottom: 0;
+    border-bottom: none;
   }
 
   &--current {
@@ -34,7 +36,7 @@
       &::after {
         content: '';
         position: absolute;
-        top: 30px;
+        top: 32px;
         right: 25px;
         z-index: 1;
         transform: translateY(-50%);
@@ -46,6 +48,7 @@
       }
     }
 
+    // &:hover,
     &.active {
       .page-nav__lvl-2 {
         display: block;
@@ -68,18 +71,17 @@
   text-decoration: none;
   text-align: left;
 
-  @include hover {
+  &:hover {
     color: color(secondary);
   }
 }
 
 .page-nav__lvl-2 {
   display: none;
-  margin-left: 30px;
   overflow: hidden;
-  transition: duration(md) func(primary);
+  margin-bottom: 10px;
 
-  @include hover {
+  &:hover {
     display: block;
   }
 }
@@ -87,7 +89,7 @@
 @include respond-to(large) {
   .page-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
   }
 
@@ -95,6 +97,7 @@
     font-size: 16px;
     line-height: 24px;
     color: color(primary);
+    border-bottom: none;
 
     &--current {
       .page-nav__link {
@@ -103,8 +106,10 @@
     }
 
     &--lvl-2 {
+      position: relative;
+
       .page-nav__link {
-        position: relative;
+        padding: 30px 15px;
 
         &::after {
           top: 100%;
@@ -122,13 +127,12 @@
       }
 
       &:hover,
-      &:focus,
       &.active {
-        .main-nav__lvl-2 {
+        .page-nav__lvl-2 {
           transform: scaleY(1);
         }
 
-        .main-nav__link {
+        .page-nav__link {
           color: color(white);
           background-color: color(secondary);
 
@@ -139,18 +143,6 @@
         }
       }
     }
-
-    @include hover {
-      .page-nav__lvl-2 {
-        display: block;
-      }
-
-      .page-nav__link {
-        &::after {
-          transform: rotate(-135deg);
-        }
-      }
-    }
   }
 
   .page-nav__link {
@@ -158,7 +150,7 @@
     width: auto;
     padding: 30px 15px;
 
-    @include hover {
+    &:hover {
       color: color(white);
       background-color: color(secondary);
     }
@@ -169,8 +161,10 @@
     top: 100%;
     left: 50%;
     display: block;
+    margin-bottom: 0;
     margin-left: -135px;
     transform: scaleY(0);
-    transition-delay: 0.3s;
+    transition: duration(md) func(primary);
+    transform-origin: 50% 0;
   }
 }

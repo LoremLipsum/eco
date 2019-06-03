@@ -1,8 +1,15 @@
+.video-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .video-item__text {
-  margin-bottom: 20px;
+  order: 1;
+  margin-left: 10px;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .video-item__button {
@@ -16,6 +23,7 @@
 @include respond-to(1024px) {
   .video-item {
     position: relative;
+    display: block;
   }
 
   .video-item__preview {
@@ -49,6 +57,8 @@
   .video-item__text {
     position: relative;
     z-index: 1;
+    margin-right: 0;
+    margin-bottom: 20px;
     padding-left: 30px;
     text-align: left;
 
