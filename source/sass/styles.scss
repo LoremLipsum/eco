@@ -48,6 +48,7 @@
 @import "../pug/blocks/advantages/advantages";
 @import "../pug/blocks/social/social";
 @import "../pug/blocks/tabs/tabs";
+@import "../pug/blocks/pin/pin";
 @import "../pug/blocks/circle/circle";
 @import "../pug/blocks/pagination/pagination";
 @import "../pug/blocks/tabs-diary/tabs-diary";
@@ -119,3 +120,6 @@
 @import "../pug/blocks/service-about/service-about";
 @import "../pug/blocks/service-features/service-features";
 @import "../pug/blocks/service-projects/service-projects";
+
+@import "../pug/blocks/main-card/main-card";
+@import "../pug/blocks/pin-item/pin-item";

@@ -1,0 +1,86 @@
+.pin-item {
+  position: relative;
+  display: block;
+  overflow: visible;
+  cursor: pointer;
+  transition: duration(md) func(primary);
+
+  @include hover {
+    .pin-item__pin {
+      // transform: scale(2);
+      width: 82px;
+      height: 104px;
+      filter: drop-shadow(0 0 18px rgba(color(secondary), 0.65));
+      transition-delay: 0;
+
+      &::after {
+        opacity: 0;
+      }
+
+      .pin__num {
+        width: 64px;
+        height: 64px;
+        font-size: 26px;
+        transition-delay: 0;
+      }
+    }
+
+    .pin-item__info {
+      max-width: 9999px;
+      transform: scaleX(1);
+      opacity: 1;
+      transition-delay: 0.3s;
+    }
+  }
+}
+
+.pin-item__pin {
+  transform-origin: 50% bottom;
+  transition: duration(md) func(primary);
+  transition-property: width height;
+  transition-delay: 0.2s;
+
+  &::after {
+    opacity: 1;
+    transition: duration(md) func(primary);
+  }
+
+  .pin__num {
+    transition-delay: 0.2s;
+  }
+}
+
+.pin-item__info {
+  position: absolute;
+  bottom: 2px;
+  right: 50%;
+  width: 250px;
+  max-width: 0;
+  padding: 10px 20px;
+  padding-right: 50px;
+  border-radius: radius(sm) radius(sm) 0 radius(sm);
+  background-color: color(white);
+  overflow: hidden;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: 100% 100%;
+  transition-delay: 0s;
+  transition: duration(md) func(primary);
+}
+
+.pin-item__title {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.pin-item__title-num {
+  font-weight: 700;
+}
+
+.pin-item__descr {
+  font-size: 14px;
+}
+
+.pin-item__value {
+  font-weight: 500;
+}

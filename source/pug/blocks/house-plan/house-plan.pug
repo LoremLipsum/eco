@@ -6,13 +6,9 @@ mixin house-plan(data)
         js: 'tabs-small',
     })&attributes(attributes)
         .house-plan__wrap
-            .house-plan__main-card.house-plan__main-card--desktop
-                .house-plan__heading-wrap
-                    h2.house-plan__heading
-                        | Выберите
-                        |
-                        span.house-plan__heading--accent
-                            | дом мечты
+            +main-card({
+
+            }).house-plan__main-card.house-plan__main-card--desktop
             +tabs({
                 mix: 'house-plan__tabs',
                 items: [
@@ -41,3 +37,8 @@ mixin house-plan(data)
                     .house-plan__bullet.js-house-plan-bullet.swiper-pagination
             .tab-2.js-tabs-small-content
                 .house-plan__main-card.house-plan__main-card--mobile
+                    +el({
+                        tag: 'img',
+                        class: 'house-plan__image',
+                        image: 'house-plan-mob.jpg'
+                    })

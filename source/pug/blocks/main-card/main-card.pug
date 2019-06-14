@@ -1,0 +1,32 @@
+mixin main-card(data)
+
+    +el({
+        tag: 'section',
+        class: 'main-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'tabs',
+    })&attributes(attributes)
+        h2.main-card__heading
+            | Выберите
+            |
+            span.main-card__heading--accent
+                | дом мечты
+        +el({
+            tag: 'img',
+            class: 'main-card__image',
+            image: 'house-plan.jpg',
+        })
+        +el({
+            tag: 'ul',
+            class: 'main-card__list',
+        })
+            each item, index in ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+                +el({
+                    tag: 'li',
+                    class: 'main-card__item',
+                    mod: item
+                })
+                    +pin-item({
+                        num: item
+                    })

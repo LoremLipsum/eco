@@ -1,0 +1,43 @@
+mixin pin-item(data)
+    +el({
+        tag: data.tag,
+        class: 'pin-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'pin-item__info',
+        })
+            +el({
+                class: 'pin-item__title',
+                text: 'коттедж',
+            })
+                +el({
+                    tag: 'span',
+                    class: 'pin-item__title-num',
+                    text: data.num,
+                })
+            +el({
+                class: 'pin-item__descr',
+                text: 'Площадь дома: ',
+            })
+                +el({
+                    tag: 'span',
+                    class: 'pin-item__value',
+                    text: '148 м<sup>2</sup>',
+                })
+            +el({
+                class: 'pin-item__descr',
+                text: 'Площадь участка: ',
+            })
+                +el({
+                    tag: 'span',
+                    class: 'pin-item__value',
+                    text: '211 м<sup>2</sup>',
+                })
+        +pin({
+            text: data.num,
+            mod: 'size-sm',
+            mix: 'pin-item__pin',
+        })
