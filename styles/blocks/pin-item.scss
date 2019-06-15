@@ -1,65 +1,71 @@
 .pin-item {
   position: relative;
   display: block;
-  width: 40px;
-  height: 50px;
-  padding: 0;
-  background-image: url('../assets/images/pin.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   overflow: visible;
   cursor: pointer;
   transition: duration(md) func(primary);
 
-  &::after,
-  &::before {
-    position: absolute;
-  }
+  @include hover {
+    .pin-item__pin {
+      // transform: scale(2);
+      width: 82px;
+      height: 104px;
+      filter: drop-shadow(0 0 18px rgba(color(secondary), 0.65));
+      transition-delay: 0;
 
-  &::before {
-    top: 5px;
-    left: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    padding-top: 2px;
-    border-radius: 50%;
-    color: color(white);
-    font-size: 16px;
-    font-weight: 700;
-    background: color(secondary);
-    box-sizing: border-box;
-  }
+      &::after {
+        opacity: 0;
+      }
 
-  &::after {
-    content: "";
-    bottom: -5px;
-    left: 10px;
-    z-index: -1;
-    display: block;
-    width: 46px;
-    height: 46px;
-    background-image: url('../assets/images/pin-shadow.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
+      .pin__num {
+        width: 64px;
+        height: 64px;
+        font-size: 26px;
+        transition-delay: 0;
+      }
+    }
 
-  &.active {
-    .map__pin-number {
-      background: color(primary);
+    .pin-item__info {
+      max-width: 9999px;
+      transform: scaleX(1);
+      opacity: 1;
+      transition-delay: 0.3s;
     }
   }
 }
 
+.pin-item__pin {
+  transform-origin: 50% bottom;
+  transition: duration(md) func(primary);
+  transition-property: width height;
+  transition-delay: 0.2s;
+
+  &::after {
+    opacity: 1;
+    transition: duration(md) func(primary);
+  }
+
+  .pin__num {
+    transition-delay: 0.2s;
+  }
+}
+
 .pin-item__info {
+  position: absolute;
+  bottom: 2px;
+  right: 50%;
+  width: 250px;
+  max-width: 0;
   padding: 10px 20px;
-  padding-left: 50px;
-  border-radius: radius(md);
+  padding-right: 50px;
+  border-radius: radius(sm) radius(sm) 0 radius(sm);
   background-color: color(white);
+  overflow: hidden;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: 100% 100%;
+  transition-delay: 0s;
+  transition: duration(md) func(primary);
 }
 
 .pin-item__title {

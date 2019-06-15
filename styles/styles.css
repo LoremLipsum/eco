@@ -9940,6 +9940,8 @@ body > *
     width: 100%;
     padding: 10px;
 
+    text-decoration: none; 
+
     color: #004416;
     border-radius: 3px;
     background-color: #fff;
@@ -11339,6 +11341,11 @@ body > *
 .house-section__links-group
 {
     margin-bottom: 30px;
+}
+
+.house-section__pagination
+{
+    margin-top: 20px;
 }
 
 @media (min-width: 920px)
@@ -14545,6 +14552,10 @@ body > *
 {
     content: counter(list);
 }
+.process__item:last-child .process__arrow
+{
+    display: none;
+}
 
 .process__arrow
 {
@@ -15344,6 +15355,48 @@ body > *
     {
         margin-bottom: 50px;
     }
+    .page-content--our-objects .page-content__house-plan
+    {
+        position: relative;
+        z-index: 10;
+
+        padding-top: 0;
+    }
+    .page-content--our-objects .page-content__house-plan .main-card::after
+    {
+        display: none;
+    }
+    .page-content--our-objects .page-content__house-section
+    {
+        position: relative;
+        z-index: 1;
+
+        background-color: #f9faf8;
+    }
+    .page-content--our-objects .page-content__house-section::before
+    {
+        top: 480px;
+    }
+    .page-content--our-objects .page-content__house-section::after
+    {
+        z-index: -10;
+        top: 560px;
+        right: auto;
+        left: 50%;
+
+        width: 1920px;
+        height: 1200px;
+
+        -webkit-transform: translate(-50%, -100%);
+            -ms-transform: translate(-50%, -100%);
+                transform: translate(-50%, -100%);
+
+        background-color: transparent; 
+        background-image: url('../assets/images/bg-our-objects.jpg');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100% auto;
+    }
     .page-content__heading
     {
         font-size: 36px;
@@ -15374,6 +15427,11 @@ body > *
     {
         margin-bottom: 50px;
     }
+    .page-content--our-objects .page-content__house-section
+    {
+        background-image: url('../assets/images/bg-w-logo-one.png');
+        background-position: calc(50% + 390px) calc(100% - 100px);
+    }
     .page-content__breadcrumbs
     {
         margin-top: -40px;
@@ -15384,6 +15442,24 @@ body > *
         font-size: 40px; 
 
         margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 1900px)
+{
+    .page-content--our-objects .page-content__house-section::after
+    {
+        top: 560px;
+        right: 0;
+        left: 0;
+
+        width: auto;
+
+        -webkit-transform: translate(0, -100%);
+            -ms-transform: translate(0, -100%);
+                transform: translate(0, -100%);
+
+        background-position: center top;
     }
 }
 
@@ -16601,11 +16677,6 @@ body > *
     -webkit-transition: .3s cubic-bezier(.25, .1, .25, 1);
          -o-transition: .3s cubic-bezier(.25, .1, .25, 1);
             transition: .3s cubic-bezier(.25, .1, .25, 1);
-}
-.pin-item:hover,
-.pin-item:focus
-{
-    z-index: 1000;
 }
 .pin-item:hover .pin-item__pin,
 .pin-item:focus .pin-item__pin
