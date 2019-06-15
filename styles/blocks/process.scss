@@ -62,6 +62,11 @@
     }
   }
 
+  &:last-child {
+    .process__arrow {
+      display: none;
+    }
+  }
 }
 
 .process__arrow {
