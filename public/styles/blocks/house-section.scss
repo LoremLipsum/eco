@@ -10,6 +10,10 @@
   margin-bottom: 30px;
 }
 
+.house-section__pagination {
+  margin-top: 20px;
+}
+
 @include respond-to(medium) {
   .house-section {
     position: relative;
@@ -42,7 +46,6 @@
       background-color: color(light-secondary);
     }
   }
-
 
   .house-section__links-group {
     margin-bottom: 50px;

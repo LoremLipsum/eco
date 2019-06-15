@@ -37,6 +37,7 @@
   background-color: color(white);
   color: color(primary);
   box-shadow: $shadow-secondary;
+  text-decoration: none;
 
   @include hover {
     color: color(secondary);
