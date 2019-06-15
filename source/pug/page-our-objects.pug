@@ -1,0 +1,22 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Экопарк'
+    - var main = false
+    //- - var pageId = 1
+
+block content
+    main.page-content.page-content--our-objects
+        .page-content__wrap
+            h1.page-content__heading Наши объекты
+        +house-plan({
+            mix: '',
+            items: house,
+            mix: 'page-content__house-plan',
+        })
+        +house-section({
+            mix: 'page-content__house-section',
+        })
+        +feedback({
+
+        })

@@ -70,6 +70,45 @@
         }
       }
     }
+
+    &--our-objects {
+      .page-content__house-plan {
+        position: relative;
+        z-index: 10;
+        padding-top: 0;
+
+        .main-card {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      .page-content__house-section {
+        position: relative;
+        z-index: 1;
+        background-color: color(light-secondary);
+        // здесь полоска для секции house-section смещается вниз
+        &::before {
+          top: 480px;
+        }
+        // здесь бэкграунд для страницы Наши объкты, чтоб не улетал привязан к секции house-section
+        &::after {
+          top: 560px;
+          left: 50%;
+          right: auto;
+          z-index: -10;
+          height: 1200px;
+          width: 1920px;
+          transform: translate(-50%, -100%);
+          background-image: url('../assets/images/bg-our-objects.jpg');
+          background-position: center bottom;
+          background-size: 100% auto;
+          background-repeat: no-repeat;
+          background-color: transparent;
+        }
+      }
+    }
   }
 
   .page-content__heading {
@@ -98,6 +137,13 @@
         }
       }
     }
+
+    &--our-objects {
+      .page-content__house-section {
+        background-image: url('../assets/images/bg-w-logo-one.png');
+        background-position: calc(50% + 390px) calc(100% - 100px);
+      }
+    }
   }
 
   .page-content__breadcrumbs {
@@ -108,5 +154,23 @@
   .page-content__heading {
     margin-bottom: 50px;
     font-size: 40px;
+  }
+}
+
+
+@include respond-to(1900px) {
+  .page-content {
+    &--our-objects {
+      .page-content__house-section {
+        &::after {
+          top: 560px;
+          left: 0;
+          right: 0;
+          width: auto;
+          transform: translate(0, -100%);
+          background-position: center top;
+        }
+      }
+    }
   }
 }

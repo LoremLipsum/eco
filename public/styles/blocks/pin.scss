@@ -4,26 +4,34 @@
   width: 40px;
   height: 50px;
   padding: 0;
-  background-image: url('../assets/images/pin.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   overflow: visible;
   cursor: pointer;
-  transition: duration(md) func(primary);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/pin.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
 
   &::after {
     content: "";
     position: absolute;
     bottom: -5px;
-    left: 10px;
+    left: 35%;
     z-index: -1;
     display: block;
     width: 46px;
     height: 46px;
     background-image: url('../assets/images/pin-shadow.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     background-position: center;
   }
 
@@ -32,22 +40,39 @@
       background: color(primary);
     }
   }
+
+  &--size-sm  {
+    width: 30px;
+    height: 36px;
+
+    &::after {
+      width: 34px;
+      height: 34px;
+    }
+
+    .pin__num {
+      width: 22px;
+      height: 22px;
+      font-size: 12px;
+    }
+  }
 }
 
 .pin__num {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 30px;
   height: 30px;
-  padding-top: 2px;
   border-radius: 50%;
   color: color(white);
   font-size: 16px;
   font-weight: 700;
   background: color(secondary);
   box-sizing: border-box;
+  transition: duration(md) func(primary);
 }

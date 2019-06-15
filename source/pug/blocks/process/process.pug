@@ -22,14 +22,9 @@ mixin process(data)
                                 icon: item.icon,
                                 text: item.text
                             })
-                            +el({
-                                tag: 'svg',
-                                class: 'process__arrow',
-                                icon: 'arrow-02',
-                            })
-                //- +button({
-                //-     mix: 'about-descr__button-show',
-                //-     mod: ['small', 'bg-secondary'],
-                //-     text: 'Смотреть больше',
-                //-     js: 'show-button',
-                //- })
+                            if !(index == (process.length - 1))
+                                +el({
+                                    tag: 'svg',
+                                    class: 'process__arrow',
+                                    icon: 'arrow-02',
+                                })
