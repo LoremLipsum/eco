@@ -1,0 +1,12 @@
+mixin button-up(data)
+    +el({
+        tag: 'button',
+        class: 'button-up',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)
+        +arrow({
+            mix: 'button-up__arrow',
+        })

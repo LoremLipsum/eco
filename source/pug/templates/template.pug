@@ -19,6 +19,11 @@ html(lang="ru-RU")
         block content
         block footer
             +footer({})
+        block button
+            +button-up({
+                text: 'Наверх',
+                js: 'page-up'
+            })
         block modal
             +modal({
                 heading: 'Заполните форму <br>и мы позвоним Вам в&nbsp;ближайшее время',
