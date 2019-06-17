@@ -2349,6 +2349,71 @@ body > *
     }
 }
 
+.button-up
+{
+    font-size: 11px;
+
+    position: fixed;
+    z-index: 3000;
+    right: 20px;
+    bottom: 20px;
+
+    display: none;
+
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    padding-top: 10px;
+
+    text-align: center; 
+
+    border: 2px solid #8ab23f;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.button-up:hover .control__arrow,
+.button-up:focus .control__arrow
+{
+    border-top-color: #004416;
+    border-right-color: #004416;
+}
+.button-up.active
+{
+    display: block;
+}
+
+.button-up__arrow
+{
+    position: absolute;
+    top: 14px;
+    left: 50%;
+
+    -webkit-transform: translate(-50%) rotate(-45deg);
+        -ms-transform: translate(-50%) rotate(-45deg);
+            transform: translate(-50%) rotate(-45deg);
+
+    border-top-color: #8ab23f;
+    border-right-color: #8ab23f;
+}
+
+@media (min-width: 920px)
+{
+    .button-up
+    {
+        right: 30px; 
+        bottom: 30px;
+    }
+}
+
+@media (min-width: 1240px)
+{
+    .button-up
+    {
+        right: 40px; 
+        bottom: 40px;
+    }
+}
+
 .arrow
 {
     display: inline-block;
@@ -5392,7 +5457,7 @@ body > *
     position: absolute;
     z-index: -1;
     bottom: -5px;
-    left: 35%;
+    left: 25%;
 
     display: block;
 
@@ -5401,36 +5466,20 @@ body > *
 
     content: '';
 
+    opacity: .5; 
     background-image: url('../assets/images/pin-shadow.png');
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     background-size: 100% 100%;
 }
 .pin.active .map__pin-number
 {
     background: #004416;
 }
-.pin--size-sm
-{
-    width: 30px;
-    height: 36px;
-}
-.pin--size-sm::after
-{
-    width: 34px;
-    height: 34px;
-}
-.pin--size-sm .pin__num
-{
-    font-size: 12px; 
-
-    width: 22px;
-    height: 22px;
-}
 
 .pin__num
 {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
 
     position: absolute;
@@ -15248,342 +15297,6 @@ body > *
     }
 }
 
-.page-content
-{
-    margin-top: 64px;
-    padding-top: 40px;
-}
-.page-content--article .page-content__content
-{
-    padding-bottom: 40px;
-}
-.page-content--article .page-content__content > *:first-child
-{
-    margin-top: 0 !important;
-}
-.page-content--article .page-content__content > *:last-child
-{
-    margin-bottom: 0 !important;
-}
-.page-content--article .page-content__content .article
-{
-    margin-bottom: 40px;
-}
-.page-content--no-pads
-{
-    padding: 0 !important;
-}
-
-.page-content__wrap
-{
-    padding-right: 20px; 
-    padding-left: 20px;
-}
-@media (min-width: 920px)
-{
-    .page-content__wrap
-    {
-        padding-right: 50px; 
-        padding-left: 50px;
-    }
-}
-@media (min-width: 1240px)
-{
-    .page-content__wrap
-    {
-        width: 1240px;
-        margin-right: auto;
-        margin-left: auto;
-        padding-right: 50px; 
-        padding-left: 50px;
-    }
-}
-
-.page-content__content--bg-light
-{
-    background-color: #f9faf8;
-}
-
-.page-content__heading
-{
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 1.3;
-
-    margin: 0;
-    margin-bottom: 30px;
-
-    text-align: center; 
-    text-transform: none;
-
-    color: #004416;
-}
-
-.page-content__breadcrumbs
-{
-    margin-top: -20px;
-    margin-bottom: 20px;
-}
-
-.page-content__pagination
-{
-    margin-top: 20px;
-}
-
-.page-content__link-comeback
-{
-    margin-bottom: 40px;
-}
-
-.page-content__tabs-house-list
-{
-    margin-bottom: 40px;
-}
-
-@media (min-width: 920px)
-{
-    .page-content
-    {
-        margin-top: 77px;
-        padding-top: 50px;
-    }
-    .page-content--article .page-content__content
-    {
-        padding-bottom: 50px;
-    }
-    .page-content--article .page-content__content .article
-    {
-        margin-bottom: 50px;
-    }
-    .page-content--our-objects .page-content__house-plan
-    {
-        position: relative;
-        z-index: 10;
-
-        padding-top: 0;
-    }
-    .page-content--our-objects .page-content__house-plan .main-card::after
-    {
-        display: none;
-    }
-    .page-content--our-objects .page-content__house-section
-    {
-        position: relative;
-        z-index: 1;
-
-        background-color: #f9faf8;
-    }
-    .page-content--our-objects .page-content__house-section::before
-    {
-        top: 480px;
-    }
-    .page-content--our-objects .page-content__house-section::after
-    {
-        z-index: -10;
-        top: 560px;
-        right: auto;
-        left: 50%;
-
-        width: 1920px;
-        height: 1200px;
-
-        -webkit-transform: translate(-50%, -100%);
-            -ms-transform: translate(-50%, -100%);
-                transform: translate(-50%, -100%);
-
-        background-color: transparent; 
-        background-image: url('../assets/images/bg-our-objects.jpg');
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        background-size: 100% auto;
-    }
-    .page-content__heading
-    {
-        font-size: 36px;
-
-        margin-bottom: 40px;
-
-        text-align: left;
-    }
-    .page-content__breadcrumbs
-    {
-        margin-top: -30px;
-        margin-bottom: 25px;
-    }
-}
-
-@media (min-width: 1240px)
-{
-    .page-content
-    {
-        margin-top: 84px;
-        padding-top: 70px;
-    }
-    .page-content--article .page-content__content
-    {
-        padding-bottom: 60px;
-    }
-    .page-content--article .page-content__content .article
-    {
-        margin-bottom: 50px;
-    }
-    .page-content--our-objects .page-content__house-section
-    {
-        background-image: url('../assets/images/bg-w-logo-one.png');
-        background-position: calc(50% + 390px) calc(100% - 100px);
-    }
-    .page-content__breadcrumbs
-    {
-        margin-top: -40px;
-        margin-bottom: 30px;
-    }
-    .page-content__heading
-    {
-        font-size: 40px; 
-
-        margin-bottom: 50px;
-    }
-}
-
-@media (min-width: 1900px)
-{
-    .page-content--our-objects .page-content__house-section::after
-    {
-        top: 560px;
-        right: 0;
-        left: 0;
-
-        width: auto;
-
-        -webkit-transform: translate(0, -100%);
-            -ms-transform: translate(0, -100%);
-                transform: translate(0, -100%);
-
-        background-position: center top;
-    }
-}
-
-.main-content__wrap
-{
-    position: relative;
-
-    padding-right: 20px; 
-    padding-left: 20px;
-}
-@media (min-width: 920px)
-{
-    .main-content__wrap
-    {
-        padding-right: 50px; 
-        padding-left: 50px;
-    }
-}
-@media (min-width: 1240px)
-{
-    .main-content__wrap
-    {
-        width: 1240px;
-        margin-right: auto;
-        margin-left: auto;
-        padding-right: 50px; 
-        padding-left: 50px;
-    }
-}
-
-@media (min-width: 920px)
-{
-    .main-content__section-top-wrap
-    {
-        position: relative;
-
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-            flex-direction: column; 
-
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-    }
-    .main-content__section-top-wrap::after
-    {
-        position: absolute;
-        z-index: -1;
-        top: 100px;
-        right: 0;
-        left: 0;
-
-        height: 1220px;
-
-        content: '';
-
-        background-image: url('../assets/images/bg-choice-house.jpg');
-        background-repeat: no-repeat; 
-        background-position: center top;
-        background-size: cover;
-    }
-    .main-content__house-plan
-    {
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-        order: 1;
-    }
-    .main-content__feedback
-    {
-        -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-        order: 3;
-    }
-    .main-content__house-top
-    {
-        -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-        order: 2;
-    }
-}
-
-@media (min-width: 920px)
-{
-    .main-content__section-top-wrap::after
-    {
-        top: 200px;
-        right: -70px;
-
-        height: 1390px;
-    }
-}
-
-@media (min-width: 1600px)
-{
-    .main-content__wrap
-    {
-        position: relative;
-    }
-    .main-content__branch--top
-    {
-        position: absolute;
-        z-index: 2;
-        top: 330px;
-        right: 230px;
-
-        display: block;
-
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box; 
-        width: 858px;
-        height: 705px;
-
-        -webkit-transform: translate(100%);
-            -ms-transform: translate(100%);
-                transform: translate(100%);
-
-        background-color: transparent;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 858px 705px;
-    }
-}
-
 .service-section__wrap
 {
     padding-right: 20px; 
@@ -16599,67 +16312,96 @@ body > *
             -ms-transform: translate(-50%, -100%);
                 transform: translate(-50%, -100%);
     }
-    .main-card__item:hover,
-    .main-card__item:focus
+    .main-card__item:hover
     {
         z-index: 100;
     }
-    .main-card__item--01
+    .main-card__item--1-1
     {
         top: 73.9%;
         left: 39.6%;
     }
-    .main-card__item--02
+    .main-card__item--1-2
     {
         top: 67%;
         left: 50.5%;
     }
-    .main-card__item--03
+    .main-card__item--3-1
+    {
+        top: 20%;
+        left: 30%;
+    }
+    .main-card__item--3-2
+    {
+        top: 14%;
+        left: 34%;
+    }
+    .main-card__item--3-3
+    {
+        top: 12.5%;
+        left: 38%;
+    }
+    .main-card__item--3-4
+    {
+        top: 11%;
+        left: 42%;
+    }
+    .main-card__item--3-5
+    {
+        top: 9.5%;
+        left: 46%;
+    }
+    .main-card__item--3-6
+    {
+        top: 8%;
+        left: 50%;
+    }
+    .main-card__item--5-2
     {
         top: 43.5%;
-        left: 62%;
+        left: 61%;
     }
-    .main-card__item--04
+    .main-card__item--5-1
     {
         top: 42.7%;
         left: 70%;
     }
-    .main-card__item--05
+    .main-card__item--4-3
     {
         top: 42.7%;
         left: 77.8%;
     }
-    .main-card__item--06
+    .main-card__item--4-2
     {
         top: 41.2%;
         left: 84.2%;
     }
-    .main-card__item--07
+    .main-card__item--4-1
     {
         top: 39%;
         left: 91%;
     }
-    .main-card__item--08
+    .main-card__item--7-1
     {
         top: 35.8%;
         left: 42.6%;
     }
-    .main-card__item--09
+    .main-card__item--7-2
     {
         top: 30.5%;
         left: 51.6%;
     }
-    .main-card__item--10
+    .main-card__item--6-3
     {
         top: 28.2%;
         left: 74.7%;
     }
-    .main-card__item--11
+    .main-card__item--6-2
     {
         top: 22%;
         left: 68.4%;
     }
-    .main-card__item--12
+    .main-card__item--6-1
     {
         top: 14.5%;
         left: 61%;
@@ -16678,8 +16420,7 @@ body > *
          -o-transition: .3s cubic-bezier(.25, .1, .25, 1);
             transition: .3s cubic-bezier(.25, .1, .25, 1);
 }
-.pin-item:hover .pin-item__pin,
-.pin-item:focus .pin-item__pin
+.pin-item:hover .pin-item__pin
 {
     width: 82px;
     height: 104px;
@@ -16691,15 +16432,13 @@ body > *
     -webkit-filter: drop-shadow(0 0 18px rgba(138, 178, 63, .65));
             filter: drop-shadow(0 0 18px rgba(138, 178, 63, .65));
 }
-.pin-item:hover .pin-item__pin::after,
-.pin-item:focus .pin-item__pin::after
+.pin-item:hover .pin-item__pin::after
 {
     opacity: 0;
 }
-.pin-item:hover .pin-item__pin .pin__num,
-.pin-item:focus .pin-item__pin .pin__num
+.pin-item:hover .pin-item__pin .pin__num
 {
-    font-size: 26px;
+    font-size: 24px;
 
     width: 64px;
     height: 64px;
@@ -16708,8 +16447,7 @@ body > *
          -o-transition-delay: 0;
             transition-delay: 0;
 }
-.pin-item:hover .pin-item__info,
-.pin-item:focus .pin-item__info
+.pin-item:hover .pin-item__info
 {
     max-width: 9999px;
 
@@ -16805,67 +16543,338 @@ body > *
     font-weight: 500;
 }
 
-.button-up
+.page-content
 {
-    font-size: 11px;
+    margin-top: 64px;
+    padding-top: 40px;
+}
+.page-content--article .page-content__content
+{
+    padding-bottom: 40px;
+}
+.page-content--article .page-content__content > *:first-child
+{
+    margin-top: 0 !important;
+}
+.page-content--article .page-content__content > *:last-child
+{
+    margin-bottom: 0 !important;
+}
+.page-content--article .page-content__content .article
+{
+    margin-bottom: 40px;
+}
+.page-content--no-pads
+{
+    padding: 0 !important;
+}
 
-    position: fixed;
-    z-index: 3000;
-    right: 20px;
-    bottom: 20px;
+.page-content__wrap
+{
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+@media (min-width: 920px)
+{
+    .page-content__wrap
+    {
+        padding-right: 50px; 
+        padding-left: 50px;
+    }
+}
+@media (min-width: 1240px)
+{
+    .page-content__wrap
+    {
+        width: 1240px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 50px; 
+        padding-left: 50px;
+    }
+}
 
-    display: none;
+.page-content__content--bg-light
+{
+    background-color: #f9faf8;
+}
 
-    width: 60px;
-    height: 60px;
-    padding: 5px;
-    padding-top: 10px;
+.page-content__heading
+{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+
+    margin: 0;
+    margin-bottom: 30px;
 
     text-align: center; 
+    text-transform: none;
 
-    border: 2px solid #8ab23f;
-    border-radius: 50%;
-    background-color: #fff;
-}
-.button-up:hover .control__arrow,
-.button-up:focus .control__arrow
-{
-    border-top-color: #004416;
-    border-right-color: #004416;
-}
-.button-up.active
-{
-    display: block;
+    color: #004416;
 }
 
-.button-up__arrow
+.page-content__breadcrumbs
 {
-    position: absolute;
-    top: 14px;
-    left: 50%;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
 
-    -webkit-transform: translate(-50%) rotate(-45deg);
-        -ms-transform: translate(-50%) rotate(-45deg);
-            transform: translate(-50%) rotate(-45deg);
+.page-content__pagination
+{
+    margin-top: 20px;
+}
 
-    border-top-color: #8ab23f;
-    border-right-color: #8ab23f;
+.page-content__link-comeback
+{
+    margin-bottom: 40px;
+}
+
+.page-content__tabs-house-list
+{
+    margin-bottom: 40px;
 }
 
 @media (min-width: 920px)
 {
-    .button-up
+    .page-content
     {
-        right: 30px; 
-        bottom: 30px;
+        margin-top: 77px;
+        padding-top: 50px;
+    }
+    .page-content--article .page-content__content
+    {
+        padding-bottom: 50px;
+    }
+    .page-content--article .page-content__content .article
+    {
+        margin-bottom: 50px;
+    }
+    .page-content--our-objects .page-content__house-plan
+    {
+        position: relative;
+        z-index: 10;
+
+        padding-top: 0;
+    }
+    .page-content--our-objects .page-content__house-plan .main-card::after
+    {
+        display: none;
+    }
+    .page-content--our-objects .page-content__house-section
+    {
+        position: relative;
+        z-index: 1;
+
+        background-color: #f9faf8;
+    }
+    .page-content--our-objects .page-content__house-section::before
+    {
+        top: 480px;
+    }
+    .page-content--our-objects .page-content__house-section::after
+    {
+        z-index: -10;
+        top: 560px;
+        right: auto;
+        left: 50%;
+
+        width: 1920px;
+        height: 1200px;
+
+        -webkit-transform: translate(-50%, -100%);
+            -ms-transform: translate(-50%, -100%);
+                transform: translate(-50%, -100%);
+
+        background-color: transparent; 
+        background-image: url('../assets/images/bg-our-objects.jpg');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100% auto;
+    }
+    .page-content__heading
+    {
+        font-size: 36px;
+
+        margin-bottom: 40px;
+
+        text-align: left;
+    }
+    .page-content__breadcrumbs
+    {
+        margin-top: -30px;
+        margin-bottom: 25px;
     }
 }
 
 @media (min-width: 1240px)
 {
-    .button-up
+    .page-content
     {
-        right: 40px; 
-        bottom: 40px;
+        margin-top: 84px;
+        padding-top: 70px;
+    }
+    .page-content--article .page-content__content
+    {
+        padding-bottom: 60px;
+    }
+    .page-content--article .page-content__content .article
+    {
+        margin-bottom: 50px;
+    }
+    .page-content--our-objects .page-content__house-section
+    {
+        background-image: url('../assets/images/bg-w-logo-one.png');
+        background-position: calc(50% + 390px) calc(100% - 100px);
+    }
+    .page-content__breadcrumbs
+    {
+        margin-top: -40px;
+        margin-bottom: 30px;
+    }
+    .page-content__heading
+    {
+        font-size: 40px; 
+
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 1900px)
+{
+    .page-content--our-objects .page-content__house-section::after
+    {
+        top: 560px;
+        right: 0;
+        left: 0;
+
+        width: auto;
+
+        -webkit-transform: translate(0, -100%);
+            -ms-transform: translate(0, -100%);
+                transform: translate(0, -100%);
+
+        background-position: center top;
+    }
+}
+
+.main-content__wrap
+{
+    position: relative;
+
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+@media (min-width: 920px)
+{
+    .main-content__wrap
+    {
+        padding-right: 50px; 
+        padding-left: 50px;
+    }
+}
+@media (min-width: 1240px)
+{
+    .main-content__wrap
+    {
+        width: 1240px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 50px; 
+        padding-left: 50px;
+    }
+}
+
+@media (min-width: 920px)
+{
+    .main-content__section-top-wrap
+    {
+        position: relative;
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: column; 
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+    .main-content__section-top-wrap::after
+    {
+        position: absolute;
+        z-index: -1;
+        top: 100px;
+        right: 0;
+        left: 0;
+
+        height: 1220px;
+
+        content: '';
+
+        background-image: url('../assets/images/bg-choice-house.jpg');
+        background-repeat: no-repeat; 
+        background-position: center top;
+        background-size: cover;
+    }
+    .main-content__house-plan
+    {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    .main-content__feedback
+    {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3;
+    }
+    .main-content__house-top
+    {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}
+
+@media (min-width: 920px)
+{
+    .main-content__section-top-wrap::after
+    {
+        top: 200px;
+        right: -70px;
+
+        height: 1390px;
+    }
+}
+
+@media (min-width: 1600px)
+{
+    .main-content__wrap
+    {
+        position: relative;
+    }
+    .main-content__branch--top
+    {
+        position: absolute;
+        z-index: 2;
+        top: 330px;
+        right: 230px;
+
+        display: block;
+
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; 
+        width: 858px;
+        height: 705px;
+
+        -webkit-transform: translate(100%);
+            -ms-transform: translate(100%);
+                transform: translate(100%);
+
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 858px 705px;
     }
 }
