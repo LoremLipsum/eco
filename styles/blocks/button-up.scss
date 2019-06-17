@@ -1,0 +1,50 @@
+.button-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3000;
+  display: none;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  padding-top: 10px;
+  border: 2px solid color(secondary);
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 11px;
+  text-align: center;
+
+  @include hover {
+    .control__arrow {
+      border-top-color: color(primary);
+      border-right-color: color(primary);
+    }
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+.button-up__arrow {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translate(-50%) rotate(-45deg);
+  border-top-color: color(secondary);
+  border-right-color: color(secondary);
+}
+
+@include respond-to(medium) {
+  .button-up {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .button-up {
+    bottom: 40px;
+    right: 40px;
+  }
+}
