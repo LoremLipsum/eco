@@ -1,9 +1,6 @@
 @import "../assets/fonts/gothampro/gothampro";
-
 @import "./libs/normalize";
 @import "./libs/swiper";
-// @import "./libs/animate";
-// @import "./libs/baron";
 @import "./global/functions";
 @import "./global/vars";
 @import "./global/mixins/mixins";
@@ -20,6 +17,7 @@
 @import "../pug/blocks/button-icon/button-icon";
 @import "../pug/blocks/button-video/button-video";
 @import "../pug/blocks/button-close/button-close";
+@import "../pug/blocks/button-up/button-up";
 @import "../pug/blocks/arrow/arrow";
 @import "../pug/blocks/control/control";
 @import "../pug/blocks/link-w-arrow/link-w-arrow";
@@ -33,10 +31,8 @@
 @import "../pug/blocks/checkbox-confirm/checkbox-confirm";
 @import "../pug/blocks/form/form";
 @import "../pug/blocks/logo/logo";
-
 @import "../pug/blocks/main-nav-lvl-2/main-nav-lvl-2";
 @import "../pug/blocks/page-nav-lvl-2/page-nav-lvl-2";
-
 @import "../pug/blocks/main-nav/main-nav";
 @import "../pug/blocks/callback/callback";
 @import "../pug/blocks/main-header/main-header";
@@ -113,12 +109,11 @@
 @import "../pug/blocks/condition-form/condition-form";
 @import "../pug/blocks/condition-card/condition-card";
 @import "../pug/blocks/condition/condition";
-@import "./blocks/page-content";
-@import "./blocks/main-content";
 @import "../pug/blocks/service-section/service-section";
 @import "../pug/blocks/service-about/service-about";
 @import "../pug/blocks/service-features/service-features";
 @import "../pug/blocks/service-projects/service-projects";
 @import "../pug/blocks/main-card/main-card";
 @import "../pug/blocks/pin-item/pin-item";
-@import "../pug/blocks/button-up/button-up";
+@import "./blocks/page-content";
+@import "./blocks/main-content";

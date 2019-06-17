@@ -1,4 +1,25 @@
 mixin main-card(data)
+    -
+        var pinHouse = [
+            {text: '1/1', mod: '1-1'},
+            {text: '1/2', mod: '1-2'},
+            {text: '5/2', mod: '5-2'},
+            {text: '5/1', mod: '5-1'},
+            {text: '4/3', mod: '4-3'},
+            {text: '4/2', mod: '4-2'},
+            {text: '4/1', mod: '4-1'},
+            {text: '7/1', mod: '7-1'},
+            {text: '7/2', mod: '7-2'},
+            {text: '6/3', mod: '6-3'},
+            {text: '6/2', mod: '6-2'},
+            {text: '6/1', mod: '6-1'},
+            {text: '3/1', mod: '3-1'},
+            {text: '3/2', mod: '3-2'},
+            {text: '3/3', mod: '3-3'},
+            {text: '3/4', mod: '3-4'},
+            {text: '3/5', mod: '3-5'},
+            {text: '3/6', mod: '3-6'},
+        ]
 
     +el({
         tag: 'section',
@@ -21,13 +42,13 @@ mixin main-card(data)
             tag: 'ul',
             class: 'main-card__list',
         })
-            each item, index in ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+            each item, index in pinHouse
                 +el({
                     tag: 'li',
                     class: 'main-card__item',
-                    mod: item
+                    mod: item.mod
                 })
                     +pin-item({
                         tag: 'a',
-                        num: item
+                        num: item.text
                     })
