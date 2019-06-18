@@ -5,9 +5,8 @@
   cursor: pointer;
   transition: duration(md) func(primary);
 
-  @include hover {
+  &:hover {
     .pin-item__pin {
-      // transform: scale(2);
       width: 82px;
       height: 104px;
       filter: drop-shadow(0 0 18px rgba(color(secondary), 0.65));
@@ -20,7 +19,7 @@
       .pin__num {
         width: 64px;
         height: 64px;
-        font-size: 26px;
+        font-size: 24px;
         transition-delay: 0;
       }
     }

@@ -1,0 +1,20 @@
+mixin building-descr(data)
+    +el({
+        class: 'building-descr',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .building-descr__wrap
+            .building-descr__text-wrap
+                h2.building-descr__heading Авторская архитектура
+                p.
+                    Сочетание стильных дизайнерских решений и комфорта. Отделка домов грамотно
+                    подобранными декоративными элементами и гармонирующая с окружающей природой
+                    цветовая гамма, придаёт таунхаусам своеобразный средиземноморский колорит.
+            .building-descr__image-wrap
+                +el({
+                    tag: 'img',
+                    image: 'building01.jpg',
+                    class: 'building-descr__image',
+                })

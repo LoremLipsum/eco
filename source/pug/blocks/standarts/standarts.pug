@@ -1,0 +1,19 @@
+mixin standarts(data)
+    +el({
+        class: 'standarts',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .standarts__wrap
+            h2.standarts__heading Передовые европейские стандарты качества:
+            .js-standarts-slider.swiper-container
+                ul.standarts__list.swiper-wrapper
+                    each item in standarts
+                        li.standarts__item.swiper-slide
+                            +standarts-card({
+                                image: item.image,
+                                heading: item.heading,
+                                text: item.text,
+                            })
+                .standarts__bullet.swiper-pagination.js-standarts-bullet

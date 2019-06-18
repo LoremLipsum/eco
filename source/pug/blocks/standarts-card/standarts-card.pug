@@ -1,0 +1,28 @@
+mixin standarts-card(data)
+    +el({
+        class: 'standarts-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'standarts-card__image-wrap',
+        })
+            +el({
+                tag: 'img',
+                image: data.image,
+                class: 'standarts-card__image',
+            })
+        +el({
+            mix: 'standarts-card__content',
+            before: {
+                tag: 'strong',
+                class: 'standarts-card__title',
+                text: data.heading
+            },
+            after: {
+                tag: 'p',
+                class: 'standarts-card__text',
+                text: data.text
+            }
+        })

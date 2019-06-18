@@ -1,7 +1,4 @@
 .item-w-circle {
-  position: relative;
-  padding-top: 120px;
-
   &--text-lg {
     .item-w-circle__text {
       text-transform: uppercase;
@@ -11,16 +8,14 @@
 }
 
 .item-w-circle__circle {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 6px;
   width: 100px;
   height: 100px;
+  margin: 0 auto;
+  margin-bottom: 15px;
   border-radius: 50%;
   background-color: color(white);
   box-shadow: 0 0 40px 0 rgba(color(secondary), 0.2);
@@ -51,6 +46,24 @@
 }
 
 @include respond-to(medium) {
+  .item-w-circle {
+    &--horizontal {
+      display: flex;
+      align-items: center;
+
+      .item-w-circle__circle {
+        flex-shrink: 0;
+        margin-left: 0;
+        margin-right: 50px;
+        margin-bottom: 0;
+      }
+
+      .item-w-circle__text {
+        text-align: left;
+      }
+    }
+  }
+
   .item-w-circle__text {
     font-size: 16px;
   }
@@ -58,15 +71,14 @@
 
 @include respond-to(large) {
   .item-w-circle {
-    padding-top: 150px;
-
     &--text-lg {
-      padding-top: 160px;
-
       .item-w-circle__text {
         text-transform: uppercase;
         font-size: 24px;
       }
+    }
+
+    &--horizontal {
     }
   }
 

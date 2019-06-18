@@ -121,6 +121,10 @@
     margin-top: -30px;
     margin-bottom: 25px;
   }
+
+  .page-content__building-features {
+    margin-bottom: 60px;
+  }
 }
 
 @include respond-to(large) {
@@ -155,8 +159,11 @@
     margin-bottom: 50px;
     font-size: 40px;
   }
-}
 
+  .page-content__building-features {
+    margin-bottom: 90px;
+  }
+}
 
 @include respond-to(1900px) {
   .page-content {

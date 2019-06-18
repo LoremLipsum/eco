@@ -1,0 +1,20 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Экопарк'
+    - var main = false
+    //- - var pageId = 1
+
+block content
+    main.page-content
+        .page-content__wrap
+            h1.page-content__heading Особенности строительства
+        +building-features({
+            mix: 'page-content__building-features'
+        })
+        +building-descr({
+
+        })
+        +standarts({
+
+        })

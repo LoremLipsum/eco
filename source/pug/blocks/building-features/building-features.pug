@@ -1,0 +1,21 @@
+mixin building-features(data)
+    +el({
+        class: 'building-features',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .building-features__wrap
+            h2.building-features__heading Почему выбирают нас?
+            ul.building-features__list
+                each item in buildingIcons
+                    +el({
+                        tag: 'li',
+                        class: 'building-features__item',
+                        js: 'show-item'
+                    })
+                        +item-w-circle({
+                            icon: item.icon,
+                            text: item.text,
+                            mod: 'horizontal'
+                        })
