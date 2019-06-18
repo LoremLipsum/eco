@@ -16638,6 +16638,11 @@ body > *
     margin-bottom: 40px;
 }
 
+.page-content__building-standarts
+{
+    margin-bottom: 30px;
+}
+
 @media (min-width: 920px)
 {
     .page-content

@@ -56,6 +56,10 @@
   margin-bottom: 40px;
 }
 
+.page-content__building-standarts {
+  margin-bottom: 30px;
+}
+
 @include respond-to(medium) {
   .page-content {
     margin-top: 77px;
