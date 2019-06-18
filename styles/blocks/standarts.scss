@@ -1,6 +1,7 @@
-.standarts__wrap {
-  padding-top: 40px;
-  padding-bottom: 20px;
+.standarts {
+  .swiper-container {
+    overflow: visible;
+  }
 }
 
 .standarts__list {
@@ -13,7 +14,7 @@
   }
 
   .swiper-slide-active {
-    .about-card__image-wrap {
+    .standarts-card__image-wrap {
       &::after {
         opacity: 0;
       }
@@ -30,6 +31,7 @@
 }
 
 .standarts__heading {
+  max-width: 390px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0 pads(small);
@@ -48,6 +50,8 @@
 
 @include respond-to(small-lg) {
   .standarts__heading {
+    margin-right: 0;
+    margin-left: 0;
     text-align: left;
   }
 }
@@ -58,8 +62,6 @@
     z-index: 2;
     padding-left: pads(medium);
     padding-right: pads(medium);
-    padding-top: 100px;
-    padding-bottom: 40px;
   }
 
   .standarts__list {
@@ -77,10 +79,16 @@
   .standarts__item {
     width: 33.33%;
     max-width: none;
+
+    .standarts-card__image-wrap {
+      &::after {
+        opacity: 0;
+      }
+    }
   }
 
   .standarts__heading {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding: 0;
     font-size: 22px;
   }
@@ -97,7 +105,6 @@
     margin-right: auto;
     padding-left: pads(large);
     padding-right: pads(large);
-    padding-top: 150px;
   }
 
   .standarts__list {
