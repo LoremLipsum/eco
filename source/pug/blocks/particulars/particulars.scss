@@ -1,0 +1,44 @@
+.particulars {
+}
+
+.particulars__wrap {
+  @include wrapper;
+}
+
+.particulars__heading {
+  max-width: 380px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: color(primary);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.particulars__list {
+  @include ul-no;
+}
+
+@include respond-to(small-lg) {
+  .particulars__heading {
+    text-align: left;
+  }
+}
+
+@include respond-to(medium) {
+  .particulars__heading {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
+}
+
+@include respond-to(large) {
+  .particulars__heading {
+    margin-bottom: 50px;
+    font-size: 24px;
+  }
+}

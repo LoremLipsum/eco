@@ -60,6 +60,14 @@
   margin-bottom: 30px;
 }
 
+.page-content__building-descr {
+  margin-bottom: 30px;
+}
+
+.page-content__building-particulars {
+  margin-bottom: 30px;
+}
+
 @include respond-to(medium) {
   .page-content {
     margin-top: 77px;
@@ -129,6 +137,14 @@
   .page-content__building-features {
     margin-bottom: 60px;
   }
+
+  .page-content__building-descr {
+    margin-bottom: 20px;
+  }
+
+  .page-content__building-particulars {
+    margin-bottom: 50px;
+  }
 }
 
 @include respond-to(large) {
@@ -166,6 +182,10 @@
 
   .page-content__building-features {
     margin-bottom: 90px;
+  }
+
+  .page-content__building-particulars {
+    margin-bottom: 70px;
   }
 }
 

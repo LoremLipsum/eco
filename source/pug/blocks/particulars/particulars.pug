@@ -1,0 +1,25 @@
+mixin particulars(data)
+    +el({
+        class: 'particulars',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .particulars__wrap
+            h2.particulars__heading Экопарк в деталях
+            .particulars__card
+                +el({
+                    tag: 'img',
+                    class: 'particulars__image',
+                    image: 'schema01.jpg',
+                })
+                +el({
+                    tag: 'ul',
+                    class: 'particulars__list',
+                })
+                    //- each item, index in items
+                    //-     +el({
+                    //-         tag: 'li',
+                    //-         class: 'particulars__item',
+                    //-         mod: item.mod
+                    //-     })
