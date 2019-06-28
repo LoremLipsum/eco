@@ -6,6 +6,9 @@
   padding: 8px;
   border-radius: 50%;
   text-decoration: none;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 
   &::after {
     content: "";
@@ -36,6 +39,9 @@
   fill: none;
   stroke: url("#video-gradient");
   stroke-width: 2px;
+  animation-name: pulse-icon;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .button-video__icon {
@@ -48,4 +54,31 @@
   width: 14px;
   height: 14px;
   fill: color(secondary);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(color(secondary), 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(color(secondary), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(color(secondary), 0);
+  }
+}
+
+@keyframes pulse-icon {
+  0% {
+    transform: scale3d(0.9, 0.9, 0.9);
+	}
+	60% {
+    transform: scale3d(1.06, 1.06, 1.06);
+	}
+	80% {
+    transform: scale3d(0.98, 0.98, 0.98);
+	}
+	100% {
+    transform: scale3d(1.0, 1.0, 1.0);
+	}
 }
