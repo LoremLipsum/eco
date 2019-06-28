@@ -31,6 +31,10 @@
   display: none;
 }
 
+.building-descr__branch {
+  display: none;
+}
+
 @include respond-to(small-lg) {
   .building-descr__text-wrap {
     padding: 30px;
@@ -100,5 +104,27 @@
     width: 750px;
     height: 600px;
     margin-left: -200px;
+  }
+}
+
+@include respond-to(1600px) {
+  .building-descr__wrap {
+    position: relative;
+  }
+
+  .building-descr__branch {
+    position: absolute;
+    transform-origin: center;
+    top: -250px;
+    left: 150px + pads(large);
+    z-index: 2;
+    width: 858px;
+    height: 705px;
+    transform: translate(-100%) rotate(180deg) scaleY(-1);
+    display: block;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
