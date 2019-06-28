@@ -26,6 +26,14 @@
   &:focus {
     transform: scale(0.95);
   }
+
+  &.active {
+    animation: none;
+
+    .button-video__circle {
+      animation: none;
+    }
+  }
 }
 
 .button-video__circle {

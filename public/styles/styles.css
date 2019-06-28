@@ -2251,6 +2251,16 @@ body > *
         -ms-transform: scale(.95);
             transform: scale(.95);
 }
+.button-video.active
+{
+    -webkit-animation: none;
+            animation: none;
+}
+.button-video.active .button-video__circle
+{
+    -webkit-animation: none;
+            animation: none;
+}
 
 .button-video__circle
 {
